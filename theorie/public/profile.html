@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="profile-site.css">
+</head>
+<body>
+    <header>
+        <div class="header-margin">
+
+          <div class="mobile-menu-btn">☰</div>
+          <ul class="mobile-menu">
+            <span class="close-btn">×</span>
+            <li><a href="/">Main</a></li>
+            <li><a href="" onclick="infoPage()">Info</a></li>
+            <li><a href="">Cursussen</a></li>
+            <li><a href="">Onderwijs</a></li>
+            <li><a href="/#contact">Contacten</a></li>
+            <li><a href="/profile.html" id="mainButton">Profile</a></li>
+            <button onclick="anotherPage()">Account</button>
+          </ul>
+
+          <div class="desktop-menu">
+            <h1 style="color: aliceblue;">Red-Drive</h1>
+            <!-- сделать отдельную ашку для теста и описания теста, а также цен -->
+              <ul>
+                <li><a href="/">Main</a></li>
+                <li><a href="/info.html">Info</a></li>
+                <li><a href="">Cursussen</a></li>
+                <li><a href="">Proeftoets</a></li>
+                <li><a href="/#contact">Contacten</a></li>
+                <li><a href="/profile.html" id="mainButton">Profile</a></li>
+              </ul>
+  
+              <button onclick="anotherPage()">Account</button>
+          </div>
+        </div>
+      </header>
+
+
+      <div class="profile-card">
+        <div class="avatar"></div>
+        <div class="profile-container">
+          <h1>Ваш профиль</h1>
+          <p><strong>Имя:</strong> <span id="user-name">Загрузка...</span></p>
+        </div>
+
+
+        <h3 class="activity-heading">Activity</h3>
+        <div class="activity-placeholder"></div>
+
+        <div class="profile-container">
+          <h1>Ваш профиль</h1>
+          <p><strong>Email:</strong> <span id="user-email">Загрузка...</span></p>
+          <p><strong>Оплата:</strong> <span id="user-paid">Загрузка...</span></p>
+          <p><strong>Админ:</strong> <span id="user-admin">Загрузка...</span></p>
+          <button onclick="logout()">Выйти</button>
+        </div>
+
+        <div id="premium-content" style="display:none; color: white;" >
+          <p>Это контент для оплаченных пользователей</p>
+        </div>
+      </div>
+
+
+  <script src="profile.js"></script>
+</body>
+</html>

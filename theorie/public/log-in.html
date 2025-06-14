@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Авторизация</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      background-image: url("images/bgc.png");
+      background-size: 20px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #f4f4f4;
+      padding: 1rem 2rem;
+      display: flex;
+      height: 70px;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 30px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .auth-card {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.15);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .auth-card h2 {
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      color: #222;
+    }
+
+    .auth-btn {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .auth-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .google {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    .google:hover {
+      background-color: #f1f1f1;
+    }
+
+    .apple {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .apple:hover {
+      background-color: #222;
+    }
+    .logo{
+        margin-left: 15%;
+    }
+    .main-link{
+        margin-right: 15%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">Red-Drive</a>
+    <nav class="main-link">
+      <a href="/">Главная</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="auth-card">
+      <h2>Войти в аккаунт</h2>
+      <a href="/auth/google" style="text-decoration: none;">
+        <button class="auth-btn google">
+          <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" />
+          Войти через Google
+        </button>
+      </a>
+      <button class="auth-btn apple">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/mac-os.png" alt="Apple" />
+        Войти через Apple
+      </button>
+    </div>
+  </main>
+</body>
+</html>
