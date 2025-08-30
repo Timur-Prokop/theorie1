@@ -1492,17 +1492,40 @@ const questions = [
     topic: "borden"
   },
 
+
+
+
+  // stilstaan en parkeren
   {
-    id: 124,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "",
-    "answers": [
-    { "text": "", "isCorrect": true },
-    { "text": "", "isCorrect": false },
-    { "text": "", "isCorrect": false }
+  id: 124,
+  question: "",
+  imageUrl: "",
+  answers: [
+    { text: "Verboden toegang voor voertuigen", isCorrect: true },
+    { text: "Einde van alle verboden", isCorrect: false },
+    { text: "Eenrichtingsverkeer", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat alle voertuigen verboden zijn om verder te rijden.",
+  topic: "stilstaanENparkeren",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено движение для всех транспортных средств",
+      "Конец всех ограничений",
+      "Одностороннее движение"
     ],
-    topic: "borden"
+    why: "Этот знак означает запрет движения для всех транспортных средств."
   },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No entry for any vehicles",
+      "End of all restrictions",
+      "One-way traffic"
+    ],
+    why: "This sign indicates that all vehicles are prohibited from proceeding."
+  }
+}
 
 
 

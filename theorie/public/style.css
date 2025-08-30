@@ -736,9 +736,9 @@ footer{
 
 
 /* Для экранов ≥ 1200px (ПК) */
-@media (min-width: 2501px){
+@media (min-width: 2001px){
     header{
-        height: 1100px;
+        height: 1300px;
     }
 }
 /* Диапазон do 500px */
