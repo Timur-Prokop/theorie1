@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="stylesheet" href="profile-site.css">
+    <title>Auto</title>
+    <link rel="stylesheet" href="feiten_c.css">
 </head>
 <body>
-    <header>
+    
+<header>
         <div class="header-margin">
-
           <div class="mobile-menu-btn">☰</div>
           <ul class="mobile-menu">
             <span class="close-btn">×</span>
             <li><a href="/">Main</a></li>
-            <li><a href="" onclick="infoPage()">Info</a></li>
+            <li><a href="/info.html">Info</a></li>
             <li><a href="/cursus.html">Cursussen</a></li>
             <li><a href="/proeftoets_h.html">Proeftoets</a></li>
             <li><a href="/theorie.html">Theorie</a></li>
-            <li><a href="/profile.html" id="mainButton">Profile</a></li>
+            <li><a href="/profile.html">Profile</a></li>
             <button onclick="anotherPage()">Account</button>
           </ul>
 
@@ -31,39 +31,42 @@
                 <li><a href="/cursus.html">Cursussen</a></li>
                 <li><a href="/proeftoets_h.html">Proeftoets</a></li>
                 <li><a href="/theorie.html">Theorie</a></li>
-                <li><a href="/profile.html" id="mainButton">Profile</a></li>
+                <li><a href="/profile.html">Profile</a></li>
               </ul>
-  
               <button onclick="anotherPage()">Account</button>
           </div>
         </div>
-      </header>
+    </header>
 
 
-      <div class="profile-card">
-        <div class="avatar"></div>
-        <div class="profile-container">
-          <h1>Jouw profile</h1>
-          <p><strong>Имя:</strong> <span id="user-name">Loading...</span></p>
-        </div>
 
 
-        <h3 class="activity-heading">Activity</h3>
-        <div class="activity-placeholder"></div>
-
-        <div class="profile-container">
-          <h1>Ваш профиль</h1>
-          <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
-          <p><strong>Оплата:</strong> <span id="user-paid">Loading...</span></p>
-          <button onclick="logout()">Выйти</button>
-        </div>
-
-        <div id="premium-content" style="display:none; color: white;" >
-          <p>Content is voor premium gebruikers</p>
-        </div>
-      </div>
 
 
-  <script src="profile.js"></script>
+<section id="jouw-auto-info">
+    <div class="container">
+      <h2>Auto Theorie – Cijfers en feiten</h2>
+      
+        <article>
+            <h3>Voetgangersoversteekplaats of zebrapad</h3>
+            <p>Een voetgangersoversteekplaats (VOP) wordt ook wel zebrapad genoemd.</p>
+            <ul>
+                <li>Geef altijd voorrang aan voetgangers en gehandicaptenvoertuigen die bezig zijn over te steken, of duidelijk van plan zijn dit te doen.</li>
+                <li>Inhalen vlak bij een zebrapad is niet toegestaan.</li>
+                <li>Het is verboden onnodig stil te staan of te parkeren binnen 5 meter van een zebrapad.</li>
+            </ul>
+            <div class="suggestiestrook">
+                <img src="images/borden/zebrapad.png" alt="">
+                <p>Voetgangeroversteekplaats</p>
+            </div>
+        </article>
+
+        <hr class="line">
+        
+
+
+  </section>
+
+  <script src="feiten_j.js"></script>
 </body>
 </html>

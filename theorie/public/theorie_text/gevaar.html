@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="stylesheet" href="profile-site.css">
+    <title>Auto</title>
+    <link rel="stylesheet" href="gevaar_c.css">
 </head>
 <body>
-    <header>
+    
+<header>
         <div class="header-margin">
-
           <div class="mobile-menu-btn">☰</div>
           <ul class="mobile-menu">
             <span class="close-btn">×</span>
             <li><a href="/">Main</a></li>
-            <li><a href="" onclick="infoPage()">Info</a></li>
+            <li><a href="/info.html">Info</a></li>
             <li><a href="/cursus.html">Cursussen</a></li>
             <li><a href="/proeftoets_h.html">Proeftoets</a></li>
             <li><a href="/theorie.html">Theorie</a></li>
-            <li><a href="/profile.html" id="mainButton">Profile</a></li>
+            <li><a href="/profile.html">Profile</a></li>
             <button onclick="anotherPage()">Account</button>
           </ul>
 
@@ -31,39 +31,44 @@
                 <li><a href="/cursus.html">Cursussen</a></li>
                 <li><a href="/proeftoets_h.html">Proeftoets</a></li>
                 <li><a href="/theorie.html">Theorie</a></li>
-                <li><a href="/profile.html" id="mainButton">Profile</a></li>
+                <li><a href="/profile.html">Profile</a></li>
               </ul>
-  
               <button onclick="anotherPage()">Account</button>
           </div>
         </div>
-      </header>
+    </header>
 
 
-      <div class="profile-card">
-        <div class="avatar"></div>
-        <div class="profile-container">
-          <h1>Jouw profile</h1>
-          <p><strong>Имя:</strong> <span id="user-name">Loading...</span></p>
-        </div>
 
 
-        <h3 class="activity-heading">Activity</h3>
-        <div class="activity-placeholder"></div>
-
-        <div class="profile-container">
-          <h1>Ваш профиль</h1>
-          <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
-          <p><strong>Оплата:</strong> <span id="user-paid">Loading...</span></p>
-          <button onclick="logout()">Выйти</button>
-        </div>
-
-        <div id="premium-content" style="display:none; color: white;" >
-          <p>Content is voor premium gebruikers</p>
-        </div>
-      </div>
 
 
-  <script src="profile.js"></script>
+<section id="jouw-auto-info">
+    <div class="container">
+      <h2>Auto Theorie – Gevaarherkening</h2>
+      
+        <article>
+            <h3>Gevaarherkenning</h3>
+            <p>Sinds 7 april 2025 is het onderdeel gevaarherkenning geen vast onderdeel meer van het autotheorie-examen.</p>
+            <h4 class="nmotoren">👉 Je kunt er wel nog mee oefenen om je verkeersinzicht te verbeteren.</h4>
+            <p>Hoe werkte dit onderdeel?</p>
+            <ul>
+              <li>Je kreeg 25 vragen met een verkeerssituatie.</li>
+              <li>Elke vraag liet een foto zien vanuit een auto.</li>
+              <li>Je zag: de snelheid, de achteruitkijkspiegel en de richtingaanwijzers.</li>
+            </ul>
+            <div class="image_center">
+                <img src="images/borden/gevaar_1.png" alt="">
+                <p>Gevaarherkenning</p>
+            </div>
+        </article>
+
+        <hr class="line">
+        
+
+
+  </section>
+
+  <script src="gevaar_j.js"></script>
 </body>
 </html>

@@ -146,38 +146,6 @@ header{
 }
 
 
-.rotonde_img img{
-    width: 600px;
-}
-.rotonde_img div{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.rotonde_img h3{
-    display: flex;
-    justify-content: center;
-}
-.rotonde_img p{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.d1_j9{
-    display: flex;
-    justify-content: center;
-}
-.d1_j9 div{
-    display: block;
-}
-.d1_j9 img{
-    width: 150px;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-
 
 
 
@@ -379,8 +347,6 @@ header{
   font-size: 2.5rem;
   color: #ff3c3c;
   margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
 }
 
 #jouw-auto-info article h3 {
@@ -390,19 +356,12 @@ header{
   margin-bottom: 20px;
 }
 
-#jouw-auto-info ul{
-      font-size: 1.2rem;
-  line-height: 1.8;
-  color: #fff;
-}
-
 #jouw-auto-info p,
+#jouw-auto-info ul,
 #jouw-auto-info ol {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #fff;
-  display: flex;
-  justify-content: center;
 }
 
 #jouw-auto-info ul {
@@ -419,21 +378,6 @@ header{
   color: #fff;
 }
 
-.erftoegangsweg div{
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.gebied_img{
-    display: flex;
-    justify-content: center;
-}
-.stroomweg{
-    display: flex;
-    justify-content: center;
-}
 .line {
   border: none; 
   height: 4px;        
@@ -441,81 +385,36 @@ header{
   border-radius: 2px;  
   margin-top: 30px;
 }
-.j15_bord img{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-}
-.j15_bord div{
-    flex-direction: column;
-}
-
-.l13_bord img{
-    width: 200px;
-    display: flex;
-    justify-content: center;
-}
-.l13_bord div{
-    flex-direction: column;
-}
-.eenrichtingsweg_img div{
+.image_center img{
     display: block;
-    width: 300px;
-    
+    margin: 30px auto;
 }
-.eenrichtingsweg_img img{
+.image_center p{
+    display: flex;
+    justify-content: center;
+}
+article main{
+    display: flex;
+    justify-content: space-between;
+}
+.img_onder img{
     width: 150px;
 }
-.eenrichtingsweg_img p{
-    width: 200px;
-}
-
-.bocht_borden{
+article main p{
     display: flex;
     justify-content: center;
 }
-.bocht_borden div{
+.autosnelweg_img{
     display: block;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 20px auto;
 }
-.bocht_borden img{
-    width: 200px;
-}
-.bocht_img img{
-      display: block;
-  margin: 0 auto;
-}
-.bocht_beschrijving{
-    margin-bottom: 50px;
-}
-.bocht_wegverkanting{
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-.zone30{
-    width: 200px;
-    display: block;
-    margin: 50px auto;
-}
-
-.zone_30km{
-    display: flex;
-}
-.erf_g5{
-    width: 200px;
-    display: block;
-    margin: 50px auto;
-}
-
-
 
 
 
 
 
 /* 📱 Адаптация под мобильные устройства */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   #jouw-auto-info {
     padding: 30px 15px;
   }
@@ -535,85 +434,6 @@ header{
   #jouw-auto-info ol {
     font-size: 1.05rem;
   }
-
-.erftoegangsweg {
-    flex-direction: column;
-}
-.erftoegangsweg img{
-    width: 350px;
-}
-.turborotonde img{
-    width: 350px;
-}
-.rot_onde img{
-    width: 350px;
-}
-.gebied_img img{
-    width: 350px;
-}
-.stroomweg img{
-    width: 350px;
-}
-.erftoegang {
-    display: block;
-    align-items: center;    
-}
-.erftoegang img{
-    width: 300px;
-    display: block;
-}
-.bocht_borden{
-    flex-direction: column;
-}
-.bocht_borden div img{
-    width: 200px;
-}
-.bocht_borden div{
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.bocht_img img{
-    width: 300px;
-}
-.d1_j9{
-    flex-direction: column;
-}
-.d1_j9 img {
-  display: block;
-  margin: 0 auto;
-}
-
-.eenrichtingsweg_img{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;   
-    text-align: center;    
-}
-.eenrichtingsweg_img p{
-    margin-left: 40px;
-}
-
-.zone_30km{
-    flex-direction: column;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
