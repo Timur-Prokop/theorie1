@@ -385,16 +385,60 @@ header{
   border-radius: 2px;  
   margin-top: 30px;
 }
-.suggestiestrook p{
+.image_center img{
+    display: block;
+    margin: 30px auto;
+    width: 250px;
+}
+.image_center p{
     display: flex;
     justify-content: center;
 }
-.suggestiestrook img{
-    display: block;
-    margin: 50px auto 10px auto;
+.nmotoren{
+    color: #ffc850;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 
+#jouw-auto-info a {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(145deg, #b30000, #800000);
+  padding: 10px 20px;
+  margin: 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(179, 0, 0, 0.3);
+}
+
+/* Наведение */
+#jouw-auto-info a:hover {
+  background: linear-gradient(145deg, #ff1a1a, #b30000);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 26, 26, 0.5);
+}
+
+/* Клик */
+#jouw-auto-info a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(179, 0, 0, 0.4);
+}
+
+
+
+
+    /* Адаптив */
+    @media (max-width: 600px) {
+      .nav-container a {
+        flex: 1 1 40%;
+        text-align: center;
+      }
+    }
 
 
 /* 📱 Адаптация под мобильные устройства */

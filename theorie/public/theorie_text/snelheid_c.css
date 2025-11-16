@@ -385,7 +385,20 @@ header{
   border-radius: 2px;  
   margin-top: 30px;
 }
-
+.suggestiestrook p{
+    display: flex;
+    justify-content: center;
+}
+.suggestiestrook img{
+    display: block;
+    margin: 50px auto 10px auto;
+}
+.nmotoren{
+    color: #ffc850;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 
 
 
