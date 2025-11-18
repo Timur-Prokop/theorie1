@@ -10503,10 +10503,2443 @@ why: "Cyclists and moped riders must follow the rules too, but may pass you on t
 
 
 
+{
+id: 448,
+question: "Wie wordt in het verkeer als weggebruiker beschouwd?",
+imageUrl: "",
+answers: [
+{ text: "Iedereen die deelneemt aan het verkeer", isCorrect: true },
+{ text: "Alleen bestuurders van motorvoertuigen", isCorrect: false },
+{ text: "Alleen voetgangers", isCorrect: false }
+],
+why: "Elke persoon die deelneemt aan het verkeer is een weggebruiker.",
+topic: "weggebruikers",
+ruTranslation: {
+question: "Кто считается участником дорожного движения?",
+answers: [
+"Каждый, кто участвует в движении",
+"Только водители моторных транспортов",
+"Только пешеходы"
+],
+why: "Любой человек, участвующий в дорожном движении, является его участником."
+},
+enTranslation: {
+question: "Who is considered a road user?",
+answers: [
+"Anyone participating in traffic",
+"Only motor vehicle drivers",
+"Only pedestrians"
+],
+why: "Anyone taking part in traffic is a road user."
+}
+},
+
+{
+id: 449,
+question: "Tot welke groep behoort iemand die loopt of stept?",
+imageUrl: "",
+answers: [
+{ text: "Voetgangers", isCorrect: true },
+{ text: "Bestuurders", isCorrect: false },
+{ text: "Motorvoertuigen", isCorrect: false }
+],
+why: "Iedereen die te voet deelneemt is een voetganger.",
+topic: "voetgangers",
+ruTranslation: {
+question: "К какой группе относится человек, который идёт пешком или на самокате без мотора?",
+answers: [ "Пешеходы", "Водители", "Моторные транспортные средства" ],
+why: "Каждый, кто передвигается пешком, считается пешеходом."
+},
+enTranslation: {
+question: "Which group does someone walking or using a kick-scooter belong to?",
+answers: [ "Pedestrians", "Drivers", "Motor vehicles" ],
+why: "Anyone moving on foot is considered a pedestrian."
+}
+},
+
+{
+id: 450,
+question: "Mag een motorvoertuig op het trottoir rijden?",
+imageUrl: "",
+answers: [
+{ text: "Nee", isCorrect: true },
+{ text: "Ja, als hij langzaam rijdt", isCorrect: false },
+{ text: "Ja, maar alleen in woonwijken", isCorrect: false }
+],
+why: "Motorvoertuigen mogen geen gebruik maken van trottoir of voetpad.",
+topic: "motorvoertuigen",
+ruTranslation: {
+question: "Разрешено ли моторному транспорту ездить по тротуару?",
+answers: [ "Нет", "Да, если медленно", "Да, только в жилых зонах" ],
+why: "Моторные транспортные средства не имеют права ехать по тротуару."
+},
+enTranslation: {
+question: "May a motor vehicle drive on the sidewalk?",
+answers: [ "No", "Yes, if slowly", "Yes, but only in residential areas" ],
+why: "Motor vehicles are not allowed on the sidewalk."
+}
+},
+
+{
+id: 451,
+question: "Welke voertuigen behoren tot 'niet-motorvoertuigen'?",
+imageUrl: "",
+answers: [
+{ text: "Fietsen, trams en snorfietsen", isCorrect: true },
+{ text: "Auto's en motorfietsen", isCorrect: false },
+{ text: "Ambulances en brandweerwagens", isCorrect: false }
+],
+why: "Niet-motorvoertuigen zijn voertuigen zonder motor of met uitzonderingspositie zoals trams.",
+topic: "niet_motorvoertuigen",
+ruTranslation: {
+question: "Что относится к категории немоторных транспортов?",
+answers: [ "Велосипеды, трамваи и мокики", "Авто и мотоциклы", "Скорая помощь и пожарные" ],
+why: "Немоторные транспортные средства — без мотора или с особым статусом, как трамвай."
+},
+enTranslation: {
+question: "Which belong to non-motor vehicles?",
+answers: [ "Bicycles, trams and mopeds", "Cars and motorcycles", "Ambulances and fire trucks" ],
+why: "Non-motor vehicles have no motor or special exception like trams."
+}
+},
+
+{
+id: 452,
+question: "Wat is een motorrijtuig volgens de wet?",
+imageUrl: "",
+answers: [
+{ text: "Een voertuig dat zich door mechanische kracht voortbeweegt", isCorrect: true },
+{ text: "Een voertuig met maximaal twee wielen", isCorrect: false },
+{ text: "Alle voertuigen behalve fietsen", isCorrect: false }
+],
+why: "Een motorrijtuig beweegt door mechanische aandrijving en valt onder verzekeringsplicht.",
+topic: "motorrijtuigen",
+ruTranslation: {
+question: "Что считается моторизованным транспортом по закону?",
+answers: [
+"Транспорт, движущийся за счёт механической силы",
+"Транспорт с двумя колёсами",
+"Любой транспорт кроме велосипедов"
+],
+why: "Моторизованный транспорт движется за счет механической силы и должен быть застрахован."
+},
+enTranslation: {
+question: "What is considered a motorized vehicle by law?",
+answers: [
+"A vehicle that moves using mechanical power",
+"A vehicle with two wheels",
+"Any vehicle except bicycles"
+],
+why: "A motorized vehicle uses mechanical power and must be insured."
+}
+},
+
+
+{
+id: 453,
+question: "Wanneer is een voertuig een voorrangsvoertuig?",
+imageUrl: "",
+answers: [
+{ text: "Wanneer het optische én geluidssignalen voert", isCorrect: true },
+{ text: "Wanneer het blauwe kenteken heeft", isCorrect: false },
+{ text: "Wanneer het groter is dan andere voertuigen", isCorrect: false }
+],
+why: "Een voertuig heeft alleen voorrang als zowel optische als geluidssignalen worden gebruikt.",
+topic: "voorrangsvoertuigen",
+ruTranslation: {
+question: "Когда транспорт считается приоритетным?",
+answers: [
+"Когда включены и световые и звуковые сигналы",
+"Когда у него синий номер",
+"Когда он больше других машин"
+],
+why: "Приоритет имеют только машины с включёнными световыми и звуковыми сигналами одновременно."
+},
+enTranslation: {
+question: "When is a vehicle considered an emergency priority vehicle?",
+answers: [
+"When both light and siren are used",
+"When it has a blue plate",
+"When it is bigger than other vehicles"
+],
+why: "Priority applies only when both lights and siren are active."
+}
+},
+
+{
+id: 454,
+question: "Mag een dierenambulance voorrang eisen?",
+imageUrl: "",
+answers: [
+{ text: "Nee", isCorrect: true },
+{ text: "Ja, altijd", isCorrect: false },
+{ text: "Ja, maar alleen in woonwijken", isCorrect: false }
+],
+why: "Een dierenambulance is geen voorrangsvoertuig.",
+topic: "voorrangsvoertuigen",
+ruTranslation: {
+question: "Может ли ветеринарная скорая требовать приоритет?",
+answers: [ "Нет", "Да, всегда", "Да, но только в жилых районах" ],
+why: "Ветеринарная скорая не является приоритетным транспортом."
+},
+enTranslation: {
+question: "May an animal ambulance demand right of way?",
+answers: [ "No", "Yes, always", "Yes, but only in residential areas" ],
+why: "An animal ambulance is not a priority vehicle."
+}
+},
+
+{
+id: 455,
+question: "Welke bestuurders zijn kwetsbare weggebruikers?",
+imageUrl: "",
+answers: [
+{ text: "Kinderen, fietsers en gehandicapten", isCorrect: true },
+{ text: "Alleen vrachtwagenchauffeurs", isCorrect: false },
+{ text: "Alleen snorfietsers", isCorrect: false }
+],
+why: "Kwetsbare weggebruikers lopen extra risico in het verkeer.",
+topic: "kwetsbare_weggebruikers",
+ruTranslation: {
+question: "Кто относится к уязвимым участникам движения?",
+answers: [ "Дети, велосипедисты и люди с ограниченными возможностями", "Только водители грузовиков", "Только водители мокиков" ],
+why: "Эти участники менее защищены и имеют больший риск травм."
+},
+enTranslation: {
+question: "Who are vulnerable road users?",
+answers: [ "Children, cyclists and disabled users", "Only truck drivers", "Only moped riders" ],
+why: "These users are less protected and at higher risk."
+}
+},
+
+{
+id: 456,
+question: "Waar moet een bromfiets rijden binnen de bebouwde kom?",
+imageUrl: "",
+answers: [
+{ text: "Op het fiets/bromfietspad", isCorrect: true },
+{ text: "Op de stoep", isCorrect: false },
+{ text: "Op de rijbaan naast auto's", isCorrect: false }
+],
+why: "Binnen de bebouwde kom gebruikt een bromfiets het fiets/bromfietspad.",
+topic: "bromfiets",
+ruTranslation: {
+question: "Где должен ехать мокик в населённом пункте?",
+answers: [ "По веломопедной дорожке", "По тротуару", "По дороге рядом с автомобилями" ],
+why: "В населённом пункте мокик обязан использовать дорожку для мокиков/велосипедов."
+},
+enTranslation: {
+question: "Where must a moped ride in built-up areas?",
+answers: [ "On the bicycle/moped lane", "On the sidewalk", "On the main roadway" ],
+why: "Inside built-up areas mopeds must use the designated moped/bike lane."
+}
+},
+
+{
+id: 457,
+question: "Wat is de maximumsnelheid voor een snorfiets?",
+imageUrl: "",
+answers: [
+{ text: "25 km/u", isCorrect: true },
+{ text: "40 km/u", isCorrect: false },
+{ text: "45 km/u", isCorrect: false }
+],
+why: "Snorfietsen mogen maximaal 25 km/u rijden.",
+topic: "snorfiets",
+ruTranslation: {
+question: "Какова максимальная скорость мокика-лайт (snorfiets)?",
+answers: [ "25 км/ч", "40 км/ч", "45 км/ч" ],
+why: "Snorfiets может ехать максимум 25 км/ч."
+},
+enTranslation: {
+question: "What is the maximum speed for a snorfiets?",
+answers: [ "25 km/h", "40 km/h", "45 km/h" ],
+why: "Snorfiets must not exceed 25 km/h."
+}
+},
+
+{
+id: 458,
+question: "Heeft een snorfiets een helm-plicht?",
+imageUrl: "",
+answers: [
+{ text: "Ja, sinds 2023", isCorrect: true },
+{ text: "Nee", isCorrect: false },
+{ text: "Alleen buiten de bebouwde kom", isCorrect: false }
+],
+why: "Sinds 1 januari 2023 moeten snorfietsers een helm dragen.",
+topic: "snorfiets",
+ruTranslation: {
+question: "Обязателен ли шлем для snorfiets?",
+answers: [ "Да, с 2023 года", "Нет", "Только вне населённых пунктов" ],
+why: "С 1 января 2023 года шлем обязателен."
+},
+enTranslation: {
+question: "Is a helmet required on a snorfiets?",
+answers: [ "Yes, since 2023", "No", "Only outside built-up areas" ],
+why: "Helmet is mandatory since January 2023."
+}
+},
+
+{
+id: 459,
+question: "Welke regel geldt voor een brommobiel?",
+imageUrl: "",
+answers: [
+{ text: "Hij mag op de rijbaan rijden en max. 45 km/u", isCorrect: true },
+{ text: "Hij rijdt altijd op het fietspad", isCorrect: false },
+{ text: "Hij mag op de autosnelweg", isCorrect: false }
+],
+why: "Brommobielen lijken op kleine auto's, maar rijden op de rijbaan met max. 45 km/u.",
+topic: "brommobiel",
+ruTranslation: {
+question: "Какие правила применяются к brommobiel?",
+answers: [ "Он должен ехать по дороге до 45 км/ч", "Он должен ехать по велосипедной дорожке", "Он может ехать по автостраде" ],
+why: "Это малый автомобиль, но езда только по дороге и максимум 45 км/ч."
+},
+enTranslation: {
+question: "Which rule applies to a microcar (brommobiel)?",
+answers: [ "It must drive on the road with max 45 km/h", "It must drive on bike paths", "It may use motorways" ],
+why: "Microcars use normal roadway but limited to 45 km/h."
+}
+},
+
+{
+id: 460,
+question: "Waar mag een gehandicaptenvoertuig rijden?",
+imageUrl: "",
+answers: [
+{ text: "Overal behalve autosnelweg en autoweg", isCorrect: true },
+{ text: "Alleen op de stoep", isCorrect: false },
+{ text: "Alleen op de rijbaan", isCorrect: false }
+],
+why: "Een gehandicaptenvoertuig mag voetpad, fietspad of rijbaan gebruiken afhankelijk van de situatie.",
+topic: "gehandicaptenvoertuig",
+ruTranslation: {
+question: "Где может ехать средство для инвалидов?",
+answers: [ "Везде, кроме автострады и автодороги", "Только по тротуару", "Только по дороге" ],
+why: "Оно может использовать тротуар, велодорожку или дорогу, но не автостраду."
+},
+enTranslation: {
+question: "Where may a mobility scooter/disabled vehicle drive?",
+answers: [ "Anywhere except motorway and expressway", "Only on pavement", "Only on the road" ],
+why: "It may use pavement, cycle lane or road depending on situation."
+}
+},
+
+// ogevallen en pech @!!!!!!!!!!!!!!!!!!!
+
+{
+  id: 461,
+  question: "Wat moet je als eerste doen als je pech hebt op de autosnelweg?",
+  imageUrl: "",
+  answers: [
+    { text: "Eigen veiligheid waarborgen en auto zo ver mogelijk rechts parkeren", isCorrect: true },
+    { text: "Direct de auto verlaten en op de rijbaan blijven staan", isCorrect: false },
+    { text: "112 bellen zonder eerst veiligheid te checken", isCorrect: false }
+  ],
+  why: "Veiligheid gaat altijd voor.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что нужно сделать первым при поломке на автомагистрали?",
+    answers: [
+      "Обеспечить безопасность и остановиться как можно правее",
+      "Сразу выйти на проезжую часть",
+      "Сразу позвонить 112 без проверки безопасности"
+    ],
+    why: "Безопасность всегда на первом месте."
+  },
+  enTranslation: {
+    question: "What should you do first if you break down on the motorway?",
+    answers: [
+      "Ensure safety and stop as far right as possible",
+      "Immediately leave the car and stand on the road",
+      "Call 112 immediately without checking safety"
+    ],
+    why: "Safety comes first."
+  }
+},
+{
+  id: 462,
+  question: "Waar plaats je de gevarendriehoek bij pech binnen de bebouwde kom?",
+  imageUrl: "",
+  answers: [
+    { text: "Je hoeft geen gevarendriehoek te plaatsen", isCorrect: true },
+    { text: "Op 30 meter afstand achter de auto", isCorrect: false },
+    { text: "Op de rijbaan voor de auto", isCorrect: false }
+  ],
+  why: "Binnen de bebouwde kom is een gevarendriehoek niet verplicht.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Где ставят аварийный треугольник при поломке в населённом пункте?",
+    answers: [
+      "Ставить не обязательно",
+      "На расстоянии 30 метров за машиной",
+      "Перед машиной на дороге"
+    ],
+    why: "В населённых пунктах знак не обязателен."
+  },
+  enTranslation: {
+    question: "Where do you place the warning triangle when you break down in built-up areas?",
+    answers: [
+      "It is not required",
+      "30 meters behind the vehicle",
+      "In front of the vehicle on the road"
+    ],
+    why: "A triangle is not mandatory in built-up areas."
+  }
+},
+{
+  id: 463,
+  question: "Wat moet je NIET doen bij aquaplaning?",
+  imageUrl: "",
+  answers: [
+    { text: "Remmen", isCorrect: true },
+    { text: "Rustig sturen", isCorrect: false },
+    { text: "Gas loslaten", isCorrect: false }
+  ],
+  why: "Remmen zorgt voor verlies van controle.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Чего НЕЛЬЗЯ делать при аквапланировании?",
+    answers: [
+      "Тормозить",
+      "Аккуратно рулить",
+      "Отпустить газ"
+    ],
+    why: "Торможение приводит к потере контроля."
+  },
+  enTranslation: {
+    question: "What should you NOT do during aquaplaning?",
+    answers: [
+      "Brake",
+      "Steer calmly",
+      "Release the accelerator"
+    ],
+    why: "Braking may lead to a loss of control."
+  }
+},
+{
+  id: 464,
+  question: "Wat is de grootste oorzaak van aquaplaning?",
+  imageUrl: "",
+  answers: [
+    { text: "Snelheid", isCorrect: true },
+    { text: "Bandenprofiel", isCorrect: false },
+    { text: "Sporen in de weg", isCorrect: false }
+  ],
+  why: "Hoe harder je rijdt, hoe minder grip.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что является основной причиной аквапланирования?",
+    answers: ["Скорость", "Протектор шин", "Канавки на дороге"],
+    why: "Чем выше скорость, тем меньше сцепление."
+  },
+  enTranslation: {
+    question: "What is the biggest cause of aquaplaning?",
+    answers: ["Speed", "Tire tread", "Grooves in the road"],
+    why: "Higher speed reduces grip."
+  }
+},
+{
+  id: 465,
+  question: "Welke bandenspanning vergroot de kans op aquaplaning?",
+  imageUrl: "",
+  answers: [
+    { text: "Te lage spanning", isCorrect: true },
+    { text: "Normale spanning", isCorrect: false },
+    { text: "Te hoge spanning", isCorrect: false }
+  ],
+  why: "Een platte band voert water minder goed af.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Какое давление в шинах увеличивает риск аквапланирования?",
+    answers: ["Слишком низкое", "Нормальное", "Слишком высокое"],
+    why: "Спущенная шина хуже отводит воду."
+  },
+  enTranslation: {
+    question: "Which tire pressure increases the risk of aquaplaning?",
+    answers: ["Too low", "Normal", "Too high"],
+    why: "A flat tire drains water poorly."
+  }
+},
+{
+  id: 466,
+  question: "Wat moet je doen als je auto te water raakt?",
+  imageUrl: "",
+  answers: [
+    { text: "Zo snel mogelijk gordel losmaken en auto verlaten", isCorrect: true },
+    { text: "Wachten tot hulpdiensten aankomen", isCorrect: false },
+    { text: "Eerst bagage redden", isCorrect: false }
+  ],
+  why: "De auto zinkt binnen enkele minuten.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что делать, если автомобиль тонет?",
+    answers: [
+      "Быстро отстегнуться и покинуть автомобиль",
+      "Ждать спасателей",
+      "Сначала спасать вещи"
+    ],
+    why: "Машина тонет за несколько минут."
+  },
+  enTranslation: {
+    question: "What should you do if your car falls into water?",
+    answers: [
+      "Unbuckle and exit as fast as possible",
+      "Wait for emergency services",
+      "Save personal items first"
+    ],
+    why: "The vehicle sinks within minutes."
+  }
+},
+{
+  id: 467,
+  question: "Welke hulpmiddel gebruik je om een zijruit in te slaan bij nood?",
+  imageUrl: "",
+  answers: [
+    { text: "Een veiligheidshamer (lifehammer)", isCorrect: true },
+    { text: "Een sleutel", isCorrect: false },
+    { text: "Je helm of schoen", isCorrect: false }
+  ],
+  why: "De veiligheidshamer is speciaal ontworpen hiervoor.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Какой инструмент используют для разбивания бокового стекла при аварии?",
+    answers: ["Автомобильный аварийный молоток", "Ключ", "Шлем или ботинок"],
+    why: "Аварийный молоток создан специально для этого."
+  },
+  enTranslation: {
+    question: "Which tool is used to break the side window in an emergency?",
+    answers: ["Emergency hammer", "Key", "Helmet or shoe"],
+    why: "The safety hammer is made for this purpose."
+  }
+},
+{
+  id: 468,
+  question: "Wanneer bel je 112?",
+  imageUrl: "",
+  answers: [
+    { text: "Bij direct gevaar of ernstig ongeval", isCorrect: true },
+    { text: "Alleen bij lichte schade", isCorrect: false },
+    { text: "Nooit bij pech", isCorrect: false }
+  ],
+  why: "112 is bedoeld voor spoedsituaties.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Когда звонят в 112?",
+    answers: [
+      "При непосредственной угрозе или серьёзной аварии",
+      "Только при лёгких повреждениях",
+      "Никогда при поломке"
+    ],
+    why: "112 — это номер экстренных служб."
+  },
+  enTranslation: {
+    question: "When should you call 112?",
+    answers: [
+      "In case of immediate danger or serious emergency",
+      "Only for minor damage",
+      "Never for breakdowns"
+    ],
+    why: "112 is for emergency cases."
+  }
+},
+{
+  id: 469,
+  question: "Wat moet je doen als je auto niet meer rijdt op de rijbaan?",
+  imageUrl: "",
+  answers: [
+    { text: "Zet alarmlichten aan en bel 112 als het gevaarlijk is", isCorrect: true },
+    { text: "In de auto blijven en wachten", isCorrect: false },
+    { text: "De auto midden op de rijbaan laten staan zonder waarschuwing", isCorrect: false }
+  ],
+  why: "Je moet zichtbaar en veilig zijn.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что нужно делать, если автомобиль сломался на проезжей части?",
+    answers: [
+      "Включить аварийку и позвонить 112 при опасности",
+      "Оставаться в машине и ждать",
+      "Оставить машину без предупреждения"
+    ],
+    why: "Важно обеспечить видимость и безопасность."
+  },
+  enTranslation: {
+    question: "What should you do if your vehicle breaks down on the road?",
+    answers: [
+      "Turn on the hazard lights and call 112 if dangerous",
+      "Stay in the car and wait",
+      "Leave the car without warning signs"
+    ],
+    why: "Visibility and safety are essential."
+  }
+},
+{
+  id: 470,
+  question: "Welke actie voer je uit bij een bewusteloos slachtoffer?",
+  imageUrl: "",
+  answers: [
+    { text: "Niet verplaatsen tenzij direct gevaar", isCorrect: true },
+    { text: "Direct optillen en naar een auto brengen", isCorrect: false },
+    { text: "Plaatsen in een onveilige positie", isCorrect: false }
+  ],
+  why: "Verplaatsen kan letsel verergeren.",
+  topic: "ongevallenПech",
+  ruTranslation: {
+    question: "Что делать с потерявшим сознание пострадавшим?",
+    answers: [
+      "Не перемещать, если нет прямой угрозы",
+      "Сразу поднять и перенести",
+      "Положить в неудобную позу"
+    ],
+    why: "Перемещение может ухудшить травму."
+  },
+  enTranslation: {
+    question: "What should you do with an unconscious victim?",
+    answers: [
+      "Do not move them unless there is immediate danger",
+      "Immediately lift and transport them",
+      "Place them in an unstable position"
+    ],
+    why: "Movement can worsen injuries."
+  }
+},
+
+
+
+{
+  id: 471,
+  question: "Hoe ver moet je minimaal afstand houden tussen een sleepauto en het gesleepte voertuig?",
+  imageUrl: "",
+  answers: [
+    { text: "Maximaal 5 meter", isCorrect: true },
+    { text: "Minimaal 10 meter", isCorrect: false },
+    { text: "Er is geen afstandsregel", isCorrect: false }
+  ],
+  why: "De afstand tussen voertuigen mag maximaal 5 meter zijn.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Какое максимальное расстояние допускается между буксирующим и буксируемым автомобилем?",
+    answers: ["Максимум 5 метров", "Минимум 10 метров", "Правил по расстоянию нет"],
+    why: "По правилам расстояние не должно превышать 5 метров."
+  },
+  enTranslation: {
+    question: "What is the maximum allowed distance between a towing vehicle and the towed vehicle?",
+    answers: ["Maximum 5 meters", "Minimum 10 meters", "No distance regulations"],
+    why: "The distance may not exceed 5 meters."
+  }
+},
+{
+  id: 472,
+  question: "Mag je de spitsstrook gebruiken als het rode kruis erboven brandt?",
+  imageUrl: "",
+  answers: [
+    { text: "Nee", isCorrect: true },
+    { text: "Ja, maar alleen langzaam", isCorrect: false },
+    { text: "Ja, als er weinig verkeer is", isCorrect: false }
+  ],
+  why: "Een rood kruis betekent dat de rijstrook gesloten is.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Можно ли использовать полосу для часа пик, если над ней горит красный крест?",
+    answers: ["Нет", "Да, но медленно", "Да, если мало машин"],
+    why: "Красный крест означает, что полоса закрыта."
+  },
+  enTranslation: {
+    question: "Are you allowed to use the rush hour lane when a red cross is shown?",
+    answers: ["No", "Yes, but slowly", "Yes, if traffic is low"],
+    why: "A red cross indicates the lane is closed."
+  }
+},
+{
+  id: 473,
+  question: "Wat moet je doen als je tijdens aquaplaning merkt dat de banden weer grip krijgen?",
+  imageUrl: "",
+  answers: [
+    { text: "Rustig weer gas geven en sturen", isCorrect: true },
+    { text: "Hard sturen", isCorrect: false },
+    { text: "Direct hard remmen", isCorrect: false }
+  ],
+  why: "Rustig reageren voorkomt slippen.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что нужно делать, когда шины вновь получают сцепление при аквапланировании?",
+    answers: ["Аккуратно добавить газ и рулить мягко", "Резко повернуть", "Резко затормозить"],
+    why: "Плавные действия предотвращают занос."
+  },
+  enTranslation: {
+    question: "What should you do when your tires regain grip during aquaplaning?",
+    answers: ["Gently accelerate and steer", "Steer sharply", "Brake hard"],
+    why: "Smooth reaction prevents skidding."
+  }
+},
+{
+  id: 474,
+  question: "Wat is de eerste stap als je auto in een tunnel tot stilstand komt door pech?",
+  imageUrl: "",
+  answers: [
+    { text: "Auto zo dicht mogelijk rechts tegen de tunnelwand parkeren", isCorrect: true },
+    { text: "In het midden van de tunnel stoppen", isCorrect: false },
+    { text: "Direct uitstappen en op de weg wachten", isCorrect: false }
+  ],
+  why: "Dicht tegen de wand blijven voorkomt gevaar voor verkeer.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что нужно сделать, если машина сломалась в тоннеле?",
+    answers: [
+      "Остановиться как можно правее у стены тоннеля",
+      "Остановиться по центру тоннеля",
+      "Сразу выйти и ждать на дороге"
+    ],
+    why: "Остановка у стены снижает риск столкновения."
+  },
+  enTranslation: {
+    question: "What should you do if your car breaks down in a tunnel?",
+    answers: [
+      "Park as far right as possible near the tunnel wall",
+      "Stop in the middle of the tunnel",
+      "Immediately step out and wait on the road"
+    ],
+    why: "Staying on the right reduces collision risk."
+  }
+},
+{
+  id: 475,
+  question: "Wat moet je doen als er sprake is van een verkeersongeval met slachtoffers?",
+  imageUrl: "",
+  answers: [
+    { text: "Eerst veiligheid waarborgen en daarna hulpdiensten bellen", isCorrect: true },
+    { text: "Slachtoffers direct verplaatsen", isCorrect: false },
+    { text: "Niets doen en wachten op anderen", isCorrect: false }
+  ],
+  why: "Veiligheid is prioriteit voordat hulp wordt ingeschakeld.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что нужно делать при ДТП с пострадавшими?",
+    answers: [
+      "Сначала обеспечить безопасность и затем вызвать службы",
+      "Сразу переносить пострадавших",
+      "Ничего не делать и ждать других"
+    ],
+    why: "Сначала проверяют безопасность, затем вызывают помощь."
+  },
+  enTranslation: {
+    question: "What should you do in an accident with injured people?",
+    answers: [
+      "Ensure safety first, then call emergency services",
+      "Immediately move injured persons",
+      "Do nothing and wait"
+    ],
+    why: "Safety comes before assistance."
+  }
+},
+{
+  id: 476,
+  question: "Welk nummer bel je voor niet-spoedeisende hulp in Nederland?",
+  imageUrl: "",
+  answers: [
+    { text: "0900-8844", isCorrect: true },
+    { text: "112", isCorrect: false },
+    { text: "0800-0000", isCorrect: false }
+  ],
+  why: "0900-8844 is voor politie zonder spoed.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Какой номер звонка для несрочной помощи в Нидерландах?",
+    answers: ["0900-8844", "112", "0800-0000"],
+    why: "0900-8844 — это полиция без срочности."
+  },
+  enTranslation: {
+    question: "Which number do you call for non-emergency help in the Netherlands?",
+    answers: ["0900-8844", "112", "0800-0000"],
+    why: "0900-8844 is for police without emergency."
+  }
+},
+{
+  id: 477,
+  question: "Wat moet je doen als je auto op een gevaarlijke plek stilstaat?",
+  imageUrl: "",
+  answers: [
+    { text: "Alarmlichten aanzetten en achter de vangrail gaan staan", isCorrect: true },
+    { text: "In de auto blijven zitten", isCorrect: false },
+    { text: "Op de rijbaan gaan staan", isCorrect: false }
+  ],
+  why: "Achter de vangrail ben je veiliger voor verkeer.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что делать, если машина остановилась в опасном месте?",
+    answers: [
+      "Включить аварийку и уйти за отбойник",
+      "Оставаться внутри машины",
+      "Стоять на проезжей части"
+    ],
+    why: "За отбойником безопаснее."
+  },
+  enTranslation: {
+    question: "What should you do if your car stops in a dangerous location?",
+    answers: [
+      "Turn on hazard lights and stand behind the guardrail",
+      "Stay inside the car",
+      "Stand on the roadway"
+    ],
+    why: "Behind the guardrail is safer."
+  }
+},
+{
+  id: 478,
+  question: "Welke handeling moet je vermijden als je auto slipt?",
+  imageUrl: "",
+  answers: [
+    { text: "Hard remmen", isCorrect: true },
+    { text: "Rustig sturen", isCorrect: false },
+    { text: "Gas loslaten", isCorrect: false }
+  ],
+  why: "Hard remmen vergroot het risico op controleverlies.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Какого действия нужно избегать при заносе?",
+    answers: ["Резкого торможения", "Плавного руления", "Отпускания газа"],
+    why: "Резкое торможение ухудшает ситуацию."
+  },
+  enTranslation: {
+    question: "Which action should you avoid during a skid?",
+    answers: ["Braking hard", "Steering calmly", "Releasing the accelerator"],
+    why: "Hard braking increases loss of control."
+  }
+},
+{
+  id: 479,
+  question: "Waar wacht je als je je voertuig moet verlaten op een snelweg?",
+  imageUrl: "",
+  answers: [
+    { text: "Achter de vangrail", isCorrect: true },
+    { text: "Op de vluchtstrook", isCorrect: false },
+    { text: "Naast de auto", isCorrect: false }
+  ],
+  why: "De vangrail beschermt tegen passerend verkeer.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Где нужно ждать, если пришлось покинуть автомобиль на трассе?",
+    answers: ["За отбойником", "На обочине", "Рядом с машиной"],
+    why: "Отбойник защищает от машин."
+  },
+  enTranslation: {
+    question: "Where should you wait if you must leave your car on the motorway?",
+    answers: ["Behind the guardrail", "On the hard shoulder", "Next to the car"],
+    why: "The guardrail protects you from traffic."
+  }
+},
+{
+  id: 480,
+  question: "Wat is het belangrijkste bij een noodsituatie?",
+  imageUrl: "",
+  answers: [
+    { text: "Rustig blijven en veilig handelen", isCorrect: true },
+    { text: "Zo snel mogelijk alles doen", isCorrect: false },
+    { text: "Eerst panikeren", isCorrect: false }
+  ],
+  why: "Rust voorkomt fouten en gevaarlijke handelingen.",
+  topic: "ongevallenPech",
+  ruTranslation: {
+    question: "Что главное в аварийной ситуации?",
+    answers: [
+      "Сохранять спокойствие и действовать безопасно",
+      "Делать всё как можно быстрее",
+      "Паниковать в первую очередь"
+    ],
+    why: "Спокойствие предотвращает ошибки."
+  },
+  enTranslation: {
+    question: "What is most important in an emergency situation?",
+    answers: [
+      "Stay calm and act safely",
+      "Do everything as fast as possible",
+      "Panic first"
+    ],
+    why: "Calmness prevents mistakes."
+  }
+},
+
+
+
+// bewust rijden !!!!!!!!!!!!!!!!!!!!!!!!
+
+{
+  id: 481,
+  question: "Wat stimuleert het Nieuwe Rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Veiliger, efficiënter en slimmer rijden", isCorrect: true },
+    { text: "Harder en agressiever rijden", isCorrect: false },
+    { text: "Altijd met hoge toeren rijden", isCorrect: false }
+  ],
+  why: "Het Nieuwe Rijden gaat over veiligheid, comfort en brandstofbesparing.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что стимулирует 'Новая манера вождения'?",
+    answers: ["Более безопасное, эффективное и умное вождение", "Более быстрое и агрессивное вождение", "Езда только на высоких оборотах"],
+    why: "Концепция направлена на безопасность и экономию топлива."
+  },
+  enTranslation: {
+    question: "What does 'The New Driving' promote?",
+    answers: ["Safer, more efficient and smarter driving", "Faster and more aggressive driving", "Driving only at high RPM"],
+    why: "It focuses on safety, comfort and fuel saving."
+  }
+},
+{
+  id: 482,
+  question: "Hoe vaak moet je de bandenspanning controleren?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_1_wfmyqq.png",
+  answers: [
+    { text: "Maandelijks", isCorrect: true },
+    { text: "Eén keer per jaar", isCorrect: false },
+    { text: "Alleen tijdens onderhoud", isCorrect: false }
+  ],
+  why: "Regelmatige controle voorkomt slijtage en verhoogd verbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Как часто нужно проверять давление в шинах?",
+    answers: ["Ежемесячно", "Раз в год", "Только на обслуживании"],
+    why: "Регулярная проверка снижает износ шин и расход топлива."
+  },
+  enTranslation: {
+    question: "How often should you check tire pressure?",
+    answers: ["Monthly", "Once a year", "Only during maintenance"],
+    why: "Regular checks reduce tyre wear and fuel consumption."
+  }
+},
+{
+  id: 483,
+  question: "Wat is het nadeel van een te lage bandenspanning?",
+  imageUrl: "",
+  answers: [
+    { text: "Hoger brandstofverbruik", isCorrect: true },
+    { text: "Lagere grip op sneeuw", isCorrect: false },
+    { text: "Geen verschil", isCorrect: false }
+  ],
+  why: "Een te lage bandenspanning verhoogt de rolweerstand.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какой недостаток у слишком низкого давления в шинах?",
+    answers: ["Более высокий расход топлива", "Хуже сцепление со снегом", "Разницы нет"],
+    why: "Слишком мягкие шины увеличивают сопротивление качению."
+  },
+  enTranslation: {
+    question: "What is a disadvantage of low tire pressure?",
+    answers: ["Higher fuel consumption", "Worse grip on snow", "No difference"],
+    why: "Low pressure increases rolling resistance."
+  }
+},
+{
+  id: 484,
+  question: "Wat doet cruisecontrol?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_2_vmffea.png",
+  answers: [
+    { text: "Houdt een constante snelheid aan", isCorrect: true },
+    { text: "Verhoogt automatisch de snelheid", isCorrect: false },
+    { text: "Schakelt de motor uit", isCorrect: false }
+  ],
+  why: "Cruisecontrol helpt het brandstofverbruik te verminderen.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что делает круиз-контроль?",
+    answers: ["Поддерживает постоянную скорость", "Автоматически увеличивает скорость", "Выключает двигатель"],
+    why: "Круиз-контроль снижает расход топлива."
+  },
+  enTranslation: {
+    question: "What does cruise control do?",
+    answers: ["Maintains a constant speed", "Automatically increases your speed", "Shuts the engine off"],
+    why: "Cruise control helps reduce fuel consumption."
+  }
+},
+{
+  id: 485,
+  question: "Wanneer wordt startstop-systeem geactiveerd?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_3_nmhiav.png",
+  answers: [
+    { text: "Wanneer het voertuig stil staat", isCorrect: true },
+    { text: "Tijdens accelereren", isCorrect: false },
+    { text: "Tijdens schakelen", isCorrect: false }
+  ],
+  why: "Het systeem schakelt de motor automatisch uit bij stilstand om brandstof te besparen.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Когда активируется система Start-Stop?",
+    answers: ["Когда автомобиль стоит", "Во время ускорения", "Во время переключения передач"],
+    why: "Она отключает двигатель при остановке для экономии топлива."
+  },
+  enTranslation: {
+    question: "When is the start-stop system activated?",
+    answers: ["When the vehicle is stationary", "While accelerating", "While shifting gears"],
+    why: "It saves fuel by turning the engine off at stops."
+  }
+},
+{
+  id: 486,
+  question: "Bij hoeveel toeren kun je het beste schakelen met een benzinemotor?",
+  imageUrl: "",
+  answers: [
+    { text: "Tussen 2000 en 3000 toeren", isCorrect: true },
+    { text: "Boven 5000 toeren", isCorrect: false },
+    { text: "Onder 1000 toeren", isCorrect: false }
+  ],
+  why: "Dat zorgt voor zuinig rijden.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "На каких оборотах лучше переключать передачу у бензинового двигателя?",
+    answers: ["Между 2000–3000 об/мин", "Выше 5000 об/мин", "До 1000 об/мин"],
+    why: "Это помогает экономить топливо."
+  },
+  enTranslation: {
+    question: "At what RPM should you shift with a petrol engine?",
+    answers: ["Between 2000–3000 RPM", "Above 5000 RPM", "Below 1000 RPM"],
+    why: "This improves fuel efficiency."
+  }
+},
+{
+  id: 487,
+  question: "Wat helpt brandstof besparen tijdens het rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Rustig accelereren en constant rijden", isCorrect: true },
+    { text: "Veel remmen en optrekken", isCorrect: false },
+    { text: "Altijd vol gas geven", isCorrect: false }
+  ],
+  why: "Rustig rijden vermindert brandstofverbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что помогает экономить топливо во время движения?",
+    answers: ["Плавное ускорение и поддержание скорости", "Частые торможения и разгоны", "Постоянная езда на полной мощности"],
+    why: "Плавная езда снижает расход топлива."
+  },
+  enTranslation: {
+    question: "What helps save fuel while driving?",
+    answers: ["Smooth acceleration and constant speed", "Frequent braking and accelerating", "Driving full throttle all the time"],
+    why: "Smooth driving reduces fuel consumption."
+  }
+},
+{
+  id: 488,
+  question: "Wat moet je vermijden om brandstof te besparen?",
+  imageUrl: "",
+  answers: [
+    { text: "Onnodig gebruik van airco of verlichting", isCorrect: true },
+    { text: "Rustig rijden", isCorrect: false },
+    { text: "Controle van bandenspanning", isCorrect: false }
+  ],
+  why: "Onnodige apparatuur verhoogt verbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что нужно избегать для экономии топлива?",
+    answers: ["Лишнее использование кондиционера и света", "Спокойное вождение", "Проверка давления шин"],
+    why: "Дополнительные приборы увеличивают расход топлива."
+  },
+  enTranslation: {
+    question: "What should you avoid to save fuel?",
+    answers: ["Unnecessary use of AC or lights", "Calm driving", "Checking tire pressure"],
+    why: "Extra systems increase fuel consumption."
+  }
+},
+{
+  id: 489,
+  question: "Waar moet je op letten bij het kopen van een auto voor zuinig rijden?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_4_jbqyay.png",
+  answers: [
+    { text: "Het energielabel", isCorrect: true },
+    { text: "De kleur van de auto", isCorrect: false },
+    { text: "Het aantal stickers op de auto", isCorrect: false }
+  ],
+  why: "Een betere energielabel betekent lager verbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "На что следует смотреть при покупке экономичного автомобиля?",
+    answers: ["На энергетическую метку", "На цвет машины", "На количество наклеек"],
+    why: "Хорошая метка означает низкий расход топлива."
+  },
+  enTranslation: {
+    question: "What should you consider when buying a fuel-efficient car?",
+    answers: ["The energy label", "The colour of the car", "The amount of stickers"],
+    why: "A better label means lower fuel use."
+  }
+},
+{
+  id: 490,
+  question: "Hoe controleer je de juiste volgafstand?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_5_s2lysm.png",
+  answers: [
+    { text: "Door de twee-secondenregel", isCorrect: true },
+    { text: "Door zo dicht mogelijk achter iemand te rijden", isCorrect: false },
+    { text: "Door de bumper te volgen", isCorrect: false }
+  ],
+  why: "De twee-secondenregel voorkomt gevaarlijke situaties.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Как проверить безопасную дистанцию?",
+    answers: ["С помощью правила двух секунд", "Ехать максимально близко", "Следить по бамперу впереди"],
+    why: "Правило двух секунд предотвращает аварии."
+  },
+  enTranslation: {
+    question: "How do you check proper following distance?",
+    answers: ["Using the two-second rule", "Driving as close as possible", "Following the bumper ahead"],
+    why: "The two-second rule prevents collisions."
+  }
+},
+{
+  id: 491,
+  question: "Wat is het voordeel van een navigatiesysteem gebruiken?",
+  imageUrl: "",
+  answers: [
+    { text: "Je kunt de efficiëntste route plannen", isCorrect: true },
+    { text: "Je hoeft nooit meer te tanken", isCorrect: false },
+    { text: "Je auto rijdt automatisch zonder jou", isCorrect: false }
+  ],
+  why: "Een navigatiesysteem voorkomt onnodige kilometers en bespaart brandstof.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какое преимущество от использования навигационной системы?",
+    answers: ["Можно спланировать наиболее эффективный маршрут", "Больше не нужно заправляться", "Машина едет сама"],
+    why: "Навигатор помогает избегать лишних поездок и экономить топливо."
+  },
+  enTranslation: {
+    question: "What is an advantage of using a navigation system?",
+    answers: ["You can plan the most efficient route", "You never need to refuel again", "The car drives automatically"],
+    why: "Navigation prevents unnecessary distance and fuel waste."
+  }
+},
+{
+  id: 492,
+  question: "Wat moet je doen bij wegrijden bij een groen licht?",
+  imageUrl: "",
+  answers: [
+    { text: "Rustig accelereren en snel opschakelen", isCorrect: true },
+    { text: "Vol gas geven", isCorrect: false },
+    { text: "Op lage versnelling blijven rijden", isCorrect: false }
+  ],
+  why: "Rustig versnellen en schakelen vermindert brandstofverbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Как правильно трогаться на зелёный свет?",
+    answers: ["Плавно ускоряться и рано переключаться", "Нажать газ до упора", "Оставаться на низкой передаче"],
+    why: "Плавный разгон экономит топливо."
+  },
+  enTranslation: {
+    question: "How should you start moving at a green light?",
+    answers: ["Accelerate smoothly and shift early", "Press full throttle", "Stay in a low gear"],
+    why: "Smooth acceleration saves fuel."
+  }
+},
+{
+  id: 493,
+  question: "Wat moet je vermijden tijdens het rijden om brandstof te besparen?",
+  imageUrl: "",
+  answers: [
+    { text: "Rijden met open ramen of dakdragers", isCorrect: true },
+    { text: "Kleine bochten sturen", isCorrect: false },
+    { text: "Rustig rijden", isCorrect: false }
+  ],
+  why: "Open ramen en dakdragers verhogen de luchtweerstand.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что следует избегать во время движения для экономии топлива?",
+    answers: ["Езды с открытыми окнами или багажником на крыше", "Плавных поворотов", "Спокойной езды"],
+    why: "Открытые элементы увеличивают сопротивление воздуха."
+  },
+  enTranslation: {
+    question: "What should you avoid while driving to save fuel?",
+    answers: ["Driving with open windows or roof racks", "Smooth steering", "Calm driving"],
+    why: "Open windows increase drag."
+  }
+},
+{
+  id: 494,
+  question: "Wat moet je doen voordat je gaat remmen om zuinig te rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Op tijd gas loslaten", isCorrect: true },
+    { text: "Eerst vol gas geven", isCorrect: false },
+    { text: "Motor uitzetten", isCorrect: false }
+  ],
+  why: "Het voertuig kan uitrollen zonder extra brandstof te verbruiken.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что нужно сделать перед торможением для экономии топлива?",
+    answers: ["Заранее отпустить газ", "Сначала разогнаться сильнее", "Выключить двигатель"],
+    why: "Машина будет катиться и расход уменьшится."
+  },
+  enTranslation: {
+    question: "What should you do before braking to save fuel?",
+    answers: ["Release the throttle early", "Speed up first", "Turn the engine off"],
+    why: "The car can coast without fuel injection."
+  }
+},
+{
+  id: 495,
+  question: "Wat betekent een hoog energielabel zoals A of B op een auto?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_4_jbqyay.png",
+  answers: [
+    { text: "De auto verbruikt minder brandstof", isCorrect: true },
+    { text: "De auto is altijd elektrisch", isCorrect: false },
+    { text: "De auto rijdt alleen langzaam", isCorrect: false }
+  ],
+  why: "Hoge labels betekenen efficiënter brandstofgebruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что означает высокий энергокласс автомобиля, например A или B?",
+    answers: ["Автомобиль потребляет меньше топлива", "Автомобиль всегда электрический", "Может ехать только медленно"],
+    why: "Высокий класс означает экономичный расход."
+  },
+  enTranslation: {
+    question: "What does a high energy label (A or B) on a car mean?",
+    answers: ["The car consumes less fuel", "The car is always electric", "The car can only drive slowly"],
+    why: "High labels indicate better efficiency."
+  }
+},
+{
+  id: 496,
+  question: "Hoe zorg je voor een lager brandstofverbruik in stadsverkeer?",
+  imageUrl: "",
+  answers: [
+    { text: "Gebruik een startstop-systeem", isCorrect: true },
+    { text: "Blijf altijd accelereren", isCorrect: false },
+    { text: "Laat motor warmdraaien minutenlang", isCorrect: false }
+  ],
+  why: "Het systeem bespaart brandstof tijdens stilstand.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Как снизить расход топлива в городском режиме?",
+    answers: ["Использовать систему Start-Stop", "Постоянно ускоряться", "Долго прогревать двигатель"],
+    why: "Система экономит топливо при остановках."
+  },
+  enTranslation: {
+    question: "How can you reduce fuel consumption in city traffic?",
+    answers: ["Use a start-stop system", "Keep accelerating", "Warm up the engine for minutes"],
+    why: "It saves fuel during idle time."
+  }
+},
+{
+  id: 497,
+  question: "Welke band heeft het grootste contactoppervlak met het wegdek?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_1_wfmyqq.png",
+  answers: [
+    { text: "Band met juiste spanning", isCorrect: true },
+    { text: "Band met te hoge spanning", isCorrect: false },
+    { text: "Band met te lage spanning", isCorrect: false }
+  ],
+  why: "Correcte spanning zorgt voor optimale grip en minder slijtage.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какая шина имеет наибольшее соприкосновение с дорогой?",
+    answers: ["Шина с правильным давлением", "Шина с завышенным давлением", "Шина с пониженным давлением"],
+    why: "Правильное давление обеспечивает лучшее сцепление."
+  },
+  enTranslation: {
+    question: "Which tyre has the most contact with the road?",
+    answers: ["The tyre with correct pressure", "The over-inflated tyre", "The under-inflated tyre"],
+    why: "Correct pressure ensures optimal grip."
+  }
+},
+{
+  id: 498,
+  question: "Welke rijstijl vermindert brandstofverbruik?",
+  imageUrl: "",
+  answers: [
+    { text: "Rustig en voorspelbaar rijden", isCorrect: true },
+    { text: "Snel optrekken en abrupt remmen", isCorrect: false },
+    { text: "Zonder schakelen rijden", isCorrect: false }
+  ],
+  why: "Rustig rijden betekent minder verbruik en veiliger verkeer.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какой стиль вождения снижает расход топлива?",
+    answers: ["Спокойный и предсказуемый", "Резкие разгоны и торможения", "Езда без переключения передач"],
+    why: "Спокойное вождение экономичнее и безопаснее."
+  },
+  enTranslation: {
+    question: "Which driving style lowers fuel consumption?",
+    answers: ["Calm and predictable driving", "Fast acceleration and hard braking", "Driving without shifting"],
+    why: "Calm driving uses less fuel."
+  }
+},
+{
+  id: 499,
+  question: "Hoe kun je onnodig verbruik verminderen?",
+  imageUrl: "",
+  answers: [
+    { text: "Gebruik de airco niet onnodig", isCorrect: true },
+    { text: "Laat de motor stationair draaien", isCorrect: false },
+    { text: "Altijd met open ramen rijden", isCorrect: false }
+  ],
+  why: "Airco verhoogt brandstofverbruik met tot 10%.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Как уменьшить ненужный расход топлива?",
+    answers: ["Не использовать кондиционер без необходимости", "Долго держать двигатель на холостом ходу", "Всегда ездить с открытыми окнами"],
+    why: "Кондиционер увеличивает расход до 10%."
+  },
+  enTranslation: {
+    question: "How do you reduce unnecessary fuel consumption?",
+    answers: ["Avoid unnecessary use of AC", "Keep the engine idling", "Drive with open windows constantly"],
+    why: "Air conditioning increases fuel usage."
+  }
+},
+{
+  id: 500,
+  question: "Wanneer moet je de motor uitzetten om zuinig te rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Wanneer je langer dan 1 minuut moet wachten", isCorrect: true },
+    { text: "Wanneer je optrekt", isCorrect: false },
+    { text: "Wanneer je remt", isCorrect: false }
+  ],
+  why: "Bij langere stilstand bespaart motor uitschakelen brandstof.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Когда следует выключить двигатель для экономии топлива?",
+    answers: ["Если ожидание длится более минуты", "При разгоне", "При торможении"],
+    why: "При долгом ожидании двигатель тратит топливо впустую."
+  },
+  enTranslation: {
+    question: "When should you turn off the engine to save fuel?",
+    answers: ["If waiting longer than one minute", "When accelerating", "When braking"],
+    why: "Turning it off saves fuel during long idle periods."
+  }
+},
+{
+  id: 501,
+  question: "Welke bandenspanning leidt tot meer slijtage?",
+  imageUrl: "",
+  answers: [
+    { text: "Te lage bandenspanning", isCorrect: true },
+    { text: "Normale bandenspanning", isCorrect: false },
+    { text: "Geen banden", isCorrect: false }
+  ],
+  why: "Te lage spanning vergroot rolweerstand en slijtage.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какое давление приводит к большему износу шин?",
+    answers: ["Слишком низкое", "Нормальное", "Если шин нет — износа нет :)"],
+    why: "Низкое давление увеличивает сопротивление качению."
+  },
+  enTranslation: {
+    question: "Which tyre pressure causes more wear?",
+    answers: ["Too low tyre pressure", "Correct pressure", "No tyres = no wear :)"],
+    why: "Low pressure increases rolling resistance."
+  }
+},
+{
+  id: 502,
+  question: "Wat is een goed schakeladvies bij 80 km/u?",
+  imageUrl: "",
+  answers: [
+    { text: "Rijden in de vijfde versnelling", isCorrect: true },
+    { text: "Rijden in de eerste versnelling", isCorrect: false },
+    { text: "Rijden in neutraal", isCorrect: false }
+  ],
+  why: "Hoge versnelling bij constante snelheid bespaart brandstof.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какая передача рекомендуется при 80 км/ч?",
+    answers: ["Пятая передача", "Первая передача", "На нейтрали"],
+    why: "Высшая передача экономичнее на высокой скорости."
+  },
+  enTranslation: {
+    question: "What is the recommended gear at 80 km/h?",
+    answers: ["Fifth gear", "First gear", "Neutral"],
+    why: "Higher gear saves fuel at cruising speed."
+  }
+},
+{
+  id: 503,
+  question: "Wat gebeurt er met brandstofverbruik bij zwaar beladen rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Het verbruik stijgt", isCorrect: true },
+    { text: "Het verbruik daalt", isCorrect: false },
+    { text: "Het blijft gelijk", isCorrect: false }
+  ],
+  why: "Meer gewicht betekent meer energie nodig om te bewegen.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Что происходит с расходом топлива при большой нагрузке?",
+    answers: ["Он увеличивается", "Он уменьшается", "Не меняется"],
+    why: "Большой вес требует больше энергии."
+  },
+  enTranslation: {
+    question: "What happens to fuel consumption when driving heavily loaded?",
+    answers: ["It increases", "It decreases", "It stays the same"],
+    why: "More weight requires more power."
+  }
+},
+{
+  id: 504,
+  question: "Welke handeling helpt zuinig rijden bij het naderen van een kruispunt?",
+  imageUrl: "",
+  answers: [
+    { text: "Op tijd gas loslaten en laten uitrollen", isCorrect: true },
+    { text: "Vol gas tot aan het kruispunt", isCorrect: false },
+    { text: "Hard remmen vlakbij het kruispunt", isCorrect: false }
+  ],
+  why: "Uitrollen zonder brandstoftoevoer is zuinig en veilig.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какая привычка помогает экономить топливо при подъезде к перекрестку?",
+    answers: ["Заранее отпустить газ и катиться", "Газовать до последнего", "Тормозить резко прямо перед перекрестком"],
+    why: "Крайслесс движение экономит топливо."
+  },
+  enTranslation: {
+    question: "Which habit helps fuel efficiency when approaching an intersection?",
+    answers: ["Release the throttle early and coast", "Accelerate until the end", "Brake hard at the last moment"],
+    why: "Coasting uses no extra fuel."
+  }
+},
+{
+  id: 505,
+  question: "Wat is een voordeel van rustig rijgedrag?",
+  imageUrl: "",
+  answers: [
+    { text: "Hoger verkeersveiligheid en minder brandstofverbruik", isCorrect: true },
+    { text: "Meer slijtage en stress", isCorrect: false },
+    { text: "Altijd sneller op bestemming", isCorrect: false }
+  ],
+  why: "Rustig rijden verlaagt stress, risico's en verbruik.",
+  topic: "Bewust_Rijden",
+  ruTranslation: {
+    question: "Какое преимущество у спокойного стиля вождения?",
+    answers: ["Больше безопасность и меньший расход топлива", "Больше стресса и износа", "Всегда быстрая поездка"],
+    why: "Спокойная езда безопаснее и экономичнее."
+  },
+  enTranslation: {
+    question: "What is an advantage of calm driving?",
+    answers: ["More safety and lower fuel consumption", "More stress and wear", "Always faster arrival"],
+    why: "Calm driving reduces risks and fuel usage."
+  }
+},
+
+// wettelijk wettelijk !!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!!!!
+
+{
+id: 506,
+question: "Hoe vaak moet je rijbewijs B worden vernieuwd?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_1_xdrbi4.png",
+answers: [
+{ text: "Elke 10 jaar", isCorrect: true },
+{ text: "Elke 5 jaar", isCorrect: false },
+{ text: "Elke 15 jaar", isCorrect: false }
+],
+why: "Volgens de regels wordt rijbewijs B elke 10 jaar vernieuwd.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Как часто нужно обновлять водительское удостоверение категории B?",
+answers: ["Каждые 10 лет", "Каждые 5 лет", "Каждые 15 лет"],
+why: "Согласно правилам, права категории B обновляют каждые 10 лет."
+},
+enTranslation: {
+question: "How often must a category B driving licence be renewed?",
+answers: ["Every 10 years", "Every 5 years", "Every 15 years"],
+why: "According to the rules, licence B must be renewed every 10 years."
+}
+},
+{
+id: 507,
+question: "Vanaf welke leeftijd kun je normaal rijbewijs B halen?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_1_xdrbi4.png",
+answers: [
+{ text: "Vanaf 18 jaar", isCorrect: true },
+{ text: "Vanaf 16 jaar", isCorrect: false },
+{ text: "Vanaf 21 jaar", isCorrect: false }
+],
+why: "In de tekst staat dat je rijbewijs B vanaf 18 jaar kunt halen (buiten 2toDrive-regeling).",
+topic: "wettelijk",
+ruTranslation: {
+question: "С какого возраста можно получить обычные права категории B?",
+answers: ["С 18 лет", "С 16 лет", "С 21 года"],
+why: "В тексте указано, что права B получают с 18 лет (вне схемы 2toDrive)."
+},
+enTranslation: {
+question: "From what age can you normally obtain a category B licence?",
+answers: ["From 18 years", "From 16 years", "From 21 years"],
+why: "The text states you can get licence B from the age of 18 (outside 2toDrive)."
+}
+},
+{
+id: 508,
+question: "Wat is de maximale toegestane massa van een motorvoertuig dat je met rijbewijs B mag besturen?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_1_xdrbi4.png",
+answers: [
+{ text: "3500 kilogram", isCorrect: true },
+{ text: "2500 kilogram", isCorrect: false },
+{ text: "4500 kilogram", isCorrect: false }
+],
+why: "Met rijbewijs B mag je een vierwielig motorvoertuig tot maximaal 3500 kg besturen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Какова максимальная разрешённая масса автомобиля, который можно вести с правами B?",
+answers: ["3500 килограмм", "2500 килограмм", "4500 килограмм"],
+why: "С правами B можно управлять автомобилем максимум до 3500 кг."
+},
+enTranslation: {
+question: "What is the maximum permitted mass of a motor vehicle you may drive with licence B?",
+answers: ["3500 kilograms", "2500 kilograms", "4500 kilograms"],
+why: "With licence B you may drive a four-wheeled vehicle up to 3500 kg."
+}
+},
+{
+id: 509,
+question: "Voor hoeveel passagiers (exclusief bestuurder) mag een voertuig ingericht zijn bij rijbewijs B?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_2_gvyswx.png",
+answers: [
+{ text: "Maximaal 8 passagiers", isCorrect: true },
+{ text: "Maximaal 6 passagiers", isCorrect: false },
+{ text: "Maximaal 10 passagiers", isCorrect: false }
+],
+why: "Met rijbewijs B mag je voertuigen besturen die zijn ingericht voor maximaal 8 passagiers.",
+topic: "wettelijk",
+ruTranslation: {
+question: "На сколько пассажиров (без водителя) может быть рассчитан автомобиль с правами B?",
+answers: ["Максимум на 8 пассажиров", "Максимум на 6 пассажиров", "Максимум на 10 пассажиров"],
+why: "С правами B можно управлять ТС, рассчитанным максимум на 8 пассажиров."
+},
+enTranslation: {
+question: "For how many passengers (excluding the driver) may a vehicle be designed with licence B?",
+answers: ["Maximum 8 passengers", "Maximum 6 passengers", "Maximum 10 passengers"],
+why: "With licence B you may drive vehicles designed for up to 8 passengers."
+}
+},
+{
+id: 510,
+question: "Wat mag je besturen met een bromfietsrijbewijs AM dat je automatisch bij rijbewijs B krijgt?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_2_gvyswx.png",
+answers: [
+{ text: "Een bromfiets, scooter, speed-pedelec of brommobiel", isCorrect: true },
+{ text: "Een vrachtwagen met aanhanger", isCorrect: false },
+{ text: "Een autobus met passagiers", isCorrect: false }
+],
+why: "Met rijbewijs AM mag je bromfiets, scooter, speed-pedelec of brommobiel besturen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "На чём можно ездить с мопедными правами AM, которые идут вместе с B?",
+answers: ["На мопеде, скутере, спид-педелеке или мотоколяске", "На грузовике с прицепом", "На автобусе с пассажирами"],
+why: "С удостоверением AM разрешены мопед, скутер, спид-педелек и мотоколяска."
+},
+enTranslation: {
+question: "What may you drive with the moped licence AM that you receive with licence B?",
+answers: ["A moped, scooter, speed-pedelec or microcar", "A lorry with trailer", "A bus with passengers"],
+why: "Licence AM allows you to drive a moped, scooter, speed-pedelec or microcar."
+}
+},
+{
+id: 511,
+question: "Vanaf welke leeftijd mag je binnen 2toDrive het theorie-examen voor rijbewijs B afleggen?",
+imageUrl: "",
+answers: [
+{ text: "Vanaf 16 jaar", isCorrect: true },
+{ text: "Vanaf 15,5 jaar", isCorrect: false },
+{ text: "Vanaf 17 jaar", isCorrect: false }
+],
+why: "In het 2toDrive-programma mag je vanaf je 16e het theorie-examen halen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "С какого возраста по программе 2toDrive можно сдавать теорию на права B?",
+answers: ["С 16 лет", "С 15,5 лет", "С 17 лет"],
+why: "По программе 2toDrive теоретический экзамен можно сдать с 16 лет."
+},
+enTranslation: {
+question: "From what age may you take the theory test for licence B in 2toDrive?",
+answers: ["From 16 years", "From 15.5 years", "From 17 years"],
+why: "In the 2toDrive scheme you may take the theory exam from age 16."
+}
+},
+{
+id: 512,
+question: "Wanneer mag je binnen 2toDrive volledig zelfstandig autorijden?",
+imageUrl: "",
+answers: [
+{ text: "Vanaf 18 jaar", isCorrect: true },
+{ text: "Vanaf 17 jaar", isCorrect: false },
+{ text: "Vanaf 16,5 jaar", isCorrect: false }
+],
+why: "Tot 18 jaar rij je onder begeleiding van een coach, daarna mag je zelfstandig rijden.",
+topic: "wettelijk",
+ruTranslation: {
+question: "С какого возраста по 2toDrive можно ездить полностью самостоятельно?",
+answers: ["С 18 лет", "С 17 лет", "С 16,5 лет"],
+why: "До 18 лет ездишь только с сопровождающим, после 18 — самостоятельно."
+},
+enTranslation: {
+question: "From what age may you drive completely on your own in 2toDrive?",
+answers: ["From 18 years", "From 17 years", "From 16.5 years"],
+why: "Up to 18 you drive with a coach; after 18 you may drive independently."
+}
+},
+{
+id: 513,
+question: "Welke documenten moet je in Nederland verplicht bij je hebben als je gaat autorijden?",
+imageUrl: "",
+answers: [
+{ text: "Je rijbewijs en kentekenbewijs (of kentekencard)", isCorrect: true },
+{ text: "Alle onderhoudsbonnen van de auto", isCorrect: false },
+{ text: "Alleen een identiteitskaart", isCorrect: false }
+],
+why: "De tekst zegt dat je rijbewijs en kentekenbewijs verplicht zijn, kopieën zijn niet toegestaan.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Какие документы обязательно иметь при вождении автомобиля в Нидерландах?",
+answers: ["Водительское удостоверение и свидетельство о регистрации (карта номера)", "Все чеки на обслуживание автомобиля", "Только удостоверение личности"],
+why: "В тексте сказано, что обязательно иметь права и свидетельство о регистрации, не копии."
+},
+enTranslation: {
+question: "Which documents are compulsory to carry when driving a car in the Netherlands?",
+answers: ["Your driving licence and registration certificate (number plate card)", "All car service receipts", "Only an identity card"],
+why: "The text states that licence and registration certificate are mandatory; copies are not allowed."
+}
+},
+{
+id: 514,
+question: "Welke autoverzekering is in Nederland minimaal wettelijk verplicht?",
+imageUrl: "",
+answers: [
+{ text: "WA-verzekering (Wettelijke Aansprakelijkheidsverzekering)", isCorrect: true },
+{ text: "All-risk verzekering", isCorrect: false },
+{ text: "Rechtsbijstandverzekering", isCorrect: false }
+],
+why: "Bij deelname aan het verkeer ben je verplicht minimaal een WA-verzekering te hebben.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Какой вид страхования автомобиля является минимально обязательным в Нидерландах?",
+answers: ["Страховка гражданской ответственности (WA)", "Полное каско (all-risk)", "Страхование правовой помощи"],
+why: "При участии в дорожном движении обязателен минимум полис WA."
+},
+enTranslation: {
+question: "Which car insurance is at least legally required in the Netherlands?",
+answers: ["Third-party liability insurance (WA)", "Fully comprehensive insurance (all-risk)", "Legal expenses insurance"],
+why: "When you take part in traffic you must at least have WA liability insurance."
+}
+},
+{
+id: 515,
+question: "Wat is een belangrijk voordeel van een all-risk verzekering ten opzichte van alleen WA?",
+imageUrl: "",
+answers: [
+{ text: "Schade aan je eigen auto is meestal ook gedekt", isCorrect: true },
+{ text: "Je hoeft geen wegenbelasting meer te betalen", isCorrect: false },
+{ text: "Je hoeft geen rijbewijs te hebben", isCorrect: false }
+],
+why: "Een all-risk verzekering dekt naast schade bij anderen ook schade aan je eigen voertuig.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Какое главное преимущество страховки all-risk по сравнению только с WA?",
+answers: ["Обычно покрывается и ущерб вашему автомобилю", "Можно не платить дорожный налог", "Права можно не иметь"],
+why: "Полис all-risk покрывает не только ущерб другим, но и вашей машине."
+},
+enTranslation: {
+question: "What is an important advantage of all-risk insurance compared to WA only?",
+answers: ["Damage to your own car is usually covered as well", "You no longer pay road tax", "You do not need a driving licence"],
+why: "All-risk insurance covers not only damage to others but also to your own vehicle."
+}
+},
+{
+id: 516,
+question: "Wat is een groene kaart in het verkeer?",
+imageUrl: "",
+answers: [
+{ text: "Een internationaal verzekeringsbewijs", isCorrect: true },
+{ text: "Een milieusticker voor in de stad", isCorrect: false },
+{ text: "Een APK-keuringsrapport", isCorrect: false }
+],
+why: "De groene kaart is een internationaal verzekeringsbewijs; in Nederland is hij niet verplicht.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Что такое «зелёная карта» в контексте автострахования?",
+answers: ["Международный страховой сертификат", "Экологический стикер для города", "Отчёт о техосмотре (APK)"],
+why: "Зелёная карта — это международный страховой документ, в Нидерландах не обязательный."
+},
+enTranslation: {
+question: "What is a green card in traffic context?",
+answers: ["An international insurance certificate", "An environmental sticker for cities", "A vehicle inspection (APK) report"],
+why: "The green card is an international proof of insurance; it is not compulsory in the Netherlands."
+}
+},
+{
+id: 517,
+question: "Waarvan hangt de hoogte van de motorrijtuigenbelasting (wegenbelasting) af?",
+imageUrl: "",
+answers: [
+{ text: "Brandstoftype, milieuvriendelijkheid, gewicht en provincie", isCorrect: true },
+{ text: "Alleen van de leeftijd van de bestuurder", isCorrect: false },
+{ text: "Alleen van het aantal passagiers", isCorrect: false }
+],
+why: "De tekst noemt brandstoftype, milieuvriendelijkheid, gewicht en de provincie als factoren.",
+topic: "wettelijk",
+ruTranslation: {
+question: "От чего зависит размер налога на транспортное средство (wegenbelasting)?",
+answers: ["От вида топлива, экологичности, массы и провинции", "Только от возраста водителя", "Только от количества пассажиров"],
+why: "В тексте указано: вид топлива, экологичность, масса и провинция владельца."
+},
+enTranslation: {
+question: "On what does the amount of motor vehicle tax depend?",
+answers: ["Fuel type, environmental class, weight and province", "Only on the driver’s age", "Only on the number of passengers"],
+why: "The text lists fuel type, environmental friendliness, weight and province as factors."
+}
+},
+{
+id: 518,
+question: "Wat is het kentekenbewijs of de kentekencard?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_3_h3ahdf.png",
+answers: [
+{ text: "Een document met gegevens van de kentekenhouder en het voertuig", isCorrect: true },
+{ text: "Een bon van de laatste tankbeurt", isCorrect: false },
+{ text: "Een tijdelijk rijverbod", isCorrect: false }
+],
+why: "De kentekencard bevat de gegevens van de kentekenhouder en de technische gegevens van het voertuig.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Что такое свидетельство о регистрации (kentekenbewijs / kentekencard)?",
+answers: ["Документ с данными владельца номера и техническими данными ТС", "Чек с последней заправки", "Документ о временном лишении прав"],
+why: "Карта номера содержит данные владельца и технические характеристики автомобиля."
+},
+enTranslation: {
+question: "What is the registration certificate or number plate card?",
+answers: ["A document with details of the holder and the vehicle", "A receipt from the last refuelling", "A temporary driving ban"],
+why: "The number plate card holds the keeper’s details and the vehicle’s technical data."
+}
+},
+{
+id: 519,
+question: "Wanneer heb je de tenaamstellingscode of het overschrijvingsbewijs nodig?",
+imageUrl: "",
+answers: [
+{ text: "Als het voertuig van eigenaar wisselt", isCorrect: true },
+{ text: "Bij elke APK-keuring", isCorrect: false },
+{ text: "Wanneer je van rijbaan wisselt", isCorrect: false }
+],
+why: "De tenaamstellingscode of het overschrijvingsbewijs is nodig als het voertuig op naam van een andere eigenaar wordt gezet.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Когда нужен код переоформления (tenaamstellingscode / overschrijvingsbewijs)?",
+answers: ["Когда автомобиль переходит к другому владельцу", "При каждом техосмотре (APK)", "Когда вы меняете полосу движения"],
+why: "Код переоформления требуется при смене владельца транспортного средства."
+},
+enTranslation: {
+question: "When do you need the transfer code or transfer certificate?",
+answers: ["When the vehicle changes owner", "At every periodic inspection (APK)", "When you change lanes while driving"],
+why: "The transfer code is required when the vehicle is registered to a new owner."
+}
+},
+{
+id: 520,
+question: "Wat is een voorbeeld van een verkeersovertreding?",
+imageUrl: "",
+answers: [
+{ text: "Door rood licht rijden", isCorrect: true },
+{ text: "Rijden onder invloed van alcohol", isCorrect: false },
+{ text: "Joyriding in een gestolen auto", isCorrect: false }
+],
+why: "In de tekst worden door rood rijden, fout parkeren en te hard rijden genoemd als overtredingen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Что является примером дорожного проступка (overtreding)?",
+answers: ["Проезд на красный свет", "Вождение в состоянии опьянения", "Катание на угнанной машине (джойрайд)"],
+why: "В тексте проезд на красный, неправильная парковка и превышение скорости указаны как проступки."
+},
+enTranslation: {
+question: "What is an example of a traffic offence (overtreding)?",
+answers: ["Driving through a red light", "Driving under the influence of alcohol", "Joyriding in a stolen car"],
+why: "The text lists running a red light, bad parking and speeding as offences."
+}
+},
+{
+id: 521,
+question: "Wat is een voorbeeld van een verkeermisdrijf?",
+imageUrl: "",
+answers: [
+{ text: "Rijden onder invloed van alcohol of drugs", isCorrect: true },
+{ text: "Per ongeluk een bocht te ruim nemen", isCorrect: false },
+{ text: "Een keer vergeten richting aan te geven", isCorrect: false }
+],
+why: "Rijden onder invloed, doorrijden na een ongeval en joyriding worden als verkeermisdrijven genoemd.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Что является примером дорожного преступления (misdrijf)?",
+answers: ["Вождение в состоянии алкогольного или наркотического опьянения", "Случайно слишком широко пройти поворот", "Один раз забыть включить поворотник"],
+why: "В тексте к преступлениям отнесены вождение в нетрезвом виде, скрытие с места ДТП и джойрайд."
+},
+enTranslation: {
+question: "What is an example of a traffic crime (misdrijf)?",
+answers: ["Driving under the influence of alcohol or drugs", "Accidentally taking a bend too wide", "Forgetting to indicate once"],
+why: "The text names driving under the influence, leaving the scene of an accident and joyriding as crimes."
+}
+},
+{
+id: 522,
+question: "Waarvoor kun je als beginnend bestuurder strafpunten krijgen?",
+imageUrl: "",
+answers: [
+{ text: "Als je bij een snelheid boven 80 km/uur te dicht op je voorganger rijdt (bumperkleven)", isCorrect: true },
+{ text: "Als je één keer te laat remt bij een stoplicht", isCorrect: false },
+{ text: "Als je in de bebouwde kom 5 km/uur te hard rijdt", isCorrect: false }
+],
+why: "Bumperkleven bij een snelheid van meer dan 80 km/uur is één van de situaties waarbij strafpunten kunnen worden opgelegd.",
+topic: "wettelijk",
+ruTranslation: {
+question: "За что начинающий водитель может получить штрафные пункты?",
+answers: ["За подъезд слишком близко к впереди идущей машине при скорости выше 80 км/ч", "За один раз позднее торможение на светофоре", "За превышение всего на 5 км/ч в городе"],
+why: "Один из случаев из текста — «висеть на бампере» при скорости свыше 80 км/ч."
+},
+enTranslation: {
+question: "For what can a novice driver receive penalty points?",
+answers: ["For tailgating at a speed above 80 km/h", "For braking a bit late once at a traffic light", "For only 5 km/h speeding in town"],
+why: "Tailgating at more than 80 km/h is one of the situations where penalty points may be imposed."
+}
+},
+{
+id: 523,
+question: "Wat kan er gebeuren bij twee veroordelingen voor zware verkeersovertredingen tijdens de beginnersperiode?",
+imageUrl: "",
+answers: [
+{ text: "Je beginnersrijbewijs moet worden ingeleverd bij de politie", isCorrect: true },
+{ text: "Je moet alleen een extra theorie-examen doen", isCorrect: false },
+{ text: "Je krijgt automatisch een hogere verzekeringspremie", isCorrect: false }
+],
+why: "Bij twee veroordelingen voor zware overtredingen moet het beginnersrijbewijs worden ingeleverd.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Что может произойти при двух серьёзных нарушениях в период начинающего водителя?",
+answers: ["Начальные права должны быть сданы в полицию", "Нужно только повторно сдать теорию", "Автоматически повышается страховой взнос"],
+why: "При двух тяжёлых нарушениях начальное водительское удостоверение изымается."
+},
+enTranslation: {
+question: "What can happen after two serious traffic violations during the beginner’s period?",
+answers: ["Your beginner’s licence must be handed in to the police", "You only need to redo the theory test", "Your insurance premium is automatically raised"],
+why: "After two serious offences the beginner’s licence must be surrendered."
+}
+},
+{
+id: 524,
+question: "Wat is het belangrijkste verschil tussen een rijverbod en een ontzegging van de rijbevoegdheid?",
+imageUrl: "",
+answers: [
+{ text: "Bij een rijverbod mag je geen enkel voertuig besturen, bij ontzegging geen motorvoertuigen", isCorrect: true },
+{ text: "Een rijverbod geldt alleen in het buitenland", isCorrect: false },
+{ text: "Bij ontzegging mag je juist alles blijven rijden", isCorrect: false }
+],
+why: "In de tekst staat dat je tijdens een rijverbod geen enkel voertuig mag besturen, en bij ontzegging geen motorvoertuigen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "В чём главное отличие между «rijverbod» и «ontzegging van de rijbevoegdheid»?",
+answers: ["При rijverbod нельзя управлять никаким транспортом, при ontzegging — никакими моторными ТС", "Rijverbod действует только за границей", "При ontzegging, наоборот, можно ездить на всём"],
+why: "В тексте сказано: при rijverbod запрещено любое ТС, при лишении права управления — все моторные."
+},
+enTranslation: {
+question: "What is the main difference between a driving ban and a disqualification from driving?",
+answers: ["During a driving ban you may drive no vehicle, during disqualification no motor vehicles", "A driving ban only applies abroad", "With disqualification you may still drive everything"],
+why: "The text states that a driving ban forbids all vehicles, while disqualification forbids motor vehicles."
+}
+},
+{
+id: 525,
+question: "Aan welke bestuurders kan de Lichte Educatieve Maatregel Alcohol en verkeer (LEMA) worden opgelegd?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_5_b2lnyt.png",
+answers: [
+{ text: "Aan bestuurders met een relatief laag maar te hoog alcoholgehalte, zoals 0,5‰ tot 0,8‰", isCorrect: true },
+{ text: "Alleen aan bestuurders zonder rijbewijs", isCorrect: false },
+{ text: "Alleen bij snelheidsovertredingen zonder alcohol", isCorrect: false }
+],
+why: "De LEMA is bedoeld voor bestuurders met een te hoog maar nog relatief beperkt alcoholgehalte binnen de genoemde grenzen.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Каким водителям может быть назначена Лёгкая образовательная мера «Алкоголь и движение» (LEMA)?",
+answers: ["Водителям с повышенным, но относительно невысоким уровнем алкоголя, примерно 0,5–0,8‰", "Только водителям без прав", "Только за превышение скорости без алкоголя"],
+why: "LEMA предназначена для водителей с превышением алкоголя в нижнем диапазоне указанных значений."
+},
+enTranslation: {
+question: "To which drivers can the Light Educational Measure Alcohol and Traffic (LEMA) be imposed?",
+answers: ["To drivers with an elevated but still moderate blood alcohol level, about 0.5‰ to 0.8‰", "Only to drivers without a licence", "Only for speeding offences without alcohol"],
+why: "LEMA is intended for drivers whose alcohol level is too high but still within the lower specified range."
+}
+},
+
+{
+id: 526,
+question: "Wanneer kan de Lichte Educatieve Maatregel Alcohol en verkeer (LEMA) worden opgelegd aan een beginnend bestuurder?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_5_b2lnyt.png",
+answers: [
+{ text: "Bij een alcoholgehalte van ongeveer 220 tot 350 µg/l (0,5‰ tot 0,8‰)", isCorrect: true },
+{ text: "Alleen bij een alcoholgehalte boven 1,8‰", isCorrect: false },
+{ text: "Alleen als de bestuurder zonder rijbewijs rijdt", isCorrect: false }
+],
+why: "LEMA is bedoeld voor bestuurders met een te hoog maar relatief laag alcoholgehalte binnen de genoemde grenswaarden.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Когда начинающему водителю могут назначить LEMA (Лёгкая образовательная мера «Алкоголь и движение»)?",
+answers: [
+"При уровне алкоголя примерно 220–350 мкг/л (0,5–0,8‰)",
+"Только при уровне выше 1,8‰",
+"Только если водитель едет без прав"
+],
+why: "LEMA предназначена для водителей с повышенным, но сравнительно невысоким уровнем алкоголя в указанных пределах."
+},
+enTranslation: {
+question: "When can the Light Educational Measure Alcohol and Traffic (LEMA) be imposed on a novice driver?",
+answers: [
+"At a blood alcohol level of about 220 to 350 µg/l (0.5‰ to 0.8‰)",
+"Only at a level above 1.8‰",
+"Only if the driver has no licence"
+],
+why: "LEMA is intended for drivers with an elevated but relatively low alcohol level within these limits."
+}
+},
+{
+id: 527,
+question: "Op welke bestuurders kan de Educatieve Maatregel Alcohol en verkeer (EMA) worden toegepast?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_6_ogx9ch.png",
+answers: [
+{ text: "Op bestuurders met een hoger alcoholgehalte, bijvoorbeeld 0,8‰ tot 1,3‰ of die weigeren mee te werken aan een alcoholcontrole", isCorrect: true },
+{ text: "Alleen op bestuurders die te hard rijden zonder alcohol te gebruiken", isCorrect: false },
+{ text: "Alleen op bestuurders met een LEMA in het verleden", isCorrect: false }
+],
+why: "EMA is voor zwaardere alcoholgevallen: hoger promillage of weigering mee te werken aan een controle.",
+topic: "wettelijk",
+ruTranslation: {
+question: "К каким водителям применяется EMA (Образовательная мера «Алкоголь и движение»)?",
+answers: [
+"К водителям с более высоким уровнем алкоголя, примерно 0,8–1,3‰, или отказавшимся от проверки",
+"Только к водителям, которые просто ехали слишком быстро без алкоголя",
+"Только к тем, у кого раньше уже была LEMA"
+],
+why: "EMA назначают при более серьёзных нарушениях, связанных с алкоголем: высокое промилле или отказ от проверки."
+},
+enTranslation: {
+question: "To which drivers can the Educational Measure Alcohol and Traffic (EMA) be applied?",
+answers: [
+"To drivers with a higher alcohol level, e.g. about 0.8‰ to 1.3‰, or who refuse an alcohol test",
+"Only to drivers who were just speeding without alcohol",
+"Only to drivers who previously had a LEMA"
+],
+why: "EMA is used for more serious alcohol cases: higher BAC or refusal to cooperate with testing."
+}
+},
+{
+id: 528,
+question: "Voor welk gedrag is de Educatieve Maatregel Gedrag (LEMG) vooral bedoeld?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_7_mfmxdq.png",
+answers: [
+{ text: "Voor bestuurders die 50–60 km/uur te hard rijden (of 30–60 km/uur bij wegwerkzaamheden)", isCorrect: true },
+{ text: "Voor bestuurders die vergeten richting aan te geven", isCorrect: false },
+{ text: "Voor fout parkeren in de bebouwde kom", isCorrect: false }
+],
+why: "LEMG is gericht op forse snelheidsovertredingen, vaak door jonge bestuurders.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Для какого поведения в основном предназначена LEMG (Лёгкая образовательная мера «Поведение»)?",
+answers: [
+"Для водителей, превысивших скорость на 50–60 км/ч (или 30–60 км/ч при дорожных работах)",
+"Для водителей, забывших включить поворотник",
+"Для неправильной парковки в городе"
+],
+why: "LEMG направлена на серьёзные превышения скорости, которые часто совершают молодые водители."
+},
+enTranslation: {
+question: "For what type of behaviour is the Light Educational Measure Behaviour (LEMG) mainly intended?",
+answers: [
+"For drivers who exceed the speed limit by 50–60 km/h (or 30–60 km/h at roadworks)",
+"For drivers who forget to indicate",
+"For incorrect parking in built-up areas"
+],
+why: "LEMG targets major speeding offences, often committed by young drivers."
+}
+},
+{
+id: 529,
+question: "Voor welke bestuurders is de Educatieve Maatregel Drugs (EMD) bedoeld?",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/wettelijk_8_nvabym.png",
+answers: [
+{ text: "Voor bestuurders die worden aangehouden voor rijden onder invloed van drugs", isCorrect: true },
+{ text: "Voor bestuurders die nooit een verkeersovertreding hebben begaan", isCorrect: false },
+{ text: "Voor bestuurders die alleen lichte parkeerovertredingen maken", isCorrect: false }
+],
+why: "EMD is specifiek bedoeld voor bestuurders die onder invloed van drugs rijden; soms gaat daar eerst een geschiktheidsonderzoek aan vooraf.",
+topic: "wettelijk",
+ruTranslation: {
+question: "Для каких водителей предназначена EMD (Образовательная мера «Наркотики»)?",
+answers: [
+"Для водителей, задержанных за вождение под воздействием наркотиков",
+"Для водителей, никогда не нарушавших правила",
+"Для водителей только с лёгкими парковочными штрафами"
+],
+why: "EMD специально предназначена для тех, кто управлял автомобилем под воздействием наркотиков; иногда сначала проводят медосвидетельствование."
+},
+enTranslation: {
+question: "For which drivers is the Educational Measure Drugs (EMD) intended?",
+answers: [
+"For drivers who are stopped for driving under the influence of drugs",
+"For drivers who have never committed an offence",
+"For drivers with only minor parking tickets"
+],
+why: "EMD is specifically aimed at drivers who drive under the influence of drugs; sometimes a fitness examination precedes it."
+}
+},
+
+
+
+// aanhangwagen
+// 1212323423453
+// 56435643564356
+// 3456
+// 4356
+// 456
+// 34
+// 5634
+// 56
+
+{
+ id: 530,
+ question: "Wat is de maximaal toegestane massa voor een aanhangwagen zonder extra regels met rijbewijs B?",
+ imageUrl: "",
+ answers: [
+  { text: "750 kg", isCorrect: true },
+  { text: "1500 kg", isCorrect: false },
+  { text: "3500 kg", isCorrect: false }
+ ],
+ why: "Met rijbewijs B mag je zonder extra voorwaarden een aanhangwagen tot 750 kg trekken.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какая максимальная масса прицепа без доп. условий с категорией B?",
+  answers: ["750 кг", "1500 кг", "3500 кг"],
+  why: "С категорией B можно буксировать прицеп до 750 кг без дополнительных правил."
+ },
+ enTranslation: {
+  question: "What is the maximum trailer weight without extra rules with category B?",
+  answers: ["750 kg", "1500 kg", "3500 kg"],
+  why: "With a B license, a trailer up to 750 kg is allowed without extra requirements."
+ }
+},
+{
+ id: 531,
+ question: "Wanneer heb je rijbewijs BE nodig?",
+ imageUrl: "",
+ answers: [
+  { text: "Als auto + aanhangwagen samen meer dan 3500 kg wegen", isCorrect: true },
+  { text: "Bij elke caravan", isCorrect: false },
+  { text: "Als de aanhangwagen lichter is dan 750 kg", isCorrect: false }
+ ],
+ why: "Rijbewijs BE is vereist wanneer het totaalgewicht hoger is dan 3500 kg.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Когда требуется категория BE?",
+  answers: ["Если общий вес авто и прицепа > 3500 кг", "При любой караване", "Если прицеп легче 750 кг"],
+  why: "Категория BE нужна если общий вес превышает 3500 кг."
+ },
+ enTranslation: {
+  question: "When do you need license BE?",
+  answers: ["If car + trailer exceed 3500 kg", "For any caravan", "If trailer weighs under 750 kg"],
+  why: "BE is required when the total exceeds 3500 kg."
+ }
+},
+{
+ id: 532,
+ question: "Wat is de maximale hoogte van een aanhangwagen?",
+ imageUrl: "",
+ answers: [
+  { text: "4 meter", isCorrect: true },
+  { text: "3 meter", isCorrect: false },
+  { text: "5 meter", isCorrect: false }
+ ],
+ why: "De wettelijke maximale hoogte is 4 meter.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какая максимальная высота прицепа?",
+  answers: ["4 м", "3 м", "5 м"],
+  why: "Максимальная разрешённая высота — 4 м."
+ },
+ enTranslation: {
+  question: "What is the maximum height of a trailer?",
+  answers: ["4 m", "3 m", "5 m"],
+  why: "The legal maximum is 4 meters."
+ }
+},
+{
+ id: 533,
+ question: "Waar vind je het maximaal trekgewicht van je auto?",
+ imageUrl: "",
+ answers: [
+  { text: "Op het kentekenbewijs", isCorrect: true },
+  { text: "Op de bandenspanning sticker", isCorrect: false },
+  { text: "Op de voorruit", isCorrect: false }
+ ],
+ why: "Het trekgewicht staat vermeld op het kentekenbewijs.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Где указывается максимальная буксировочная масса автомобиля?",
+  answers: ["В регистрационных документах", "На наклейке давления шин", "На лобовом стекле"],
+  why: "Там прописан максимально разрешённый вес прицепа."
+ },
+ enTranslation: {
+  question: "Where can you find the maximum towing limit?",
+  answers: ["On the registration papers", "On the tire pressure sticker", "On the windshield"],
+  why: "It is printed on the registration document."
+ }
+},
+{
+ id: 534,
+ question: "Wat is de maximale lengte van auto + aanhangwagen samen?",
+ imageUrl: "",
+ answers: [
+  { text: "18 meter", isCorrect: true },
+  { text: "12 meter", isCorrect: false },
+  { text: "20 meter", isCorrect: false }
+ ],
+ why: "De totale maximale lengte is 18 meter.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какова максимальная длина автомобиля + прицепа?",
+  answers: ["18 м", "12 м", "20 м"],
+  why: "Максимально разрешённая длина — 18 м."
+ },
+ enTranslation: {
+  question: "What is the maximum allowed length of car + trailer?",
+  answers: ["18 m", "12 m", "20 m"],
+  why: "18 meters is the legal limit."
+ }
+},
+{
+ id: 535,
+ question: "Welke kleur moet het kenteken van een aanhangwagen van meer dan 750 kg hebben?",
+ imageUrl: "",
+ answers: [
+  { text: "Geel met eigen nummer", isCorrect: true },
+  { text: "Wit zonder nummer", isCorrect: false },
+  { text: "Rood", isCorrect: false }
+ ],
+ why: "Zwaardere aanhangwagens hebben een gele kentekenplaat met eigen nummer.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какого цвета должен быть номерной знак прицепа тяжелее 750 кг?",
+  answers: ["Жёлтый с собственным номером", "Белый без номера", "Красный"],
+  why: "Прицепы >750 кг должны иметь жёлтый номер."
+ },
+ enTranslation: {
+  question: "What color must a trailer plate be if it weighs more than 750 kg?",
+  answers: ["Yellow with its own number", "White without number", "Red"],
+  why: "Trailers above 750 kg require a yellow plate."
+ }
+},
+{
+ id: 536,
+ question: "Wat is een hulpkoppeling?",
+ imageUrl: "Losbreekkabel aanhanger afbeelding",
+ answers: [
+  { text: "Een stalen kabel die voorkomt dat een aanhanger los schiet", isCorrect: true },
+  { text: "Een extra rem", isCorrect: false },
+  { text: "Een lamp", isCorrect: false }
+ ],
+ why: "Een hulpkoppeling houdt een ongeremde aanhanger verbonden als hij loskomt.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что такое страховочный трос прицепа?",
+  answers: ["Стальной трос, предотвращающий отцепление", "Запасной тормоз", "Фара"],
+  why: "Он удерживает прицеп, если сцепка разорвётся."
+ },
+ enTranslation: {
+  question: "What is a breakaway safety cable?",
+  answers: ["A steel cable preventing the trailer from detaching", "An extra brake", "A light"],
+  why: "It keeps the trailer attached if coupling fails."
+ }
+},
 
 
 
 
+
+{
+ id: 537,
+ question: "Wanneer is een losbreekreminrichting verplicht?",
+ imageUrl: "",
+ answers: [
+  { text: "Bij aanhangwagens met een massa van meer dan 1500 kg", isCorrect: true },
+  { text: "Altijd, ongeacht het gewicht", isCorrect: false },
+  { text: "Alleen bij bagagewagens", isCorrect: false }
+ ],
+ why: "Voor zware aanhangwagens (>1500 kg) is een losbreekreminrichting verplicht.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Когда тормозной страховочный механизм обязателен?",
+  answers: ["При прицепах более 1500 кг", "Всегда", "Только при багажных прицепах"],
+  why: "Тормоз обязателен при массе более 1500 кг."
+ },
+ enTranslation: {
+  question: "When is a breakaway brake system mandatory?",
+  answers: ["For trailers over 1500 kg", "Always", "Only for luggage trailers"],
+  why: "Required on trailers heavier than 1500 kg."
+ }
+},
+{
+ id: 538,
+ question: "Wat moet een aanhangwagen altijd hebben aan de achterkant?",
+ imageUrl: "",
+ answers: [
+  { text: "2 rode reflectoren", isCorrect: true },
+  { text: "Groene verlichting", isCorrect: false },
+  { text: "Een gevarendriehoek", isCorrect: false }
+ ],
+ why: "Aanhangwagens moeten verplicht twee rode reflectoren hebben.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что обязательно должно быть сзади у прицепа?",
+  answers: ["2 красных отражателя", "Зелёные лампы", "Знак аварии"],
+  why: "По правилам прицепы должны иметь два красных отражателя."
+ },
+ enTranslation: {
+  question: "What must a trailer always have at the rear?",
+  answers: ["Two red reflectors", "Green lighting", "A warning triangle"],
+  why: "Two red reflectors are mandatory."
+ }
+},
+{
+ id: 539,
+ question: "Welke verlichting moet een aanhangwagen aan de voorkant hebben?",
+ imageUrl: "",
+ answers: [
+  { text: "2 witte reflectoren", isCorrect: true },
+  { text: "Gele knipperlichten", isCorrect: false },
+  { text: "Blauwe lampen", isCorrect: false }
+ ],
+ why: "Aan de voorkant moeten verplicht twee witte reflectoren aanwezig zijn.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какие элементы должны быть спереди прицепа?",
+  answers: ["2 белых отражателя", "Жёлтые поворотники", "Синие лампы"],
+  why: "Спереди обязаны стоять два белых отражателя."
+ },
+ enTranslation: {
+  question: "Which front equipment is mandatory on a trailer?",
+  answers: ["Two white reflectors", "Yellow indicators", "Blue lights"],
+  why: "Two white reflectors are required on the front."
+ }
+},
+{
+ id: 540,
+ question: "Wat is de maximale breedte van een aanhangwagen?",
+ imageUrl: "",
+ answers: [
+  { text: "2,55 meter", isCorrect: true },
+  { text: "2,00 meter", isCorrect: false },
+  { text: "3,00 meter", isCorrect: false }
+ ],
+ why: "De maximale wettelijke breedte is 2,55 meter.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какая максимальная ширина прицепа?",
+  answers: ["2,55 м", "2,00 м", "3,00 м"],
+  why: "Максимальная разрешенная ширина — 2,55 м."
+ },
+ enTranslation: {
+  question: "What is the maximum allowed width of a trailer?",
+  answers: ["2.55 meters", "2.00 meters", "3.00 meters"],
+  why: "Legally limited to 2.55 meters."
+ }
+},
+{
+ id: 541,
+ question: "Wat moet een ongeremde aanhangwagen hebben?",
+ imageUrl: "",
+ answers: [
+  { text: "Een hulpkoppeling", isCorrect: true },
+  { text: "Een aparte nummerplaat", isCorrect: false },
+  { text: "Geen verlichting", isCorrect: false }
+ ],
+ why: "Ongeremde aanhangwagens moeten voorzien zijn van een hulpkoppeling voor veiligheid.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что обязательно для не тормозного прицепа?",
+  answers: ["Страховочный трос", "Отдельный номер", "Нет освещения"],
+  why: "Он должен иметь страховочный трос."
+ },
+ enTranslation: {
+  question: "What must an unbraked trailer have?",
+  answers: ["A safety cable", "A separate number plate", "No lights"],
+  why: "A safety coupling is mandatory."
+ }
+},
+{
+ id: 542,
+ question: "Hoeveel achterlichten moet een aanhangwagen hebben?",
+ imageUrl: "",
+ answers: [
+  { text: "2 achterlichten", isCorrect: true },
+  { text: "1 achterlicht", isCorrect: false },
+  { text: "Geen achterlichten", isCorrect: false }
+ ],
+ why: "Minimaal twee achterlichten zijn verplicht.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Сколько задних фонарей должно быть у прицепа?",
+  answers: ["2", "1", "0"],
+  why: "По правилам — два."
+ },
+ enTranslation: {
+  question: "How many rear lights must a trailer have?",
+  answers: ["2", "1", "0"],
+  why: "A minimum of two is mandatory."
+ }
+},
+{
+ id: 543,
+ question: "Wat gebeurt er als de losbreekkabel breekt?",
+ imageUrl: "Losbreekkabel aanhanger afbeelding",
+ answers: [
+  { text: "De rem van de aanhangwagen komt in werking", isCorrect: true },
+  { text: "De verlichting gaat knipperen", isCorrect: false },
+  { text: "Er gebeurt niets", isCorrect: false }
+ ],
+ why: "De losbreekrem zorgt ervoor dat de aanhanger automatisch stopt.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что происходит если порвётся страховочный тормозной трос?",
+  answers: ["Срабатывает тормоз прицепа", "Начинают мигать фары", "Ничего"],
+  why: "Система автоматически тормозит прицеп."
+ },
+ enTranslation: {
+  question: "What happens if the breakaway cable snaps?",
+  answers: ["The trailer brake will activate", "Lights start blinking", "Nothing happens"],
+  why: "It activates the brake to stop the trailer."
+ }
+},
+{
+ id: 544,
+ question: "Welke kentekenplaat heeft een lichte aanhangwagen tot 750 kg?",
+ imageUrl: "",
+ answers: [
+  { text: "Witte plaat met goedkeuringsmerk", isCorrect: true },
+  { text: "Gele plaat met eigen nummer", isCorrect: false },
+  { text: "Geen plaat nodig", isCorrect: false }
+ ],
+ why: "Lichte aanhangwagens gebruiken een witte plaat met keurmerk.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Какой номерной знак использует лёгкий прицеп до 750 кг?",
+  answers: ["Белый с отметкой", "Жёлтый со своим номером", "Никакой"],
+  why: "Для лёгких прицепов используется белый знак."
+ },
+ enTranslation: {
+  question: "What plate does a light trailer up to 750 kg use?",
+  answers: ["White plate with approval mark", "Yellow plate with its own number", "None"],
+  why: "Light trailers use a white plate."
+ }
+},
+{
+ id: 545,
+ question: "Welke remverlichting moet een aanhangwagen hebben?",
+ imageUrl: "",
+ answers: [
+  { text: "2 remlichten", isCorrect: true },
+  { text: "1 remlicht", isCorrect: false },
+  { text: "Geen remlichten", isCorrect: false }
+ ],
+ why: "Aanhangwagens moeten twee remlichten hebben.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Сколько стоп-сигналов должно быть у прицепа?",
+  answers: ["2", "1", "0"],
+  why: "По стандарту — два стоп-сигнала."
+ },
+ enTranslation: {
+  question: "How many brake lights must a trailer have?",
+  answers: ["2", "1", "0"],
+  why: "Two brake lights are required."
+ }
+},
+{
+ id: 546,
+ question: "Waarom is correcte belading van een aanhangwagen belangrijk?",
+ imageUrl: "",
+ answers: [
+  { text: "Voor stabiliteit en veiligheid", isCorrect: true },
+  { text: "Voor een lagere maximumsnelheid", isCorrect: false },
+  { text: "Alleen voor belastingdienst", isCorrect: false }
+ ],
+ why: "Onjuist beladen aanhangwagens kunnen slingeren en gevaar opleveren.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Почему важно правильно загружать прицеп?",
+  answers: ["Для устойчивости и безопасности", "Чтобы ехать медленнее", "Только для налоговой"],
+  why: "Неправильная загрузка может вызвать раскачивание."
+ },
+ enTranslation: {
+  question: "Why is correct trailer loading important?",
+  answers: ["For stability and safety", "To reduce speed limits", "Only for tax purposes"],
+  why: "Incorrect loading can cause dangerous swaying."
+ }
+},
+{
+ id: 547,
+ question: "Wat kan er gebeuren bij te hoge kogeldruk?",
+ imageUrl: "",
+ answers: [
+  { text: "De achterkant van de auto zakt en sturen wordt moeilijker", isCorrect: true },
+  { text: "De rit wordt sneller", isCorrect: false },
+  { text: "Je verliest minder grip", isCorrect: false }
+ ],
+ why: "Te hoge kogeldruk maakt sturen en remmen gevaarlijker.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что происходит при слишком большой нагрузке на шар фаркопа?",
+  answers: ["Зад машины опускается и рулить сложнее", "Машина ускоряется", "Сцепление улучшается"],
+  why: "Большая нагрузка ухудшает управляемость и торможение."
+ },
+ enTranslation: {
+  question: "What happens if nose weight is too high?",
+  answers: ["Rear of the car lowers and steering becomes harder", "The trip becomes faster", "You gain more grip"],
+  why: "High nose weight affects control and braking."
+ }
+},
+{
+ id: 548,
+ question: "Wat moet je controleren voordat je met een aanhangwagen wegrijdt?",
+ imageUrl: "",
+ answers: [
+  { text: "Verlichting, koppeling en belasting", isCorrect: true },
+  { text: "Alleen de kleur van het kenteken", isCorrect: false },
+  { text: "Alleen de wielbouten", isCorrect: false }
+ ],
+ why: "Veilig rijden vereist controle van koppeling, verlichting en belading.",
+ topic: "aanhangwagen",
+ ruTranslation: {
+  question: "Что нужно проверить перед поездкой с прицепом?",
+  answers: ["Освещение, сцепку и груз", "Только цвет номера", "Только болты колёс"],
+  why: "Важно проверить сцепление, нагрузку и освещение."
+ },
+ enTranslation: {
+  question: "What must you check before driving with a trailer?",
+  answers: ["Lights, coupling and load", "Only number plate color", "Only wheel bolts"],
+  why: "Safety requires checking the load, coupling and lighting."
+ }
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// topic нормальный сделать
 
 ];
 mongoose.connect('mongodb://localhost:27017/proeftoets')
