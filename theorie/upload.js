@@ -12504,7 +12504,7 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 {
  id: 530,
  question: "Wat is de maximaal toegestane massa voor een aanhangwagen zonder extra regels met rijbewijs B?",
- imageUrl: "",
+ imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/ChatGPT_Image_Nov_18_2025_04_54_09_PM_kaeukr.png",
  answers: [
   { text: "750 kg", isCorrect: true },
   { text: "1500 kg", isCorrect: false },
@@ -12548,7 +12548,7 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 {
  id: 532,
  question: "Wat is de maximale hoogte van een aanhangwagen?",
- imageUrl: "",
+ imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/ChatGPT_Image_Nov_18_2025_04_54_09_PM_kaeukr.png",
  answers: [
   { text: "4 meter", isCorrect: true },
   { text: "3 meter", isCorrect: false },
@@ -12636,7 +12636,7 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 {
  id: 536,
  question: "Wat is een hulpkoppeling?",
- imageUrl: "Losbreekkabel aanhanger afbeelding",
+ imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/aanhangwagen_1_ljtqgb.png",
  answers: [
   { text: "Een stalen kabel die voorkomt dat een aanhanger los schiet", isCorrect: true },
   { text: "Een extra rem", isCorrect: false },
@@ -12663,7 +12663,7 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 {
  id: 537,
  question: "Wanneer is een losbreekreminrichting verplicht?",
- imageUrl: "",
+ imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/aanhangwagen_1_ljtqgb.png",
  answers: [
   { text: "Bij aanhangwagens met een massa van meer dan 1500 kg", isCorrect: true },
   { text: "Altijd, ongeacht het gewicht", isCorrect: false },
@@ -12795,7 +12795,7 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 {
  id: 543,
  question: "Wat gebeurt er als de losbreekkabel breekt?",
- imageUrl: "Losbreekkabel aanhanger afbeelding",
+ imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/aanhangwagen_1_ljtqgb.png",
  answers: [
   { text: "De rem van de aanhangwagen komt in werking", isCorrect: true },
   { text: "De verlichting gaat knipperen", isCorrect: false },
@@ -12925,6 +12925,840 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
  }
 },
 
+// afstand en snelheid
+
+
+
+
+{
+  id: 549,
+  question: "Wat geeft dit verkeersbord aan?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G1_zb_yox9dp.png",
+  answers: [
+    { text: "Begin van een autosnelweg", isCorrect: true },
+    { text: "Einde van bebouwde kom", isCorrect: false },
+    { text: "Maximumsnelheid 120 km/u", isCorrect: false }
+  ],
+  why: "Bord G1 geeft het begin van een autosnelweg aan.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Что показывает этот знак?",
+    answers: ["Начало автомагистрали", "Конец населённого пункта", "Максимальная скорость 120 км/ч"],
+    why: "Знак G1 обозначает начало автомагистрали."
+  },
+  enTranslation: {
+    question: "What does this sign indicate?",
+    answers: ["Start of motorway", "End of built-up area", "Maximum speed 120 km/h"],
+    why: "Sign G1 indicates the beginning of a motorway."
+  }
+},
+
+{
+  id: 550,
+  question: "Wat is de maximale snelheid op een autosnelweg (tenzij anders aangegeven)?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G1_zb_yox9dp.png",
+  answers: [
+    { text: "130 km/u", isCorrect: true },
+    { text: "120 km/u", isCorrect: false },
+    { text: "100 km/u", isCorrect: false }
+  ],
+  why: "De wettelijke maximumsnelheid op een autosnelweg is 130 km/u tenzij anders aangegeven.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какая максимальная скорость на автомагистрали (если не указано иначе)?",
+    answers: ["130 км/ч", "120 км/ч", "100 км/ч"],
+    why: "Максимальная разрешённая скорость — 130 км/ч, если нет других указаний."
+  },
+  enTranslation: {
+    question: "What is the maximum speed on a motorway (unless stated otherwise)?",
+    answers: ["130 km/h", "120 km/h", "100 km/h"],
+    why: "The legal motorway speed limit is 130 km/h unless otherwise stated."
+  }
+},
+
+{
+  id: 551,
+  question: "Hoe snel mag je tussen 06:00 en 19:00 uur rijden op snelwegen sinds 2020?",
+  imageUrl: "",
+  answers: [
+    { text: "100 km/u", isCorrect: true },
+    { text: "120 km/u", isCorrect: false },
+    { text: "130 km/u", isCorrect: false }
+  ],
+  why: "Sinds 2020 geldt overdag op snelwegen 100 km/u.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "С какой скоростью можно ехать по автомагистрали с 06:00 до 19:00 после изменений 2020 года?",
+    answers: ["100 км/ч", "120 км/ч", "130 км/ч"],
+    why: "С 2020 года днём на автомагистрали действует лимит 100 км/ч."
+  },
+  enTranslation: {
+    question: "What is the motorway speed limit between 06:00 and 19:00 since 2020?",
+    answers: ["100 km/h", "120 km/h", "130 km/h"],
+    why: "Since 2020, daytime speed limit is 100 km/h."
+  }
+},
+
+{
+  id: 552,
+  question: "Wat betekent het onderste bord '6-19 h' onder een snelheidsbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/100km_f6wzpf.png",
+  answers: [
+    { text: "De snelheidslimiet geldt alleen tussen 6:00 en 19:00", isCorrect: true },
+    { text: "De snelheidslimiet geldt 's nachts", isCorrect: false },
+    { text: "Er geldt geen snelheidslimiet buiten deze tijden", isCorrect: false }
+  ],
+  why: "Het tijdvak duidt aan wanneer de aangegeven snelheid geldt.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Что означает табличка '6-19 h' под знаком скорости?",
+    answers: ["Ограничение действует только с 6:00 до 19:00", "Ограничение действует ночью", "За пределами времени ограничений нет"],
+    why: "Время указывает период, когда действует ограничение."
+  },
+  enTranslation: {
+    question: "What does the '6-19 h' mean under a speed sign?",
+    answers: ["Speed limit applies only from 6 AM to 7 PM", "Speed limit applies at night", "No speed limit outside these hours"],
+    why: "The time panel indicates when the speed limit is valid."
+  }
+},
+
+{
+  id: 553,
+  question: "Welke maximale snelheid hoort bij dit bord?",
+  imageUrl: "",
+  answers: [
+    { text: "120 km/u", isCorrect: true },
+    { text: "100 km/u", isCorrect: false },
+    { text: "130 km/u", isCorrect: false }
+  ],
+  why: "Een rond rood bord met een cijfer geeft een maximumsnelheid aan.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какую скорость обозначает этот знак?",
+    answers: ["120 км/ч", "100 км/ч", "130 км/ч"],
+    why: "Красный круглый знак с числом — это ограничение скорости."
+  },
+  enTranslation: {
+    question: "What speed does this sign indicate?",
+    answers: ["120 km/h", "100 km/h", "130 km/h"],
+    why: "A red circular sign with a number shows maximum speed."
+  }
+},
+
+{
+  id: 554,
+  question: "Wat is de maximumsnelheid binnen de bebouwde kom?",
+  imageUrl: "",
+  answers: [
+    { text: "50 km/u", isCorrect: true },
+    { text: "80 km/u", isCorrect: false },
+    { text: "30 km/u", isCorrect: false }
+  ],
+  why: "Binnen de bebouwde kom geldt standaard 50 km/u.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какая скорость разрешена в пределах населённого пункта?",
+    answers: ["50 км/ч", "80 км/ч", "30 км/ч"],
+    why: "В населённом пункте действует стандартное ограничение — 50 км/ч."
+  },
+  enTranslation: {
+    question: "What is the maximum speed inside built-up areas?",
+    answers: ["50 km/h", "80 km/h", "30 km/h"],
+    why: "Standard limit is 50 km/h in built-up areas."
+  }
+},
+
+{
+  id: 555,
+  question: "Wat is de maximumsnelheid buiten de bebouwde kom (niet op autowegen)?",
+  imageUrl: "",
+  answers: [
+    { text: "80 km/u", isCorrect: true },
+    { text: "100 km/u", isCorrect: false },
+    { text: "120 km/u", isCorrect: false }
+  ],
+  why: "Buiten de bebouwde kom is de standaard snelheid 80 km/u.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какая скорость разрешена вне населённого пункта (не на автомагистрали)?",
+    answers: ["80 км/ч", "100 км/ч", "120 км/ч"],
+    why: "Вне населённого пункта ограничение — 80 км/ч."
+  },
+  enTranslation: {
+    question: "What is the maximum speed outside built-up areas (not highway)?",
+    answers: ["80 km/h", "100 km/h", "120 km/h"],
+    why: "Speed limit outside built-up areas is 80 km/h."
+  }
+},
+
+{
+  id: 556,
+  question: "Wat is de minimumsnelheid op een autosnelweg?",
+  imageUrl: "",
+  answers: [
+    { text: "60 km/u", isCorrect: true },
+    { text: "80 km/u", isCorrect: false },
+    { text: "Geen minimumsnelheid", isCorrect: false }
+  ],
+  why: "Op de autosnelweg mag je alleen rijden als je minstens 60 km/u kunt rijden.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какова минимальная скорость на автомагистрали?",
+    answers: ["60 км/ч", "80 км/ч", "Минимальной скорости нет"],
+    why: "На автомагистрали можно ехать только если машина способна ехать минимум 60 км/ч."
+  },
+  enTranslation: {
+    question: "What is the minimum allowed speed on a motorway?",
+    answers: ["60 km/h", "80 km/h", "There is no minimum speed"],
+    why: "Motorways require vehicles capable of at least 60 km/h."
+  }
+},
+
+{
+  id: 557,
+  question: "Welke van deze voertuigen heeft een maximumsnelheid van 45 km/u?",
+  imageUrl: "",
+  answers: [
+    { text: "Brommobiel", isCorrect: true },
+    { text: "Auto", isCorrect: false },
+    { text: "Motorfiets", isCorrect: false }
+  ],
+  why: "Een brommobiel heeft maximum 45 km/u.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какое из этих транспортных средств имеет ограничение скорости 45 км/ч?",
+    answers: ["Броммобиль", "Легковой автомобиль", "Мотоцикл"],
+    why: "Броммобиль имеет ограничение 45 км/ч."
+  },
+  enTranslation: {
+    question: "Which vehicle has a max speed of 45 km/h?",
+    answers: ["Microcar", "Car", "Motorcycle"],
+    why: "Microcars are limited to max 45 km/h."
+  }
+},
+
+{
+  id: 558,
+  question: "Welke van deze voertuigen mag maximaal 25 km/u rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Snorfiets", isCorrect: true },
+    { text: "Bromfiets", isCorrect: false },
+    { text: "Speed-pedelec", isCorrect: false }
+  ],
+  why: "Snorfietsen hebben een maximum van 25 km/u.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какое транспортное средство имеет ограничение скорости 25 км/ч?",
+    answers: ["Снорфит (лёгкий мопед)", "Бромфит (мопед)", "Speed-pedelec"],
+    why: "Для лёгких мопедов установлен лимит — 25 км/ч."
+  },
+  enTranslation: {
+    question: "Which vehicle may drive max 25 km/h?",
+    answers: ["Moped (snorfiets)", "Moped (bromfiets)", "Speed-pedelec"],
+    why: "Light mopeds are limited to 25 km/h."
+  }
+},
+
+{
+  id: 559,
+  question: "Wat is de maximumsnelheid voor een voertuig dat een aanhanger trekt van meer dan 3500 kg?",
+  imageUrl: "",
+  answers: [
+    { text: "90 km/u", isCorrect: true },
+    { text: "120 km/u", isCorrect: false },
+    { text: "130 km/u", isCorrect: false }
+  ],
+  why: "Voertuigen die zware aanhangwagens trekken hebben een lagere maximumsnelheid.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какова максимальная скорость автомобиля с прицепом тяжелее 3500 кг?",
+    answers: ["90 км/ч", "120 км/ч", "130 км/ч"],
+    why: "Транспортные средства с тяжёлыми прицепами обязаны ехать медленнее."
+  },
+  enTranslation: {
+    question: "What is the max speed for a vehicle towing a trailer over 3500 kg?",
+    answers: ["90 km/h", "120 km/h", "130 km/h"],
+    why: "Vehicles towing heavy trailers must drive slower."
+  }
+},
+
+{
+  id: 560,
+  question: "Welke maximumsnelheid geldt op een autoweg, tenzij anders aangegeven?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G3_pjbqj5.png",
+  answers: [
+    { text: "100 km/u", isCorrect: true },
+    { text: "80 km/u", isCorrect: false },
+    { text: "130 km/u", isCorrect: false }
+  ],
+  why: "Op autowegen geldt standaard 100 km/u tenzij anders aangegeven.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какая максимальная скорость на дороге типа autoweg (если не указано иначе)?",
+    answers: ["100 км/ч", "80 км/ч", "130 км/ч"],
+    why: "На таких дорогах обычно действует ограничение 100 км/ч."
+  },
+  enTranslation: {
+    question: "What is the default speed limit on an autoweg unless stated otherwise?",
+    answers: ["100 km/h", "80 km/h", "130 km/h"],
+    why: "Autowegen have a standard limit of 100 km/h."
+  }
+},
+
+{
+  id: 561,
+  question: "Welke snelheid geldt bij dit bord met blauwe plaatsnaam?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/H1_wxitzr.png",
+  answers: [
+    { text: "50 km/u binnen de bebouwde kom", isCorrect: true },
+    { text: "80 km/u", isCorrect: false },
+    { text: "Geen snelheidslimiet", isCorrect: false }
+  ],
+  why: "Het H1 plaatsnaambord betekent begin bebouwde kom = 50 km/u regel.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Что означает этот знак с названием города?",
+    answers: ["Ограничение 50 км/ч в населённом пункте", "Ограничение 80 км/ч", "Нет ограничения"],
+    why: "Голубой знак с названием города означает въезд в населённый пункт, где лимит — 50 км/ч."
+  },
+  enTranslation: {
+    question: "What speed applies at this town entrance sign?",
+    answers: ["50 km/h inside built-up area", "80 km/h", "No speed limit"],
+    why: "Town boundary signs indicate the start of a 50 km/h zone."
+  }
+},
+
+{
+  id: 562,
+  question: "Welke maximumsnelheid geldt voor landbouwvoertuigen met een kenteken buiten de bebouwde kom?",
+  imageUrl: "",
+  answers: [
+    { text: "40 km/u", isCorrect: true },
+    { text: "25 km/u", isCorrect: false },
+    { text: "60 km/u", isCorrect: false }
+  ],
+  why: "Landbouwvoertuigen met kenteken mogen maximaal 40 km/u buiten de bebouwde kom.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какова максимальная скорость сельхозтехники с номером вне населённого пункта?",
+    answers: ["40 км/ч", "25 км/ч", "60 км/ч"],
+    why: "Технике с госномером разрешено двигаться максимум 40 км/ч за городом."
+  },
+  enTranslation: {
+    question: "What is the max speed for farm vehicles with a plate outside towns?",
+    answers: ["40 km/h", "25 km/h", "60 km/h"],
+    why: "Registered agricultural vehicles may drive up to 40 km/h."
+  }
+},
+
+{
+  id: 563,
+  question: "Wat is de maximumsnelheid voor een T100-bus?",
+  imageUrl: "",
+  answers: [
+    { text: "100 km/u", isCorrect: true },
+    { text: "80 km/u", isCorrect: false },
+    { text: "130 km/u", isCorrect: false }
+  ],
+  why: "T100-bussen mogen maximaal 100 km/u rijden.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какова максимальная скорость автобуса T100?",
+    answers: ["100 км/ч", "80 км/ч", "130 км/ч"],
+    why: "Автобусы категории T100 могут ехать максимум 100 км/ч."
+  },
+  enTranslation: {
+    question: "What is the max speed for a T100 bus?",
+    answers: ["100 km/h", "80 km/h", "130 km/h"],
+    why: "T100 buses are limited to 100 km/h."
+  }
+},
+
+{
+  id: 564,
+  question: "Wanneer mag je 130 km/u rijden op de snelweg?",
+  imageUrl: "",
+  answers: [
+    { text: "Na 19:00 uur en 's nachts (afhankelijk van traject)", isCorrect: true },
+    { text: "Altijd, zonder uitzondering", isCorrect: false },
+    { text: "Alleen tussen 06:00 en 19:00 uur", isCorrect: false }
+  ],
+  why: "130 km/u mag alleen buiten de dagperiode en hangt af van het traject.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Когда разрешено ехать 130 км/ч на автомагистрали?",
+    answers: ["После 19:00 и ночью (в зависимости от участка)", "Всегда", "Только с 06:00 до 19:00"],
+    why: "130 км/ч можно ехать только вечером и ночью, и не везде."
+  },
+  enTranslation: {
+    question: "When may you drive 130 km/h on the motorway?",
+    answers: ["After 19:00 and at night (depending on route)", "Always", "Only between 06:00 and 19:00"],
+    why: "130 km/h is only allowed outside daytime hours depending on location."
+  }
+},
+
+{
+  id: 565,
+  question: "Wanneer moet je extra langzaam rijden volgens de wegmarkering?",
+  imageUrl: "",
+  answers: [
+    { text: "Bij dubbele middenstrepen of smalle wegen", isCorrect: true },
+    { text: "Alleen als het regent", isCorrect: false },
+    { text: "Nooit, markering verandert niets", isCorrect: false }
+  ],
+  why: "Dubbele strepen geven extra voorzichtigheid aan.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Когда следует ехать медленнее, согласно разметке?",
+    answers: ["При двойных линиях или узкой дороге", "Только в дождь", "Никогда — разметка ничего не меняет"],
+    why: "Двойная разметка означает необходимость осторожного движения."
+  },
+  enTranslation: {
+    question: "When should you reduce speed based on road markings?",
+    answers: ["With double lines or narrow roads", "Only in rain", "Never — markings don't matter"],
+    why: "Double centerlines indicate caution and lower speed."
+  }
+},
+
+{
+  id: 566,
+  question: "Welke afstand moet je minimaal houden bij goede omstandigheden?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bewust_5_rhzyoj.png",
+  answers: [
+    { text: "Twee seconden afstand", isCorrect: true },
+    { text: "Eén seconde afstand", isCorrect: false },
+    { text: "Vijf seconden afstand", isCorrect: false }
+  ],
+  why: "Twee-seconden-regel helpt veiligheid te bewaren.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Какую дистанцию нужно держать в нормальных условиях?",
+    answers: ["Две секунды", "Одну секунду", "Пять секунд"],
+    why: "Правило двух секунд обеспечивает безопасную дистанцию."
+  },
+  enTranslation: {
+    question: "How much following distance should you keep?",
+    answers: ["Two seconds", "One second", "Five seconds"],
+    why: "The 2-second rule maintains safe following distance."
+  }
+},
+
+{
+  id: 567,
+  question: "Welke factor heeft een negatieve invloed op reactietijd?",
+  imageUrl: "",
+  answers: [
+    { text: "Vermoeidheid, alcohol of afleiding", isCorrect: true },
+    { text: "Goede nachtrust", isCorrect: false },
+    { text: "Rustig rijden", isCorrect: false }
+  ],
+  why: "Reactietijd wordt slechter door vermoeidheid, alcohol en afleiding.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Что ухудшает реакцию водителя?",
+    answers: ["Усталость, алкоголь и отвлечение", "Хороший сон", "Спокойная езда"],
+    why: "Алкоголь, усталость и отвлечённость замедляют реакцию."
+  },
+  enTranslation: {
+    question: "What negatively affects reaction time?",
+    answers: ["Fatigue, alcohol, distraction", "Good rest", "Calm driving"],
+    why: "Reaction time worsens with fatigue and intoxication."
+  }
+},
+
+{
+  id: 568,
+  question: "Hoe bereken je remweg bij 100 km/u volgens het ezelsbruggetje?",
+  imageUrl: "",
+  answers: [
+    { text: "100 / 10 = 10, dan × zichzelf / 2 = 50 meter", isCorrect: true },
+    { text: "100 / 2 = 50 meter", isCorrect: false },
+    { text: "100 × 2 = 200 meter", isCorrect: false }
+  ],
+  why: "De ezelsbrug: snelheid delen door 10, keer zichzelf, dan delen door 2.",
+  topic: "Maximumsnelheid",
+  ruTranslation: {
+    question: "Как посчитать тормозной путь при скорости 100 км/ч?",
+    answers: ["100/10 = 10, затем ×10 и ÷2 = 50 м", "100/2 = 50 м", "100×2 = 200 м"],
+    why: "Формула: скорость/10 × скорость/10 ÷2."
+  },
+  enTranslation: {
+    question: "How do you calculate braking distance at 100 km/h?",
+    answers: ["100/10 = 10, then ×10 and ÷2 = 50m", "100/2 = 50m", "100×2 = 200m"],
+    why: "Formula: speed/10 × speed/10 ÷2."
+  }
+},
+
+// bestuurder !!!!!!!!!!!!!!!!!!!!!!
+
+{
+  id: 580,
+  question: "Wat is het maximale toegestane alcoholpromillage voor een beginnend bestuurder?",
+  imageUrl: "",
+  answers: [
+    { text: "0,2‰", isCorrect: true },
+    { text: "0,5‰", isCorrect: false },
+    { text: "1,0‰", isCorrect: false }
+  ],
+  why: "Voor beginnende bestuurders geldt een strenger limiet: maximaal 0,2‰.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Какой максимальный уровень алкоголя разрешён начинающему водителю?",
+    answers: ["0,2‰", "0,5‰", "1,0‰"],
+    why: "Для начинающих водителей лимит строже — максимум 0,2‰."
+  },
+  enTranslation: {
+    question: "What is the maximum permitted alcohol level for a beginner driver?",
+    answers: ["0.2‰", "0.5‰", "1.0‰"],
+    why: "Beginner drivers have a stricter limit: maximum 0.2‰."
+  }
+},
+
+{
+  id: 581,
+  question: "Hoeveel standaardglazen alcohol mag een beginnend bestuurder drinken voordat hij boven de limiet zit?",
+  imageUrl: "",
+  answers: [
+    { text: "1 glas", isCorrect: true },
+    { text: "2 glazen", isCorrect: false },
+    { text: "Geen limiet zolang je je goed voelt", isCorrect: false }
+  ],
+  why: "Eén standaardglas bevat al genoeg alcohol om boven de limiet te komen.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Сколько стандартных бокалов алкоголя может выпить начинающий водитель и остаться в лимите?",
+    answers: ["1 бокал", "2 бокала", "Без лимита если чувствуешь себя нормально"],
+    why: "Уже один бокал может превысить допустимую норму."
+  },
+  enTranslation: {
+    question: "How many standard drinks can a beginner driver consume without exceeding the limit?",
+    answers: ["1 drink", "2 drinks", "No limit if you feel fine"],
+    why: "One drink is often enough to exceed the legal limit."
+  }
+},
+
+{
+  id: 582,
+  question: "Welke effecten kan alcohol hebben op je rijvaardigheid?",
+  imageUrl: "",
+  answers: [
+    { text: "Verminderd reactievermogen en tunnelzicht", isCorrect: true },
+    { text: "Je gaat beter concentreren", isCorrect: false },
+    { text: "Geen effect zolang je weinig drinkt", isCorrect: false }
+  ],
+  why: "Alcohol beïnvloedt je reactietijd en gezichtsveld.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Как алкоголь влияет на способность водить?",
+    answers: ["Замедляет реакцию и вызывает туннельное зрение", "Улучшает концентрацию", "Не влияет, если выпить немного"],
+    why: "Алкоголь ухудшает реакцию и восприятие."
+  },
+  enTranslation: {
+    question: "What effect can alcohol have on your driving ability?",
+    answers: ["Reduced reaction time and tunnel vision", "Improved concentration", "No effect if you drink a little"],
+    why: "Alcohol decreases response time and awareness."
+  }
+},
+
+{
+  id: 583,
+  question: "Hoeveel tijd duurt het voordat één standaardglas alcohol is afgebroken?",
+  imageUrl: "",
+  answers: [
+    { text: "ongeveer 1 tot 1,5 uur", isCorrect: true },
+    { text: "5 minuten", isCorrect: false },
+    { text: "30 minuten", isCorrect: false }
+  ],
+  why: "Het lichaam heeft tijd nodig om alcohol te verwerken.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Сколько нужно времени, чтобы организм переработал один стандартный бокал алкоголя?",
+    answers: ["Около 1–1,5 часов", "5 минут", "30 минут"],
+    why: "Организм требует времени для переработки алкоголя."
+  },
+  enTranslation: {
+    question: "How long does it take to process one standard drink?",
+    answers: ["About 1–1.5 hours", "5 minutes", "30 minutes"],
+    why: "The body needs time to eliminate alcohol."
+  }
+},
+
+{
+  id: 584,
+  question: "Hoeveel groter wordt de kans op een ongeval na 2 glazen alcohol?",
+  imageUrl: "",
+  answers: [
+    { text: "Ongeveer 40% groter", isCorrect: true },
+    { text: "Geen verschil", isCorrect: false },
+    { text: "Alleen ’s nachts", isCorrect: false }
+  ],
+  why: "Onderzoek laat zien dat 2 glazen alcohol het risico met 40% verhogen.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Насколько увеличивается шанс аварии после двух бокалов алкоголя?",
+    answers: ["Примерно на 40%", "Не меняется", "Только ночью"],
+    why: "После двух бокалов риск увеличивается примерно на 40%."
+  },
+  enTranslation: {
+    question: "How much does the risk of an accident increase after 2 alcoholic drinks?",
+    answers: ["About 40%", "No change", "Only at night"],
+    why: "Research shows risk increases by about 40%."
+  }
+},
+
+{
+  id: 585,
+  question: "Mag je rijden onder invloed van drugs?",
+  imageUrl: "",
+  answers: [
+    { text: "Nee, dat is verboden", isCorrect: true },
+    { text: "Ja, als je je goed voelt", isCorrect: false },
+    { text: "Alleen buiten de bebouwde kom", isCorrect: false }
+  ],
+  why: "Rijden onder invloed van drugs is wettelijk verboden.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Разрешено ли водить под воздействием наркотиков?",
+    answers: ["Нет, запрещено", "Да, если чувствуешь себя нормально", "Можно только вне города"],
+    why: "Управление под наркотиками запрещено по закону."
+  },
+  enTranslation: {
+    question: "Is driving under the influence of drugs allowed?",
+    answers: ["No, it is illegal", "Yes if you feel okay", "Only outside city areas"],
+    why: "Driving under drugs is legally prohibited."
+  }
+},
+
+{
+  id: 586,
+  question: "Wat betekent een gele medicatiesticker op de verpakking?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-11-20_211334_nfyexb.png",
+  answers: [
+    { text: "Dat het je rijvaardigheid kan beïnvloeden", isCorrect: true },
+    { text: "Dat het medicijn sterker werkt", isCorrect: false },
+    { text: "Dat je geen eten mag nemen", isCorrect: false }
+  ],
+  why: "De gele sticker waarschuwt voor negatieve invloed op rijvaardigheid.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Что означает жёлтая наклейка на лекарствах?",
+    answers: ["Что препарат влияет на управление автомобилем", "Что лекарство сильнее обычного", "Что нельзя есть с ним"],
+    why: "Жёлтая наклейка предупреждает о влиянии на вождение."
+  },
+  enTranslation: {
+    question: "What does a yellow medicine label mean?",
+    answers: ["It may affect driving ability", "The medicine is extra strong", "You may not eat with it"],
+    why: "The yellow label warns that it affects driving."
+  }
+},
+
+{
+  id: 587,
+  question: "Mag je een mobiele telefoon vasthouden tijdens het rijden?",
+  imageUrl: "",
+  answers: [
+    { text: "Nee, dat is verboden", isCorrect: true },
+    { text: "Ja, als je langzaam rijdt", isCorrect: false },
+    { text: "Alleen bij stoplichten", isCorrect: false }
+  ],
+  why: "Je mag geen telefoon vasthouden tijdens het rijden.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Можно ли держать телефон в руках во время вождения?",
+    answers: ["Нет, запрещено", "Можно, если ехать медленно", "Можно только на светофоре"],
+    why: "Держать телефон при движении запрещено."
+  },
+  enTranslation: {
+    question: "Are you allowed to hold a phone while driving?",
+    answers: ["No, it is forbidden", "Yes if driving slowly", "Only at traffic lights"],
+    why: "Holding a phone while driving is illegal."
+  }
+},
+
+{
+  id: 588,
+  question: "Wat gebeurt er met je reactietijd na drank- of drugsgebruik?",
+  imageUrl: "",
+  answers: [
+    { text: "Die wordt langer", isCorrect: true },
+    { text: "Die wordt korter", isCorrect: false },
+    { text: "Die blijft gelijk", isCorrect: false }
+  ],
+  why: "Alcohol en drugs vertragen je reacties.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Что происходит с реакцией после алкоголя или наркотиков?",
+    answers: ["Она замедляется", "Она ускоряется", "Она не меняется"],
+    why: "Алкоголь и наркотики замедляют реакцию."
+  },
+  enTranslation: {
+    question: "What happens to reaction time after alcohol or drug use?",
+    answers: ["It becomes slower", "It becomes faster", "It stays the same"],
+    why: "Alcohol and drugs delay reaction time."
+  }
+},
+
+{
+  id: 589,
+  question: "Is rijden onder invloed van alcohol een overtreding of misdrijf?",
+  imageUrl: "",
+  answers: [
+    { text: "Een misdrijf", isCorrect: true },
+    { text: "Een overtreding", isCorrect: false },
+    { text: "Geen van beide", isCorrect: false }
+  ],
+  why: "Rijden onder invloed wordt als misdrijf beschouwd.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Вождение под алкоголем — это нарушение или преступление?",
+    answers: ["Преступление", "Нарушение", "Ни то, ни другое"],
+    why: "Вождение в нетрезвом состоянии считается преступлением."
+  },
+  enTranslation: {
+    question: "Is driving under alcohol influence an offense or crime?",
+    answers: ["A crime", "An offense", "Neither"], 
+    why: "Driving under influence is classified as a crime."
+  }
+},
+
+{
+  id: 590,
+  question: "Wie valt onder de strengste alcoholregels?",
+  imageUrl: "",
+  answers: [
+    { text: "Beginnende bestuurders", isCorrect: true },
+    { text: "Ervaren bestuurders", isCorrect: false },
+    { text: "Passagiers", isCorrect: false }
+  ],
+  why: "Beginnende bestuurders hebben een strengere limiet.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Кого касается самый строгий лимит по алкоголю?",
+    answers: ["Начинающих водителей", "Опытных водителей", "Пассажиров"],
+    why: "Для новичков действуют самые строгие нормы."
+  },
+  enTranslation: {
+    question: "Who must follow the strictest alcohol limits?",
+    answers: ["Beginner drivers", "Experienced drivers", "Passengers"],
+    why: "Beginners have stricter alcohol limits."
+  }
+},
+
+{
+  id: 591,
+  question: "Wat gebeurt er met je rijgedrag onder invloed van alcohol?",
+  imageUrl: "",
+  answers: [
+    { text: "Je overschat jezelf en maakt fouten", isCorrect: true },
+    { text: "Je rijdt voorzichtiger", isCorrect: false },
+    { text: "Je rijdt automatisch beter", isCorrect: false }
+  ],
+  why: "Alcohol beïnvloedt beoordelingsvermogen.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Что происходит с манерой вождения под алкоголем?",
+    answers: ["Переоценка себя и ошибки", "Более аккуратная езда", "Автоматически лучшее управление"],
+    why: "Алкоголь искажает самооценку и приводит к ошибкам."
+  },
+  enTranslation: {
+    question: "What happens to your driving under alcohol?",
+    answers: ["You overestimate yourself and make mistakes", "You drive safer", "You automatically drive better"],
+    why: "Alcohol affects judgement."
+  }
+},
+
+{
+  id: 592,
+  question: "Is het toegestaan om tijdens file wél je telefoon vast te houden?",
+  imageUrl: "",
+  answers: [
+    { text: "Alleen als het voertuig volledig stilstaat", isCorrect: true },
+    { text: "Ja, altijd", isCorrect: false },
+    { text: "Nee, nooit", isCorrect: false }
+  ],
+  why: "Het mag alleen als je voertuig helemaal stilstaat.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Можно ли держать телефон в пробке?",
+    answers: ["Только если машина полностью стоит", "Да, всегда", "Нет, никогда"],
+    why: "Телефон разрешён только когда машина полностью остановлена."
+  },
+  enTranslation: {
+    question: "Is holding your phone allowed in traffic jams?",
+    answers: ["Only when completely stopped", "Yes always", "No never"],
+    why: "It's only allowed if the vehicle is fully stationary."
+  }
+},
+
+{
+  id: 593,
+  question: "Wat is een standaardglas alcohol?",
+  imageUrl: "",
+  answers: [
+    { text: "Drank met ongeveer 10 gram pure alcohol", isCorrect: true },
+    { text: "Een groot bierglas", isCorrect: false },
+    { text: "Een willekeurig glas alcohol", isCorrect: false }
+  ],
+  why: "Één standaardglas bevat ongeveer 10 gram alcohol.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Что такое стандартный бокал алкоголя?",
+    answers: ["Напиток с ~10 граммами чистого алкоголя", "Большой бокал пива", "Любой бокал алкоголя"],
+    why: "Стандартный бокал содержит около 10 г алкоголя."
+  },
+  enTranslation: {
+    question: "What is a standard alcoholic drink?",
+    answers: ["A drink containing about 10g of pure alcohol", "A large beer", "Any alcoholic drink"],
+    why: "A standard drink contains around 10g alcohol."
+  }
+},
+
+{
+  id: 594,
+  question: "Welke invloed hebben medicijnen met gele sticker?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-11-20_211334_nfyexb.png",
+  answers: [
+    { text: "Je reactievermogen wordt minder", isCorrect: true },
+    { text: "Ze verbeteren je concentratie", isCorrect: false },
+    { text: "Geen invloed op rijden", isCorrect: false }
+  ],
+  why: "Geneesmiddelen met een gele sticker verminderen rijvaardigheid.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Как лекарства с жёлтой наклейкой влияют на вождение?",
+    answers: ["Замедляют реакцию", "Улучшают концентрацию", "Не влияют"],
+    why: "Такие лекарства могут ухудшать способность управлять автомобилем."
+  },
+  enTranslation: {
+    question: "What effect do medicines with a yellow label have?",
+    answers: ["Reduced reaction ability", "Improved concentration", "No influence"],
+    why: "Yellow-label medication reduces response ability."
+  }
+},
+
+{
+  id: 595,
+  question: "Wat moet je doen als je twijfelt of een medicijn invloed heeft op je rijvaardigheid?",
+  imageUrl: "",
+  answers: [
+    { text: "De bijsluiter lezen of apotheker vragen", isCorrect: true },
+    { text: "Gewoon proberen en kijken wat gebeurt", isCorrect: false },
+    { text: "Meer koffie drinken", isCorrect: false }
+  ],
+  why: "Twijfel? Dan altijd controleren of advies vragen.",
+  topic: "invloed",
+  ruTranslation: {
+    question: "Что делать, если ты не уверен, влияет ли лекарство на вождение?",
+    answers: ["Прочитать инструкцию или спросить у врача/аптекаря", "Просто попробовать", "Выпить больше кофе"],
+    why: "При сомнениях — проверить инструкцию или спросить специалиста."
+  },
+  enTranslation: {
+    question: "What should you do if you're unsure whether a medication affects driving?",
+    answers: ["Read the leaflet or ask a pharmacist", "Just try and see", "Drink extra coffee"],
+    why: "When unsure, always check or ask."
+  }
+},
 
 
 

@@ -393,8 +393,18 @@ header{
     display: block;
     margin: 50px auto 10px auto;
 }
-
-
+.nmotoren{
+    color: #ffc850;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.nmotoren1{
+    color: #64ff50;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 
 
 /* 📱 Адаптация под мобильные устройства */
