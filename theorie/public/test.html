@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Theorie Test</title>
+  <link rel="stylesheet" href="test-c.css">
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
     img { max-width: 300px; margin-top: 10px; }
@@ -10,9 +11,23 @@
   </style>
 </head>
 <body>
-  <h1>Theorie Test</h1>
-  <div id="quiz-container"></div>
 
+
+<div class="exam-wrapper">
+  <div class="exam-header">
+    <h1>Red-Drive Theorie-examen</h1>
+    <p>De test bestaat uit 20 vragen. Je mag maximaal 3 fouten maken.</p>
+  </div>
+
+  <div id="quiz-container" class="quiz"></div>
+
+  <div class="exam-footer">
+    <button id="check-btn" class="btn-primary">Resultaat controleren</button>
+    <div id="result" class="result"></div>
+  </div>
+</div>
+
+  
   <script src="test-j.js"></script>
 </body>
 </html>
