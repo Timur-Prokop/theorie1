@@ -38,7 +38,6 @@ header{
 .desktop-menu a{
     color: white;
     text-decoration: none;
-    font-size: 20px;
 }
 .desktop-menu button{
     background: linear-gradient(to left, #860000, #ff2326);
@@ -318,7 +317,7 @@ header{
         margin-right: 15%;
     }
     .desktop-menu a{
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -424,6 +423,8 @@ header{
   opacity: 0.4;
 }
 
-
+.profile-container p{
+    margin-top: 10px;
+}
 
 

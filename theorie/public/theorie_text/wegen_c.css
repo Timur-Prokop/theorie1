@@ -176,7 +176,9 @@ header{
     margin-left: 60px;
     margin-right: 60px;
 }
-
+.bocht_img img{
+    width: 500px;
+}
 
 
 

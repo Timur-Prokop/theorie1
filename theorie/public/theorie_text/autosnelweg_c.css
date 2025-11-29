@@ -34,7 +34,9 @@ header{
     width: 70px;
     height: 70px;
 }
-
+.image_center img{
+    width: 400px;
+}
 .desktop-menu a{
     color: white;
     text-decoration: none;

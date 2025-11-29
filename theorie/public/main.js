@@ -98,9 +98,9 @@ async function getMessage() {
     }
 
 
-function anotherPage() {
-      window.location.href = "log-in.html"; 
-}
+// function anotherPage() {
+//       window.location.href = "log-in.html"; 
+// }
 
 function infoPage() {
       window.location.href = "info.html"; 

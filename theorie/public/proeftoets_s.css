@@ -27,6 +27,9 @@ header{
     align-items: center;
 
 }
+.desktop-menu h1{
+    font-size: 34px;
+}
 .desktop-menu ul{
     display: flex;
 }
@@ -59,23 +62,7 @@ header{
     font-size: 16px;
     margin-top: 10px;
 }
-.header-maintext h2{
-    font-size: 34px;
-    margin-top: 200px;;
-    text-align: center;
-    color: white;
-}
-.header-maintext{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.header-maintext p{
-    font-size: 20px;
-    margin-top: 50px;
-    text-align: center;
-    color: white;
-}
+
 .header-margin{
     margin-left: 20%;
     margin-right: 20%;
@@ -129,6 +116,13 @@ header{
 }
 
 
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+    display: block;
+}
 .mobile-menu a {
     color: white;
     text-decoration: none;

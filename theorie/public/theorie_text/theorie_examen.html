@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theorie examen</title>
-    <link rel="stylesheet" href="/theorie_text/theorie_examen_c.css">
+  <meta charset="UTF-8">
+  <title>Theorie Test</title>
+  <link rel="stylesheet" href="../test-c.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    img { max-width: 300px; margin-top: 10px; }
+    .question-block { margin-bottom: 30px; }
+  </style>
 </head>
 <body>
-    
-<header>
-        <div class="header-margin">
-          <div class="mobile-menu-btn">☰</div>
-          <ul class="mobile-menu">
-            <span class="close-btn">×</span>
-            <li><a href="/">Main</a></li>
-            <li><a href="/info.html">Info</a></li>
-            <li><a href="/cursus.html">Cursussen</a></li>
-            <li><a href="/proeftoets_h.html">Proeftoets</a></li>
-            <li><a href="/theorie.html">Theorie</a></li>
-            <li><a href="/profile.html">Profile</a></li>
-            <button onclick="anotherPage()">Account</button>
-          </ul>
-
-          <div class="desktop-menu">
-            <h1 style="color: aliceblue;">Red-Drive</h1>
-            <!-- сделать отдельную ашку для теста и описания теста, а также цен -->
-              <ul>
-                <li><a href="/">Main</a></li>
-                <li><a href="/info.html">Info</a></li>
-                <li><a href="/cursus.html">Cursussen</a></li>
-                <li><a href="/proeftoets_h.html">Proeftoets</a></li>
-                <li><a href="/theorie.html">Theorie</a></li>
-                <li><a href="/profile.html">Profile</a></li>
-              </ul>
-              <button onclick="anotherPage()">Account</button>
-          </div>
-        </div>
-    </header>
 
 
+<div class="exam-wrapper">
+  <div class="exam-header">
+    <h1>Red-Drive Theorie-examen</h1>
+    <p>De test bestaat uit 50 vragen. Je mag maximaal 6 fouten maken.</p>
+  </div>
 
+  <div id="quiz-container" class="quiz"></div>
 
+  <div class="exam-footer">
+    <button id="check-btn" class="btn-primary">Resultaat controleren</button>
+    <div id="result" class="result"></div>
+    <div class="mainmenu"><a href="/">Main menu</a></div>
+  </div>
+</div>
 
-
-
-
+  
+  <script src="theorie_examen_j.js"></script>
 </body>
 </html>

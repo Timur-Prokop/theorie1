@@ -81,8 +81,8 @@ const observer = new IntersectionObserver((entries) => {
 animatedElements.forEach(el => observer.observe(el));
 
 
-function anotherPage() {
-      window.location.href = "log-in.html"; 
-}
+// function anotherPage() {
+//       window.location.href = "log-in.html"; 
+// }
 
         

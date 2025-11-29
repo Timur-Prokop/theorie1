@@ -1563,7 +1563,7 @@ const questions = [
 {
   id: 126,
   question: "Waar mag u niet parkeren, maar wel kort stilstaan?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokken_streep2_tayltl.png",
   answers: [
     { text: "Langs een gele onderbroken streep", isCorrect: true },
     { text: "Voor een uitrit", isCorrect: false },
@@ -1755,7 +1755,7 @@ const questions = [
 {
   id: 132,
   question: "Is het toegestaan om te parkeren op een gehandicaptenparkeerplaats?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/gehandicap_npps2n.png",
   answers: [
     { text: "Alleen met geldige gehandicaptenkaart", isCorrect: true },
     { text: "Ja, als u maar even blijft", isCorrect: false },
@@ -2296,6 +2296,9 @@ const questions = [
     why: "Parking is allowed if no prohibition exists."
   }
 },
+
+
+// vanaf hier controleren
 {
   id: 150,
   question: "Waar is parkeren toegestaan in een 30 km-zone?",
@@ -2358,7 +2361,7 @@ const questions = [
 },
 {
   id: 152,
-  question: "Waar mag u niet parkeren vanwege gevaar voor voetgangers?",
+  question: "Waar mag u niet parkeren?",
   imageUrl: "",
   answers: [
     { text: "Op trottoirs", isCorrect: true },
@@ -4138,6 +4141,11 @@ const questions = [
   }
 },
 
+
+
+
+
+// AAPPAPAKLKKK techniek
 {
   id: 211,
   question: "Wanneer moet een benzine- of elektrische personenauto (in gebruik na 1 januari 2005) voor het eerst APK gekeurd worden?",
@@ -4229,7 +4237,7 @@ const questions = [
 {
   id: 215,
   question: "Wat betekent een rood oliedruk-lampje tijdens het rijden?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord25_p5enkl.png",
   answers: [
     { text: "Oliedruk/olieniveau probleem: direct stoppen om motorschade te voorkomen", isCorrect: true },
     { text: "Alleen dat je olie binnenkort moet verversen", isCorrect: false },
@@ -4251,7 +4259,7 @@ const questions = [
 {
   id: 216,
   question: "Een rood (P) lampje brandt tijdens het rijden. Wat betekent dit meestal?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord24_acsed7.png",
   answers: [
     { text: "Handrem is ingeschakeld of probleem met remsysteem", isCorrect: true },
     { text: "ABS is actief", isCorrect: false },
@@ -4273,7 +4281,7 @@ const questions = [
 {
   id: 217,
   question: "Wat betekent een rood acculampje dat blijft branden?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord22_jtlszq.png",
   answers: [
     { text: "Storing in accu of dynamo/laadsysteem", isCorrect: true },
     { text: "Ruitensproeier leeg", isCorrect: false },
@@ -4295,7 +4303,7 @@ const questions = [
 {
   id: 218,
   question: "Een rood lampje met gordelsymbool brandt. Wat geeft dit aan?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord21_mjczpi.png",
   answers: [
     { text: "Een passagier heeft zijn veiligheidsgordel niet om", isCorrect: true },
     { text: "De airbags zijn uitgeschakeld", isCorrect: false },
@@ -4317,7 +4325,7 @@ const questions = [
 {
   id: 219,
   question: "Wat betekent een rood airbag-lampje?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord19_tf3v90.png",
   answers: [
     { text: "Storing met de airbag, laat dit snel nakijken", isCorrect: true },
     { text: "Airbag is juist geactiveerd voor botsing", isCorrect: false },
@@ -4339,7 +4347,7 @@ const questions = [
 {
   id: 220,
   question: "Wat doe je bij een rood koelvloeistoftemperatuur-lampje?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord20_vc6dgc.png",
   answers: [
     { text: "Zo snel mogelijk veilig stoppen om oververhitting te voorkomen", isCorrect: true },
     { text: "De verwarming hoger zetten en doorrijden", isCorrect: false },
@@ -4361,7 +4369,7 @@ const questions = [
 {
   id: 221,
   question: "Wat betekent een rood deur-open lampje?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord18_jkdecm.png",
   answers: [
     { text: "Een portier staat open", isCorrect: true },
     { text: "De kofferbak is te vol", isCorrect: false },
@@ -4383,7 +4391,7 @@ const questions = [
 {
   id: 222,
   question: "Wat betekent een rood driehoekje met uitroepteken (knipperend of brandend)?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord17_g7ky7o.png",
   answers: [
     { text: "Waarschuwingslichten staan aan of algemene ernstige waarschuwing", isCorrect: true },
     { text: "Richtingaanwijzer links staat aan", isCorrect: false },
@@ -4405,7 +4413,7 @@ const questions = [
 {
   id: 223,
   question: "Wat geeft een oranje brandstofpomp-lampje aan?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord16_ocxkhq.png",
   answers: [
     { text: "Brandstofniveau laag: zo snel mogelijk tanken", isCorrect: true },
     { text: "Brandstofdop staat open", isCorrect: false },
@@ -4427,7 +4435,7 @@ const questions = [
 {
   id: 224,
   question: "ABS-lampje (oranje) brandt continu. Wat doe je?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord15_qmamnb.png",
   answers: [
     { text: "Naar garage; remmen werken, maar ABS is mogelijk uit", isCorrect: true },
     { text: "Direct stoppen op de vluchtstrook", isCorrect: false },
@@ -4449,7 +4457,7 @@ const questions = [
 {
   id: 225,
   question: "Wat betekent een oranje slip/ijsvloksymbool?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord14_s0pzku.png",
   answers: [
     { text: "Gevaar voor slippen, buitentemperatuur (rond/below) vriespunt", isCorrect: true },
     { text: "Sneeuwkettingen verplicht", isCorrect: false },
@@ -4471,7 +4479,7 @@ const questions = [
 {
   id: 226,
   question: "Wat betekent een oranje motorstoringslampje (check engine)?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord13_io75ym.png",
   answers: [
     { text: "Er is iets mis met de motor; laat de auto snel nakijken", isCorrect: true },
     { text: "De motor is klaar voor sportstand", isCorrect: false },
@@ -4493,7 +4501,7 @@ const questions = [
 {
   id: 227,
   question: "Een oranje bandenspanningslampje brandt. Wat betekent dit sinds 1 november 2014?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord12_dgeols.png",
   answers: [
     { text: "TPMS detecteert lage bandenspanning; controleer/lucht bijvullen", isCorrect: true },
     { text: "Je banden zijn te warm", isCorrect: false },
@@ -4515,7 +4523,7 @@ const questions = [
 {
   id: 228,
   question: "Welke verlichting is 'dimlicht'?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord11_p0dnpr.png",
   answers: [
     { text: "Standaard koplamplicht voor normaal rijden in het donker", isCorrect: true },
     { text: "Groot licht dat tegenliggers kan verblinden", isCorrect: false },
@@ -4537,7 +4545,7 @@ const questions = [
 {
   id: 229,
   question: "Wanneer mag je mistlicht vóór gebruiken volgens de tekst?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord9_ortggn.png",
   answers: [
     { text: "Alleen als het zicht minder is dan 200 meter", isCorrect: true },
     { text: "Altijd in de regen", isCorrect: false },
@@ -4559,7 +4567,7 @@ const questions = [
 {
   id: 230,
   question: "Wanneer mag je mistachterlicht gebruiken?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord8_ctghwq.png",
   answers: [
     { text: "Alleen als het zicht minder is dan 50 meter bij sneeuw of mist", isCorrect: true },
     { text: "Bij harde regen altijd", isCorrect: false },
@@ -4581,7 +4589,7 @@ const questions = [
 {
   id: 231,
   question: "Wat betekenen de groene pijlen links/rechts op het dashboard?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Richtingaanwijzers zijn actief", isCorrect: true },
     { text: "Cruisecontrol is ingesteld", isCorrect: false },
@@ -4603,7 +4611,7 @@ const questions = [
 {
   id: 232,
   question: "Wat betekent een oranje ruitensproeiervloeistof-lampje?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord3_z1jwai.png",
   answers: [
     { text: "Vloeistof bijna leeg: bijvullen", isCorrect: true },
     { text: "Ruitenwisser kapot", isCorrect: false },
@@ -4625,7 +4633,7 @@ const questions = [
 {
   id: 233,
   question: "Welk lampje geeft aan dat de voorruitverwarming aanstaat?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord1_j06vkp.png",
   answers: [
     { text: "Een oranje symbool met gebogen lijnen naar boven", isCorrect: true },
     { text: "Een rood driehoekje", isCorrect: false },
@@ -4647,7 +4655,7 @@ const questions = [
 {
   id: 234,
   question: "Wat is het doel van het start-stopsysteem (A-symbool)?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord4_zzrowz.png",
   answers: [
     { text: "Motor automatisch uitschakelen bij stilstaan om brandstof te besparen", isCorrect: true },
     { text: "Auto automatisch laten remmen bij obstakels", isCorrect: false },
@@ -4757,7 +4765,7 @@ const questions = [
 {
   id: 239,
   question: "Welke profieldiepte wordt voor winterbanden geadviseerd?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/photo_2025-11-25_23-43-43_ox5i0n.jpg",
   answers: [
     { text: "Minstens 4 mm", isCorrect: true },
     { text: "1,6 mm (wettelijk minimum)", isCorrect: false },
@@ -4779,7 +4787,7 @@ const questions = [
 {
   id: 240,
   question: "Wanneer zijn winterbanden aan te raden volgens de tekst?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/photo_2025-11-25_23-44-38_ngryzx.jpg",
   answers: [
     { text: "Bij temperaturen kouder dan 7 °C", isCorrect: true },
     { text: "Alleen bij sneeuw op de weg", isCorrect: false },
@@ -4801,7 +4809,7 @@ const questions = [
 {
   id: 241,
   question: "Wat is het effect van winterbanden bij warme temperaturen?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/photo_2025-11-25_23-44-38_ngryzx.jpg",
   answers: [
     { text: "Ze zorgen voor een langere remweg dan zomerbanden", isCorrect: true },
     { text: "Ze remmen juist korter dan zomerbanden", isCorrect: false },
@@ -4974,6 +4982,7 @@ const questions = [
     why: "Multiple types are listed."
   }
 },
+// tutdfsdfaaasdasdasd
 {
   id: 249,
   question: "Wat gebeurt er als je met een rood lampje doorrijdt dat een ernstig probleem aangeeft?",
@@ -5861,7 +5870,7 @@ const questions = [
 {
   id: 282,
   question: "Wat is dimlicht?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord11_p0dnpr.png",
   answers: [
     { text: "Een naar beneden gerichte lichtbundel voor normaal rijden in donker/slecht zicht", isCorrect: true },
     { text: "Een fel licht dat bedoeld is om te seinen", isCorrect: false },
@@ -5891,7 +5900,7 @@ const questions = [
 {
   id: 283,
   question: "Wanneer is het gebruik van dimlicht verplicht?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord11_p0dnpr.png",
   answers: [
     { text: "In het donker en bij slecht zicht", isCorrect: true },
     { text: "Alleen in een tunnel", isCorrect: false },
@@ -5921,7 +5930,7 @@ const questions = [
 {
   id: 284,
   question: "Mag je dimlichten uit laten terwijl mistlichten branden?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord9_ortggn.png",
   answers: [
     { text: "Ja, dimlichten hoeven niet aan als mistlichten aanstaan", isCorrect: true },
     { text: "Nee, dimlicht moet altijd samen met mistlicht", isCorrect: false },
@@ -5951,7 +5960,7 @@ const questions = [
 {
   id: 285,
   question: "Waarvoor gebruik je stadslicht (parkeerlicht)?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord6_jbqcc7.png",
   answers: [
     { text: "Alleen bij stilstaan of parkeren", isCorrect: true },
     { text: "Om beter te zien in het donker tijdens het rijden", isCorrect: false },
@@ -5981,7 +5990,7 @@ const questions = [
 {
   id: 286,
   question: "Waar moet je stadslicht en achterlicht voeren als je in het donker stilstaat/geparkeerd staat?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord6_jbqcc7.png",
   answers: [
     { text: "Op rijbaan buiten de bebouwde kom of op (vlucht)strook langs autoweg/snelweg", isCorrect: true },
     { text: "Overal binnen de bebouwde kom", isCorrect: false },
@@ -6011,7 +6020,7 @@ const questions = [
 {
   id: 287,
   question: "Wanneer mag je groot licht voeren?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord10_ckob74.png",
   answers: [
     { text: "Alleen als er geen ander verkeer in de buurt is", isCorrect: true },
     { text: "Altijd ’s nachts, ongeacht verkeer", isCorrect: false },
@@ -6041,7 +6050,7 @@ const questions = [
 {
   id: 288,
   question: "Wanneer mag je géén groot licht voeren?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord10_ckob74.png",
   answers: [
     { text: "Overdag, bij tegenkomend verkeer en als je dicht achter een ander rijdt", isCorrect: true },
     { text: "Alleen op snelwegen", isCorrect: false },
@@ -6071,7 +6080,7 @@ const questions = [
 {
   id: 289,
   question: "Wanneer gebruik je mistlicht vóór?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord9_ortggn.png",
   answers: [
     { text: "Bij ernstig belemmerd zicht door mist, sneeuwval of regen, met richtlijn < 200 m", isCorrect: true },
     { text: "Altijd bij lichte regen", isCorrect: false },
@@ -6101,7 +6110,7 @@ const questions = [
 {
   id: 290,
   question: "Wanneer mag je mistachterlicht gebruiken?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord8_ctghwq.png",
   answers: [
     { text: "Als het zicht minder is dan 50 meter door mist of sneeuwval", isCorrect: true },
     { text: "Bij slecht zicht door regen", isCorrect: false },
@@ -6131,7 +6140,7 @@ const questions = [
 {
   id: 291,
   question: "Wat zijn dagrijlichten (DRL) en sinds wanneer verplicht op nieuwe auto’s?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord6_jbqcc7.png",
   answers: [
     { text: "Lichten voor zichtbaarheid overdag; verplicht op nieuwe auto’s sinds 2011", isCorrect: true },
     { text: "Extra groot licht; verplicht sinds 2001", isCorrect: false },
@@ -6161,7 +6170,7 @@ const questions = [
 {
   id: 292,
   question: "Mogen dagrijlichten tegelijk branden met andere verlichting aan de voorzijde?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord6_jbqcc7.png",
   answers: [
     { text: "Nee, DRL mogen niet tegelijk branden met andere voorlichten", isCorrect: true },
     { text: "Ja, altijd samen met dimlicht", isCorrect: false },
@@ -6221,7 +6230,7 @@ const questions = [
 {
   id: 294,
   question: "Wanneer gebruik je alarmlichten (waarschuwingslichten)?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Bij pech, gevaarlijke/ slecht zichtbare stopplaats of bij filevorming op de snelweg", isCorrect: true },
     { text: "Om een inhaalmanoeuvre aan te kondigen", isCorrect: false },
@@ -6251,7 +6260,7 @@ const questions = [
 {
   id: 295,
   question: "Wanneer moet je de richtingaanwijzer gebruiken?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Bij elke belangrijke zijdelingse verplaatsing", isCorrect: true },
     { text: "Alleen bij afslaan", isCorrect: false },
@@ -6281,7 +6290,7 @@ const questions = [
 {
   id: 296,
   question: "Noem een voorbeeld van een zijdelingse verplaatsing waarbij je móét richting aangeven.",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Wisselen van rijstrook", isCorrect: true },
     { text: "Rechtuit blijven rijden", isCorrect: false },
@@ -6311,7 +6320,7 @@ const questions = [
 {
   id: 297,
   question: "Wat doe je met de richtingaanwijzer na het afronden van de verplaatsing?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Direct weer uitschakelen", isCorrect: true },
     { text: "Nog 10 seconden laten knipperen", isCorrect: false },
@@ -6341,7 +6350,7 @@ const questions = [
 {
   id: 298,
   question: "Bij welke van deze handelingen moet je richting aangeven?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Inhalen of voorsorteren", isCorrect: true },
     { text: "Rijden met constante snelheid", isCorrect: false },
@@ -6371,7 +6380,7 @@ const questions = [
 {
   id: 299,
   question: "Welke handeling vraagt óók om richting aangeven?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Wegrijden", isCorrect: true },
     { text: "Stoppen voor rood licht", isCorrect: false },
@@ -6431,7 +6440,7 @@ const questions = [
 {
   id: 301,
   question: "Wat doe je met richtingaanwijzer op een rotonde?",
-  imageUrl: "",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/dashbord7_lccspl.png",
   answers: [
     { text: "Richting aangeven bij het verlaten van de rotonde", isCorrect: true },
     { text: "Continu links laten knipperen tijdens de hele rotonde", isCorrect: false },
@@ -7381,7 +7390,7 @@ const questions = [
 {
   id: 335,
   question: "Wat is een kenmerk van een kleine rotonde?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde_img_t9kgao.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde-fietspad_gfjavp.jpg",
   answers: [
     { text: "Hij heeft meestal één rijstrook", isCorrect: true },
     { text: "Hij heeft altijd meerdere rijstroken", isCorrect: false },
@@ -7412,7 +7421,7 @@ const questions = [
 {
   id: 336,
   question: "Wat is een kenmerk van een grote rotonde?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde_img_t9kgao.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde-fietspad_gfjavp.jpg",
   answers: [
     { text: "Deze heeft vaak meerdere rijstroken", isCorrect: true },
     { text: "Deze heeft geen voorsorteerpijlen", isCorrect: false },
@@ -7443,7 +7452,7 @@ const questions = [
 {
   id: 337,
   question: "Wat is een belangrijk kenmerk van een turborotonde?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/turborotonde_ianila.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/turborotonde1_su4kf2.png",
   answers: [
     { text: "Je kunt er niet van rijstrook wisselen", isCorrect: true },
     { text: "Je moet er altijd stoppen", isCorrect: false },
@@ -7474,7 +7483,7 @@ const questions = [
 {
   id: 338,
   question: "Wat is een kenmerk van een erftoegangsweg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/erftoegangsweh_buiten_e96lc3.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/erftoegangweg_buiten_xm5mwt.png",
   answers: [
     { text: "Inhalen is toegestaan", isCorrect: true },
     { text: "De maximumsnelheid is altijd 80 km/u", isCorrect: false },
@@ -7505,7 +7514,7 @@ const questions = [
 {
   id: 339,
   question: "Op welke weg mag je landbouwvoertuigen verwachten?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/erftoegangsweg_cfuneo.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/erftoegangsweg1_rhzrso.png",
   answers: [
     { text: "Op een erftoegangsweg", isCorrect: true },
     { text: "Op een autosnelweg", isCorrect: false },
@@ -7598,7 +7607,7 @@ const questions = [
 {
   id: 342,
   question: "Welke voertuigen mogen niet rijden op een autosnelweg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/autoweg_img_a9efwx.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/stroomweg1_hc4fe3.png",
   answers: [
     { text: "Landbouwvoertuigen", isCorrect: true },
     { text: "Auto’s", isCorrect: false },
@@ -7846,7 +7855,7 @@ const questions = [
 {
   id: 350,
   question: "Waardoor wordt een bocht veiliger gemaakt?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bocht_mcaaba.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/bocht1_nce5ww.png",
   answers: [
     { text: "Door positieve wegverkanting", isCorrect: true },
     { text: "Door hogere snelheid", isCorrect: false },
@@ -8128,7 +8137,7 @@ const questions = [
 {
   id: 359,
   question: "Mag je stilstaan op een fietsstrook?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/fietstrook_nxqyfy.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiestrook_mbegmm.png",
   answers: [
     { text: "Nee, je mag nooit stilstaan op een fietsstrook", isCorrect: true },
     { text: "Ja, maar alleen als er geen fietsers zijn", isCorrect: false },
@@ -8248,7 +8257,7 @@ const questions = [
 {
   id: 363,
   question: "Mag je hier inhalen?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokkenEnNot_gmzi0b.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokkenEnNot_hjvccb.png",
   answers: [
     { text: "Nee, je mag de streep niet overschrijden", isCorrect: true },
     { text: "Ja, altijd", isCorrect: false },
@@ -8278,7 +8287,7 @@ const questions = [
 {
   id: 364,
   question: "Wanneer mag je inhalen bij een onderbroken streep?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokkenEnNot_gmzi0b.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokkenEnNot_hjvccb.png",
   answers: [
     { text: "Wanneer het veilig kan", isCorrect: true },
     { text: "Wanneer het handig voor je is", isCorrect: false },
@@ -8428,7 +8437,7 @@ const questions = [
 {
   id: 369,
   question: "Hoe herken je een suggestiestrook?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiestrook_mbegmm.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiesstrook1_e6xbri.png",
   answers: [
     { text: "Hij lijkt op een fietsstrook maar heeft geen fiets-symbool", isCorrect: true },
     { text: "Door rode kleur en fietspictogram", isCorrect: false },
@@ -8549,7 +8558,7 @@ const questions = [
 {
   id: 373,
   question: "Mag je rijden op een busstrook?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/busstrook_vifgoz.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/busstrook1_qlvrjz.png",
   answers: [
     { text: "Nee, een busstrook is alleen voor bussen", isCorrect: true },
     { text: "Ja, als er geen bus aankomt", isCorrect: false },
@@ -8609,7 +8618,7 @@ const questions = [
 {
   id: 375,
   question: "Wat betekent een gele onderbroken streep langs de weg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/gele_onderbroken_naolj9.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/gele_onderbroken1_hd0mey.png",
   answers: [
     { text: "Parkeren verboden, maar laden en lossen toegestaan", isCorrect: true },
     { text: "Volledig parkeren toegestaan", isCorrect: false },
@@ -8639,7 +8648,7 @@ const questions = [
 {
   id: 376,
   question: "Wat betekent een gele doorgetrokken streep langs de weg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetroken_streep_v9fvab.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/doorgetrokken_streep2_tayltl.png",
   answers: [
     { text: "Stilstaan en parkeren verboden", isCorrect: true },
     { text: "Alleen parkeren verboden", isCorrect: false },
@@ -8759,7 +8768,7 @@ const questions = [
 {
   id: 380,
   question: "Wat betekent een rood knipperlicht bij een spooroverweg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/weg2_k5vajn.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/weg22_hcd7ub.png",
   answers: [
     { text: "Stoppen", isCorrect: true },
     { text: "Doorrijden", isCorrect: false },
@@ -8789,7 +8798,7 @@ const questions = [
 {
   id: 381,
   question: "Wat betekent een wit knipperlicht bij een spooroverweg?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/weg1_zw2dnk.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/weg11_xj6knw.png",
   answers: [
     { text: "Je mag doorrijden", isCorrect: true },
     { text: "Stoppen verplicht", isCorrect: false },
@@ -9368,7 +9377,7 @@ why: "U-turns, reversing and unnecessary stopping are forbidden on these roads."
 {
 id: 404,
 question: "Waar mogen auto’s met aanhanger langer dan 7 meter en vrachtauto’s rijden op een autosnelweg met drie rijstroken per richting?",
-imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_open_bgz182.png",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_openNaam_ismp23.png",
 answers: [
 { text: "Alleen op de twee meest rechts gelegen rijstroken", isCorrect: true },
 { text: "Alleen op de linkerrijstrook", isCorrect: false },
@@ -9548,7 +9557,7 @@ why: "Without necessity you may not drive or park on the hard shoulder."
 {
 id: 410,
 question: "Wat is een spitsstrook?",
-imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_open_bgz182.png",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_openNaam_ismp23.png",
 answers: [
 { text: "Een vluchtstrook die bij drukte tijdelijk als rijstrook wordt gebruikt", isCorrect: true },
 { text: "Een aparte rijstrook alleen voor bussen", isCorrect: false },
@@ -9578,7 +9587,7 @@ why: "In heavy traffic the hard shoulder can be opened as a spitsstrook."
 {
 id: 411,
 question: "Hoe gebruik je een spitsstrook wanneer deze open is?",
-imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_open_bgz182.png",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/spitsstrook_openNaam_ismp23.png",
 answers: [
 { text: "Je rijdt er zo veel mogelijk rechts en je mag over de doorgetrokken lijn en puntstukken rijden", isCorrect: true },
 { text: "Je mag er alleen rijden als je langzamer dan 50 km/uur rijdt", isCorrect: false },
@@ -9638,7 +9647,7 @@ why: "A red cross or no green arrow means the spitsstrook is closed."
 {
 id: 413,
 question: "Wat is een plusstrook?",
-imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/autosnelweg1_dcjrg9.png",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/autosnelweg_namen_z2x4lc.png",
 answers: [
 { text: "Een extra, vaak smallere linkerrijstrook die uit bestaande rijstroken wordt gehaald", isCorrect: true },
 { text: "Een aparte strook naast de vluchtstrook voor hulpdiensten", isCorrect: false },
@@ -10104,7 +10113,7 @@ why: "All these parts are mentioned as possible components of a road."
 {
 id: 430,
 question: "Wat moet je eerst doen voordat je een inhaalmanoeuvre begint?",
-imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/inhalen_1_bauj8v.png",
+imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/inhalen_11_kie7x9.png",
 answers: [
 { text: "Controleren of inhalen veilig kan in spiegels en dode hoek", isCorrect: true },
 { text: "Eerst claxonneren", isCorrect: false },

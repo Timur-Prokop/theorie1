@@ -32,10 +32,12 @@ header{
     display: flex;
 }
 .desktop-menu img{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
 }
-
+.snezhinka{
+    width: 100px;
+}
 .desktop-menu a{
     color: white;
     text-decoration: none;
@@ -279,6 +281,7 @@ main{
     margin-left: 15%;
     margin-right: 15%;
 }
+
 .icons-img{
   display: flex;
   justify-content: center;
@@ -394,6 +397,7 @@ footer{
 @media (max-width: 400px) {
     header{
         background-size: cover;     
+        background-image: url("images/carback1.png");
         background-repeat: no-repeat;
         width: 100%;
         height: 250px;
@@ -487,6 +491,7 @@ footer{
         background-size: cover;     
         background-repeat: no-repeat;
         width: 100%;
+        background-image: url("images/carback1.png");
         height: 250px;
         padding-top: 20px;
     }
@@ -548,6 +553,7 @@ footer{
     header{
         background-size: cover;      
         background-repeat: no-repeat;
+        background-image: url("images/carback1.png");
         width: 100%;
         height: 500px;
         padding-top: 20px;
@@ -629,6 +635,13 @@ footer{
         display: flex;
         gap: 20px;
         margin-top: 50px;
+    }
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
     }
 }
 
@@ -740,6 +753,9 @@ footer{
     header{
         height: 1300px;
     }
+    .icons .fade-in-element{
+    width: 100%;
+}
 }
 /* Диапазон do 500px */
 @media (max-width: 500px) {

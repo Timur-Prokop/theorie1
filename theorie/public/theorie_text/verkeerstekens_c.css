@@ -17,6 +17,9 @@ li{
     margin-left: 40px;
     margin-right: 40px;
 }
+img{
+    width: 400px;
+}
 header{
     width: 100%;
     padding-top: 20px;

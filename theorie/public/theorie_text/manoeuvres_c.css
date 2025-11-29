@@ -27,6 +27,9 @@ header{
     align-items: center;
 
 }
+.image_center img{
+    width: 400px;
+}
 .desktop-menu ul{
     display: flex;
 }
