@@ -393,6 +393,9 @@ header{
 .tekst img{
     width: 200px;
 }
+.breedte .tekst img{
+    height: 100px;
+}
 
 /* 📱 Адаптация под мобильные устройства */
 @media (max-width: 768px) {

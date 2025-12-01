@@ -7359,7 +7359,7 @@ const questions = [
 {
   id: 334,
   question: "Mag je links en rechts inhalen op een rotonde?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde_img_t9kgao.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/rotonde-fietspad_gfjavp.jpg",
   answers: [
     { text: "Ja, dat mag", isCorrect: true },
     { text: "Nee, je mag alleen links inhalen", isCorrect: false },
@@ -8137,7 +8137,7 @@ const questions = [
 {
   id: 359,
   question: "Mag je stilstaan op een fietsstrook?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiestrook_mbegmm.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiesstrook1_e6xbri.png",
   answers: [
     { text: "Nee, je mag nooit stilstaan op een fietsstrook", isCorrect: true },
     { text: "Ja, maar alleen als er geen fietsers zijn", isCorrect: false },
@@ -8167,7 +8167,7 @@ const questions = [
 {
   id: 360,
   question: "Heeft een suggestiestrook een juridische status?",
-  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiestrook_mbegmm.png",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/suggestiesstrook1_e6xbri.png",
   answers: [
     { text: "Nee, een suggestiestrook heeft geen juridische status", isCorrect: true },
     { text: "Ja, dezelfde als een fietsstrook", isCorrect: false },

@@ -36,6 +36,9 @@ app.use('/api/auth', require('./routes/auth'));
 
 // Старт сервера
 const PORT = process.env.PORT || 7777;
-app.listen(PORT, () => console.log(`🚀 Server gestart op http://localhost:${PORT}`));
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server gestart op портe ${PORT}`);
+});
 
 

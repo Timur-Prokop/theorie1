@@ -9,8 +9,35 @@ function shuffle(array) {
 }
 
 // какие вопросы использовать
-const QUESTION_IDS = Array.from({ length: 595 }, (_, i) => i + 1);
-
+function getRandomFromRange(min, max, count) {
+  const set = new Set();
+  while (set.size < count) {
+    set.add(Math.floor(Math.random() * (max - min + 1)) + min);
+  }
+  return [...set];
+}
+let QUESTION_IDS = [];
+QUESTION_IDS.push(...getRandomFromRange(1, 123, 1));
+QUESTION_IDS.push(...getRandomFromRange(124, 159, 1));
+QUESTION_IDS.push(...getRandomFromRange(160, 179, 1));
+QUESTION_IDS.push(...getRandomFromRange(180, 210, 1));
+QUESTION_IDS.push(...getRandomFromRange(211, 250, 1));
+QUESTION_IDS.push(...getRandomFromRange(251, 280, 1));
+QUESTION_IDS.push(...getRandomFromRange(281, 310, 1));
+QUESTION_IDS.push(...getRandomFromRange(311, 320, 1));
+QUESTION_IDS.push(...getRandomFromRange(321, 330, 1));
+QUESTION_IDS.push(...getRandomFromRange(331, 357, 1));
+QUESTION_IDS.push(...getRandomFromRange(358, 382, 1));
+QUESTION_IDS.push(...getRandomFromRange(383, 397, 1));
+QUESTION_IDS.push(...getRandomFromRange(398, 422, 1));
+QUESTION_IDS.push(...getRandomFromRange(423, 447, 1));
+QUESTION_IDS.push(...getRandomFromRange(448, 460, 1));
+QUESTION_IDS.push(...getRandomFromRange(461, 480, 1));
+QUESTION_IDS.push(...getRandomFromRange(481, 505, 1));
+QUESTION_IDS.push(...getRandomFromRange(506, 529, 1));
+QUESTION_IDS.push(...getRandomFromRange(530, 548, 1));
+QUESTION_IDS.push(...getRandomFromRange(549, 568, 1));
+QUESTION_IDS.push(...getRandomFromRange(569, 595, 1));
 
 
 async function loadQuestions() {
@@ -19,7 +46,7 @@ async function loadQuestions() {
 
   questionsInTest = data
     .filter(q => QUESTION_IDS.includes(q.id))
-    .slice(0, 595);
+    .slice(0, 21);
 
   const container = document.getElementById('quiz-container');
   container.innerHTML = '';
