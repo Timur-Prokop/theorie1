@@ -1,0 +1,35 @@
+PROJECTS USEFULL THINGS:::::::
+
+---Firebase Storage для хранения картинок, а потом в манго дб кидаешь ссылки на них
+
+---mango db atlas cloud (goodtime2804 password: 2804ptPT08!)
+mongodb+srv://goodtime2804:<db_password>@cluster0.vvpnwsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+---mango db auth
+
+---https://cloudinary.com/    IMG_STORAGE !!!!!!!!!!!!!!
+
+23.06 proeftoets afmaken en local storage ook
+
+пока что сделать только тесты по разным темам как демо версия, а потом уже теорию доделать как крутой релиз
+
+
+https://www.fortamoto.com/hjc-c10-geti-black-yellow.html    шлееееееееееееееееем!!!!!!
+https://www.fortamoto.com/hjc-c10-haven-grey-black-810.html
+https://www.fortamoto.com/ls2-ff808-stream-ii-jungle-mat-black-pink-blue.html
+https://www.fortamoto.com/ls2-ff808-stream-ii-inferno-white-blue.html
+
+
+
+
+| Раздел                           | Цель                                   | Кол-во вопросов |
+| -------------------------------- | -------------------------------------- | --------------- |
+| Verkeersborden                   | Распознавание всех знаков              | 120 (уже есть)  |
+| Verkeersregels & Voorrang        | Кто кому уступает, трамваи и т.д.      | 150             |
+| Snelheid, afstanden, verlichting | Ограничения, освещение, тормозной путь | 120             |
+| Gebruik van de weg               | Как себя вести на дороге               | 120             |
+| Bijzondere verrichtingen         | Обгон, повороты, перестроение          | 80              |
+| Milieubewust rijden              | Экодрайвинг, расход, торможение        | 80              |
+| Gevaarherkenning                 | Что делать в опасной ситуации          | 200–250         |
+| Voertuigkennis                   | Шины, свет, зеркала, жидкость и т.д.   | 60              |
+| Alcohol, medicijnen, wetgeving   | Промилле, ответственность, документы   | 100             |
