@@ -1,0 +1,452 @@
+ul{
+    list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding-bottom: 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/bgc.png");
+    background-size: 100%;     
+}
+li{
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+header{
+    width: 100%;
+    padding-top: 20px;
+}
+.desktop-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.image_center img{
+    width: 400px;
+}
+.desktop-menu ul{
+    display: flex;
+}
+.desktop-menu img{
+    width: 70px;
+    height: 70px;
+}
+
+.desktop-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.desktop-menu button{
+    background: linear-gradient(to left, #860000, #ff2326);
+    color:#ffffff;
+    width: 105px;
+    height: 45px;
+    border: 0px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+.mobile-menu button{
+    background: linear-gradient(to left, #860000, #ff2326);
+    color:#ffffff;
+    width: 135px;
+    height: 45px;
+    border: 0px;
+    border-radius: 0px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.header-maintext h2{
+    font-size: 34px;
+    margin-top: 200px;;
+    text-align: center;
+    color: white;
+}
+.header-maintext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-maintext p{
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+.header-margin{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для десктопного меню */
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Стили для мобильного меню */
+.mobile-menu-btn {
+    display: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    z-index: 100;
+}
+
+/* animate */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+.fade-in-element.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+    display: block;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* do 400px */
+@media (max-width: 400px) {
+    header{
+        background-size: cover;     
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .header-margin{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .header-maintext{
+        font-size: 16px;
+        margin-top: 10px;
+        width: 100%;
+        color: white;
+    }
+    .desktop-menu img{
+        width: 40px;
+        height: 40px;
+    }
+    li{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .desktop-menu a{
+        font-size: 14px;
+    }
+    .desktop-menu button{
+        width: 85px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+}
+
+/* телефоны до 600 пикселей*/
+@media (min-width: 401px) and (max-width: 600px) {
+    header{
+        background-size: cover;     
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .header-margin{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .header-maintext{
+        font-size: 18px;
+        margin-top: 10px;
+        width: 100%;
+        color: white;
+    }
+    .desktop-menu img{
+        width: 40px;
+        height: 40px;
+    }
+    li{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .desktop-menu a{
+        font-size: 14px;
+    }
+    .desktop-menu button{
+        width: 85px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+
+
+/* телефоны до 900 пикселей*/
+@media (min-width: 601px) and (max-width: 900px) {
+    header{
+        background-size: cover;      
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .header-margin{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .header-maintext{
+        font-size: 25px;
+        margin-top: 50px;
+        width: 100%;
+        color: white;
+    }
+    .desktop-menu img{
+        width: 40px;
+        height: 40px;
+    }
+    li{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .desktop-menu a{
+        font-size: 14px;
+    }
+    .desktop-menu button{
+        width: 85px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        font-size: 40px;
+    }
+}
+  
+
+
+/* Диапазон (например, планшеты) */
+@media (min-width: 901px) and (max-width: 1199px) {
+    header{
+        background-size: cover;     
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .header-margin{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .header-maintext{
+        font-size: 34px;
+        margin-top: 100px;
+        width: 100%;
+        color: white;
+    }
+}
+
+
+
+/* Для экранов ≥ 1200px (ПК) */
+@media (min-width: 1200px) {
+    header{
+        background-size: cover;
+    }
+    .header-margin{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .desktop-menu a{
+        font-size: 18px;
+    }
+    .desktop-menu h1{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+#jouw-auto-info {
+  padding: 40px 0;
+  background-color: transparent; /* ← Прозрачный фон */
+  color: #fff;
+}
+
+#jouw-auto-info .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#jouw-auto-info h2 {
+  font-size: 2.5rem;
+  color: #ff3c3c;
+  margin-bottom: 60px;
+}
+
+#jouw-auto-info article h3 {
+  font-size: 1.6rem;
+  color: #ff3c3c;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+}
+
+#jouw-auto-info p,
+#jouw-auto-info ul,
+#jouw-auto-info ol {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+}
+
+#jouw-auto-info ul {
+  padding-left: 1.5em;
+  list-style: disc;
+}
+
+#jouw-auto-info ol {
+  padding-left: 1.5em;
+  list-style: decimal;
+}
+
+#jouw-auto-info strong {
+  color: #fff;
+}
+
+.line {
+  border: none; 
+  height: 4px;        
+  background: grey;    
+  border-radius: 2px;  
+  margin-top: 30px;
+}
+.suggestiestrook p{
+    display: flex;
+    justify-content: center;
+}
+.suggestiestrook img{
+    display: block;
+    margin: 50px auto 10px auto;
+}
+
+.image_center img{
+    display: block;
+    margin: 30px auto;
+}
+.image_center p{
+    display: flex;
+    justify-content: center;
+}
+article main{
+    display: flex;
+    justify-content: space-between;
+}
+.img_onder img{
+    width: 150px;
+}
+article main p{
+    display: flex;
+    justify-content: center;
+}
+.inhalen_img{
+    display: block;
+    margin: 20px auto;
+}
+
+
+
+
+/* 📱 Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  #jouw-auto-info {
+    padding: 30px 15px;
+  }
+
+  #jouw-auto-info h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #jouw-auto-info article h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  #jouw-auto-info p,
+  #jouw-auto-info ul,
+  #jouw-auto-info ol {
+    font-size: 1.05rem;
+  }
+
+.suggestiestrook img{
+    width: 300px;
+}
+}
