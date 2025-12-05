@@ -648,7 +648,7 @@ footer{
 
 
 /* Для экранов ≥ 1200px (ПК) */
-@media (min-width: 1200px) and (max-width: 2000px) {
+@media (min-width: 1200px) {
     header{
         height: 900px;
         background-size: cover;
@@ -665,10 +665,7 @@ footer{
     }
 }
 
-/* IMPORTANT!!!!!!!!!!!!!!!!!!!!!!! */
-@media (min-width: 2001px){
-    
-}
+
 
 
 /* телефоны до 600 пикселей*/
