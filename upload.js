@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-const Question = require('./models_Question');
 
 const questions = [
   {
@@ -13777,19 +13775,4 @@ why: "EMD is specifically aimed at drivers who drive under the influence of drug
 
 
 
-
-
-
-
-
-// topic нормальный сделать
-
 ];
-mongoose.connect('mongodb://localhost:27017/proeftoets')
-  .then(async () => {
-    await Question.deleteMany(); 
-    await Question.insertMany(questions);
-    console.log('✅ Вопросы загружены');
-    mongoose.disconnect();
-  })
-  .catch(console.error);
