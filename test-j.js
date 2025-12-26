@@ -11,22 +11,13 @@ function shuffle(array) {
 
 async function loadQuestions() {
   try {
-    // ✅ ВАЖНО: это должен быть реальный файл на хостинге
-    // Положи questions.json в папку /api/ на сайте
-    const QUESTIONS_URL = "/api/questions.json";
+    const data = window.questions; // ✅ вместо fetch
 
-    const res = await fetch(QUESTIONS_URL, { cache: "no-store" });
-
-    if (!res.ok) {
-      throw new Error(`Не удалось загрузить вопросы: ${res.status} ${res.statusText} (${QUESTIONS_URL})`);
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error("Вопросы не найдены. Проверь upload.js и порядок подключения скриптов.");
     }
 
-    const data = await res.json();
-
-    // перемешиваем все вопросы
     const shuffled = shuffle(data);
-
-    // берём первые 21
     questionsInTest = shuffled.slice(0, 21);
 
     const container = document.getElementById("quiz-container");
@@ -39,20 +30,16 @@ async function loadQuestions() {
 
       const shuffledAnswers = shuffle(q.answers);
 
-      const answersHtml = shuffledAnswers
-        .map(
-          (a) => `
-          <label class="answer-label">
-            <input 
-              type="radio" 
-              name="q-${q.id}" 
-              data-correct="${a.isCorrect}"
-            >
-            ${a.text}
-          </label>
-        `
-        )
-        .join("");
+      const answersHtml = shuffledAnswers.map(a => `
+        <label class="answer-label">
+          <input 
+            type="radio" 
+            name="q-${q.id}" 
+            data-correct="${a.isCorrect}"
+          >
+          ${a.text}
+        </label>
+      `).join("");
 
       div.innerHTML = `
         <h3>${i + 1}. ${q.question}</h3>
@@ -64,13 +51,11 @@ async function loadQuestions() {
       container.appendChild(div);
     });
 
-    // обработчик навешиваем один раз (чтобы не дублировался при повторной загрузке)
     container.onchange = (e) => {
       const target = e.target;
       if (target && target.matches('input[type="radio"]')) {
         const name = target.name;
-        const allForThisQuestion = document.querySelectorAll(`input[name="${name}"]`);
-        allForThisQuestion.forEach((input) => {
+        document.querySelectorAll(`input[name="${name}"]`).forEach(input => {
           input.closest(".answer-label")?.classList.remove("selected");
         });
         target.closest(".answer-label")?.classList.add("selected");
@@ -79,7 +64,7 @@ async function loadQuestions() {
   } catch (err) {
     console.error(err);
     const container = document.getElementById("quiz-container");
-    container.innerHTML = `<p style="color:red">Ошибка загрузки вопросов. Проверь путь к questions.json и консоль.</p>`;
+    container.innerHTML = `<p style="color:red">Ошибка загрузки вопросов. Проверь upload.js и консоль.</p>`;
   }
 }
 
