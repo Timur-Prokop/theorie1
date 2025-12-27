@@ -1,5 +1,5 @@
 
-const questions = [
+window.questions = [
   {
     id: 1,
     question: "Wat betekent dit verkeersbord?",
