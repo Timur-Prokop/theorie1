@@ -30,20 +30,28 @@ function loadQuestions() {
     questionsInTest.forEach((q, i) => {
       const div = document.createElement("div");
       div.classList.add("question");
-      div.dataset.id = String(q.id);
+
+      // Всегда уникальный id для блока
+      const blockId = q.id != null ? String(q.id) : `idx-${i}`;
+      div.dataset.id = blockId;
+
+      // Всегда уникальная группа радиокнопок
+      const groupName = `q-${blockId}`;
 
       const shuffledAnswers = shuffle(q.answers || []);
 
-      const answersHtml = shuffledAnswers.map((a) => `
-        <label class="answer-label">
-          <input
-            type="radio"
-            name="q-${q.id}"
-            data-correct="${a.isCorrect}"
-          >
-          ${a.text}
-        </label>
-      `).join("");
+      const answersHtml = shuffledAnswers
+        .map((a) => `
+          <label class="answer-label">
+            <input
+              type="radio"
+              name="${groupName}"
+              data-correct="${a.isCorrect ? "true" : "false"}"
+            >
+            ${a.text}
+          </label>
+        `)
+        .join("");
 
       div.innerHTML = `
         <h3>${i + 1}. ${q.question}</h3>
@@ -55,18 +63,25 @@ function loadQuestions() {
       container.appendChild(div);
     });
 
-    // чтобы не плодить обработчики — вешаем один раз
-    container.addEventListener("change", (e) => {
-      const target = e.target;
-      if (target && target.matches('input[type="radio"]')) {
-        const name = target.name;
-        document.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
-          input.closest(".answer-label")?.classList.remove("selected");
-        });
-        target.closest(".answer-label")?.classList.add("selected");
-      }
-    }, { once: true });
+    // Обработчик подсветки — без once:true (иначе работает только 1 раз)
+    if (!container.dataset.listenerAdded) {
+      container.addEventListener("change", (e) => {
+        const target = e.target;
+        if (target && target.matches('input[type="radio"]')) {
+          const name = target.name;
 
+          // снимаем selected только в рамках этого вопроса
+          container.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
+            input.closest(".answer-label")?.classList.remove("selected");
+          });
+
+          // ставим selected на выбранный вариант
+          target.closest(".answer-label")?.classList.add("selected");
+        }
+      });
+
+      container.dataset.listenerAdded = "1";
+    }
   } catch (err) {
     console.error(err);
     const container = document.getElementById("quiz-container");
@@ -79,28 +94,31 @@ function loadQuestions() {
 function checkAnswers() {
   let correctCount = 0;
 
-  questionsInTest.forEach((q) => {
-    const block = document.querySelector(`.question[data-id="${q.id}"]`);
+  questionsInTest.forEach((q, i) => {
+    const blockId = q.id != null ? String(q.id) : `idx-${i}`;
+    const block = document.querySelector(`.question[data-id="${blockId}"]`);
     if (!block) return;
 
     const selected = block.querySelector('input[type="radio"]:checked');
     const explanationEl = block.querySelector(".explanation");
 
+    // сброс классов
     block.classList.remove("correct", "wrong");
     block.querySelectorAll(".answer-label").forEach((label) => {
       label.classList.remove("answer-correct", "answer-wrong");
     });
 
+    // правильный ответ
     const correctInput = block.querySelector('input[data-correct="true"]');
     const correctLabel = correctInput?.closest(".answer-label");
     const correctText = correctLabel ? correctLabel.textContent.trim() : "";
 
     if (!selected) {
       block.classList.add("wrong");
-      if (explanationEl) {
-        explanationEl.textContent = `U hebt niks gekozen. Juiste antrwoord is: ${correctText}. ${q.why ?? ""}`;
-      }
       if (correctLabel) correctLabel.classList.add("answer-correct");
+      if (explanationEl) {
+        explanationEl.textContent = `U hebt niks gekozen. Juiste antwoord is: ${correctText}. ${q.why ?? ""}`;
+      }
       return;
     }
 
@@ -127,13 +145,10 @@ function checkAnswers() {
   }
 }
 
-// ждать пока DOM загрузится — чтобы кнопка точно существовала
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("check-btn");
   if (btn) btn.addEventListener("click", checkAnswers);
 
-  // проверка: видит ли браузер вопросы
   console.log("questions loaded:", window.questions?.length);
-
   loadQuestions();
 });
