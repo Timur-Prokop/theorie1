@@ -2,1497 +2,3824 @@
 // window.
 questions = [
   {
-    id: 1,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A1_rs59nu.png",
-    "answers": [
-    { "text": "Maximumsnelheid", "isCorrect": true },
-    { "text": "Adviessnelheid", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 2,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A2_nami9x.png",
-    "answers": [
-    { "text": "Einde van maximumsnelheid", "isCorrect": true },
-    { "text": "Einde van adviessnelheid", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 3,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A3_jr7v9e.png",
-    "answers": [
-    { "text": "70 km/u is de verplichte maximumsnelheid", "isCorrect": true },
-    { "text": "70 km/u is een adviessnelheid", "isCorrect": false },
-    { "text": "Je mag maximaal 70 km/u rijden, maar alleen als het regent", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-
-  {
-    id: 4,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A4_lv3j3a.png",
-    "answers": [
-    { "text": "Adviessnelheid van 50 km/u", "isCorrect": true },
-    { "text": "Verplichte maximumsnelheid van 50 km/u", "isCorrect": false },
-    { "text": "Minimumsnelheid van 50 km/u", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 5,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B2_ryx4xt.png",
-    "answers": [
-    { "text": "Einde van de voorrangsweg", "isCorrect": true },
-    { "text": "Je moet voorrang geven aan rechts", "isCorrect": false },
-    { "text": "Begin van een voorrangsweg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 6,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B3_jbaxl3.png",
-    "answers": [
-    { "text": "Op het volgende kruispunt heb je voorrang", "isCorrect": true },
-    { "text": "Je moet voorrang geven aan rechts en links", "isCorrect": false },
-    { "text": "Einde van de voorrangsweg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 7,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B6_cxtjab.png",
-    "answers": [
-    { "text": "Je moet voorrang verlenen aan bestuurders op de kruisende weg", "isCorrect": true },
-    { "text": "Jij hebt voorrang op het kruispunt", "isCorrect": false },
-    { "text": "Alleen fietsers hebben voorrang", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 8,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B7_vvep6e.png",
-    "answers": [
-    { "text": "Je moet stoppen en voorrang verlenen aan bestuurders op de kruisende weg", "isCorrect": true },
-    { "text": "Je mag alleen stoppen als er verkeer aankomt", "isCorrect": false },
-    { "text": "Je hebt altijd voorrang na een korte stop", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 9,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BB3_zppzrq.png",
-    "answers": [
-    { "text": "Om de juiste volgafstand te kunnen inschatten", "isCorrect": true },
-    { "text": "Om de maximumsnelheid aan te geven", "isCorrect": false },
-    { "text": "Als waarschuwing voor scherpe bochten", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 10,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF5_frvl3o.png",
-    "answers": [
-    { "text": "Je moet voorrang geven aan tegenliggers", "isCorrect": true },
-    { "text": "Er is tweerichtingsverkeer toegestaan", "isCorrect": false },
-    { "text": "Je hebt voorrang op tegenliggers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 11,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF5_frvl3o.png",
-    "answers": [
-    { "text": "Je moet voorrang geven aan tegenliggers", "isCorrect": true },
-    { "text": "Er is tweerichtingsverkeer toegestaan", "isCorrect": false },
-    { "text": "Je hebt voorrang op tegenliggers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 12,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF6_stwvjx.png",
-    "answers": [
-    { "text": "Tegenliggers moeten voorrang geven aan jou", "isCorrect": true },
-    { "text": "Tegenliggers hebben voorrang op jou", "isCorrect": false },
-    { "text": "Er is tweerichtingsverkeer toegestaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 13,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22b_irzyc1.png",
-    "answers": [
-    { "text": "U verlaat de milieuzone", "isCorrect": true },
-    { "text": "U rijdt een milieuzone binnen", "isCorrect": false },
-    { "text": "Hier begint een snelheidsbeperking vanwege luchtkwaliteit", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 14,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22c_smbmp4.png",
-    "answers": [
-    { "text": "Verboden voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", "isCorrect": true },
-    { "text": "Parkeerverbod voor voertuigen met een aanhanger", "isCorrect": false },
-    { "text": "Alleen toegestaan voor elektrische bestelwagens", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 15,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22d_k1fjae.png",
-    "answers": [
-    { "text": "Einde van het verbod voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", "isCorrect": true },
-    { "text": "Verboden voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", "isCorrect": false },
-    { "text": "Verbod voor de autos met een aanhanger", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 16,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C23-01_fztpv6.png",
-    "answers": [
-    { "text": "Rijbaan met drie rijstroken in dezelfde richting", "isCorrect": true },
-    { "text": "Verkeersopstopping op drie rijstroken", "isCorrect": false },
-    { "text": "Verplichte rijrichting naar links op de rechterrijstrook", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 16,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C23-03_jlz4g2.png",
-    "answers": [
-    { "text": "De rechterrijstrook is afgesloten; verkeer moet gebruikmaken van de andere twee rijstroken", "isCorrect": true },
-    { "text": "Verkeer mag alleen gebruikmaken van de derde rijstrook", "isCorrect": false },
-    { "text": "Alle rijstroken mogen vrij gebruikt worden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 17,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C1_gwazdb.png",
-    "answers": [
-    { "text": "Verboden voor alle voertuigen in beide richtingen", "isCorrect": true },
-    { "text": "Alleen toegestaan voor openbaar vervoer", "isCorrect": false },
-    { "text": "Verboden toegang voor vrachtwagens en motorfietsen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 18,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C2_bt992y.png",
-    "answers": [
-    { "text": "Eenrichtingsweg / Verboden in te rijden", "isCorrect": true },
-    { "text": "Verboden te parkeren aan deze zijde van de weg", "isCorrect": false },
-    { "text": "Eenrichtingsweg / Toegestaan om in te rijden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 19,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C3_qryrhf.png",
-    "answers": [
-    { "text": "Eenrichtingsweg / Toegestaan om in te rijden", "isCorrect": true },
-    { "text": "Toegestaan om aan deze zijde van de weg te stoppen", "isCorrect": false },
-    { "text": "Eenrichtingsweg / Verboden in te rijden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 20,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C6_wyneqm.png",
-    "answers": [
-    { "text": "Verboden voor auto's en andere motorvoertuigen met meer dan twee wielen", "isCorrect": true },
-    { "text": "", "isCorrect": false },
-    { "text": "Verboden toegang aleen voor lichte auto's", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 21,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C7_msb3vb.png",
-    "answers": [
-    { "text": "Verboden voor vrachtauto’s", "isCorrect": true },
-    { "text": "Verboden voor auto's en andere motorvoertuigen met meer dan twee wielen", "isCorrect": false },
-    { "text": "Verboden voor alle voertuigen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 22,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C8_wksymm.png",
-    "answers": [
-    { "text": "Verboden voor landbouw- en bosbouwtrekkers", "isCorrect": true },
-    { "text": "Alleen toegestaan voor landbouwverkeer", "isCorrect": false },
-    { "text": "Verboden voor alle motorvoertuigen die lichter dan 3,5 ton zijn", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 23,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C9_ro7blv.png",
-    "answers": [
-    { "text": "Verboden voor landbouwvoertuigen, bromfietsen en fietsen", "isCorrect": true },
-    { "text": "Verboden voor landbouwvoertuigen, snorfietsen en fietsen", "isCorrect": false },
-    { "text": "Verboden voor alle motorvoertuigen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 24,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C10_ejylfw.png",
-    "answers": [
-    { "text": "Verboden voor motorvoertuigen met aanhangwagen", "isCorrect": true },
-    { "text": "Alleen toegestaan voor voertuigen met aanhanger", "isCorrect": false },
-    { "text": "Verboden voor vrachtwagens zonder aanhanger", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 25,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C11_hthsqe.png",
-    "answers": [
-    { "text": "Verboden voor motorfietsen", "isCorrect": true },
-    { "text": "Alleen toegestaan voor bromfietsen", "isCorrect": false },
-    { "text": "Verboden voor auto’s en vrachtwagens", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 26,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C12_Zone_ekc70r.png",
-    "answers": [
-    { "text": "Verboden voor vervuilende motorvoertuigen die niet aan de milieunormen voldoen", "isCorrect": true },
-    { "text": "Verboden voor alle gemotoriseerde voertuigen", "isCorrect": false },
-    { "text": "Alleen toegang voor elektrische motorfietse", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 27,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C15_u8xv9p.png",
-    "answers": [
-    { "text": "Verboden voor fietsen en bromfietsen", "isCorrect": true },
-    { "text": "Alleen toegestaan voor elektrische fietsen", "isCorrect": false },
-    { "text": "Verboden voor motorvoertuigen op twee wielen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 28,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C16_rtyyfz.png",
-    "answers": [
-    { "text": "Verboden voor voetgangers", "isCorrect": true },
-    { "text": "Verplichte looproute voor voetgangers", "isCorrect": false },
-    { "text": "Alleen toegestaan voor fietsers en voetgangers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 29,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C17_qp9udc.png",
-    "answers": [
-    { "text": "Verboden voor voertuigen langer dan 10 meter", "isCorrect": true },
-    { "text": "Minimale volgafstand van 10 meter vereist", "isCorrect": false },
-    { "text": "Verboden voor voertuigen korter dan 10 meter", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 30,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C21_u5s40o.png",
-    "answers": [
-    { "text": "Verboden voor voertuigen met een toegestane maximum massa van meer dan 5,4 ton", "isCorrect": true },
-
-    { "text": "Verboden voor voertuigen die op dit moment minder dan 5,4 ton wegen", "isCorrect": false },
-
-    { "text": "Alleen toegestaan voor voertuigen met aanhanger", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 31,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C18_jv7dmb.png",
-    "answers": [
-    { "text": "Verboden voor voertuigen die, inclusief lading, breder zijn dan 2,3 meter", "isCorrect": true },
-    { "text": "Voertuigen moeten minimaal 2,3 meter breed zijn", "isCorrect": false },
-    { "text": "Verboden voor voertuigen die breder zijn dan 2,3 meter (zonder lading)", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 32,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C19_zfqlht.png",
-    "answers": [
-    { "text": "Verboden voor voertuigen hoger dan 3,1 meter, inclusief lading", "isCorrect": true },
-    { "text": "Verboden voor voertuigen hoger dan 3,1 meter (zonder lading)", "isCorrect": false },
-    { "text": "Verboden voor voertuigen die, inclusief lading, breder zijn dan 3,1 meter", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 33,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22_ttqywq.png",
-    "answers": [
-    { "text": "Verboden voor vrachtauto’s met gevaarlijke stoffen", "isCorrect": true },
-    { "text": "Verboden voor vrachtauto’s met aanhanger", "isCorrect": false },
-    { "text": "Verboden voor landbouwvoertuigen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 34,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22a_yaeyxy.png",
-    "answers": [
-    { "text": "Verboden toegang voor vervuilende voertuigen", "isCorrect": true },
-    { "text": "Parkeerzone voor milieuvriendelijke auto's", "isCorrect": false },
-    { "text": "Verplichte route voor elektrisch verkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 35,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF13_rg6dt2.png",
-    "answers": [
-    { "text": "Verplichte route voor bussen", "isCorrect": true },
-    { "text": "Verboden voor bussen", "isCorrect": false },
-    { "text": "Parkeerplaats voor touringcars", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 36,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF14_lpd83a.png",
-    "answers": [
-    { "text": "Einde van verplichte busroute", "isCorrect": true },
-    { "text": "Begin van een busbaan", "isCorrect": false },
-    { "text": "Verboden voor bussen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 37,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG7_ygdzkv.png",
-    "answers": [
-    { "text": "Verplichte route voor voetgangers", "isCorrect": true },
-    { "text": "Oversteekplaats voor voetgangers", "isCorrect": false },
-    { "text": "Verboden voor voetgangers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 38,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG10_lnrc3h.png",
-    "answers": [
-    { "text": "Einde van verplicht ruiterpad", "isCorrect": true },
-    { "text": "Begin van een fietspad", "isCorrect": false },
-    { "text": "Verboden voor ruiters", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 39,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG11_g6rptr.png",
-    "answers": [
-    { "text": "Verplicht fietspad", "isCorrect": true },
-    { "text": "Verboden voor gemotoriseerde voertuigen", "isCorrect": false },
-    { "text": "Fietsen toegestaan, maar niet verplicht", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 40,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG12_ptul4a.png",
-    "answers": [
-    { "text": "Einde van verplicht fietspad", "isCorrect": true },
-    { "text": "Begin van een fietsstraat", "isCorrect": false },
-    { "text": "Verboden voor fietsen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 41,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG12a_waxmfy.png",
-    "answers": [
-    { "text": "Pad verplicht voor fietsers en bromfietsers", "isCorrect": true },
-    { "text": "Fietsers en bromfietsers mogen hier oversteken", "isCorrect": false },
-    { "text": "Pad uitsluitend voor fietsers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 42,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D1_zb_fsa4q7.png",
-    "answers": [
-    { "text": "Verplichte rijrichting in een rotonde", "isCorrect": true },
-    { "text": "Verkeersplein met voorrang voor rechts", "isCorrect": false },
-    { "text": "U rijdt eenrichtingsverkeer binnen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 43,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D2_zb_hul2ub.png",
-    "answers": [
-    { "text": "Verplicht om pijl te volgen", "isCorrect": true },
-    { "text": "Verplicht links afslaan", "isCorrect": false },
-    { "text": "Verbod om links af te slaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 44,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D7_p0zztn.png",
-    "answers": [
-    { "text": "Verplichte rijrichting: links of rechts", "isCorrect": true },
-    { "text": "Je mag alleen links afslaan", "isCorrect": false },
-    { "text": "Je hebt keuze om links of rechts te parkeren", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 45,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF11_etwaim.png",
-    "answers": [
-    { "text": "Verplicht voor landbouwvoertuigen", "isCorrect": true },
-    { "text": "Verboden voor alle motorvoertuigen", "isCorrect": false },
-    { "text": "Verplicht voor vrachtwagens en bussen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 46,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF12_mhuapz.png",
-    "answers": [
-    { "text": "Einde van verplichte route voor landbouwvoertuigen", "isCorrect": true },
-    { "text": "Verbod voor landbouwvoertuigen", "isCorrect": false },
-    { "text": "Begin van een landbouwgebied", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 47,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E5_rc1gky.png",
-    "answers": [
-    { "text": "Parkeerplaats alleen voor taxi's", "isCorrect": true },
-    { "text": "Parkeerverbod voor taxi’s", "isCorrect": false },
-    { "text": "Parkeerplaats voor auto's met parkeerschijf", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 48,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E6_zljvpg.png",
-    "answers": [
-    { "text": "Parkeerplaats voor voertuigen met een gehandicaptenkaart", "isCorrect": true },
-    { "text": "Parkeerverbod voor rolstoelen", "isCorrect": false },
-    { "text": "Parkeerplaats voor ziekenwagens", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 49,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E7_b1xqun.png",
-    "answers": [
-    { "text": "Parkeerplaats voor laden en lossen", "isCorrect": true },
-    { "text": "Parkeerplaats voor bestelwagens", "isCorrect": false },
-    { "text": "Parkeerplaats voor leveringen na 18:00 uur", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 50,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E12_nazyqg.png",
-    "answers": [
-    { "text": "Parkeerplaats met mogelijkheid tot overstappen op het openbaar vervoer", "isCorrect": true },
-    { "text": "Parkeerplaats voor taxi's en bussen", "isCorrect": false },
-    { "text": "Parkeerplaats alleen tijdens spitsuren", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 51,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E1_mb_sm67me.png",
-    "answers": [
-    { "text": "Verbod om te parkeren", "isCorrect": true },
-    { "text": "Verbod om stil te staan", "isCorrect": false },
-    { "text": "Parkeren toegestaan met parkeerschijf", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 52,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E1_Zone_pl42dn.png",
-    "answers": [
-    { "text": "Begin van een zone waar parkeren verboden is", "isCorrect": true },
-    { "text": "Verboden om te stoppen in deze straat", "isCorrect": false },
-    { "text": "Parkeerzone alleen voor vergunninghouders", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 53,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E2_mb_d2d70x.png",
-    "answers": [
-    { "text": "Verboden om stil te staan", "isCorrect": true },
-    { "text": "Parkeren toegestaan met gevarenlichten", "isCorrect": false },
-    { "text": "Verboden om te parkeren tussen 8:00 en 18:00", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 54,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E3_gkc2hl.png",
-    "answers": [
-    { "text": "Verbod voor fietsen en bromfietsen", "isCorrect": true },
-    { "text": "Alleen toegestaan voor elektrische fietsen", "isCorrect": false },
-    { "text": "Fietsers moeten hier afstappen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 55,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E4_muskf8.png",
-    "answers": [
-    { "text": "Toegestane parkeerplaats voor alle voertuigen", "isCorrect": true },
-    { "text": "Parkeren alleen toegestaan voor bewoners", "isCorrect": false },
-    { "text": "Parkeerplaats alleen met parkeerschijf", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 56,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F3_fwxxny.png",
-    "answers": [
-    { "text": "Toegestane parkeerplaats voor alle voertuigen", "isCorrect": true },
-    { "text": "Parkeerplaats alleen voor taxi's", "isCorrect": false },
-    { "text": "Verboden om te parkeren zonder vergunning", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 57,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F4_giuaey.png",
-    "answers": [
-    { "text": "Einde van inhaalverbod voor vrachtwagens", "isCorrect": true },
-    { "text": "Begin van inhaalverbod voor vrachtwagens", "isCorrect": false },
-    { "text": "Einde van alle snelheidsbeperkingen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 58,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F7_u9vik2.png",
-    "answers": [
-    { "text": "Verboden om te keren (U-bocht te maken)", "isCorrect": true },
-    { "text": "Verplicht om te keren", "isCorrect": false },
-    { "text": "Alleen keren toegestaan voor bestemmingsverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 59,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F8_ddw0dy.png",
-    "answers": [
-    { "text": "Einde van alle verboden en beperkingen", "isCorrect": true },
-    { "text": "Begin van een snelheidszone", "isCorrect": false },
-    { "text": "Einde van een autosnelweg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 60,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F9_n5mpor.png",
-    "answers": [
-    { "text": "Einde van de adviessnelheid op een autosnelweg", "isCorrect": true },
-    { "text": "Verbod op inhalen", "isCorrect": false },
-    { "text": "Einde van de snelheidslimiet van 50 km/u", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 61,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F10_dnmzb7.png",
-    "answers": [
-    { "text": "Verboden in te rijden (eenrichtingsverkeer – tegen de richting in)", "isCorrect": true },
-    { "text": "Inrijden toegestaan alleen voor openbaar vervoer", "isCorrect": false },
-    { "text": "Verplicht om te stoppen voor alle verkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 62,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F1_fajkfj.png",
-    "answers": [
-    { "text": "Verbod voor motorvoertuigen om elkaar in te halen", "isCorrect": true },
-    { "text": "Verplichte rijrichting voor vrachtverkeer", "isCorrect": false },
-    { "text": "Alleen personenauto’s mogen hier inhalen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 63,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F2_yne3vz.png",
-    "answers": [
-    { "text": "Einde van het inhaalverbod voor motorvoertuigen", "isCorrect": true },
-    { "text": "Verbod voor vrachtwagens om in te halen", "isCorrect": false },
-    { "text": "Einde van een snelheidsbeperking van 70 km/u", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 64,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G14_fyzgup.png",
-    "answers": [
-    { "text": "Einde van het verplicht fietspad", "isCorrect": true },
-    { "text": "Fietsers verplicht afstappen", "isCorrect": false },
-    { "text": "Begin van een voetpad voor fietsers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 65,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/H1_k0qvot.png",
-    "answers": [
-    { "text": "Begin van de bebouwde kom van Helmond", "isCorrect": true },
-    { "text": "Gemeentegrens van Helmond", "isCorrect": false },
-    { "text": "Verkeersbord met toeristische route door Helmond", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 66,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/H2_inwlle.png",
-    "answers": [
-    { "text": "Einde van de bebouwde kom van Helmond", "isCorrect": true },
-    { "text": "Begin van de gemeente Helmond", "isCorrect": false },
-    { "text": "Einde van een toeristisch gebied", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 67,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G1_zb_chvhra.png",
-    "answers": [
-    { "text": "Begin van een autosnelweg", "isCorrect": true },
-    { "text": "Einde van een autosnelweg", "isCorrect": false },
-    { "text": "Verplichte minimumsnelheid van 100 km/u", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 68,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G2_zb_kqqyet.png",
-    "answers": [
-    { "text": "Einde van een autosnelweg", "isCorrect": true },
-    { "text": "Begin van een autoweg", "isCorrect": false },
-    { "text": "Verbod voor motorvoertuigen om door te rijden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 69,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G3_nvekna.png",
-    "answers": [
-    { "text": "Begin van een autoweg", "isCorrect": true },
-    { "text": "Parkeerplaats voor personenauto’s", "isCorrect": false },
-    { "text": "Verplichte rijrichting voor auto’s", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 70,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G4_kdfglh.png",
-    "answers": [
-    { "text": "Einde van een autoweg", "isCorrect": true },
-    { "text": "Verbod voor motorvoertuigen", "isCorrect": false },
-    { "text": "Begin van een parkeerverbodszone", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 71,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G5_mikgxl.png",
-    "answers": [
-    { "text": "Begin van een woonerf", "isCorrect": true },
-    { "text": "Verplicht om stapvoets te rijden", "isCorrect": false },
-    { "text": "Verboden voor doorgaand verkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 72,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "",
-    "answers": [
-    { "text": "Begin van een woonerf", "isCorrect": true },
-    { "text": "Verplicht om stapvoets te rijden", "isCorrect": false },
-    { "text": "Verboden voor doorgaand verkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 73,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G6_mb_yh6sff.png",
-    "answers": [
-    { "text": "Einde van een woonerf", "isCorrect": true },
-    { "text": "Verbod voor voetgangers en spelende kinderen", "isCorrect": false },
-    { "text": "Begin van een zone met snelheidsbeperking", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 74,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G13_jiybuv.png",
-    "answers": [
-    { "text": "Einde van het verplicht fietspad", "isCorrect": true },
-    { "text": "Fietsers verboden in deze zone", "isCorrect": false },
-    { "text": "Fietspad alleen toegestaan buiten de spits", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 75,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J2_focvn6.png",
-    "answers": [
-    { "text": "Gevaarlijke bocht naar rechts", "isCorrect": true },
-    { "text": "Verplicht afslaan naar rechts", "isCorrect": false },
-    { "text": "Einde van eenrichtingsverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 76,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J4_knpfch.png",
-    "answers": [
-    { "text": "S-bocht, eerst naar rechts", "isCorrect": true },
-    { "text": "Verplicht rechtsaf, daarna linksaf", "isCorrect": false },
-    { "text": "Gevaarlijke rotonde nadert", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 77,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J6_msrw5d.png",
-    "answers": [
-    { "text": "Waarschuwing voor een stijging van 10%", "isCorrect": true },
-    { "text": "Waarschuwing voor een afdaling van 10%", "isCorrect": false },
-    { "text": "Verplichte versnelling bij helling", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 78,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J7_gaeali.png",
-    "answers": [
-    { "text": "Waarschuwing voor een afdaling van 10%", "isCorrect": true },
-    { "text": "Waarschuwing voor een stijging van 10%", "isCorrect": false },
-    { "text": "Verbod om te remmen op de helling", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 79,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J8_kb72py.png",
-    "answers": [
-    { "text": "Kruispunt van gelijkwaardige wegen", "isCorrect": true },
-    { "text": "Voorrangskruispunt", "isCorrect": false },
-    { "text": "Verkeerslichtregeling op kruising", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 80,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J9_k4c3uk.png",
-    "answers": [
-    { "text": "Waarschuwing voor een rotonde", "isCorrect": true },
-    { "text": "Verplichte rijrichting naar rechts", "isCorrect": false },
-    { "text": "Verkeersplein verboden voor vrachtauto’s", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 81,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J10_dgsnno.png",
-    "answers": [
-    { "text": "Waarschuwing voor een overweg met slagbomen", "isCorrect": true },
-    { "text": "Waarschuwing voor een tolpoort", "isCorrect": false },
-    { "text": "Oversteekplaats voor landbouwverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 82,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J11_komzhr.png",
-    "answers": [
-    { "text": "Waarschuwing voor een overweg zonder slagbomen", "isCorrect": true },
-    { "text": "Spoorwegovergang met stoplicht", "isCorrect": false },
-    { "text": "Toegang alleen voor spoorwegverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 83,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J12_jnnafa.png",
-    "answers": [
-    { "text": "Overweg met meerdere spoorlijnen", "isCorrect": true },
-    { "text": "Overweg met één spoorlijn", "isCorrect": false },
-    { "text": "Spoorwegovergang met slagbomen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 84,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J13_pffpw0.png",
-    "answers": [
-    { "text": "Overweg met drie of meer spoorlijnen", "isCorrect": true },
-    { "text": "Spoorwegovergang zonder waarschuwingslichten", "isCorrect": false },
-    { "text": "Waarschuwing voor metrospoor of trambaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 85,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J15_vywlif.png",
-    "answers": [
-    { "text": "Waarschuwing voor een beweegbare brug", "isCorrect": true },
-    { "text": "Waarschuwing voor een tunnel", "isCorrect": false },
-    { "text": "Brug alleen toegankelijk voor openbaar vervoer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 86,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J16_pz0dxd.png",
-    "answers": [
-    { "text": "Waarschuwing voor wegwerkzaamheden", "isCorrect": true },
-    { "text": "Verbod om te stoppen wegens bouwzone", "isCorrect": false },
-    { "text": "Verkeersregelaar in dienst", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 87,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J17_eqimrv.png",
-    "answers": [
-    { "text": "Waarschuwing voor versmalling van de rijbaan aan beide zijden", "isCorrect": true },
-    { "text": "Waarschuwing voor wegverbreding", "isCorrect": false },
-    { "text": "Rijstrook alleen voor landbouwvoertuigen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 88,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J18_esqzbe.png",
-    "answers": [
-    { "text": "Waarschuwing voor versmalling van de rijbaan aan de rechterzijde", "isCorrect": true },
-    { "text": "Begin van eenrichtingsverkeer aan de rechterkant", "isCorrect": false },
-    { "text": "Rechts voorsorteren verplicht", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 89,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J20_owge6z.png",
-    "answers": [
-    { "text": "Waarschuwing voor slipgevaar", "isCorrect": true },
-    { "text": "Bochtige weg met verhoogde snelheid", "isCorrect": false },
-    { "text": "Verplichte snelheid onder de 30 km/u", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 90,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J21_lhxlkr.png",
-    "answers": [
-    { "text": "Waarschuwing voor overstekende kinderen", "isCorrect": true },
-    { "text": "Speelzone voor kinderen", "isCorrect": false },
-    { "text": "Voetgangersoversteekplaats", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 91,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J21__school_xlakza.png",
-    "answers": [
-    { "text": "Waarschuwing voor schoolgaande kinderen", "isCorrect": true },
-    { "text": "Verplichte stop bij schoolgebied", "isCorrect": false },
-    { "text": "Speelstraat alleen voor voetgangers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 92,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J22_fdu9zb.png",
-    "answers": [
-    { "text": "Waarschuwing voor een oversteekplaats voor voetgangers", "isCorrect": true },
-    { "text": "Voetgangers verboden", "isCorrect": false },
-    { "text": "Verplichte stop voor voetgangers", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 93,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J24_qdzymf.png",
-    "answers": [
-    { "text": "Waarschuwing voor overstekende of kruisende fietsers", "isCorrect": true },
-    { "text": "Verplichte route voor fietsers", "isCorrect": false },
-    { "text": "Verbod voor motorvoertuigen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 94,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J25_rvodcf.png",
-    "answers": [
-    { "text": "Waarschuwing voor losliggend grind of steenslag", "isCorrect": true },
-    { "text": "Verplicht om lichten te dimmen", "isCorrect": false },
-    { "text": "Gevaar voor wegsleepregeling", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 95,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J26_btectg.png",
-    "answers": [
-    { "text": "Waarschuwing voor een kade of oever zonder vangrail", "isCorrect": true },
-    { "text": "Brug in slechte staat", "isCorrect": false },
-    { "text": "Gevaar voor overstroming bij regen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 96,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J27_q6nlhy.png",
-    "answers": [
-    { "text": "Waarschuwing voor overstekend wild (herten)", "isCorrect": true },
-    { "text": "Verboden toegang voor dieren", "isCorrect": false },
-    { "text": "Bosgebied met jachttoestemming", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 97,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J29_m6npie.png",
-    "answers": [
-    { "text": "Waarschuwing voor een weg met tweerichtingsverkeer", "isCorrect": true },
-    { "text": "Begin van eenrichtingsweg", "isCorrect": false },
-    { "text": "Voorrang voor tegemoetkomend verkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 98,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J31_rborup.png",
-    "answers": [
-    { "text": "Waarschuwing voor zijwind of sterke windstoten", "isCorrect": true },
-    { "text": "Verplichte rijrichting bij storm", "isCorrect": false },
-    { "text": "Waarschuwing voor naderende stormvloed", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 99,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J33_s8y4t7.png",
-    "answers": [
-    { "text": "Waarschuwing voor filevorming", "isCorrect": true },
-    { "text": "Verplichte minimumafstand tussen voertuigen", "isCorrect": false },
-    { "text": "Waarschuwing voor parkeerterrein met rijen auto's", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 100,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J30_zt6b66.png",
-    "answers": [
-    { "text": "Waarschuwing voor laagvliegende vliegtuigen", "isCorrect": true },
-    { "text": "Route naar het dichtstbijzijnde vliegveld", "isCorrect": false },
-    { "text": "Verboden voor luchtverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 101,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J32_yrolte.png",
-    "answers": [
-    { "text": "Waarschuwing: Verkeerslichten ahead", "isCorrect": true },
-    { "text": "Verkeerslichten zijn buiten werking", "isCorrect": false },
-    { "text": "Alleen toegang voor bussen bij groen licht", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-
-  {
-    id: 102,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J34_is5frg.png",
-    "answers": [
-    { "text": "Waarschuwing: Slechte of zachte berm", "isCorrect": true },
-    { "text": "Auto’s kunnen hier slippen", "isCorrect": false },
-    { "text": "Rijbaan versmalt plotseling aan de rechterkant", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 103,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J1_catrdv.png",
-    "answers": [
-    { "text": "Waarschuwing: Slecht wegdek of hobbelige weg", "isCorrect": true },
-    { "text": "Waarschuwing voor een rotonde", "isCorrect": false },
-    { "text": "Waarschuwing voor verkeerslichten", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 104,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J37_qzhlpa.png",
-    "answers": [
-    { "text": "Algemeen gevaar, uitleg staat op het onderbord", "isCorrect": true },
-    { "text": "Altijd stoppen", "isCorrect": false },
-    { "text": "Voorrang aan besturders van rechts geven", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 105,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J38_ztnced.png",
-    "answers": [
-    { "text": "Verhoogd wegdek (verkeersdrempel)", "isCorrect": true },
-    { "text": "Snelheidslimiet op heuvelachtig terrein", "isCorrect": false },
-    { "text": "Gevaarlijke helling", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 106,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J35_qumgah.png",
-    "answers": [
-    { "text": "Kans op glad wegdek bij nat weer", "isCorrect": true },
-    { "text": "Gevaar voor slecht zicht", "isCorrect": false },
-    { "text": "Kans op regenachtig weer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 107,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J36_ngs5wq.png",
-    "answers": [
-    { "text": "Gevaar voor sneeuw of ijzel", "isCorrect": true },
-    { "text": "Winterbanden verplicht", "isCorrect": false },
-    { "text": "Sneeuwkettingen vereist", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 108,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/K10_gc9x8m.png",
-    "answers": [
-    { "text": "Bewegwijzering binnen de bebouwde kom", "isCorrect": true },
-    { "text": "Route voor fitsers buiten de beboude kom", "isCorrect": false },
-    { "text": "Richtingaanwijzer op een autosnelweg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 109,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/K14_n4dzma.png",
-    "answers": [
-    { "text": "Omleidingsroute in noordelijke richting", "isCorrect": true },
-    { "text": "Volg deze rijstrook voor doorgaand verkeer", "isCorrect": false },
-    { "text": "Verbod om links of rechts af te slaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 110,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "",
-    "answers": [
-    { "text": "Afstanden naar steden via een autosnelweg", "isCorrect": true },
-    { "text": "Richting naar tankstations en parkeerplaatsen", "isCorrect": false },
-    { "text": "Alternatieve route voor vrachtverkeer", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 111,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L16_kk9sba.png",
-    "answers": [
-    { "text": "Noodtelefoon in de buurt", "isCorrect": true },
-    { "text": "Informatiebord over mobiele dekking", "isCorrect": false },
-    { "text": "Verboden te bellen tijdens het rijden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 112,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L2_gsglls.png",
-    "answers": [
-    { "text": "Oversteekplaats voor voetgangers", "isCorrect": true },
-    { "text": "Verboden voor voetgangers", "isCorrect": false },
-    { "text": "Waarschuwing voor kinderen", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 113,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L8_mb_yefc7a.png",
-    "answers": [
-    { "text": "Doodlopende weg", "isCorrect": true },
-    { "text": "Verboden in te rijden", "isCorrect": false },
-    { "text": "Weg met beperkte doorgang", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 114,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L9_hqdw3t.png",
-    "answers": [
-    { "text": "De zijweg rechts is een doodlopende weg", "isCorrect": true },
-    { "text": "Je mag alleen rechtdoor rijden", "isCorrect": false },
-    { "text": "Rechtdoor is een doodlopende weg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 115,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L13_z0ojxs.png",
-    "answers": [
-    { "text": "De tunnel die je binnenrijdt is 17 km lang", "isCorrect": true },
-    { "text": "Er komt een tunnel aan die 17 km verderop ligt", "isCorrect": false },
-    { "text": "Je rijdt over 17 km door een tunne", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 116,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L14_eiwljq.png",
-    "answers": [
-    { "text": "Uitwijkplaats of pechhaven", "isCorrect": true },
-    { "text": "Parkeerplaats voor vrachtwagens", "isCorrect": false },
-    { "text": "Invoegstrook naar de snelweg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 117,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L19__links_vtvfv6.png",
-    "answers": [
-    { "text": "Nooduitgang bevindt zich over 50 meter naar links", "isCorrect": true },
-    { "text": "Over 50 meter mag je naar links afslaan", "isCorrect": false },
-    { "text": "Begin van een wandelpad naar links over 50 meter", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 118,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L21_yrgxki.png",
-    "answers": [
-    { "text": "Tegenliggers moeten uitwijken voor jou", "isCorrect": true },
-    { "text": "Jij moet uitwijken voor tegenliggers", "isCorrect": false },
-    { "text": "Beide richtingen moeten afwisselend doorrijden", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 119,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/NL-E34_htdh91.png",
-    "answers": [
-    { "text": "Je rijdt op of richting Europese route E34", "isCorrect": true },
-    { "text": "Dit is een afritnummer op snelweg E34", "isCorrect": false },
-    { "text": "Snelheidslimiet van 34 km/u op deze weg", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 120,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB1_fz1qug.png",
-    "answers": [
-    { "text": "Pad uitsluitend bestemd voor ruiters", "isCorrect": true },
-    { "text": "Paarden verboden", "isCorrect": false },
-    { "text": "Verplicht fietspad met paarden toegestaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 121,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB2_nfn87s.png",
-    "answers": [
-    { "text": "Alleen voertuigen van milieuklasse 4 of hoger zijn toegestaan", "isCorrect": true },
-    { "text": "Alleen elektrische voertuigen zijn toegestaan", "isCorrect": false },
-    { "text": "Voertuigen van bouwjaar 2004 of ouder zijn toegestaan", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 122,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB60_dnwwbp.png",
-    "answers": [
-    { "text": "Aanhangwagens zijn hier verboden", "isCorrect": true },
-    { "text": "Alleen voertuigen met aanhanger mogen hier rijden", "isCorrect": false },
-    { "text": "De verkeersregel erboven geldt niet voor aanhangwagens", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-  {
-    id: 123,
-    question: "Wat betekent dit verkeersbord?",
-    imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB65_mrjosm.png",
-    "answers": [
-    { "text": "De verkeersregel erboven geldt niet voor brommobielen", "isCorrect": true },
-    { "text": "Alleen brommobielen zijn toegestaan", "isCorrect": false },
-    { "text": "Bromfietsen en scooters zijn hier verboden ", "isCorrect": false }
-    ],
-    topic: "borden"
-  },
-
-
-
+  id: 1,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A1_rs59nu.png",
+  answers: [
+    { text: "Maximumsnelheid", isCorrect: true },
+    { text: "Adviessnelheid", isCorrect: false }
+  ],
+  why: "Dit bord geeft een maximumsnelheid aan (verplicht).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: ["Максимальная скорость", "Рекомендованная скорость"],
+    why: "Знак показывает обязательную максимальную скорость."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: ["Maximum speed limit", "Advisory speed"],
+    why: "This sign indicates a mandatory maximum speed limit."
+  }
+},
+
+{
+  id: 2,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A2_nami9x.png",
+  answers: [
+    { text: "Einde van maximumsnelheid", isCorrect: true },
+    { text: "Einde van adviessnelheid", isCorrect: false }
+  ],
+  why: "Dit bord betekent het einde van de (verplichte) maximumsnelheid.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: ["Конец ограничения максимальной скорости", "Конец рекомендованной скорости"],
+    why: "Знак обозначает конец обязательного ограничения скорости."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: ["End of the maximum speed limit", "End of the advisory speed"],
+    why: "This sign indicates the end of the mandatory speed limit."
+  }
+},
+
+{
+  id: 3,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A3_jr7v9e.png",
+  answers: [
+    { text: "70 km/u is de verplichte maximumsnelheid", isCorrect: true },
+    { text: "70 km/u is een adviessnelheid", isCorrect: false },
+    { text: "Je mag maximaal 70 km/u rijden, maar alleen als het regent", isCorrect: false }
+  ],
+  why: "Rond bord met rode rand = verplichte maximumsnelheid (hier 70 km/u).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "70 км/ч — обязательная максимальная скорость",
+      "70 км/ч — рекомендованная скорость",
+      "Можно до 70 км/ч только когда идёт дождь"
+    ],
+    why: "Круглый знак с красной окантовкой означает обязательное ограничение скорости (70 км/ч)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "70 km/h is the mandatory maximum speed",
+      "70 km/h is an advisory speed",
+      "You may drive up to 70 km/h only when it rains"
+    ],
+    why: "A round sign with a red border indicates a mandatory maximum speed (70 km/h)."
+  }
+},
+
+{
+  id: 4,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/A4_lv3j3a.png",
+  answers: [
+    { text: "Adviessnelheid van 50 km/u", isCorrect: true },
+    { text: "Verplichte maximumsnelheid van 50 km/u", isCorrect: false },
+    { text: "Minimumsnelheid van 50 km/u", isCorrect: false }
+  ],
+  why: "Blauw vierkant met snelheid = adviessnelheid (aanbevolen), geen verplichting.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Рекомендованная скорость 50 км/ч",
+      "Обязательная максимальная скорость 50 км/ч",
+      "Минимальная скорость 50 км/ч"
+    ],
+    why: "Синий квадрат со скоростью означает рекомендованную скорость (не обязательную)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Advisory speed of 50 km/h",
+      "Mandatory maximum speed of 50 km/h",
+      "Minimum speed of 50 km/h"
+    ],
+    why: "A blue square with a speed indicates an advisory (recommended) speed."
+  }
+},
+
+{
+  id: 5,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B2_ryx4xt.png",
+  answers: [
+    { text: "Einde van de voorrangsweg", isCorrect: true },
+    { text: "Je moet voorrang geven aan rechts", isCorrect: false },
+    { text: "Begin van een voorrangsweg", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van een voorrangsweg aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: ["Конец главной дороги", "Нужно уступать справа", "Начало главной дороги"],
+    why: "Знак обозначает конец дороги с приоритетом (главной дороги)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: ["End of a priority road", "You must give way to the right", "Start of a priority road"],
+    why: "This sign indicates the end of a priority road."
+  }
+},
+
+{
+  id: 6,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B3_jbaxl3.png",
+  answers: [
+    { text: "Op het volgende kruispunt heb je voorrang", isCorrect: true },
+    { text: "Je moet voorrang geven aan rechts en links", isCorrect: false },
+    { text: "Einde van de voorrangsweg", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat je op het volgende kruispunt voorrang hebt.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "На следующем перекрёстке у вас преимущество",
+      "Нужно уступать справа и слева",
+      "Конец главной дороги"
+    ],
+    why: "Знак сообщает, что на следующем перекрёстке у вас приоритет."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You have priority at the next intersection",
+      "You must give way to right and left",
+      "End of the priority road"
+    ],
+    why: "This sign indicates you have priority at the next intersection."
+  }
+},
+
+{
+  id: 7,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B6_cxtjab.png",
+  answers: [
+    { text: "Je moet voorrang verlenen aan bestuurders op de kruisende weg", isCorrect: true },
+    { text: "Jij hebt voorrang op het kruispunt", isCorrect: false },
+    { text: "Alleen fietsers hebben voorrang", isCorrect: false }
+  ],
+  why: "Dit is een voorrangsbord: je moet voorrang verlenen aan het kruisende verkeer.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Нужно уступить дорогу на пересекаемой дороге",
+      "У вас преимущество на перекрёстке",
+      "Преимущество только у велосипедистов"
+    ],
+    why: "Это знак 'Уступите дорогу': вы должны уступить пересекаемому движению."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You must give way to traffic on the intersecting road",
+      "You have priority at the intersection",
+      "Only cyclists have priority"
+    ],
+    why: "This is a give-way sign: you must yield to traffic on the intersecting road."
+  }
+},
+
+{
+  id: 8,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/B7_vvep6e.png",
+  answers: [
+    { text: "Je moet stoppen en voorrang verlenen aan bestuurders op de kruisende weg", isCorrect: true },
+    { text: "Je mag alleen stoppen als er verkeer aankomt", isCorrect: false },
+    { text: "Je hebt altijd voorrang na een korte stop", isCorrect: false }
+  ],
+  why: "STOP-bord: je moet altijd stoppen en daarna voorrang verlenen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Нужно остановиться и уступить дорогу пересекаемому движению",
+      "Можно остановиться только если есть движение",
+      "После короткой остановки у вас всегда приоритет"
+    ],
+    why: "STOP: обязательная остановка, затем уступить дорогу."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You must stop and give way to traffic on the intersecting road",
+      "You only have to stop if traffic is coming",
+      "You always have priority after a short stop"
+    ],
+    why: "STOP sign: you must come to a complete stop and then yield."
+  }
+},
+
+{
+  id: 9,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BB3_zppzrq.png",
+  answers: [
+    { text: "Om de juiste volgafstand te kunnen inschatten", isCorrect: true },
+    { text: "Om de maximumsnelheid aan te geven", isCorrect: false },
+    { text: "Als waarschuwing voor scherpe bochten", isCorrect: false }
+  ],
+  why: "Dit zijn afstandsbakens/markeringen om de volgafstand te beoordelen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Чтобы оценивать правильную дистанцию",
+      "Чтобы указать максимальную скорость",
+      "Как предупреждение о резких поворотах"
+    ],
+    why: "Это разметка/указатели, помогающие оценить дистанцию до впереди идущего."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "To help estimate a safe following distance",
+      "To indicate the maximum speed",
+      "As a warning for sharp bends"
+    ],
+    why: "These markings help drivers judge a safe following distance."
+  }
+},
+
+{
+  id: 10,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF5_frvl3o.png",
+  answers: [
+    { text: "Je moet voorrang geven aan tegenliggers", isCorrect: true },
+    { text: "Er is tweerichtingsverkeer toegestaan", isCorrect: false },
+    { text: "Je hebt voorrang op tegenliggers", isCorrect: false }
+  ],
+  why: "Dit bord betekent dat jij moet wachten/voorrang geven aan tegenliggers.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Вы должны уступить встречному транспорту",
+      "Разрешено двустороннее движение",
+      "У вас приоритет перед встречными"
+    ],
+    why: "Знак показывает, что вы обязаны уступить встречным."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You must give way to oncoming traffic",
+      "Two-way traffic is allowed",
+      "You have priority over oncoming traffic"
+    ],
+    why: "This sign indicates you must yield to oncoming traffic."
+  }
+},
+
+{
+  id: 11,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF5_frvl3o.png",
+  answers: [
+    { text: "Je moet voorrang geven aan tegenliggers", isCorrect: true },
+    { text: "Er is tweerichtingsverkeer toegestaan", isCorrect: false },
+    { text: "Je hebt voorrang op tegenliggers", isCorrect: false }
+  ],
+  why: "Dit bord betekent dat jij moet wachten/voorrang geven aan tegenliggers.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Вы должны уступить встречному транспорту",
+      "Разрешено двустороннее движение",
+      "У вас приоритет перед встречными"
+    ],
+    why: "Знак показывает, что вы обязаны уступить встречным."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You must give way to oncoming traffic",
+      "Two-way traffic is allowed",
+      "You have priority over oncoming traffic"
+    ],
+    why: "This sign indicates you must yield to oncoming traffic."
+  }
+},
+
+{
+  id: 12,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/BF6_stwvjx.png",
+  answers: [
+    { text: "Tegenliggers moeten voorrang geven aan jou", isCorrect: true },
+    { text: "Tegenliggers hebben voorrang op jou", isCorrect: false },
+    { text: "Er is tweerichtingsverkeer toegestaan", isCorrect: false }
+  ],
+  why: "Dit bord betekent dat tegenliggers jou voorrang moeten geven.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Встречные должны уступить вам",
+      "Встречные имеют приоритет",
+      "Разрешено двустороннее движение"
+    ],
+    why: "Знак показывает, что приоритет у вас, встречные уступают."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Oncoming traffic must give way to you",
+      "Oncoming traffic has priority over you",
+      "Two-way traffic is allowed"
+    ],
+    why: "This sign indicates you have priority; oncoming traffic must yield."
+  }
+},
+
+{
+  id: 13,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22b_irzyc1.png",
+  answers: [
+    { text: "U verlaat de milieuzone", isCorrect: true },
+    { text: "U rijdt een milieuzone binnen", isCorrect: false },
+    { text: "Hier begint een snelheidsbeperking vanwege luchtkwaliteit", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat je de milieuzone verlaat (einde milieuzone).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Вы покидаете экологическую зону",
+      "Вы въезжаете в экологическую зону",
+      "Начинается ограничение скорости из-за качества воздуха"
+    ],
+    why: "Знак обозначает конец экологической зоны — вы её покидаете."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You are leaving the environmental zone",
+      "You are entering an environmental zone",
+      "A speed restriction starts due to air quality"
+    ],
+    why: "This sign indicates the end of the environmental zone (you are leaving it)."
+  }
+},
+
+{
+  id: 14,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22c_smbmp4.png",
+  answers: [
+    { text: "Verboden voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", isCorrect: true },
+    { text: "Parkeerverbod voor voertuigen met een aanhanger", isCorrect: false },
+    { text: "Alleen toegestaan voor elektrische bestelwagens", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt vrachtauto’s en bestelwagens boven 3,5 ton.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для грузовиков и фургонов тяжелее 3,5 т",
+      "Парковка запрещена для транспорта с прицепом",
+      "Разрешено только для электрических фургонов"
+    ],
+    why: "Знак запрещает въезд грузовым/фургонам с массой более 3,5 т."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No entry for trucks and vans over 3.5 tonnes",
+      "No parking for vehicles with a trailer",
+      "Only electric vans are allowed"
+    ],
+    why: "This sign prohibits trucks/vans with a permitted maximum mass over 3.5 tonnes."
+  }
+},
+
+{
+  id: 15,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22d_k1fjae.png",
+  answers: [
+    { text: "Einde van het verbod voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", isCorrect: true },
+    { text: "Verboden voor vrachtwagens en bestelwagens zwaarder dan 3,5 ton", isCorrect: false },
+    { text: "Verbod voor de autos met een aanhanger", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde aan van het verbod voor voertuigen boven 3,5 ton.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец запрета для грузовиков и фургонов тяжелее 3,5 т",
+      "Запрещено для грузовиков и фургонов тяжелее 3,5 т",
+      "Запрет для автомобилей с прицепом"
+    ],
+    why: "Знак обозначает конец запрета для транспорта свыше 3,5 т."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the ban for trucks and vans over 3.5 tonnes",
+      "No entry for trucks and vans over 3.5 tonnes",
+      "Ban for cars with a trailer"
+    ],
+    why: "This sign indicates the end of the restriction for vehicles over 3.5 tonnes."
+  }
+},
+
+{
+  id: 16,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C23-01_fztpv6.png",
+  answers: [
+    { text: "Rijbaan met drie rijstroken in dezelfde richting", isCorrect: true },
+    { text: "Verkeersopstopping op drie rijstroken", isCorrect: false },
+    { text: "Verplichte rijrichting naar links op de rechterrijstrook", isCorrect: false }
+  ],
+  why: "Dit bord geeft een rijbaan aan met drie rijstroken in dezelfde richting.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Дорога с тремя полосами в одном направлении",
+      "Пробка на трёх полосах",
+      "Обязательное направление налево на правой полосе"
+    ],
+    why: "Знак показывает: три полосы движения в одном направлении."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Roadway with three lanes in the same direction",
+      "Traffic jam on three lanes",
+      "Mandatory direction to the left on the right lane"
+    ],
+    why: "This sign indicates three lanes in the same direction."
+  }
+},
+
+{
+  id: 16.1,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C23-03_jlz4g2.png",
+  answers: [
+    { text: "De rechterrijstrook is afgesloten; verkeer moet gebruikmaken van de andere twee rijstroken", isCorrect: true },
+    { text: "Verkeer mag alleen gebruikmaken van de derde rijstrook", isCorrect: false },
+    { text: "Alle rijstroken mogen vrij gebruikt worden", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat de rechterrijstrook is afgesloten en je moet invoegen op de overige rijstroken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Правая полоса закрыта; нужно использовать две другие",
+      "Можно использовать только третью полосу",
+      "Все полосы можно использовать свободно"
+    ],
+    why: "Знак показывает закрытие правой полосы и необходимость перестроиться."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "The right lane is closed; traffic must use the other two lanes",
+      "Traffic may only use the third lane",
+      "All lanes may be used freely"
+    ],
+    why: "This sign indicates the right lane is closed; merge into the remaining lanes."
+  }
+},
+
+{
+  id: 17,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C1_gwazdb.png",
+  answers: [
+    { text: "Verboden voor alle voertuigen in beide richtingen", isCorrect: true },
+    { text: "Alleen toegestaan voor openbaar vervoer", isCorrect: false },
+    { text: "Verboden toegang voor vrachtwagens en motorfietsen", isCorrect: false }
+  ],
+  why: "Dit bord betekent: gesloten voor alle voertuigen in beide richtingen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Движение запрещено для всех транспортных средств в обоих направлениях",
+      "Разрешено только общественному транспорту",
+      "Запрещён въезд грузовикам и мотоциклам"
+    ],
+    why: "Знак обозначает полный запрет движения для всех ТС."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No vehicles in either direction",
+      "Only public transport allowed",
+      "No entry for trucks and motorcycles"
+    ],
+    why: "This sign means the road is closed to all vehicles in both directions."
+  }
+},
+
+{
+  id: 18,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C2_bt992y.png",
+  answers: [
+    { text: "Eenrichtingsweg / Verboden in te rijden", isCorrect: true },
+    { text: "Verboden te parkeren aan deze zijde van de weg", isCorrect: false },
+    { text: "Eenrichtingsweg / Toegestaan om in te rijden", isCorrect: false }
+  ],
+  why: "Dit bord betekent: eenrichtingsweg, verboden in te rijden vanaf deze kant.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Односторонняя дорога / Въезд запрещён",
+      "Парковка запрещена на этой стороне",
+      "Односторонняя дорога / Въезд разрешён"
+    ],
+    why: "Это знак 'въезд запрещён' на одностороннюю дорогу с этой стороны."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "One-way street / No entry from this side",
+      "No parking on this side of the road",
+      "One-way street / Entry allowed"
+    ],
+    why: "This indicates a one-way road where entry is prohibited from this direction."
+  }
+},
+
+{
+  id: 19,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C3_qryrhf.png",
+  answers: [
+    { text: "Eenrichtingsweg / Toegestaan om in te rijden", isCorrect: true },
+    { text: "Toegestaan om aan deze zijde van de weg te stoppen", isCorrect: false },
+    { text: "Eenrichtingsweg / Verboden in te rijden", isCorrect: false }
+  ],
+  why: "Dit bord betekent: eenrichtingsweg, je mag deze weg inrijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Односторонняя дорога / Въезд разрешён",
+      "Разрешена остановка на этой стороне",
+      "Односторонняя дорога / Въезд запрещён"
+    ],
+    why: "Знак указывает на одностороннюю дорогу и разрешённый въезд."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "One-way street / Entry allowed",
+      "Stopping allowed on this side",
+      "One-way street / No entry"
+    ],
+    why: "This indicates a one-way street where entry is allowed from this side."
+  }
+},
+
+{
+  id: 20,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C6_wyneqm.png",
+  answers: [
+    { text: "Verboden voor auto's en andere motorvoertuigen met meer dan twee wielen", isCorrect: true },
+    { text: "", isCorrect: false },
+    { text: "Verboden toegang aleen voor lichte auto's", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt auto's en andere motorvoertuigen met meer dan twee wielen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для автомобилей и других моторных ТС с более чем двумя колёсами",
+      "",
+      "Въезд запрещён только для лёгких автомобилей"
+    ],
+    why: "Знак запрещает автомобили и другие моторные ТС с более чем двумя колёсами."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Cars and other motor vehicles with more than two wheels are prohibited",
+      "",
+      "Entry prohibited only for light cars"
+    ],
+    why: "This sign prohibits cars and other motor vehicles with more than two wheels."
+  }
+},
+
+{
+  id: 21,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C7_msb3vb.png",
+  answers: [
+    { text: "Verboden voor vrachtauto’s", isCorrect: true },
+    { text: "Verboden voor auto's en andere motorvoertuigen met meer dan twee wielen", isCorrect: false },
+    { text: "Verboden voor alle voertuigen", isCorrect: false }
+  ],
+  why: "Dit bord betekent: vrachtauto’s verboden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Грузовикам запрещено",
+      "Запрещено для автомобилей и других моторных ТС с более чем двумя колёсами",
+      "Запрещено для всех транспортных средств"
+    ],
+    why: "Знак запрещает движение грузовиков."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Trucks are prohibited",
+      "Cars and other motor vehicles with more than two wheels are prohibited",
+      "All vehicles are prohibited"
+    ],
+    why: "This sign prohibits trucks."
+  }
+},
+
+{
+  id: 22,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C8_wksymm.png",
+  answers: [
+    { text: "Verboden voor landbouw- en bosbouwtrekkers", isCorrect: true },
+    { text: "Alleen toegestaan voor landbouwverkeer", isCorrect: false },
+    { text: "Verboden voor alle motorvoertuigen die lichter dan 3,5 ton zijn", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt landbouw- en bosbouwtrekkers.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для сельскохозяйственных и лесных тракторов",
+      "Разрешено только сельхоздвижению",
+      "Запрещено для всех моторных ТС легче 3,5 т"
+    ],
+    why: "Знак запрещает движение сельскохозяйственных/лесных тракторов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Agricultural and forestry tractors are prohibited",
+      "Only agricultural traffic is allowed",
+      "All motor vehicles under 3.5 tonnes are prohibited"
+    ],
+    why: "This sign prohibits agricultural and forestry tractors."
+  }
+},
+
+{
+  id: 23,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C9_ro7blv.png",
+  answers: [
+    { text: "Verboden voor landbouwvoertuigen, bromfietsen en fietsen", isCorrect: true },
+    { text: "Verboden voor landbouwvoertuigen, snorfietsen en fietsen", isCorrect: false },
+    { text: "Verboden voor alle motorvoertuigen", isCorrect: false }
+  ],
+  why: "Dit verbod geldt voor landbouwvoertuigen, bromfietsen en fietsen (combinatie op bord).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для сельхозтехники, мопедов и велосипедов",
+      "Запрещено для сельхозтехники, мопедов (snorfiets) и велосипедов",
+      "Запрещено для всех моторных транспортных средств"
+    ],
+    why: "Запрет распространяется на указанные категории: сельхозтранспорт, мопеды и велосипеды."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Agricultural vehicles, mopeds and bicycles are prohibited",
+      "Agricultural vehicles, light mopeds and bicycles are prohibited",
+      "All motor vehicles are prohibited"
+    ],
+    why: "The prohibition applies to the categories shown: agricultural vehicles, mopeds and bicycles."
+  }
+},
+
+{
+  id: 24,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C10_ejylfw.png",
+  answers: [
+    { text: "Verboden voor motorvoertuigen met aanhangwagen", isCorrect: true },
+    { text: "Alleen toegestaan voor voertuigen met aanhanger", isCorrect: false },
+    { text: "Verboden voor vrachtwagens zonder aanhanger", isCorrect: false }
+  ],
+  why: "Motorvoertuigen met aanhangwagen mogen hier niet rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для моторных ТС с прицепом",
+      "Разрешено только для ТС с прицепом",
+      "Запрещено для грузовиков без прицепа"
+    ],
+    why: "Знак запрещает движение моторных транспортных средств с прицепом."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Motor vehicles with a trailer are prohibited",
+      "Only vehicles with a trailer are allowed",
+      "Trucks without a trailer are prohibited"
+    ],
+    why: "This sign prohibits motor vehicles towing a trailer."
+  }
+},
+
+{
+  id: 25,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C11_hthsqe.png",
+  answers: [
+    { text: "Verboden voor motorfietsen", isCorrect: true },
+    { text: "Alleen toegestaan voor bromfietsen", isCorrect: false },
+    { text: "Verboden voor auto’s en vrachtwagens", isCorrect: false }
+  ],
+  why: "Motorfietsen mogen hier niet rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Мотоциклам запрещено",
+      "Разрешено только мопедам",
+      "Запрещено для легковых и грузовых"
+    ],
+    why: "Знак запрещает движение мотоциклов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Motorcycles are prohibited",
+      "Only mopeds are allowed",
+      "Cars and trucks are prohibited"
+    ],
+    why: "This sign prohibits motorcycles."
+  }
+},
+
+{
+  id: 26,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C12_Zone_ekc70r.png",
+  answers: [
+    { text: "Verboden voor vervuilende motorvoertuigen die niet aan de milieunormen voldoen", isCorrect: true },
+    { text: "Verboden voor alle gemotoriseerde voertuigen", isCorrect: false },
+    { text: "Alleen toegang voor elektrische motorfietse", isCorrect: false }
+  ],
+  why: "Dit is een milieuzone: vervuilende voertuigen die niet voldoen mogen niet rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для загрязняющих ТС, не соответствующих экологическим нормам",
+      "Запрещено для всех моторных ТС",
+      "Въезд только для электрических мотоциклов"
+    ],
+    why: "Это экологическая зона: въезд загрязняющим ТС, не соответствующим нормам, запрещён."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Polluting motor vehicles that do not meet environmental standards are prohibited",
+      "All motorized vehicles are prohibited",
+      "Entry only for electric motorcycles"
+    ],
+    why: "This is an environmental zone: vehicles that do not meet standards are not allowed."
+  }
+},
+
+{
+  id: 27,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C15_u8xv9p.png",
+  answers: [
+    { text: "Verboden voor fietsen en bromfietsen", isCorrect: true },
+    { text: "Alleen toegestaan voor elektrische fietsen", isCorrect: false },
+    { text: "Verboden voor motorvoertuigen op twee wielen", isCorrect: false }
+  ],
+  why: "Fietsen en bromfietsen zijn verboden op dit weggedeelte.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для велосипедов и мопедов",
+      "Разрешено только для электровелосипедов",
+      "Запрещено для двухколёсных моторных ТС"
+    ],
+    why: "Знак запрещает велосипеды и мопеды."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Bicycles and mopeds are prohibited",
+      "Only electric bicycles are allowed",
+      "Two-wheeled motor vehicles are prohibited"
+    ],
+    why: "This sign prohibits bicycles and mopeds."
+  }
+},
+
+{
+  id: 28,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C16_rtyyfz.png",
+  answers: [
+    { text: "Verboden voor voetgangers", isCorrect: true },
+    { text: "Verplichte looproute voor voetgangers", isCorrect: false },
+    { text: "Alleen toegestaan voor fietsers en voetgangers", isCorrect: false }
+  ],
+  why: "Voetgangers mogen hier niet lopen (verboden voor voetgangers).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Пешеходам запрещено",
+      "Обязательный маршрут для пешеходов",
+      "Разрешено только велосипедистам и пешеходам"
+    ],
+    why: "Знак запрещает движение пешеходов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Pedestrians are prohibited",
+      "Mandatory route for pedestrians",
+      "Only cyclists and pedestrians are allowed"
+    ],
+    why: "This sign prohibits pedestrians."
+  }
+},
+
+{
+  id: 29,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C17_qp9udc.png",
+  answers: [
+    { text: "Verboden voor voertuigen langer dan 10 meter", isCorrect: true },
+    { text: "Minimale volgafstand van 10 meter vereist", isCorrect: false },
+    { text: "Verboden voor voertuigen korter dan 10 meter", isCorrect: false }
+  ],
+  why: "Voertuigen langer dan 10 meter mogen hier niet rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для транспортных средств длиннее 10 метров",
+      "Минимальная дистанция 10 метров обязательна",
+      "Запрещено для транспортных средств короче 10 метров"
+    ],
+    why: "Знак запрещает проезд транспортным средствам длиной более 10 метров."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Vehicles longer than 10 metres are prohibited",
+      "A minimum following distance of 10 metres is required",
+      "Vehicles shorter than 10 metres are prohibited"
+    ],
+    why: "This sign prohibits vehicles longer than 10 metres."
+  }
+},
+
+{
+  id: 30,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C21_u5s40o.png",
+  answers: [
+    { text: "Verboden voor voertuigen met een toegestane maximum massa van meer dan 5,4 ton", isCorrect: true },
+    { text: "Verboden voor voertuigen die op dit moment minder dan 5,4 ton wegen", isCorrect: false },
+    { text: "Alleen toegestaan voor voertuigen met aanhanger", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt voertuigen met een toegestane maximum massa boven 5,4 ton.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для ТС с разрешённой максимальной массой более 5,4 т",
+      "Запрещено для ТС, которые сейчас весят меньше 5,4 т",
+      "Разрешено только для ТС с прицепом"
+    ],
+    why: "Знак запрещает проезд ТС с допустимой максимальной массой более 5,4 т."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Vehicles with a permitted maximum mass over 5.4 tonnes are prohibited",
+      "Vehicles currently weighing under 5.4 tonnes are prohibited",
+      "Only vehicles with a trailer are allowed"
+    ],
+    why: "This sign prohibits vehicles with a permitted maximum mass over 5.4 tonnes."
+  }
+},
+
+{
+  id: 31,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C18_jv7dmb.png",
+  answers: [
+    { text: "Verboden voor voertuigen die, inclusief lading, breder zijn dan 2,3 meter", isCorrect: true },
+    { text: "Voertuigen moeten minimaal 2,3 meter breed zijn", isCorrect: false },
+    { text: "Verboden voor voertuigen die breder zijn dan 2,3 meter (zonder lading)", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt voertuigen breder dan 2,3 m inclusief lading.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для ТС шире 2,3 м (включая груз)",
+      "ТС должны быть минимум 2,3 м шириной",
+      "Запрещено для ТС шире 2,3 м без груза"
+    ],
+    why: "Запрещён проезд ТС шире 2,3 м с учётом груза."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Vehicles wider than 2.3 m (including load) are prohibited",
+      "Vehicles must be at least 2.3 m wide",
+      "Vehicles wider than 2.3 m (without load) are prohibited"
+    ],
+    why: "This sign prohibits vehicles wider than 2.3 m including any load."
+  }
+},
+
+{
+  id: 32,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C19_zfqlht.png",
+  answers: [
+    { text: "Verboden voor voertuigen hoger dan 3,1 meter, inclusief lading", isCorrect: true },
+    { text: "Verboden voor voertuigen hoger dan 3,1 meter (zonder lading)", isCorrect: false },
+    { text: "Verboden voor voertuigen die, inclusief lading, breder zijn dan 3,1 meter", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt voertuigen hoger dan 3,1 m inclusief lading.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для ТС выше 3,1 м (включая груз)",
+      "Запрещено для ТС выше 3,1 м без груза",
+      "Запрещено для ТС шире 3,1 м (включая груз)"
+    ],
+    why: "Запрещён проезд ТС высотой более 3,1 м с учётом груза."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Vehicles higher than 3.1 m (including load) are prohibited",
+      "Vehicles higher than 3.1 m (without load) are prohibited",
+      "Vehicles wider than 3.1 m (including load) are prohibited"
+    ],
+    why: "This sign prohibits vehicles higher than 3.1 m including any load."
+  }
+},
+
+{
+  id: 33,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22_ttqywq.png",
+  answers: [
+    { text: "Verboden voor vrachtauto’s met gevaarlijke stoffen", isCorrect: true },
+    { text: "Verboden voor vrachtauto’s met aanhanger", isCorrect: false },
+    { text: "Verboden voor landbouwvoertuigen", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt vrachtauto’s die gevaarlijke stoffen vervoeren.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для грузовиков с опасными веществами",
+      "Запрещено для грузовиков с прицепом",
+      "Запрещено для сельхозтехники"
+    ],
+    why: "Знак запрещает движение грузовиков, перевозящих опасные вещества."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Trucks carrying dangerous goods are prohibited",
+      "Trucks with a trailer are prohibited",
+      "Agricultural vehicles are prohibited"
+    ],
+    why: "This sign prohibits trucks carrying dangerous goods."
+  }
+},
+
+{
+  id: 34,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/C22a_yaeyxy.png",
+  answers: [
+    { text: "Verboden toegang voor vervuilende voertuigen", isCorrect: true },
+    { text: "Parkeerzone voor milieuvriendelijke auto's", isCorrect: false },
+    { text: "Verplichte route voor elektrisch verkeer", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat vervuilende voertuigen (die niet voldoen) geen toegang hebben.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Въезд запрещён для загрязняющих автомобилей",
+      "Парковочная зона для экологичных авто",
+      "Обязательный маршрут для электротранспорта"
+    ],
+    why: "Знак обозначает запрет въезда для загрязняющих транспортных средств."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No entry for polluting vehicles",
+      "Parking zone for eco-friendly cars",
+      "Mandatory route for electric traffic"
+    ],
+    why: "This sign indicates that polluting vehicles are not allowed to enter."
+  }
+},
+
+  {
+  id: 35,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF13_rg6dt2.png",
+  answers: [
+    { text: "Verplichte route voor bussen", isCorrect: true },
+    { text: "Verboden voor bussen", isCorrect: false },
+    { text: "Parkeerplaats voor touringcars", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat bussen deze route moeten volgen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательный маршрут для автобусов",
+      "Автобусам запрещено",
+      "Парковка для туристических автобусов"
+    ],
+    why: "Знак обозначает обязательный маршрут для автобусов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory route for buses",
+      "Buses are prohibited",
+      "Parking area for coaches"
+    ],
+    why: "This sign indicates a mandatory route for buses."
+  }
+},
+
+{
+  id: 36,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF14_lpd83a.png",
+  answers: [
+    { text: "Einde van verplichte busroute", isCorrect: true },
+    { text: "Begin van een busbaan", isCorrect: false },
+    { text: "Verboden voor bussen", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van de verplichte busroute aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательного маршрута для автобусов",
+      "Начало автобусной полосы",
+      "Автобусам запрещено"
+    ],
+    why: "Знак обозначает конец обязательного маршрута для автобусов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory bus route",
+      "Start of a bus lane",
+      "Buses are prohibited"
+    ],
+    why: "This sign indicates the end of the mandatory bus route."
+  }
+},
+
+{
+  id: 37,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG7_ygdzkv.png",
+  answers: [
+    { text: "Verplichte route voor voetgangers", isCorrect: true },
+    { text: "Oversteekplaats voor voetgangers", isCorrect: false },
+    { text: "Verboden voor voetgangers", isCorrect: false }
+  ],
+  why: "Dit bord betekent dat voetgangers verplicht dit pad moeten gebruiken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательная дорожка/маршрут для пешеходов",
+      "Пешеходный переход",
+      "Пешеходам запрещено"
+    ],
+    why: "Пешеходы обязаны пользоваться этим маршрутом/дорожкой."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory route for pedestrians",
+      "Pedestrian crossing",
+      "Pedestrians prohibited"
+    ],
+    why: "Pedestrians must use this route/path."
+  }
+},
+
+{
+  id: 38,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG10_lnrc3h.png",
+  answers: [
+    { text: "Einde van verplicht ruiterpad", isCorrect: true },
+    { text: "Begin van een fietspad", isCorrect: false },
+    { text: "Verboden voor ruiters", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat het verplichte ruiterpad hier eindigt.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательной тропы для всадников",
+      "Начало велодорожки",
+      "Всадникам запрещено"
+    ],
+    why: "Знак обозначает конец обязательной дорожки для всадников."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory bridle path",
+      "Start of a cycle path",
+      "Riders are prohibited"
+    ],
+    why: "This sign indicates the end of the mandatory bridle path."
+  }
+},
+
+{
+  id: 39,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG11_g6rptr.png",
+  answers: [
+    { text: "Verplicht fietspad", isCorrect: true },
+    { text: "Verboden voor gemotoriseerde voertuigen", isCorrect: false },
+    { text: "Fietsen toegestaan, maar niet verplicht", isCorrect: false }
+  ],
+  why: "Dit is een verplicht fietspad: fietsers moeten dit pad gebruiken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательная велодорожка",
+      "Запрещено для моторных ТС",
+      "Велосипеды разрешены, но не обязаны"
+    ],
+    why: "Это обязательная велодорожка — велосипедисты должны ехать здесь."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory cycle path",
+      "Motor vehicles are prohibited",
+      "Cycling is allowed but not mandatory"
+    ],
+    why: "This is a mandatory cycle path: cyclists must use it."
+  }
+},
+
+{
+  id: 40,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG12_ptul4a.png",
+  answers: [
+    { text: "Einde van verplicht fietspad", isCorrect: true },
+    { text: "Begin van een fietsstraat", isCorrect: false },
+    { text: "Verboden voor fietsen", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van het verplichte fietspad aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательной велодорожки",
+      "Начало велосипедной улицы",
+      "Велосипедам запрещено"
+    ],
+    why: "Знак обозначает конец обязательной велодорожки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory cycle path",
+      "Start of a bicycle street",
+      "Cycling is prohibited"
+    ],
+    why: "This sign indicates the end of the mandatory cycle path."
+  }
+},
+
+{
+  id: 41,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DG12a_waxmfy.png",
+  answers: [
+    { text: "Pad verplicht voor fietsers en bromfietsers", isCorrect: true },
+    { text: "Fietsers en bromfietsers mogen hier oversteken", isCorrect: false },
+    { text: "Pad uitsluitend voor fietsers", isCorrect: false }
+  ],
+  why: "Dit pad is verplicht voor fietsers én bromfietsers.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательная дорожка для велосипедов и мопедов",
+      "Велосипедисты и мопеды могут здесь пересекать",
+      "Дорожка только для велосипедов"
+    ],
+    why: "Дорожка обязательна для велосипедистов и мопедов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory path for cyclists and moped riders",
+      "Cyclists and mopeds may cross here",
+      "Path for cyclists only"
+    ],
+    why: "This path is mandatory for cyclists and moped riders."
+  }
+},
+
+{
+  id: 42,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D1_zb_fsa4q7.png",
+  answers: [
+    { text: "Verplichte rijrichting in een rotonde", isCorrect: true },
+    { text: "Verkeersplein met voorrang voor rechts", isCorrect: false },
+    { text: "U rijdt eenrichtingsverkeer binnen", isCorrect: false }
+  ],
+  why: "Dit bord geeft de verplichte rijrichting op de rotonde aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательное направление движения на круговом перекрёстке",
+      "Площадь с приоритетом справа",
+      "Вы въезжаете на дорогу с односторонним движением"
+    ],
+    why: "Знак показывает обязательное направление движения на круговом."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory direction of travel in a roundabout",
+      "Traffic square with priority to the right",
+      "You are entering a one-way road"
+    ],
+    why: "This sign indicates the mandatory direction on the roundabout."
+  }
+},
+
+{
+  id: 43,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D2_zb_hul2ub.png",
+  answers: [
+    { text: "Verplicht om pijl te volgen", isCorrect: true },
+    { text: "Verplicht links afslaan", isCorrect: false },
+    { text: "Verbod om links af te slaan", isCorrect: false }
+  ],
+  why: "Je moet de aangegeven richting volgen (volg de pijl).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательное движение по стрелке",
+      "Обязательный поворот налево",
+      "Поворот налево запрещён"
+    ],
+    why: "Нужно ехать в направлении, указанном стрелкой."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You must follow the arrow",
+      "You must turn left",
+      "Turning left is prohibited"
+    ],
+    why: "You must follow the direction indicated by the arrow."
+  }
+},
+
+{
+  id: 44,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/D7_p0zztn.png",
+  answers: [
+    { text: "Verplichte rijrichting: links of rechts", isCorrect: true },
+    { text: "Je mag alleen links afslaan", isCorrect: false },
+    { text: "Je hebt keuze om links of rechts te parkeren", isCorrect: false }
+  ],
+  why: "Je moet links óf rechts rijden; rechtdoor is niet toegestaan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательное направление: налево или направо",
+      "Можно только налево",
+      "Можно выбирать парковку слева или справа"
+    ],
+    why: "Движение только налево или направо; прямо нельзя."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory direction: left or right",
+      "You may only turn left",
+      "You may choose to park left or right"
+    ],
+    why: "You must go left or right; going straight is not allowed."
+  }
+},
+
+{
+  id: 45,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF11_etwaim.png",
+  answers: [
+    { text: "Verplicht voor landbouwvoertuigen", isCorrect: true },
+    { text: "Verboden voor alle motorvoertuigen", isCorrect: false },
+    { text: "Verplicht voor vrachtwagens en bussen", isCorrect: false }
+  ],
+  why: "Landbouwvoertuigen moeten deze route/pad gebruiken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Обязательный путь для сельскохозяйственных транспортных средств",
+      "Запрещено для всех моторных ТС",
+      "Обязательный путь для грузовиков и автобусов"
+    ],
+    why: "Сельхозтранспорт обязан следовать по указанному пути."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Mandatory route for agricultural vehicles",
+      "All motor vehicles are prohibited",
+      "Mandatory for trucks and buses"
+    ],
+    why: "Agricultural vehicles must use this route/path."
+  }
+},
+
+{
+  id: 46,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/DF12_mhuapz.png",
+  answers: [
+    { text: "Einde van verplichte route voor landbouwvoertuigen", isCorrect: true },
+    { text: "Verbod voor landbouwvoertuigen", isCorrect: false },
+    { text: "Begin van een landbouwgebied", isCorrect: false }
+  ],
+  why: "De verplichte route voor landbouwvoertuigen eindigt hier.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательного маршрута для сельхозтранспорта",
+      "Сельхозтранспорту запрещено",
+      "Начало сельскохозяйственной зоны"
+    ],
+    why: "Знак обозначает конец обязательного маршрута для сельхозтранспорта."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory route for agricultural vehicles",
+      "Agricultural vehicles are prohibited",
+      "Start of an agricultural area"
+    ],
+    why: "This sign indicates the end of the mandatory route for agricultural vehicles."
+  }
+},
+
+{
+  id: 47,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E5_rc1gky.png",
+  answers: [
+    { text: "Parkeerplaats alleen voor taxi's", isCorrect: true },
+    { text: "Parkeerverbod voor taxi’s", isCorrect: false },
+    { text: "Parkeerplaats voor auto's met parkeerschijf", isCorrect: false }
+  ],
+  why: "Deze parkeerplaats is gereserveerd voor taxi's.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Парковка только для такси",
+      "Такси парковаться запрещено",
+      "Парковка для авто с парковочным диском"
+    ],
+    why: "Парковка предназначена только для такси."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Parking space for taxis only",
+      "No parking for taxis",
+      "Parking for cars with a parking disc"
+    ],
+    why: "This parking space is reserved for taxis only."
+  }
+},
+
+{
+  id: 48,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E6_zljvpg.png",
+  answers: [
+    { text: "Parkeerplaats voor voertuigen met een gehandicaptenkaart", isCorrect: true },
+    { text: "Parkeerverbod voor rolstoelen", isCorrect: false },
+    { text: "Parkeerplaats voor ziekenwagens", isCorrect: false }
+  ],
+  why: "Alleen voertuigen met een gehandicaptenkaart mogen hier parkeren.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Парковка для автомобилей с карточкой инвалида",
+      "Парковка запрещена для инвалидных колясок",
+      "Парковка для скорой помощи"
+    ],
+    why: "Парковка разрешена только авто с инвалидной карточкой."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Parking for vehicles with a disabled permit",
+      "No parking for wheelchairs",
+      "Parking for ambulances"
+    ],
+    why: "Only vehicles with a disabled permit may park here."
+  }
+},
+
+{
+  id: 49,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E7_b1xqun.png",
+  answers: [
+    { text: "Parkeerplaats voor laden en lossen", isCorrect: true },
+    { text: "Parkeerplaats voor bestelwagens", isCorrect: false },
+    { text: "Parkeerplaats voor leveringen na 18:00 uur", isCorrect: false }
+  ],
+  why: "Deze plaats is bedoeld voor laden en lossen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Место для погрузки и разгрузки",
+      "Парковка для фургонов",
+      "Парковка для доставок после 18:00"
+    ],
+    why: "Это место предназначено для погрузки/разгрузки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Loading and unloading area",
+      "Parking for vans",
+      "Parking for deliveries after 18:00"
+    ],
+    why: "This area is intended for loading and unloading."
+  }
+},
+
+{
+  id: 50,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E12_nazyqg.png",
+  answers: [
+    { text: "Parkeerplaats met mogelijkheid tot overstappen op het openbaar vervoer", isCorrect: true },
+    { text: "Parkeerplaats voor taxi's en bussen", isCorrect: false },
+    { text: "Parkeerplaats alleen tijdens spitsuren", isCorrect: false }
+  ],
+  why: "Dit is een P+R: parkeren en overstappen op openbaar vervoer.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Парковка с возможностью пересесть на общественный транспорт (P+R)",
+      "Парковка для такси и автобусов",
+      "Парковка только в часы пик"
+    ],
+    why: "Это P+R: можно припарковаться и пересесть на общественный транспорт."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Park and ride (transfer to public transport)",
+      "Parking for taxis and buses",
+      "Parking only during rush hours"
+    ],
+    why: "This is a P+R: park your car and transfer to public transport."
+  }
+},
+
+{
+  id: 51,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E1_mb_sm67me.png",
+  answers: [
+    { text: "Verbod om te parkeren", isCorrect: true },
+    { text: "Verbod om stil te staan", isCorrect: false },
+    { text: "Parkeren toegestaan met parkeerschijf", isCorrect: false }
+  ],
+  why: "Dit bord betekent: parkeren verboden (stilstaan om in/uit te stappen kan meestal wel).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Парковка запрещена",
+      "Остановка запрещена",
+      "Парковка разрешена с парковочным диском"
+    ],
+    why: "Знак означает запрет парковки (краткая остановка обычно возможна)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No parking",
+      "No stopping",
+      "Parking allowed with a parking disc"
+    ],
+    why: "This sign means parking is prohibited (brief stopping is usually allowed)."
+  }
+},
+
+{
+  id: 52,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E1_Zone_pl42dn.png",
+  answers: [
+    { text: "Begin van een zone waar parkeren verboden is", isCorrect: true },
+    { text: "Verboden om te stoppen in deze straat", isCorrect: false },
+    { text: "Parkeerzone alleen voor vergunninghouders", isCorrect: false }
+  ],
+  why: "Dit bord geeft het begin aan van een zone waar parkeren verboden is.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало зоны, где парковка запрещена",
+      "Остановка запрещена на этой улице",
+      "Парковка только по разрешению"
+    ],
+    why: "Знак обозначает начало зоны запрета парковки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of a no-parking zone",
+      "No stopping in this street",
+      "Parking only for permit holders"
+    ],
+    why: "This sign marks the start of a zone where parking is prohibited."
+  }
+},
+
+{
+  id: 53,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E2_mb_d2d70x.png",
+  answers: [
+    { text: "Verboden om stil te staan", isCorrect: true },
+    { text: "Parkeren toegestaan met gevarenlichten", isCorrect: false },
+    { text: "Verboden om te parkeren tussen 8:00 en 18:00", isCorrect: false }
+  ],
+  why: "Dit bord betekent: stilstaan verboden (ook niet kort stoppen).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Остановка запрещена",
+      "Парковка разрешена с аварийкой",
+      "Парковка запрещена с 8:00 до 18:00"
+    ],
+    why: "Знак означает запрет остановки (даже краткой)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No stopping",
+      "Parking allowed with hazard lights",
+      "No parking between 08:00 and 18:00"
+    ],
+    why: "This sign means stopping is prohibited (even briefly)."
+  }
+},
+
+{
+  id: 54,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E3_gkc2hl.png",
+  answers: [
+    { text: "Verbod voor fietsen en bromfietsen", isCorrect: true },
+    { text: "Alleen toegestaan voor elektrische fietsen", isCorrect: false },
+    { text: "Fietsers moeten hier afstappen", isCorrect: false }
+  ],
+  why: "Fietsen en bromfietsen mogen hier niet rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрещено для велосипедов и мопедов",
+      "Разрешено только для электровелосипедов",
+      "Велосипедистам нужно слезть"
+    ],
+    why: "Велосипеды и мопеды здесь запрещены."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Bicycles and mopeds are prohibited",
+      "Only electric bicycles are allowed",
+      "Cyclists must dismount here"
+    ],
+    why: "Bicycles and mopeds may not use this road/path."
+  }
+},
+
+{
+  id: 55,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/E4_muskf8.png",
+  answers: [
+    { text: "Toegestane parkeerplaats voor alle voertuigen", isCorrect: true },
+    { text: "Parkeren alleen toegestaan voor bewoners", isCorrect: false },
+    { text: "Parkeerplaats alleen met parkeerschijf", isCorrect: false }
+  ],
+  why: "Dit bord geeft een parkeerplaats aan waar parkeren is toegestaan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Разрешённая парковка для всех транспортных средств",
+      "Парковка только для жителей",
+      "Парковка только с парковочным диском"
+    ],
+    why: "Знак обозначает место, где парковка разрешена."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Parking is allowed for all vehicles",
+      "Parking for residents only",
+      "Parking only with a parking disc"
+    ],
+    why: "This sign indicates a place where parking is allowed."
+  }
+},
+
+{
+  id: 56,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F3_fwxxny.png",
+  answers: [
+    { text: "Toegestane parkeerplaats voor alle voertuigen", isCorrect: true },
+    { text: "Parkeerplaats alleen voor taxi's", isCorrect: false },
+    { text: "Verboden om te parkeren zonder vergunning", isCorrect: false }
+  ],
+  why: "Dit bord geeft aan dat parkeren hier is toegestaan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Разрешённая парковка для всех транспортных средств",
+      "Парковка только для такси",
+      "Запрещено парковаться без разрешения"
+    ],
+    why: "Знак обозначает место, где парковка разрешена."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Parking is allowed for all vehicles",
+      "Parking for taxis only",
+      "Parking without a permit is prohibited"
+    ],
+    why: "This sign indicates a place where parking is allowed."
+  }
+},
+
+{
+  id: 57,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F4_giuaey.png",
+  answers: [
+    { text: "Einde van inhaalverbod voor vrachtwagens", isCorrect: true },
+    { text: "Begin van inhaalverbod voor vrachtwagens", isCorrect: false },
+    { text: "Einde van alle snelheidsbeperkingen", isCorrect: false }
+  ],
+  why: "Het inhaalverbod voor vrachtwagens eindigt hier.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец запрета обгона для грузовиков",
+      "Начало запрета обгона для грузовиков",
+      "Конец всех ограничений скорости"
+    ],
+    why: "Знак обозначает конец запрета обгона для грузовиков."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the overtaking ban for trucks",
+      "Start of the overtaking ban for trucks",
+      "End of all speed restrictions"
+    ],
+    why: "This sign indicates the end of the overtaking ban for trucks."
+  }
+},
+
+{
+  id: 58,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F7_u9vik2.png",
+  answers: [
+    { text: "Verboden om te keren (U-bocht te maken)", isCorrect: true },
+    { text: "Verplicht om te keren", isCorrect: false },
+    { text: "Alleen keren toegestaan voor bestemmingsverkeer", isCorrect: false }
+  ],
+  why: "Dit bord verbiedt keren (een U-bocht maken).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Разворот (U-turn) запрещён",
+      "Разворот обязателен",
+      "Разворот разрешён только для местных"
+    ],
+    why: "Знак запрещает разворот (U-поворот)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "U-turns are prohibited",
+      "You must make a U-turn",
+      "U-turns allowed only for local traffic"
+    ],
+    why: "This sign prohibits making a U-turn."
+  }
+},
+
+{
+  id: 59,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F8_ddw0dy.png",
+  answers: [
+    { text: "Einde van alle verboden en beperkingen", isCorrect: true },
+    { text: "Begin van een snelheidszone", isCorrect: false },
+    { text: "Einde van een autosnelweg", isCorrect: false }
+  ],
+  why: "Dit bord betekent: einde van alle lokale verboden en beperkingen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец всех запретов и ограничений",
+      "Начало зоны скорости",
+      "Конец автомагистрали"
+    ],
+    why: "Знак обозначает конец всех действующих запретов и ограничений."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of all prohibitions and restrictions",
+      "Start of a speed zone",
+      "End of a motorway"
+    ],
+    why: "This sign indicates the end of all prohibitions and restrictions."
+  }
+},
+
+  {
+  id: 60,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F9_n5mpor.png",
+  answers: [
+    { text: "Einde van de adviessnelheid op een autosnelweg", isCorrect: true },
+    { text: "Verbod op inhalen", isCorrect: false },
+    { text: "Einde van de snelheidslimiet van 50 km/u", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van de adviessnelheid aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец рекомендованной скорости на автомагистрали",
+      "Обгон запрещён",
+      "Конец ограничения скорости 50 км/ч"
+    ],
+    why: "Знак обозначает конец рекомендованной скорости."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the advisory speed on a motorway",
+      "Overtaking is forbidden",
+      "End of the 50 km/h speed limit"
+    ],
+    why: "This sign indicates the end of the advisory speed."
+  }
+},
+
+{
+  id: 61,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F10_dnmzb7.png",
+  answers: [
+    { text: "Verboden in te rijden (eenrichtingsverkeer – tegen de richting in)", isCorrect: true },
+    { text: "Inrijden toegestaan alleen voor openbaar vervoer", isCorrect: false },
+    { text: "Verplicht om te stoppen voor alle verkeer", isCorrect: false }
+  ],
+  why: "Je mag deze weg niet inrijden: je zou tegen de rijrichting ingaan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Въезд запрещён (одностороннее движение — против направления)",
+      "Въезд разрешён только общественному транспорту",
+      "Обязательная остановка для всех"
+    ],
+    why: "Въезд запрещён, так как это движение против направления на односторонней дороге."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "No entry (one-way road – against the direction)",
+      "Entry allowed only for public transport",
+      "Must stop for all traffic"
+    ],
+    why: "You may not enter: it would be against the direction of a one-way road."
+  }
+},
+
+{
+  id: 62,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F1_fajkfj.png",
+  answers: [
+    { text: "Verbod voor motorvoertuigen om elkaar in te halen", isCorrect: true },
+    { text: "Verplichte rijrichting voor vrachtverkeer", isCorrect: false },
+    { text: "Alleen personenauto’s mogen hier inhalen", isCorrect: false }
+  ],
+  why: "Inhalen door motorvoertuigen is verboden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Запрет обгона для моторных транспортных средств",
+      "Обязательное направление для грузовиков",
+      "Только легковым можно обгонять"
+    ],
+    why: "Знак запрещает обгон для моторных транспортных средств."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Overtaking by motor vehicles is prohibited",
+      "Mandatory direction for trucks",
+      "Only passenger cars may overtake here"
+    ],
+    why: "This sign prohibits overtaking by motor vehicles."
+  }
+},
+
+{
+  id: 63,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/F2_yne3vz.png",
+  answers: [
+    { text: "Einde van het inhaalverbod voor motorvoertuigen", isCorrect: true },
+    { text: "Verbod voor vrachtwagens om in te halen", isCorrect: false },
+    { text: "Einde van een snelheidsbeperking van 70 km/u", isCorrect: false }
+  ],
+  why: "Het inhaalverbod voor motorvoertuigen eindigt hier.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец запрета обгона для моторных транспортных средств",
+      "Грузовикам запрещён обгон",
+      "Конец ограничения скорости 70 км/ч"
+    ],
+    why: "Знак обозначает конец запрета обгона для моторных ТС."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the overtaking ban for motor vehicles",
+      "Trucks are not allowed to overtake",
+      "End of the 70 km/h speed limit"
+    ],
+    why: "This sign indicates the end of the overtaking ban for motor vehicles."
+  }
+},
+
+{
+  id: 64,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G14_fyzgup.png",
+  answers: [
+    { text: "Einde van het verplicht fietspad", isCorrect: true },
+    { text: "Fietsers verplicht afstappen", isCorrect: false },
+    { text: "Begin van een voetpad voor fietsers", isCorrect: false }
+  ],
+  why: "Het verplichte fietspad eindigt hier.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательной велодорожки",
+      "Велосипедистам обязательно слезть с велосипеда",
+      "Начало пешеходной дорожки для велосипедистов"
+    ],
+    why: "Знак обозначает конец обязательной велодорожки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory cycle path",
+      "Cyclists must dismount",
+      "Start of a footpath for cyclists"
+    ],
+    why: "This sign indicates the end of the mandatory cycle path."
+  }
+},
+
+{
+  id: 65,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/H1_k0qvot.png",
+  answers: [
+    { text: "Begin van de bebouwde kom van Helmond", isCorrect: true },
+    { text: "Gemeentegrens van Helmond", isCorrect: false },
+    { text: "Verkeersbord met toeristische route door Helmond", isCorrect: false }
+  ],
+  why: "Dit bord geeft het begin van de bebouwde kom aan (hier: Helmond).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало населённого пункта Хелмонд",
+      "Граница муниципалитета Хелмонд",
+      "Туристический маршрут через Хелмонд"
+    ],
+    why: "Знак обозначает начало населённого пункта (застроенной территории)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of the built-up area of Helmond",
+      "Municipality border of Helmond",
+      "Tourist route through Helmond"
+    ],
+    why: "This sign indicates the start of the built-up area (here: Helmond)."
+  }
+},
+
+{
+  id: 66,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/H2_inwlle.png",
+  answers: [
+    { text: "Einde van de bebouwde kom van Helmond", isCorrect: true },
+    { text: "Begin van de gemeente Helmond", isCorrect: false },
+    { text: "Einde van een toeristisch gebied", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van de bebouwde kom aan (hier: Helmond).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец населённого пункта Хелмонд",
+      "Начало муниципалитета Хелмонд",
+      "Конец туристической зоны"
+    ],
+    why: "Знак обозначает конец населённого пункта (застроенной территории)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the built-up area of Helmond",
+      "Start of the municipality of Helmond",
+      "End of a tourist area"
+    ],
+    why: "This sign indicates the end of the built-up area (here: Helmond)."
+  }
+},
+
+{
+  id: 67,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G1_zb_chvhra.png",
+  answers: [
+    { text: "Begin van een autosnelweg", isCorrect: true },
+    { text: "Einde van een autosnelweg", isCorrect: false },
+    { text: "Verplichte minimumsnelheid van 100 km/u", isCorrect: false }
+  ],
+  why: "Dit bord betekent: begin autosnelweg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало автомагистрали",
+      "Конец автомагистрали",
+      "Минимальная скорость 100 км/ч"
+    ],
+    why: "Знак обозначает начало автомагистрали."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of a motorway",
+      "End of a motorway",
+      "Mandatory minimum speed of 100 km/h"
+    ],
+    why: "This sign indicates the start of a motorway."
+  }
+},
+
+{
+  id: 68,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G2_zb_kqqyet.png",
+  answers: [
+    { text: "Einde van een autosnelweg", isCorrect: true },
+    { text: "Begin van een autoweg", isCorrect: false },
+    { text: "Verbod voor motorvoertuigen om door te rijden", isCorrect: false }
+  ],
+  why: "Dit bord betekent: einde autosnelweg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец автомагистрали",
+      "Начало скоростной дороги (autoweg)",
+      "Запрет движения для моторных ТС"
+    ],
+    why: "Знак обозначает конец автомагистрали."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of a motorway",
+      "Start of an expressway (autoweg)",
+      "Motor vehicles are forbidden to continue"
+    ],
+    why: "This sign indicates the end of a motorway."
+  }
+},
+
+{
+  id: 69,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G3_nvekna.png",
+  answers: [
+    { text: "Begin van een autoweg", isCorrect: true },
+    { text: "Parkeerplaats voor personenauto’s", isCorrect: false },
+    { text: "Verplichte rijrichting voor auto’s", isCorrect: false }
+  ],
+  why: "Dit bord betekent: begin autoweg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало скоростной дороги (autoweg)",
+      "Парковка для легковых автомобилей",
+      "Обязательное направление движения для авто"
+    ],
+    why: "Знак обозначает начало скоростной дороги (autoweg)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of an expressway (autoweg)",
+      "Parking place for passenger cars",
+      "Mandatory direction for cars"
+    ],
+    why: "This sign indicates the start of an expressway (autoweg)."
+  }
+},
+
+{
+  id: 70,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G4_kdfglh.png",
+  answers: [
+    { text: "Einde van een autoweg", isCorrect: true },
+    { text: "Verbod voor motorvoertuigen", isCorrect: false },
+    { text: "Begin van een parkeerverbodszone", isCorrect: false }
+  ],
+  why: "Dit bord betekent: einde autoweg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец скоростной дороги (autoweg)",
+      "Запрет для моторных транспортных средств",
+      "Начало зоны запрета парковки"
+    ],
+    why: "Знак обозначает конец скоростной дороги (autoweg)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of an expressway (autoweg)",
+      "Motor vehicles prohibited",
+      "Start of a no-parking zone"
+    ],
+    why: "This sign indicates the end of an expressway (autoweg)."
+  }
+},
+
+{
+  id: 71,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G5_mikgxl.png",
+  answers: [
+    { text: "Begin van een woonerf", isCorrect: true },
+    { text: "Verplicht om stapvoets te rijden", isCorrect: false },
+    { text: "Verboden voor doorgaand verkeer", isCorrect: false }
+  ],
+  why: "Dit bord geeft het begin van een woonerf aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало жилой зоны (woonerf)",
+      "Обязательно ехать шагом",
+      "Сквозной проезд запрещён"
+    ],
+    why: "Знак обозначает начало жилой зоны (woonerf)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of a residential area (woonerf)",
+      "You must drive at walking pace",
+      "Through traffic is forbidden"
+    ],
+    why: "This sign indicates the start of a residential area (woonerf)."
+  }
+},
+
+{
+  id: 72,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "",
+  answers: [
+    { text: "Begin van een woonerf", isCorrect: true },
+    { text: "Verplicht om stapvoets te rijden", isCorrect: false },
+    { text: "Verboden voor doorgaand verkeer", isCorrect: false }
+  ],
+  why: "Dit bord geeft het begin van een woonerf aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Начало жилой зоны (woonerf)",
+      "Обязательно ехать шагом",
+      "Сквозной проезд запрещён"
+    ],
+    why: "Знак обозначает начало жилой зоны (woonerf)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Start of a residential area (woonerf)",
+      "You must drive at walking pace",
+      "Through traffic is forbidden"
+    ],
+    why: "This sign indicates the start of a residential area (woonerf)."
+  }
+},
+
+{
+  id: 73,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G6_mb_yh6sff.png",
+  answers: [
+    { text: "Einde van een woonerf", isCorrect: true },
+    { text: "Verbod voor voetgangers en spelende kinderen", isCorrect: false },
+    { text: "Begin van een zone met snelheidsbeperking", isCorrect: false }
+  ],
+  why: "Dit bord geeft het einde van een woonerf aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец жилой зоны (woonerf)",
+      "Пешеходам и играющим детям запрещено",
+      "Начало зоны с ограничением скорости"
+    ],
+    why: "Знак обозначает конец жилой зоны (woonerf)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of a residential area (woonerf)",
+      "Pedestrians and playing children are forbidden",
+      "Start of a speed limit zone"
+    ],
+    why: "This sign indicates the end of a residential area (woonerf)."
+  }
+},
+
+{
+  id: 74,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/G13_jiybuv.png",
+  answers: [
+    { text: "Einde van het verplicht fietspad", isCorrect: true },
+    { text: "Fietsers verboden in deze zone", isCorrect: false },
+    { text: "Fietspad alleen toegestaan buiten de spits", isCorrect: false }
+  ],
+  why: "Het verplichte fietspad eindigt hier.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Конец обязательной велодорожки",
+      "Велосипедистам запрещено в этой зоне",
+      "Велодорожка разрешена только вне часа пик"
+    ],
+    why: "Знак обозначает конец обязательной велодорожки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "End of the mandatory cycle path",
+      "Cyclists are forbidden in this zone",
+      "Cycle path allowed only outside rush hour"
+    ],
+    why: "This sign indicates the end of the mandatory cycle path."
+  }
+},
+
+{
+  id: 75,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J2_focvn6.png",
+  answers: [
+    { text: "Gevaarlijke bocht naar rechts", isCorrect: true },
+    { text: "Verplicht afslaan naar rechts", isCorrect: false },
+    { text: "Einde van eenrichtingsverkeer", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een gevaarlijke bocht naar rechts.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Опасный поворот направо",
+      "Обязательный поворот направо",
+      "Конец одностороннего движения"
+    ],
+    why: "Знак предупреждает об опасном повороте направо."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Dangerous right bend",
+      "Mandatory turn right",
+      "End of one-way traffic"
+    ],
+    why: "This sign warns of a dangerous bend to the right."
+  }
+},
+
+{
+  id: 76,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J4_knpfch.png",
+  answers: [
+    { text: "S-bocht, eerst naar rechts", isCorrect: true },
+    { text: "Verplicht rechtsaf, daarna linksaf", isCorrect: false },
+    { text: "Gevaarlijke rotonde nadert", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een S-bocht, eerst naar rechts.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "S-образные повороты, сначала вправо",
+      "Обязательный поворот направо, затем налево",
+      "Впереди опасная круговая развязка"
+    ],
+    why: "Знак предупреждает об S-образных поворотах, сначала вправо."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Double bend (S-curve), first to the right",
+      "Mandatory right then left",
+      "Dangerous roundabout ahead"
+    ],
+    why: "This sign warns of a double bend, first to the right."
+  }
+},
+
+{
+  id: 77,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J6_msrw5d.png",
+  answers: [
+    { text: "Waarschuwing voor een stijging van 10%", isCorrect: true },
+    { text: "Waarschuwing voor een afdaling van 10%", isCorrect: false },
+    { text: "Verplichte versnelling bij helling", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een stijging: 10%.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о подъёме 10%",
+      "Предупреждение о спуске 10%",
+      "Обязательная передача на подъёме"
+    ],
+    why: "Знак предупреждает о подъёме с уклоном 10%."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a 10% uphill gradient",
+      "Warning for a 10% downhill gradient",
+      "Mandatory gear on a slope"
+    ],
+    why: "This sign warns of an uphill gradient of 10%."
+  }
+},
+
+{
+  id: 78,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J7_gaeali.png",
+  answers: [
+    { text: "Waarschuwing voor een afdaling van 10%", isCorrect: true },
+    { text: "Waarschuwing voor een stijging van 10%", isCorrect: false },
+    { text: "Verbod om te remmen op de helling", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een afdaling: 10%.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о спуске 10%",
+      "Предупреждение о подъёме 10%",
+      "Запрещено тормозить на спуске"
+    ],
+    why: "Знак предупреждает о спуске с уклоном 10%."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a 10% downhill gradient",
+      "Warning for a 10% uphill gradient",
+      "Braking is forbidden on the slope"
+    ],
+    why: "This sign warns of a downhill gradient of 10%."
+  }
+},
+
+{
+  id: 79,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J8_kb72py.png",
+  answers: [
+    { text: "Kruispunt van gelijkwaardige wegen", isCorrect: true },
+    { text: "Voorrangskruispunt", isCorrect: false },
+    { text: "Verkeerslichtregeling op kruising", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een kruispunt van gelijkwaardige wegen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Перекрёсток равнозначных дорог",
+      "Перекрёсток с приоритетом",
+      "Перекрёсток со светофором"
+    ],
+    why: "Знак предупреждает о перекрёстке равнозначных дорог."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Intersection of roads of equal priority",
+      "Priority intersection",
+      "Traffic light controlled intersection"
+    ],
+    why: "This sign warns of an intersection where roads have equal priority."
+  }
+},
+
+{
+  id: 80,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J9_k4c3uk.png",
+  answers: [
+    { text: "Waarschuwing voor een rotonde", isCorrect: true },
+    { text: "Verplichte rijrichting naar rechts", isCorrect: false },
+    { text: "Verkeersplein verboden voor vrachtauto’s", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt dat er een rotonde aankomt.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о круговом движении",
+      "Обязательное направление направо",
+      "Круговое движение запрещено для грузовиков"
+    ],
+    why: "Знак предупреждает о приближении к круговой развязке."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a roundabout",
+      "Mandatory direction to the right",
+      "Roundabout prohibited for trucks"
+    ],
+    why: "This sign warns that a roundabout is ahead."
+  }
+},
+
+{
+  id: 81,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J10_dgsnno.png",
+  answers: [
+    { text: "Waarschuwing voor een overweg met slagbomen", isCorrect: true },
+    { text: "Waarschuwing voor een tolpoort", isCorrect: false },
+    { text: "Oversteekplaats voor landbouwverkeer", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een spoorwegovergang met slagbomen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о железнодорожном переезде со шлагбаумами",
+      "Предупреждение о пункте оплаты",
+      "Переезд для сельхозтехники"
+    ],
+    why: "Знак предупреждает о железнодорожном переезде со шлагбаумами."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a level crossing with barriers",
+      "Warning for a toll gate",
+      "Crossing for agricultural traffic"
+    ],
+    why: "This sign warns of a railway crossing with barriers."
+  }
+},
+
+{
+  id: 82,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J11_komzhr.png",
+  answers: [
+    { text: "Waarschuwing voor een overweg zonder slagbomen", isCorrect: true },
+    { text: "Spoorwegovergang met stoplicht", isCorrect: false },
+    { text: "Toegang alleen voor spoorwegverkeer", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een spoorwegovergang zonder slagbomen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о железнодорожном переезде без шлагбаума",
+      "Переезд со светофором",
+      "Только для железнодорожного транспорта"
+    ],
+    why: "Знак предупреждает о переезде без шлагбаума."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a level crossing without barriers",
+      "Railway crossing with traffic lights",
+      "Access for rail traffic only"
+    ],
+    why: "This sign warns of a railway crossing without barriers."
+  }
+},
+
+{
+  id: 83,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J12_jnnafa.png",
+  answers: [
+    { text: "Overweg met meerdere spoorlijnen", isCorrect: true },
+    { text: "Overweg met één spoorlijn", isCorrect: false },
+    { text: "Spoorwegovergang met slagbomen", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een spoorwegovergang met meerdere spoorlijnen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Железнодорожный переезд с несколькими путями",
+      "Железнодорожный переезд с одним путём",
+      "Переезд со шлагбаумами"
+    ],
+    why: "Знак предупреждает о переезде с несколькими железнодорожными путями."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Level crossing with multiple tracks",
+      "Level crossing with one track",
+      "Railway crossing with barriers"
+    ],
+    why: "This sign warns of a railway crossing with multiple tracks."
+  }
+}, 
+
+  {
+  id: 84,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J13_pffpw0.png",
+  answers: [
+    { text: "Overweg met drie of meer spoorlijnen", isCorrect: true },
+    { text: "Spoorwegovergang zonder waarschuwingslichten", isCorrect: false },
+    { text: "Waarschuwing voor metrospoor of trambaan", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een spoorwegovergang met meerdere spoorlijnen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Железнодорожный переезд с тремя или более путями",
+      "Переезд без сигнальных огней",
+      "Предупреждение о трамвайных или метро путях"
+    ],
+    why: "Знак предупреждает о переезде с несколькими железнодорожными путями."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Railroad crossing with three or more tracks",
+      "Railroad crossing without warning lights",
+      "Warning for tram or metro tracks"
+    ],
+    why: "This sign warns of a railway crossing with multiple tracks."
+  }
+},
+
+{
+  id: 85,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J15_vywlif.png",
+  answers: [
+    { text: "Waarschuwing voor een beweegbare brug", isCorrect: true },
+    { text: "Waarschuwing voor een tunnel", isCorrect: false },
+    { text: "Brug alleen toegankelijk voor openbaar vervoer", isCorrect: false }
+  ],
+  why: "Je nadert een beweegbare brug.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о разводном мосте",
+      "Предупреждение о туннеле",
+      "Мост только для общественного транспорта"
+    ],
+    why: "Знак предупреждает о разводном мосте."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for a movable bridge",
+      "Warning for a tunnel",
+      "Bridge only for public transport"
+    ],
+    why: "This sign warns of a movable bridge."
+  }
+},
+
+{
+  id: 86,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J16_pz0dxd.png",
+  answers: [
+    { text: "Waarschuwing voor wegwerkzaamheden", isCorrect: true },
+    { text: "Verbod om te stoppen wegens bouwzone", isCorrect: false },
+    { text: "Verkeersregelaar in dienst", isCorrect: false }
+  ],
+  why: "Er zijn werkzaamheden op of langs de weg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о дорожных работах",
+      "Запрет остановки из-за строительства",
+      "Регулировщик движения"
+    ],
+    why: "Знак предупреждает о дорожных работах."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for road works",
+      "No stopping due to construction",
+      "Traffic controller on duty"
+    ],
+    why: "This sign warns of road works."
+  }
+},
+
+{
+  id: 87,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J17_eqimrv.png",
+  answers: [
+    { text: "Waarschuwing voor versmalling van de rijbaan aan beide zijden", isCorrect: true },
+    { text: "Waarschuwing voor wegverbreding", isCorrect: false },
+    { text: "Rijstrook alleen voor landbouwvoertuigen", isCorrect: false }
+  ],
+  why: "De rijbaan versmalt aan beide zijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Сужение дороги с обеих сторон",
+      "Расширение дороги",
+      "Полоса только для сельхозтехники"
+    ],
+    why: "Дорога сужается с обеих сторон."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Road narrows on both sides",
+      "Road widens",
+      "Lane for agricultural vehicles only"
+    ],
+    why: "The road narrows on both sides."
+  }
+},
+
+{
+  id: 88,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J18_esqzbe.png",
+  answers: [
+    { text: "Waarschuwing voor versmalling van de rijbaan aan de rechterzijde", isCorrect: true },
+    { text: "Begin van eenrichtingsverkeer aan de rechterkant", isCorrect: false },
+    { text: "Rechts voorsorteren verplicht", isCorrect: false }
+  ],
+  why: "De rijbaan versmalt aan de rechterkant.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Сужение дороги справа",
+      "Начало одностороннего движения справа",
+      "Обязательное перестроение направо"
+    ],
+    why: "Дорога сужается с правой стороны."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Road narrows on the right",
+      "Start of one-way traffic on the right",
+      "Mandatory right lane positioning"
+    ],
+    why: "The road narrows on the right side."
+  }
+},
+
+{
+  id: 89,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J20_owge6z.png",
+  answers: [
+    { text: "Waarschuwing voor slipgevaar", isCorrect: true },
+    { text: "Bochtige weg met verhoogde snelheid", isCorrect: false },
+    { text: "Verplichte snelheid onder de 30 km/u", isCorrect: false }
+  ],
+  why: "De weg kan glad zijn, vooral bij nat weer.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о скользкой дороге",
+      "Извилистая дорога с повышенной скоростью",
+      "Обязательная скорость ниже 30 км/ч"
+    ],
+    why: "Дорога может быть скользкой."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for slippery road",
+      "Winding road with higher speed",
+      "Mandatory speed under 30 km/h"
+    ],
+    why: "The road may be slippery."
+  }
+},
+
+{
+  id: 90,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J21_lhxlkr.png",
+  answers: [
+    { text: "Waarschuwing voor overstekende kinderen", isCorrect: true },
+    { text: "Speelzone voor kinderen", isCorrect: false },
+    { text: "Voetgangersoversteekplaats", isCorrect: false }
+  ],
+  why: "Kinderen kunnen onverwacht oversteken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о переходе детей",
+      "Детская игровая зона",
+      "Пешеходный переход"
+    ],
+    why: "Возможен внезапный выход детей на дорогу."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for crossing children",
+      "Children's play area",
+      "Pedestrian crossing"
+    ],
+    why: "Children may cross unexpectedly."
+  }
+},
+
+{
+  id: 91,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J21__school_xlakza.png",
+  answers: [
+    { text: "Waarschuwing voor schoolgaande kinderen", isCorrect: true },
+    { text: "Verplichte stop bij schoolgebied", isCorrect: false },
+    { text: "Speelstraat alleen voor voetgangers", isCorrect: false }
+  ],
+  why: "Je nadert een schoolomgeving.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о школьниках",
+      "Обязательная остановка возле школы",
+      "Пешеходная игровая улица"
+    ],
+    why: "Вы приближаетесь к школьной зоне."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for school children",
+      "Mandatory stop near school",
+      "Pedestrian play street"
+    ],
+    why: "You are approaching a school area."
+  }
+},
+
+{
+  id: 92,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J22_fdu9zb.png",
+  answers: [
+    { text: "Waarschuwing voor een oversteekplaats voor voetgangers", isCorrect: true },
+    { text: "Voetgangers verboden", isCorrect: false },
+    { text: "Verplichte stop voor voetgangers", isCorrect: false }
+  ],
+  why: "Er kan een voetgangersoversteekplaats volgen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о пешеходном переходе",
+      "Пешеходам запрещено",
+      "Обязательная остановка для пешеходов"
+    ],
+    why: "Впереди возможен пешеходный переход."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for pedestrian crossing",
+      "Pedestrians prohibited",
+      "Mandatory stop for pedestrians"
+    ],
+    why: "A pedestrian crossing may follow."
+  }
+},
+
+{
+  id: 93,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J24_qdzymf.png",
+  answers: [
+    { text: "Waarschuwing voor overstekende of kruisende fietsers", isCorrect: true },
+    { text: "Verplichte route voor fietsers", isCorrect: false },
+    { text: "Verbod voor motorvoertuigen", isCorrect: false }
+  ],
+  why: "Fietsers kunnen de rijbaan kruisen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о пересечении велосипедистов",
+      "Обязательный маршрут для велосипедов",
+      "Запрет для моторных транспортных средств"
+    ],
+    why: "Возможен выезд велосипедистов."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for crossing cyclists",
+      "Mandatory route for cyclists",
+      "Motor vehicles prohibited"
+    ],
+    why: "Cyclists may cross the road."
+  }
+},
+
+{
+  id: 94,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J25_rvodcf.png",
+  answers: [
+    { text: "Waarschuwing voor losliggend grind of steenslag", isCorrect: true },
+    { text: "Verplicht om lichten te dimmen", isCorrect: false },
+    { text: "Gevaar voor wegsleepregeling", isCorrect: false }
+  ],
+  why: "Los grind kan schade of slipgevaar veroorzaken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о гравии или щебне",
+      "Обязательное выключение фар",
+      "Опасность эвакуации автомобиля"
+    ],
+    why: "Гравий может вызвать повреждения или занос."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for loose gravel or chippings",
+      "Lights must be dimmed",
+      "Danger of towing"
+    ],
+    why: "Loose gravel can cause damage or skidding."
+  }
+},
+
+{
+  id: 95,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J26_btectg.png",
+  answers: [
+    { text: "Waarschuwing voor een kade of oever zonder vangrail", isCorrect: true },
+    { text: "Brug in slechte staat", isCorrect: false },
+    { text: "Gevaar voor overstroming bij regen", isCorrect: false }
+  ],
+  why: "Er is gevaar voor water langs de weg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение об обрыве или воде без ограждения",
+      "Мост в плохом состоянии",
+      "Опасность затопления при дожде"
+    ],
+    why: "Рядом с дорогой находится вода."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for quay or bank without guardrail",
+      "Bridge in poor condition",
+      "Flood risk during rain"
+    ],
+    why: "There is water close to the road."
+  }
+},
+
+{
+  id: 96,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J27_q6nlhy.png",
+  answers: [
+    { text: "Waarschuwing voor overstekend wild (herten)", isCorrect: true },
+    { text: "Verboden toegang voor dieren", isCorrect: false },
+    { text: "Bosgebied met jachttoestemming", isCorrect: false }
+  ],
+  why: "Wild kan onverwacht oversteken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о диких животных",
+      "Животным вход запрещён",
+      "Охотничья зона"
+    ],
+    why: "Возможен выход диких животных."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for wild animals",
+      "Animals prohibited",
+      "Hunting area"
+    ],
+    why: "Wild animals may cross unexpectedly."
+  }
+},
+
+{
+  id: 97,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J29_m6npie.png",
+  answers: [
+    { text: "Waarschuwing voor een weg met tweerichtingsverkeer", isCorrect: true },
+    { text: "Begin van eenrichtingsweg", isCorrect: false },
+    { text: "Voorrang voor tegemoetkomend verkeer", isCorrect: false }
+  ],
+  why: "Tegenliggers zijn mogelijk.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Дорога с двусторонним движением",
+      "Начало односторонней дороги",
+      "Приоритет встречного движения"
+    ],
+    why: "Возможны встречные автомобили."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Two-way traffic ahead",
+      "Start of one-way road",
+      "Priority for oncoming traffic"
+    ],
+    why: "Oncoming traffic is possible."
+  }
+},
+
+{
+  id: 98,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J31_rborup.png",
+  answers: [
+    { text: "Waarschuwing voor zijwind of sterke windstoten", isCorrect: true },
+    { text: "Verplichte rijrichting bij storm", isCorrect: false },
+    { text: "Waarschuwing voor naderende stormvloed", isCorrect: false }
+  ],
+  why: "Sterke wind kan voertuigen uit balans brengen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о боковом ветре",
+      "Обязательное направление движения при шторме",
+      "Предупреждение о штормовом приливе"
+    ],
+    why: "Сильный боковой ветер опасен."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for strong side winds",
+      "Mandatory direction during storm",
+      "Storm surge warning"
+    ],
+    why: "Strong wind gusts may affect vehicles."
+  }
+},
+
+{
+  id: 99,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J33_s8y4t7.png",
+  answers: [
+    { text: "Waarschuwing voor filevorming", isCorrect: true },
+    { text: "Verplichte minimumafstand tussen voertuigen", isCorrect: false },
+    { text: "Waarschuwing voor parkeerterrein met rijen auto's", isCorrect: false }
+  ],
+  why: "Er kan plotseling stilstaand verkeer zijn.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о возможной пробке",
+      "Обязательная минимальная дистанция",
+      "Парковка с рядами автомобилей"
+    ],
+    why: "Возможна внезапная пробка."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for traffic jam",
+      "Mandatory minimum distance",
+      "Parking area with rows of cars"
+    ],
+    why: "Sudden traffic congestion may occur."
+  }
+},
+
+{
+  id: 100,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J30_zt6b66.png",
+  answers: [
+    { text: "Waarschuwing voor laagvliegende vliegtuigen", isCorrect: true },
+    { text: "Route naar het dichtstbijzijnde vliegveld", isCorrect: false },
+    { text: "Verboden voor luchtverkeer", isCorrect: false }
+  ],
+  why: "Laagvliegende vliegtuigen kunnen lawaai of schrik veroorzaken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение о низколетящих самолётах",
+      "Маршрут к ближайшему аэропорту",
+      "Запрет для воздушного движения"
+    ],
+    why: "Низколетящие самолёты могут быть опасны."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning for low-flying aircraft",
+      "Route to the nearest airport",
+      "Air traffic prohibited"
+    ],
+    why: "Low-flying aircraft may occur."
+  }
+},
+
+
+  {
+  id: 101,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J32_yrolte.png",
+  answers: [
+    { text: "Waarschuwing: Verkeerslichten ahead", isCorrect: true },
+    { text: "Verkeerslichten zijn buiten werking", isCorrect: false },
+    { text: "Alleen toegang voor bussen bij groen licht", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt dat er verkeerslichten aankomen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение: впереди светофор",
+      "Светофор не работает",
+      "Проезд только автобусам при зелёном"
+    ],
+    why: "Знак предупреждает о приближении к светофору."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning: traffic lights ahead",
+      "Traffic lights are out of order",
+      "Only buses may pass on green"
+    ],
+    why: "This sign warns that traffic lights are ahead."
+  }
+},
+
+{
+  id: 102,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J34_is5frg.png",
+  answers: [
+    { text: "Waarschuwing: Slechte of zachte berm", isCorrect: true },
+    { text: "Auto’s kunnen hier slippen", isCorrect: false },
+    { text: "Rijbaan versmalt plotseling aan de rechterkant", isCorrect: false }
+  ],
+  why: "De berm kan zacht of onbetrouwbaar zijn: oppassen bij uitwijken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение: плохая или мягкая обочина",
+      "Здесь машины могут скользить",
+      "Дорога внезапно сужается справа"
+    ],
+    why: "Обочина может быть мягкой/неустойчивой — осторожно при съезде."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning: soft or unstable verge",
+      "Cars may skid here",
+      "Road suddenly narrows on the right"
+    ],
+    why: "The verge may be soft/unstable—be careful if you pull over."
+  }
+},
+
+{
+  id: 103,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J1_catrdv.png",
+  answers: [
+    { text: "Waarschuwing: Slecht wegdek of hobbelige weg", isCorrect: true },
+    { text: "Waarschuwing voor een rotonde", isCorrect: false },
+    { text: "Waarschuwing voor verkeerslichten", isCorrect: false }
+  ],
+  why: "Je kunt een slecht of hobbelig wegdek verwachten.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Предупреждение: плохая или неровная дорога",
+      "Предупреждение о круговом движении",
+      "Предупреждение о светофоре"
+    ],
+    why: "Впереди может быть неровное/плохое покрытие."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Warning: poor or uneven road surface",
+      "Warning for a roundabout",
+      "Warning for traffic lights"
+    ],
+    why: "You can expect a rough or uneven road surface."
+  }
+},
+
+{
+  id: 104,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J37_qzhlpa.png",
+  answers: [
+    { text: "Algemeen gevaar, uitleg staat op het onderbord", isCorrect: true },
+    { text: "Altijd stoppen", isCorrect: false },
+    { text: "Voorrang aan besturders van rechts geven", isCorrect: false }
+  ],
+  why: "Algemeen waarschuwingsbord: kijk naar het onderbord voor de uitleg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Общая опасность, пояснение на дополнительной табличке",
+      "Всегда останавливаться",
+      "Уступать справа"
+    ],
+    why: "Общая опасность: уточнение указано на табличке снизу."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "General danger; details on the supplementary plate",
+      "Always stop",
+      "Give way to traffic from the right"
+    ],
+    why: "General warning sign; the supplementary plate explains the danger."
+  }
+},
+
+{
+  id: 105,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J38_ztnced.png",
+  answers: [
+    { text: "Verhoogd wegdek (verkeersdrempel)", isCorrect: true },
+    { text: "Snelheidslimiet op heuvelachtig terrein", isCorrect: false },
+    { text: "Gevaarlijke helling", isCorrect: false }
+  ],
+  why: "Dit bord waarschuwt voor een verkeersdrempel/verhoogd wegdek.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Искусственная неровность/лежачий полицейский",
+      "Ограничение скорости на холмистой местности",
+      "Опасный спуск/подъём"
+    ],
+    why: "Знак предупреждает о «лежачем полицейском» (повышении дороги)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Speed bump / raised road",
+      "Speed limit on hilly terrain",
+      "Dangerous slope"
+    ],
+    why: "This sign warns for a speed bump or raised road."
+  }
+},
+
+{
+  id: 106,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J35_qumgah.png",
+  answers: [
+    { text: "Kans op glad wegdek bij nat weer", isCorrect: true },
+    { text: "Gevaar voor slecht zicht", isCorrect: false },
+    { text: "Kans op regenachtig weer", isCorrect: false }
+  ],
+  why: "Bij nat weer kan het wegdek glad worden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Опасность скользкой дороги при мокром покрытии",
+      "Опасность плохой видимости",
+      "Вероятность дождливой погоды"
+    ],
+    why: "При дожде/влажности дорога может стать скользкой."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Risk of slippery road when wet",
+      "Danger of poor visibility",
+      "Chance of rainy weather"
+    ],
+    why: "When the road is wet it may become slippery."
+  }
+},
+
+{
+  id: 107,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/J36_ngs5wq.png",
+  answers: [
+    { text: "Gevaar voor sneeuw of ijzel", isCorrect: true },
+    { text: "Winterbanden verplicht", isCorrect: false },
+    { text: "Sneeuwkettingen vereist", isCorrect: false }
+  ],
+  why: "Er kan sneeuw of ijzel voorkomen: gladheid mogelijk.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Опасность снега или гололёда",
+      "Зимние шины обязательны",
+      "Цепи противоскольжения обязательны"
+    ],
+    why: "Возможны снег/гололёд — повышенный риск скольжения."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Danger of snow or icy conditions",
+      "Winter tires are mandatory",
+      "Snow chains required"
+    ],
+    why: "Snow or ice may occur; the road can be slippery."
+  }
+},
+
+{
+  id: 108,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/K10_gc9x8m.png",
+  answers: [
+    { text: "Bewegwijzering binnen de bebouwde kom", isCorrect: true },
+    { text: "Route voor fitsers buiten de beboude kom", isCorrect: false },
+    { text: "Richtingaanwijzer op een autosnelweg", isCorrect: false }
+  ],
+  why: "Dit is een route-/richtingsbord voor bestemmingen binnen de bebouwde kom.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Указатель направлений в населённом пункте",
+      "Маршрут для велосипедистов вне населённого пункта",
+      "Указатель направления на автомагистрали"
+    ],
+    why: "Это указатель направлений для движения в пределах населённого пункта."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Direction sign within built-up area",
+      "Cyclist route outside built-up area",
+      "Direction sign on a motorway"
+    ],
+    why: "This is a direction sign for destinations within a built-up area."
+  }
+},
+
+{
+  id: 109,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/K14_n4dzma.png",
+  answers: [
+    { text: "Omleidingsroute in noordelijke richting", isCorrect: true },
+    { text: "Volg deze rijstrook voor doorgaand verkeer", isCorrect: false },
+    { text: "Verbod om links of rechts af te slaan", isCorrect: false }
+  ],
+  why: "Dit bord geeft een omleidingsroute (hier: richting noord) aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Объездной маршрут в северном направлении",
+      "Следуйте этой полосе для сквозного движения",
+      "Запрещено поворачивать налево или направо"
+    ],
+    why: "Знак показывает маршрут объезда (в данном случае на север)."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Detour route in the north direction",
+      "Follow this lane for through traffic",
+      "Turning left or right is prohibited"
+    ],
+    why: "This sign indicates a detour route (here: north direction)."
+  }
+},
+
+{
+  id: 110,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "",
+  answers: [
+    { text: "Afstanden naar steden via een autosnelweg", isCorrect: true },
+    { text: "Richting naar tankstations en parkeerplaatsen", isCorrect: false },
+    { text: "Alternatieve route voor vrachtverkeer", isCorrect: false }
+  ],
+  why: "Dit bord geeft afstanden/Bestemmingen aan via een autosnelweg.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Расстояния до городов по автомагистрали",
+      "Направление к заправкам и парковкам",
+      "Альтернативный маршрут для грузовиков"
+    ],
+    why: "Знак показывает расстояния/направления к городам по автомагистрали."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Distances to cities via a motorway",
+      "Direction to fuel stations and parking areas",
+      "Alternative route for trucks"
+    ],
+    why: "This sign shows distances/destinations via a motorway."
+  }
+},
+
+{
+  id: 111,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L16_kk9sba.png",
+  answers: [
+    { text: "Noodtelefoon in de buurt", isCorrect: true },
+    { text: "Informatiebord over mobiele dekking", isCorrect: false },
+    { text: "Verboden te bellen tijdens het rijden", isCorrect: false }
+  ],
+  why: "Dit bord wijst op een noodtelefoon.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Рядом аварийный телефон",
+      "Информация о мобильной связи",
+      "Запрещено разговаривать по телефону за рулём"
+    ],
+    why: "Знак указывает на аварийный (экстренный) телефон."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Emergency phone nearby",
+      "Mobile coverage information",
+      "Calling while driving prohibited"
+    ],
+    why: "This sign indicates an emergency phone."
+  }
+},
+
+{
+  id: 112,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L2_gsglls.png",
+  answers: [
+    { text: "Oversteekplaats voor voetgangers", isCorrect: true },
+    { text: "Verboden voor voetgangers", isCorrect: false },
+    { text: "Waarschuwing voor kinderen", isCorrect: false }
+  ],
+  why: "Dit bord geeft een voetgangersoversteekplaats aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Пешеходный переход",
+      "Пешеходам запрещено",
+      "Предупреждение о детях"
+    ],
+    why: "Знак обозначает пешеходный переход."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Pedestrian crossing",
+      "Pedestrians prohibited",
+      "Warning for children"
+    ],
+    why: "This sign indicates a pedestrian crossing."
+  }
+},
+
+{
+  id: 113,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L8_mb_yefc7a.png",
+  answers: [
+    { text: "Doodlopende weg", isCorrect: true },
+    { text: "Verboden in te rijden", isCorrect: false },
+    { text: "Weg met beperkte doorgang", isCorrect: false }
+  ],
+  why: "Dit bord geeft een doodlopende weg aan.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Тупик",
+      "Въезд запрещён",
+      "Дорога с ограниченным проездом"
+    ],
+    why: "Знак обозначает тупиковую дорогу."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Dead end road",
+      "No entry",
+      "Road with limited access"
+    ],
+    why: "This sign indicates a dead end."
+  }
+},
+
+{
+  id: 114,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L9_hqdw3t.png",
+  answers: [
+    { text: "De zijweg rechts is een doodlopende weg", isCorrect: true },
+    { text: "Je mag alleen rechtdoor rijden", isCorrect: false },
+    { text: "Rechtdoor is een doodlopende weg", isCorrect: false }
+  ],
+  why: "De zijweg rechts loopt dood.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Правый съезд/боковая дорога — тупик",
+      "Можно ехать только прямо",
+      "Прямо — тупик"
+    ],
+    why: "Знак показывает, что боковая дорога справа является тупиком."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "The side road on the right is a dead end",
+      "You may only go straight ahead",
+      "Straight ahead is a dead end"
+    ],
+    why: "It indicates the side road on the right ends in a dead end."
+  }
+},
+
+{
+  id: 115,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L13_z0ojxs.png",
+  answers: [
+    { text: "De tunnel die je binnenrijdt is 17 km lang", isCorrect: true },
+    { text: "Er komt een tunnel aan die 17 km verderop ligt", isCorrect: false },
+    { text: "Je rijdt over 17 km door een tunne", isCorrect: false }
+  ],
+  why: "Het bord geeft de lengte van de tunnel aan: 17 km.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Тоннель, в который вы въезжаете, длиной 17 км",
+      "Тоннель будет через 17 км",
+      "Вы будете ехать 17 км по тоннелю"
+    ],
+    why: "Указывается длина тоннеля: 17 км."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "The tunnel you are entering is 17 km long",
+      "A tunnel is 17 km ahead",
+      "You will drive 17 km through a tunnel"
+    ],
+    why: "It indicates the length of the tunnel: 17 km."
+  }
+},
+
+{
+  id: 116,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L14_eiwljq.png",
+  answers: [
+    { text: "Uitwijkplaats of pechhaven", isCorrect: true },
+    { text: "Parkeerplaats voor vrachtwagens", isCorrect: false },
+    { text: "Invoegstrook naar de snelweg", isCorrect: false }
+  ],
+  why: "Dit is een uitwijkplaats/pechhaven (bijv. in tunnel).",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Карман для остановки/аварийная ниша",
+      "Стоянка для грузовиков",
+      "Полоса разгона на шоссе"
+    ],
+    why: "Знак обозначает аварийную нишу/карман для остановки."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Lay-by / emergency refuge",
+      "Truck parking area",
+      "Motorway acceleration lane"
+    ],
+    why: "This sign indicates an emergency refuge / lay-by."
+  }
+},
+
+{
+  id: 117,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L19__links_vtvfv6.png",
+  answers: [
+    { text: "Nooduitgang bevindt zich over 50 meter naar links", isCorrect: true },
+    { text: "Over 50 meter mag je naar links afslaan", isCorrect: false },
+    { text: "Begin van een wandelpad naar links over 50 meter", isCorrect: false }
+  ],
+  why: "Dit bord geeft een nooduitgang aan: over 50 meter links.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Аварийный выход через 50 м слева",
+      "Через 50 м можно повернуть налево",
+      "Начало тропы слева через 50 м"
+    ],
+    why: "Указывает на аварийный выход: через 50 метров слева."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Emergency exit 50 meters to the left",
+      "You may turn left in 50 meters",
+      "Start of a walking trail 50 meters to the left"
+    ],
+    why: "It indicates an emergency exit: 50 meters to the left."
+  }
+},
+
+{
+  id: 118,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/L21_yrgxki.png",
+  answers: [
+    { text: "Tegenliggers moeten uitwijken voor jou", isCorrect: true },
+    { text: "Jij moet uitwijken voor tegenliggers", isCorrect: false },
+    { text: "Beide richtingen moeten afwisselend doorrijden", isCorrect: false }
+  ],
+  why: "Je hebt voorrang: tegenliggers moeten wachten/uitwijken.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Встречные должны уступить вам",
+      "Вы должны уступить встречным",
+      "Обе стороны едут по очереди"
+    ],
+    why: "У вас приоритет, встречные обязаны уступить."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Oncoming traffic must give way to you",
+      "You must give way to oncoming traffic",
+      "Both directions must take turns"
+    ],
+    why: "You have priority; oncoming traffic must give way."
+  }
+},
+
+{
+  id: 119,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/NL-E34_htdh91.png",
+  answers: [
+    { text: "Je rijdt op of richting Europese route E34", isCorrect: true },
+    { text: "Dit is een afritnummer op snelweg E34", isCorrect: false },
+    { text: "Snelheidslimiet van 34 km/u op deze weg", isCorrect: false }
+  ],
+  why: "Dit is een routenummer: Europese route E34.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Вы едете по/в направлении европейского маршрута E34",
+      "Это номер съезда на трассе E34",
+      "Ограничение скорости 34 км/ч"
+    ],
+    why: "Это обозначение номера европейского маршрута: E34."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "You are on or heading to European route E34",
+      "This is an exit number on motorway E34",
+      "Speed limit of 34 km/h on this road"
+    ],
+    why: "This is a route number sign: European route E34."
+  }
+},
+
+{
+  id: 120,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB1_fz1qug.png",
+  answers: [
+    { text: "Pad uitsluitend bestemd voor ruiters", isCorrect: true },
+    { text: "Paarden verboden", isCorrect: false },
+    { text: "Verplicht fietspad met paarden toegestaan", isCorrect: false }
+  ],
+  why: "Het pad is uitsluitend bestemd voor ruiters.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Дорога/тропа только для всадников",
+      "Лошадям запрещено",
+      "Обязательная велодорожка, лошади разрешены"
+    ],
+    why: "Тропа предназначена только для всадников."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Path reserved for horse riders only",
+      "Horses prohibited",
+      "Mandatory cycle path with horses allowed"
+    ],
+    why: "The path is reserved exclusively for riders."
+  }
+},
+
+{
+  id: 121,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB2_nfn87s.png",
+  answers: [
+    { text: "Alleen voertuigen van milieuklasse 4 of hoger zijn toegestaan", isCorrect: true },
+    { text: "Alleen elektrische voertuigen zijn toegestaan", isCorrect: false },
+    { text: "Voertuigen van bouwjaar 2004 of ouder zijn toegestaan", isCorrect: false }
+  ],
+  why: "Alleen voertuigen met milieuklasse 4 of hoger mogen rijden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Разрешены только автомобили экологического класса 4 и выше",
+      "Разрешены только электромобили",
+      "Разрешены автомобили 2004 года выпуска и старше"
+    ],
+    why: "Въезд разрешён только ТС с экологическим классом 4+."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Only vehicles with emission class 4 or higher are allowed",
+      "Only electric vehicles are allowed",
+      "Vehicles from 2004 or older are allowed"
+    ],
+    why: "Only vehicles meeting emission class 4 or higher may enter."
+  }
+},
+
+{
+  id: 122,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB60_dnwwbp.png",
+  answers: [
+    { text: "Aanhangwagens zijn hier verboden", isCorrect: true },
+    { text: "Alleen voertuigen met aanhanger mogen hier rijden", isCorrect: false },
+    { text: "De verkeersregel erboven geldt niet voor aanhangwagens", isCorrect: false }
+  ],
+  why: "Aanhangwagens (trailers) zijn verboden.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Движение с прицепом запрещено",
+      "Разрешены только машины с прицепом",
+      "Правило выше не относится к прицепам"
+    ],
+    why: "Знак запрещает движение транспортных средств с прицепом."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "Trailers are prohibited",
+      "Only vehicles with trailers may drive here",
+      "The rule above does not apply to trailers"
+    ],
+    why: "This sign prohibits vehicles towing a trailer."
+  }
+},
+
+{
+  id: 123,
+  question: "Wat betekent dit verkeersbord?",
+  imageUrl: "https://res.cloudinary.com/dinthdifl/image/upload/OB65_mrjosm.png",
+  answers: [
+    { text: "De verkeersregel erboven geldt niet voor brommobielen", isCorrect: true },
+    { text: "Alleen brommobielen zijn toegestaan", isCorrect: false },
+    { text: "Bromfietsen en scooters zijn hier verboden ", isCorrect: false }
+  ],
+  why: "De regel op het bord erboven geldt niet voor brommobielen.",
+  topic: "borden",
+  ruTranslation: {
+    question: "Что означает этот дорожный знак?",
+    answers: [
+      "Правило на знаке выше не относится к микролитражным авто (brommobielen)",
+      "Разрешены только brommobielen",
+      "Мопедам и скутерам здесь запрещено"
+    ],
+    why: "Уточняющая табличка: правило выше не распространяется на brommobielen."
+  },
+  enTranslation: {
+    question: "What does this traffic sign mean?",
+    answers: [
+      "The traffic rule above does not apply to microcars (brommobielen)",
+      "Only microcars are allowed",
+      "Mopeds and scooters are prohibited here"
+    ],
+    why: "Supplementary sign: the rule above does not apply to microcars."
+  }
+}
+,
 
   // stilstaan en parkeren
 {

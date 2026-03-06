@@ -1,46 +1,93 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Theorie Test</title>
-  <link rel="stylesheet" href="test-c.css">
-  <link rel="stylesheet" href="header_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Red-Drive Theorie-examen</title>
 
-  <script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","storage":{"useSiteId":true}};
-</script>
-<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4340885.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    img { max-width: 300px; margin-top: 10px; }
-    .question-block { margin-bottom: 30px; }
-  </style>
+  <link rel="stylesheet" href="test-c.css" />
 </head>
 <body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__title">Red-Drive Theorie-examen</div>
+        <div class="brand__sub">21 vragen • maximaal 3 fouten</div>
+      </div>
 
+      <div class="topbar__right">
+        <div class="timer" aria-live="polite" title="Tijd">
+          <span class="timer__label">Tijd</span>
+          <span id="timerValue" class="timer__value">30:00</span>
+        </div>
 
-<div class="exam-wrapper">
-  <div class="exam-header">
-    <h1>Red-Drive Theorie-examen</h1>
-    <p>De test bestaat uit 21 vragen. Je mag maximaal 3 fouten maken.</p>
+        <button id="overviewBtn" class="btn btn--ghost" type="button">
+          Overzicht
+        </button>
+
+        <button id="submitBtn" class="btn btn--danger" type="button">
+          Sla test in
+        </button>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="progress">
+        <div class="progress__left">
+          <span id="progressText">Vraag 1 van 21</span>
+        </div>
+        <div class="progress__bar" aria-hidden="true">
+          <div id="progressFill" class="progress__fill"></div>
+        </div>
+      </div>
+
+      <section id="questionArea" class="questionArea" aria-live="polite">
+
+      </section>
+
+      <footer class="nav">
+        <button id="prevBtn" class="btn btn--ghost" type="button">← Vorige</button>
+
+        <div class="nav__hint">
+        </div>
+
+        <button id="nextBtn" class="btn btn--primary" type="button">Volgende →</button>
+      </footer>
+
+      <div id="resultArea" class="resultArea" hidden>
+
+      </div>
+    </main>
   </div>
 
-  <div id="quiz-container" class="quiz">
-    
+  <div id="overviewModal" class="modal" hidden aria-hidden="true">
+    <div class="modal__backdrop" data-close="1"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="overviewTitle">
+      <div class="modal__header">
+        <div>
+          <div id="overviewTitle" class="modal__title">Overzicht</div>
+          <div class="modal__subtitle">Klik op een vraag om te openen</div>
+        </div>
+        <button class="btn btn--ghost" type="button" data-close="1">✕</button>
+      </div>
+
+      <div id="overviewGrid" class="overviewGrid">
+      </div>
+
+      <div class="modal__footer">
+        <div class="legend">
+          <span class="dot dot--answered"></span> beantwoord
+          <span class="dot dot--unanswered"></span> onbeantwoord
+          <span class="dot dot--wrong" id="legendWrong" hidden></span><span id="legendWrongText" hidden> fout</span>
+          <span class="dot dot--correct" id="legendCorrect" hidden></span><span id="legendCorrectText" hidden> goed</span>
+        </div>
+        <button class="btn btn--primary" type="button" data-close="1">Terug</button>
+      </div>
+    </div>
   </div>
 
-  <div class="exam-footer">
-    <button id="check-btn" class="btn-primary">Resultaat controleren</button>
-    <div id="result" class="result"></div>
-    <a href="index.html"><div class="mainmenu">Main menu</div></a>
-  </div>
-</div>
-
-  
-  <script src="test-j.js"></script>
   <script src="./upload.js"></script>
+  <script src="./test-j.js"></script>
 </body>
 </html>

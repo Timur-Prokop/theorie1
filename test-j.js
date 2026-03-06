@@ -1,4 +1,14 @@
+
+const TEST_SIZE = 21;
+const TOTAL_SECONDS = 30 * 60;
+
 let questionsInTest = [];
+let currentIndex = 0;
+
+let remainingSeconds = TOTAL_SECONDS;
+let timerId = null;
+
+let isSubmitted = false;
 
 function shuffle(array) {
   const arr = [...array];
@@ -9,146 +19,357 @@ function shuffle(array) {
   return arr;
 }
 
+function pad2(n) {
+  return String(n).padStart(2, "0");
+}
+
+function formatTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${pad2(m)}:${pad2(s)}`;
+}
+
+function el(id) {
+  const node = document.getElementById(id);
+  if (!node) throw new Error(`Missing element #${id}`);
+  return node;
+}
+
 function loadQuestions() {
-  try {
-    const data = window.questions;
+  const data = window.questions;
 
-    if (!Array.isArray(data) || data.length === 0) {
-      throw new Error(
-        "Вопросы не найдены. Проверь, что в upload.js есть window.questions = [...] и что upload.js подключён перед test-j.js"
-      );
-    }
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new Error(
+      "Вопросы не найдены. Проверь, что в upload.js есть window.questions = [...] и что upload.js подключён перед test.js"
+    );
+  }
 
-    const shuffled = shuffle(data);
-    questionsInTest = shuffled.slice(0, 21);
+  const picked = shuffle(data).slice(0, TEST_SIZE);
 
-    const container = document.getElementById("quiz-container");
-    if (!container) throw new Error('Не найден элемент #quiz-container в test.html');
+  questionsInTest = picked.map((q, idx) => {
+    const blockId = q.id != null ? String(q.id) : `idx-${idx}`;
+    const answers = Array.isArray(q.answers) ? q.answers : [];
+    const answersShuffled = shuffle(answers).map((a) => ({
+      text: a.text,
+      isCorrect: !!a.isCorrect,
+    }));
 
-    container.innerHTML = "";
+    return {
+      id: blockId,
+      question: q.question ?? "",
+      imageUrl: q.imageUrl ?? "",
+      why: q.why ?? "",
+      answers: answersShuffled,
+      selectedIndex: null,
+    };
+  });
+}
 
-    questionsInTest.forEach((q, i) => {
-      const div = document.createElement("div");
-      div.classList.add("question");
+function renderProgress() {
+  el("progressText").textContent = `Vraag ${currentIndex + 1} van ${questionsInTest.length}`;
+  const pct = ((currentIndex + 1) / questionsInTest.length) * 100;
+  el("progressFill").style.width = `${pct}%`;
 
-      // Всегда уникальный id для блока
-      const blockId = q.id != null ? String(q.id) : `idx-${i}`;
-      div.dataset.id = blockId;
+  el("prevBtn").disabled = currentIndex === 0;
+  el("nextBtn").disabled = currentIndex === questionsInTest.length - 1;
+}
 
-      // Всегда уникальная группа радиокнопок
-      const groupName = `q-${blockId}`;
+function renderQuestion() {
+  const q = questionsInTest[currentIndex];
+  renderProgress();
 
-      const shuffledAnswers = shuffle(q.answers || []);
+  const area = el("questionArea");
+  area.innerHTML = "";
 
-      const answersHtml = shuffledAnswers
-        .map((a) => `
-          <label class="answer-label">
-            <input
-              type="radio"
-              name="${groupName}"
-              data-correct="${a.isCorrect ? "true" : "false"}"
-            >
-            ${a.text}
-          </label>
-        `)
-        .join("");
+  const title = document.createElement("h2");
+  title.className = "qTitle";
+  title.textContent = q.question;
 
-      div.innerHTML = `
-        <h3>${i + 1}. ${q.question}</h3>
-        ${q.imageUrl ? `<img src="${q.imageUrl}" alt="image">` : ""}
-        ${answersHtml}
-        <div class="explanation"></div>
-      `;
+  area.appendChild(title);
 
-      container.appendChild(div);
+  if (q.imageUrl) {
+    const img = document.createElement("img");
+    img.className = "qImage";
+    img.src = q.imageUrl;
+    img.alt = "image";
+    img.loading = "lazy";
+    area.appendChild(img);
+  }
+
+  const answersWrap = document.createElement("div");
+  answersWrap.className = "answers";
+
+  q.answers.forEach((ans, idx) => {
+    const row = document.createElement("div");
+    row.className = "answer";
+    row.setAttribute("role", "button");
+    row.tabIndex = 0;
+
+    if (q.selectedIndex === idx) row.classList.add("answer--selected");
+    if (isSubmitted) row.classList.add("answer--locked");
+
+    const radio = document.createElement("div");
+    radio.className = "answer__radio";
+
+    const text = document.createElement("div");
+    text.className = "answer__text";
+    text.textContent = ans.text;
+
+    row.appendChild(radio);
+    row.appendChild(text);
+
+    const pick = () => {
+      if (isSubmitted) return;
+      q.selectedIndex = idx;
+      updateOverviewButtonStyles();
+      renderQuestion();
+    };
+
+    row.addEventListener("click", pick);
+    row.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        pick();
+      }
     });
 
-    // Обработчик подсветки — без once:true (иначе работает только 1 раз)
-    if (!container.dataset.listenerAdded) {
-      container.addEventListener("change", (e) => {
-        const target = e.target;
-        if (target && target.matches('input[type="radio"]')) {
-          const name = target.name;
+    answersWrap.appendChild(row);
+  });
 
-          // снимаем selected только в рамках этого вопроса
-          container.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
-            input.closest(".answer-label")?.classList.remove("selected");
-          });
+  area.appendChild(answersWrap);
 
-          // ставим selected на выбранный вариант
-          target.closest(".answer-label")?.classList.add("selected");
-        }
-      });
+  if (isSubmitted) {
+    const explain = document.createElement("div");
+    explain.className = "explain";
 
-      container.dataset.listenerAdded = "1";
+    const correctIdx = q.answers.findIndex((a) => a.isCorrect);
+    const selectedIdx = q.selectedIndex;
+
+    const correctText = correctIdx >= 0 ? q.answers[correctIdx].text : "(geen)";
+    const selectedText =
+      selectedIdx == null ? "(niet gekozen)" : q.answers[selectedIdx]?.text ?? "(?)";
+
+    if (selectedIdx == null) {
+      explain.textContent = `Geen antwoord gekozen. Juiste antwoord: ${correctText}. ${q.why}`;
+    } else if (q.answers[selectedIdx]?.isCorrect) {
+      explain.textContent = `Juist . ${q.why}`;
+    } else {
+      explain.textContent = `Onjuist . Jouw antwoord: ${selectedText}. Juiste antwoord: ${correctText}. ${q.why}`;
     }
-  } catch (err) {
-    console.error(err);
-    const container = document.getElementById("quiz-container");
-    if (container) {
-      container.innerHTML = `<p style="color:red">Ошибка: ${err.message}</p>`;
-    }
+
+    const answerNodes = area.querySelectorAll(".answer");
+    answerNodes.forEach((node, idx) => {
+      const isCorrect = !!q.answers[idx]?.isCorrect;
+      const isSelected = q.selectedIndex === idx;
+
+      if (isCorrect) node.classList.add("answer--correct");
+      if (isSelected && !isCorrect) node.classList.add("answer--wrong");
+    });
+
+    area.appendChild(explain);
   }
 }
 
-function checkAnswers() {
-  let correctCount = 0;
+function goTo(index) {
+  if (index < 0 || index >= questionsInTest.length) return;
+  currentIndex = index;
+  renderQuestion();
+}
 
-  questionsInTest.forEach((q, i) => {
-    const blockId = q.id != null ? String(q.id) : `idx-${i}`;
-    const block = document.querySelector(`.question[data-id="${blockId}"]`);
-    if (!block) return;
+function next() {
+  if (currentIndex < questionsInTest.length - 1) {
+    currentIndex++;
+    renderQuestion();
+  }
+}
 
-    const selected = block.querySelector('input[type="radio"]:checked');
-    const explanationEl = block.querySelector(".explanation");
+function prev() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderQuestion();
+  }
+}
 
-    // сброс классов
-    block.classList.remove("correct", "wrong");
-    block.querySelectorAll(".answer-label").forEach((label) => {
-      label.classList.remove("answer-correct", "answer-wrong");
+function setupKeyboardNav() {
+  document.addEventListener("keydown", (e) => {
+    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+    if (tag === "input" || tag === "textarea") return;
+
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "Escape") closeOverview();
+  });
+}
+
+function startTimer() {
+  const timerValue = el("timerValue");
+  timerValue.textContent = formatTime(remainingSeconds);
+
+  timerId = window.setInterval(() => {
+    remainingSeconds = Math.max(0, remainingSeconds - 1);
+
+    timerValue.textContent = formatTime(remainingSeconds);
+
+    const timerBox = timerValue.closest(".timer");
+    if (timerBox) {
+      timerBox.classList.toggle("timer--warn", remainingSeconds <= 5 * 60 && remainingSeconds > 60);
+      timerBox.classList.toggle("timer--danger", remainingSeconds <= 60);
+    }
+
+    if (remainingSeconds === 0) {
+      window.clearInterval(timerId);
+      timerId = null;
+      if (!isSubmitted) submitTest(true);
+    }
+  }, 1000);
+}
+
+function openOverview() {
+  const modal = el("overviewModal");
+  modal.hidden = false;
+  modal.setAttribute("aria-hidden", "false");
+  buildOverviewGrid();
+}
+
+function closeOverview() {
+  const modal = document.getElementById("overviewModal");
+  if (!modal) return;
+  modal.hidden = true;
+  modal.setAttribute("aria-hidden", "true");
+}
+
+function buildOverviewGrid() {
+  const grid = el("overviewGrid");
+  grid.innerHTML = "";
+
+  questionsInTest.forEach((q, idx) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "overviewItem";
+    b.textContent = String(idx + 1);
+
+    b.addEventListener("click", () => {
+      closeOverview();
+      goTo(idx);
     });
 
-    // правильный ответ
-    const correctInput = block.querySelector('input[data-correct="true"]');
-    const correctLabel = correctInput?.closest(".answer-label");
-    const correctText = correctLabel ? correctLabel.textContent.trim() : "";
+    grid.appendChild(b);
+  });
 
-    if (!selected) {
-      block.classList.add("wrong");
-      if (correctLabel) correctLabel.classList.add("answer-correct");
-      if (explanationEl) {
-        explanationEl.textContent = `U hebt niks gekozen. Juiste antwoord is: ${correctText}. ${q.why ?? ""}`;
-      }
+  updateOverviewButtonStyles();
+}
+
+function updateOverviewButtonStyles() {
+  const grid = document.getElementById("overviewGrid");
+  if (!grid) return;
+
+  const buttons = grid.querySelectorAll(".overviewItem");
+  buttons.forEach((btn, idx) => {
+    btn.classList.remove(
+      "overviewItem--answered",
+      "overviewItem--unanswered",
+      "overviewItem--wrong",
+      "overviewItem--correct"
+    );
+
+    const q = questionsInTest[idx];
+
+    if (!isSubmitted) {
+      btn.classList.add(q.selectedIndex == null ? "overviewItem--unanswered" : "overviewItem--answered");
       return;
     }
 
-    const isCorrect = selected.dataset.correct === "true";
-
-    if (isCorrect) {
-      block.classList.add("correct");
-      selected.closest(".answer-label")?.classList.add("answer-correct");
-      correctCount++;
-      if (explanationEl) explanationEl.textContent = `Juist ✅. ${q.why ?? ""}`;
-    } else {
-      block.classList.add("wrong");
-      selected.closest(".answer-label")?.classList.add("answer-wrong");
-      if (correctLabel) correctLabel.classList.add("answer-correct");
-      if (explanationEl) {
-        explanationEl.textContent = `Onjuist ❌. Goede antwoord is: ${correctText}. ${q.why ?? ""}`;
-      }
+    if (q.selectedIndex == null) {
+      btn.classList.add("overviewItem--wrong");
+      return;
     }
+    const picked = q.answers[q.selectedIndex];
+    btn.classList.add(picked && picked.isCorrect ? "overviewItem--correct" : "overviewItem--wrong");
   });
 
-  const resultEl = document.getElementById("result");
-  if (resultEl) {
-    resultEl.textContent = `Resultaat: ${correctCount} van ${questionsInTest.length} vragen`;
+  const lw = document.getElementById("legendWrong");
+  const lwt = document.getElementById("legendWrongText");
+  const lc = document.getElementById("legendCorrect");
+  const lct = document.getElementById("legendCorrectText");
+  const show = !!isSubmitted;
+
+  if (lw && lwt && lc && lct) {
+    lw.hidden = !show;
+    lwt.hidden = !show;
+    lc.hidden = !show;
+    lct.hidden = !show;
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("check-btn");
-  if (btn) btn.addEventListener("click", checkAnswers);
+function computeScore() {
+  let correct = 0;
+  let answered = 0;
 
-  console.log("questions loaded:", window.questions?.length);
-  loadQuestions();
+  questionsInTest.forEach((q) => {
+    if (q.selectedIndex != null) answered++;
+    const picked = q.selectedIndex == null ? null : q.answers[q.selectedIndex];
+    if (picked && picked.isCorrect) correct++;
+  });
+
+  return { correct, answered, total: questionsInTest.length };
+}
+
+function submitTest(auto = false) {
+  if (isSubmitted) return;
+  isSubmitted = true;
+
+  if (timerId) {
+    window.clearInterval(timerId);
+    timerId = null;
+  }
+
+  const { correct, answered, total } = computeScore();
+  const mistakes = total - correct;
+
+  const resultArea = el("resultArea");
+  resultArea.hidden = false;
+  resultArea.innerHTML = `
+    <div class="resultArea__title">Resultaat</div>
+    <div class="resultArea__text">
+      ${auto ? "Tijd is op. " : ""}
+      Beantwoord: <b>${answered}</b> / ${total} •
+      Goed: <b>${correct}</b> •
+      Fout: <b>${mistakes}</b>
+    </div>
+  `;
+
+  const submitBtn = el("submitBtn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Ingeleverd";
+
+  updateOverviewButtonStyles();
+  renderQuestion();
+}
+
+function wireUI() {
+  el("prevBtn").addEventListener("click", prev);
+  el("nextBtn").addEventListener("click", next);
+
+  el("overviewBtn").addEventListener("click", openOverview);
+  el("submitBtn").addEventListener("click", () => submitTest(false));
+
+  const modal = el("overviewModal");
+  modal.addEventListener("click", (e) => {
+    const closeEl = e.target.closest('[data-close="1"]');
+    if (closeEl) closeOverview();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    loadQuestions();
+    wireUI();
+    setupKeyboardNav();
+    startTimer();
+    renderQuestion();
+  } catch (err) {
+    console.error(err);
+    const area = document.getElementById("questionArea");
+    if (area) area.innerHTML = `<div class="explain">Ошибка: ${err.message}</div>`;
+  }
 });

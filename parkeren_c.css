@@ -15,7 +15,7 @@ body{
 
 #jouw-auto-info {
   padding: 40px 0;
-  background-color: transparent; /* ← Прозрачный фон */
+  background-color: transparent; 
   color: #fff;
 }
 
@@ -100,7 +100,7 @@ body{
 }
 .parkeerschijf .image img{
     width: 250px;
-    height: 330px;
+    height: 200px;
     margin-left: 50px;
 }
 
@@ -109,13 +109,13 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.parkeerschijfgebied img{
-    width: 250px;
+.parkeerschijfgebied .image img{
+    width: 600px;
+    height: 200px;
     margin-left: 50px;
     margin-top: 50px;
 }
 
-/* 📱 Адаптация под мобильные устройства */
 @media (max-width: 768px) {
   #jouw-auto-info {
     padding: 30px 15px;

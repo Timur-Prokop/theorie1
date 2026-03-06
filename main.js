@@ -1,17 +1,14 @@
-// Названия дней недели
 const days = ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'];
       
 function updateTime() {
     const now = new Date();
     
-    // Обновляем значения
     document.getElementById('day').textContent = days[now.getDay()];
     document.getElementById('hours').textContent = String(now.getHours()).padStart(2, '0');
     document.getElementById('minutes').textContent = String(now.getMinutes()).padStart(2, '0');
     document.getElementById('seconds').textContent = String(now.getSeconds()).padStart(2, '0');
 }
 
-// Обновляем время сразу и затем каждую секунду
 updateTime();
 setInterval(updateTime, 1000);
 
@@ -21,17 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeBtn = document.querySelector('.close-btn');
 
-    // Открытие меню
     menuBtn.addEventListener('click', function() {
         mobileMenu.style.display = 'flex';
     });
 
-    // Закрытие меню
     closeBtn.addEventListener('click', function() {
         mobileMenu.style.display = 'none';
     });
 
-    // Закрытие при клике на ссылку
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
             mobileMenu.style.display = 'none';
@@ -39,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// animation
 const animatedElements = document.querySelectorAll('.fade-in-element');
 
 const observer = new IntersectionObserver((entries) => {
@@ -56,7 +49,6 @@ animatedElements.forEach(el => observer.observe(el));
 
 
 
-// отправка фитбека
 const sendBtn = document.getElementById("sendBtn");
     const input = document.getElementById("feedbackInput");
     const notification = document.getElementById("notification");
@@ -80,17 +72,14 @@ const sendBtn = document.getElementById("sendBtn");
         return;
       }
 
-      // Сохраняем время отправки
       localStorage.setItem(STORAGE_KEY, now.toString());
       notification.textContent = "Bericht is verzonden, bedankt voor jouw feedback!";
       notification.style.color = "#66ff66";
 
-      // Очистить поле
       input.value = "";
     });
 
 
-// server-test
 async function getMessage() {
       const res = await fetch('/api/hello');
       const data = await res.json();
@@ -98,9 +87,6 @@ async function getMessage() {
     }
 
 
-// function anotherPage() {
-//       window.location.href = "log-in.html"; 
-// }
 
 function infoPage() {
       window.location.href = "info.html"; 

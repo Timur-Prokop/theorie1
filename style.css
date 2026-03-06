@@ -18,25 +18,26 @@ li{
     text-decoration: none;
 }
 header{
-    background-image: url("images/formula32.png");
     background-size: contain;     
     background-repeat: no-repeat;
     width: 100%;
     height: 800px;
-    padding-top: 20px;
 }
+
+
+
+
 .desktop-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  /* margin-right: 10%;
-  margin-left: 10%; */
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
 }
 .desktop-menu ul {
   display: flex;
   align-items: center;
-  gap: 50px;       
 }
 .desktop-menu img{
     width: 100px;
@@ -44,16 +45,18 @@ header{
 }
 .desktop-menu a {
   color: #fff;
+  margin-left: 25px;
+  margin-right: 25px;
   font-size: clamp(14px, 1.2vw, 18px);
   text-decoration: none;
 }
 .desktop-menu button {
   background: linear-gradient(to left, #860000, #ff2326);
   color: #fff;
-  width: 85px;
+  width: 90px;
   height: 35px;
   border: 0;
-  border-radius: 25px;
+  border-radius: 10px;
   font-size: clamp(14px, 1vw, 16px);
   cursor: pointer;
 }
@@ -67,40 +70,19 @@ header{
     font-size: 20px;
     margin-top: 10px;
 }
-.header-maintext{
-    font-size: 30px;
-    margin-top: 200px;
-    width: 700px;
-    color: white;
-}
-.header-margin{
-    /* margin-left: 20%;
-    margin-right: 20%; */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Стили для десктопного меню */
-.desktop-menu {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-/* Стили для мобильного меню */
 .mobile-menu-btn {
     display: none;
+    height: 50px;
+    color: white;
     cursor: pointer;
     font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .mobile-menu {
     display: none;
     position: fixed;
+    margin: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,6 +93,13 @@ header{
     justify-content: center;
     list-style: none;
     z-index: 100;
+}
+.mobile-menu-mobility{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 .mobile-menu a {
     color: white;
@@ -127,35 +116,171 @@ header{
     font-size: 35px;
     cursor: pointer;
 }
-.container {
-    display: flex;
-    gap: 20px;
-    margin-top: 100px;
-}
-.time-square {
-    width: 150px;
-    height: 150px;
-    background-color: #121212;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-.label {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #777777;
-}
-.value {
-    font-size: 32px;
 
+
+
+/* header info */
+a{
+    text-decoration: none;
 }
+header.hero{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+
+  background-image: url("images/bck2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(900px 560px at 18% 36%, rgba(0,0,0,.72), transparent 62%),
+    linear-gradient(90deg, rgba(0,0,0,.74), rgba(0,0,0,.18) 58%, rgba(0,0,0,.10));
+  z-index:1;
+}
+
+header.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(800px 300px at 85% 0%, rgba(225,29,46,.12), transparent 60%);
+  z-index:1;
+}
+
+header.hero .header-margin{
+  position: relative;
+  z-index:2;
+  padding: 0 24px;
+  height: 100%;
+}
+
+header.hero .hero-content{
+  padding-top: 130px;
+  width: min(720px, 100%);
+}
+
+header.hero .header-maintext{
+  margin: 0;
+}
+header.hero .header-maintext h2{
+  margin: 0 0 14px;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.4px;
+  color: #fff;
+  text-shadow: 0 12px 32px rgba(0,0,0,.55);
+}
+
+header.hero .hero-sub{
+  margin: 0 0 22px;
+  font-size: 16px;
+  color: rgba(255,255,255,.72);
+}
+
+header.hero .hero-actions{
+  display:flex;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+header.hero .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: .1px;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,.30);
+}
+
+header.hero .btn-primary{
+  background: linear-gradient(180deg, rgba(225,29,46,.95), rgba(160,10,18,.95));
+  border-color: rgba(255,255,255,.08);
+  color:#fff;
+}
+header.hero .btn-primary:hover{ filter: brightness(1.05); }
+
+header.hero .btn-ghost{
+  background: rgba(0,0,0,.32);
+  border-color: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.92);
+}
+header.hero .btn-ghost:hover{ background: rgba(0,0,0,.38); }
+
+header.hero .hero-timer-label{
+  color: rgba(255,255,255,.55);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+header.hero .container{
+  display:flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+header.hero .time-square{
+  width: 120px;
+  padding: 14px 14px 12px;
+
+  background: rgba(0,0,0,.32);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  backdrop-filter: blur(10px);
+}
+
+header.hero .value{
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color:#fff;
+}
+
+header.hero .label{
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,.55);
+}
+
+@media (max-width: 900px){
+  header.hero{ height: 760px; }
+  header.hero .hero-content{ padding-top: 90px; }
+  header.hero .header-maintext h2{ font-size: 40px; }
+
+  header.hero .container{ flex-wrap: wrap; gap: 12px; }
+  header.hero .time-square{ width: 140px; }
+}
+
+@media (max-width: 600px){
+  header.hero .header-maintext h2{ font-size: 34px; }
+  header.hero .hero-actions{ flex-direction: column; align-items: flex-start; }
+  header.hero .btn{ width: min(360px, 100%); }
+  header.hero .time-square{ width: calc(50% - 6px); height: auto; }
+}
+
 
   
+
+
+
+
 
 /* MAIN-PART-MAIN-PART */
 /* MAIN-PART-MAIN-PART */
@@ -178,7 +303,7 @@ main{
     width: 500px;
     height: 300px;
     border: 15px solid;
-    border-image: linear-gradient(to right, red, transparent) 1;
+    border-image: linear-gradient(to right, rgb(41, 40, 40), transparent) 1;
 }
 .doen-text{
     color: white;
@@ -197,14 +322,12 @@ main{
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-
-
+}
 .fade-in-element.show{
     opacity: 1;
     transform: translateY(0);
 }
+/* animate */
 
 
 
@@ -406,11 +529,10 @@ footer{
         background-repeat: no-repeat;
         width: 100%;
         height: 250px;
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
     .header-margin{
         margin-left: 5%;
-        margin-right: 5%;
     }
     .header-maintext{
         font-size: 16px;
@@ -422,10 +544,6 @@ footer{
         display: flex;
         gap: 20px;
         margin-top: 10px;
-    }
-    .desktop-menu img{
-        width: 40px;
-        height: 40px;
     }
     li{
         margin-left: 20px;
@@ -439,25 +557,10 @@ footer{
         height: 35px;
         font-size: 14px;
     }
-    .time-square {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-    }
+
     .desktop-menu {
         display: none;
     }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-    .value {
-        font-size: 12px;
-    }
-    .label {
-        font-size: 8px;
-    }
-    
 
     .doen{
         width: 70%;
@@ -473,7 +576,7 @@ footer{
         height: auto;
         margin-left: 5%;
         margin-right: 5%;
-        border: 10px red solid;
+        border: 10px rgb(54, 54, 54) solid;
     }
     .doen-text{
         margin-left: 0px;
@@ -490,6 +593,9 @@ footer{
     .icons{
         display: block;
     }
+    .mobile-menu-btn{
+        display: block;
+    }
 }
 
 /* телефоны до 600 пикселей*/
@@ -500,7 +606,6 @@ footer{
         width: 100%;
         background-image: url("images/carback1.png");
         height: 250px;
-        padding-top: 20px;
     }
     .header-margin{
         margin-left: 5%;
@@ -533,11 +638,7 @@ footer{
         height: 35px;
         font-size: 14px;
     }
-    .time-square {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
+
     .desktop-menu {
         display: none;
     }
@@ -545,13 +646,6 @@ footer{
     .mobile-menu-btn {
         display: block;
     }
-    .value {
-        font-size: 12px;
-    }
-    .label {
-        font-size: 8px;
-    }
-
 
     .doen{
         width: 70%;
@@ -564,7 +658,7 @@ footer{
         height: auto;
         margin-left: 10%;
         margin-right: 10%;
-        border: 10px red solid;
+        border: 10px rgb(54, 54, 54) solid;
     }
     .doen-text{
         margin-left: 0px;
@@ -597,7 +691,6 @@ footer{
         background-image: url("images/carback1.png");
         width: 100%;
         height: 500px;
-        padding-top: 20px;
     }
     .header-margin{
         margin-left: 5%;
@@ -614,10 +707,6 @@ footer{
         gap: 20px;
         margin-top: 30px;
     }
-    .desktop-menu img{
-        width: 40px;
-        height: 40px;
-    }
     .desktop-menu a{
         font-size: 14px;
     }
@@ -626,24 +715,12 @@ footer{
         height: 35px;
         font-size: 14px;
     }
-    .time-square {
-        width: 100px;
-        height: 100px;
-        font-size: 24px;
-    }
     .desktop-menu {
         display: none;
     }
 
     .mobile-menu-btn {
         display: block;
-        font-size: 40px;
-    }
-    .value {
-        font-size: 18px;
-    }
-    .label {
-        font-size: 14px;
     }
 
 
@@ -661,7 +738,7 @@ footer{
         height: auto;
         margin-left: 10%;
         margin-right: 10%;
-        border: 10px red solid;
+        border: 10px rgb(54, 54, 54) solid;
     }
     .doen-text{
         margin-left: 0px;
@@ -691,11 +768,10 @@ footer{
         background-repeat: no-repeat;
         width: 100%;
         height: 600px;
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
     .header-margin{
         margin-left: 5%;
-        margin-right: 5%;
     }
     .header-maintext{
         font-size: 34px;
@@ -753,4 +829,9 @@ footer{
     .icons .fade-in-element{
     width: 100%;
 }
+
 }
+
+
+
+

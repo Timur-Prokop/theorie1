@@ -12,11 +12,7 @@ body{
     background-image: url("images/bgc.png");
     background-size: 100%;     
 }
-li{
-    text-decoration: none;
-    margin-left: 40px;
-    margin-right: 40px;
-}
+
 header{
     width: 100%;
     padding-top: 20px;
