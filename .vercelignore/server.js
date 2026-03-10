@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(express.static(__dirname));
 
-const questions = require('./upload.js');
+const questions = require('../upload.js');
 
 app.get('/api/questions', (req, res) => {
   res.json(questions);
