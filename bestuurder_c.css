@@ -15,7 +15,7 @@ body{
 
 #jouw-auto-info {
   padding: 40px 0;
-  background-color: transparent; /* ← Прозрачный фон */
+  background-color: transparent; 
   color: #fff;
 }
 
