@@ -1,4 +1,4 @@
-const User = require('../../Users'); // или '../models/User' если у тебя другая папка
+const User = require('../js/jsjson/Users'); // или '../models/User' если у тебя другая папка
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
