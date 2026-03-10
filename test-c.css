@@ -26,8 +26,8 @@ body{
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  display:flex;
-  justify-content:center;
+  display:block;
+  /* justify-self:center; */
   padding: 18px;
   background-image: radial-gradient(circle at 1px 1px, #141414 1px, transparent 0);
   background-size: 40px 40px;
@@ -35,9 +35,11 @@ body{
 
 .app{
   width: 100%;
+  margin: 30px auto;
   max-width: 980px;
   display:flex;
   flex-direction:column;
+  /* justify-content: center; */
   gap: 14px;
 }
 
@@ -300,11 +302,13 @@ body{
   margin-top: 6px;
   color: var(--muted);
 }
-
+.modal[hidden] {
+  display: none !important;
+}
 .modal{
   position: fixed;
   inset: 0;
-  display:none;
+  display:flex;
   align-items:center;
   justify-content:center;
   z-index: 50;
