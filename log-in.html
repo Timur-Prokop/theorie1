@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="header_style.css">
+
   <title>Inloggen - Red-Drive</title>
 
   <script type="text/javascript">
@@ -20,11 +22,14 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1a0000, #330000);
+      padding-bottom: 30px;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url("images/bgc.png");
+      background-size: 100%; 
       color: #fff;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
@@ -148,12 +153,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
 </head>
 <body>
 
-<header>
-  <div class="logo">Red Drive</div>
-  <nav class="nav-menu">
-    <a href="/">Main</a>
-  </nav>
-</header>
+<div id="site-header"></div>
 
 <div class="page-content">
   <div class="login-container">
@@ -163,42 +163,58 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
     <button onclick="login()">Inloggen</button>
     <div class="register-link">
       Nog geen account? <a href="/sigh-in.html">Registreer</a>
+
     </div>
+    <button id="googleLogin">Inloggen met Google</button>
   </div>
 </div>
 
 
-<script>
-  async function login() {
-  const login = document.getElementById('login').value;
-  const password = document.getElementById('password').value;
 
-  const res = await fetch('/api/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ login, password })
+
+<script src="jsjson/include.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBOgOVROS6uqeDPowKEEof5-LUsOK2iQcc",
+    authDomain: "theorie-storage.firebaseapp.com",
+    projectId: "theorie-storage",
+    storageBucket: "theorie-storage.firebasestorage.app",
+    messagingSenderId: "195348676965",
+    appId: "1:195348676965:web:43ed80a05bf8cd5daf218c"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  document.getElementById("googleLogin").addEventListener("click", async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const idToken = await user.getIdToken();
+
+      const response = await fetch("/auth/google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({ idToken })
+      });
+
+      const data = await response.json();
+
+      console.log("Google login success:", user);
+      console.log("ID Token:", idToken);
+      console.log("SERVER RESPONSE:", data);
+
+    } catch (error) {
+      console.error("Google login error:", error);
+    }
   });
-
-  const data = await res.json();
-  if (res.ok) {
-    alert(data.msg);
-    localStorage.setItem('token', data.token);
-    window.location.href = '/'; // куда хочешь
-  } else {
-    alert(data.msg);
-  }
-}
-
 </script>
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

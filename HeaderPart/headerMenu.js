@@ -20,6 +20,8 @@ function initMobileMenu() {
   });
 }
 
-
+// function anotherPage(){
+//   window.location.href = "log-in.html";
+// }
 
 
