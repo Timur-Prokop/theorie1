@@ -528,7 +528,7 @@ app.get("/api/me", async (req, res) => {
   }
 });
 
-app.get("/profile", async (req, res) => {
+app.get("/profile.html", async (req, res) => {
   try {
     if (!req.session.userId) {
       return res.redirect("/log-in.html");
@@ -592,5 +592,5 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
-
+const serverless = require("serverless-http");
 module.exports = serverless(app);
