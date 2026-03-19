@@ -303,10 +303,10 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { MongoClient, ObjectId } = require("mongodb");
 const admin = require("firebase-admin");
+const serverless = require("serverless-http");
 
 const app = express();
 
-const PORT = process.env.PORT || 7777;
 const NODE_ENV = process.env.NODE_ENV || "development";
 const isProd = NODE_ENV === "production";
 
@@ -314,19 +314,16 @@ const MONGO_URI = process.env.MONGO_URI;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 const FIREBASE_SERVICE_ACCOUNT = process.env.FIREBASE_SERVICE_ACCOUNT;
 
-if (!FIREBASE_SERVICE_ACCOUNT) {
-  throw new Error("FIREBASE_SERVICE_ACCOUNT is missing");
-}
+if (!MONGO_URI) throw new Error("MONGO_URI is missing");
+if (!SESSION_SECRET) throw new Error("SESSION_SECRET is missing");
+if (!FIREBASE_SERVICE_ACCOUNT) throw new Error("FIREBASE_SERVICE_ACCOUNT is missing");
 
-if (!MONGO_URI) {
-  throw new Error("MONGO_URI is missing");
+let serviceAccount;
+try {
+  serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT);
+} catch (e) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT is not valid JSON");
 }
-
-if (!SESSION_SECRET) {
-  throw new Error("SESSION_SECRET is missing");
-}
-
-const serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT);
 
 if (!admin.apps.length) {
   admin.initializeApp({
@@ -334,15 +331,16 @@ if (!admin.apps.length) {
   });
 }
 
-const client = new MongoClient(MONGO_URI);
-
+let mongoClient;
 let db;
 
 async function connectDB() {
+  if (!mongoClient) {
+    mongoClient = new MongoClient(MONGO_URI);
+    await mongoClient.connect();
+  }
   if (!db) {
-    await client.connect();
-    db = client.db("theorie1_db");
-    console.log("MongoDB connected");
+    db = mongoClient.db("theorie1_db");
   }
   return db;
 }
@@ -354,7 +352,6 @@ app.use(
     origin: [
       "http://localhost:7777",
       "http://127.0.0.1:7777",
-      "http://192.168.178.152:7777",
       "https://red-drive.nl",
       "https://www.red-drive.nl",
       "https://theorie1.vercel.app",
@@ -377,6 +374,7 @@ app.use(
       mongoUrl: MONGO_URI,
       dbName: "theorie1_db",
       collectionName: "sessions",
+      ttl: 60 * 60 * 24 * 7,
     }),
     cookie: {
       httpOnly: true,
@@ -387,22 +385,19 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "..")));
-
-const questions = require("./upload.js");
-
-app.get("/api/questions", (req, res) => {
-  res.json(questions);
+// healthcheck
+app.get("/api/health", (req, res) => {
+  res.json({ ok: true });
 });
 
+// debug route
 app.get("/auth/google", (req, res) => {
   res.send("GET /auth/google works");
 });
 
+// Google login from Firebase ID token
 app.post("/auth/google", async (req, res) => {
   try {
-    console.log("POST /auth/google hit");
-
     const { idToken } = req.body;
 
     if (!idToken) {
@@ -412,6 +407,7 @@ app.post("/auth/google", async (req, res) => {
       });
     }
 
+    // Firebase Admin verifies ID token
     const decodedToken = await admin.auth().verifyIdToken(idToken);
 
     const googleId = decodedToken.uid;
@@ -454,13 +450,8 @@ app.post("/auth/google", async (req, res) => {
         _id: insertResult.insertedId,
         ...newUser,
       };
-
-      console.log("New user created:", email);
     } else {
-      const updateFields = {
-        email,
-        name,
-      };
+      const updateFields = { email, name };
 
       if (!user.googleId) {
         updateFields.googleId = googleId;
@@ -475,8 +466,6 @@ app.post("/auth/google", async (req, res) => {
         ...user,
         ...updateFields,
       };
-
-      console.log("Existing user logged in:", email);
     }
 
     req.session.userId = user._id.toString();
@@ -494,7 +483,7 @@ app.post("/auth/google", async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Google auth error FULL:", error);
+    console.error("Google auth error:", error);
     return res.status(401).json({
       success: false,
       message: "Google authentication failed",
@@ -566,12 +555,12 @@ app.get("/profile", async (req, res) => {
       </head>
       <body style="font-family: Arial, sans-serif; padding: 40px;">
         <h1>Profile</h1>
-        <p><strong>Name:</strong> ${user.name}</p>
-        <p><strong>Email:</strong> ${user.email}</p>
-        <p><strong>Role:</strong> ${user.role}</p>
-        <p><strong>Plan:</strong> ${user.subscription?.plan || "free"}</p>
+        <p><strong>Name:</strong> ${escapeHtml(user.name || "")}</p>
+        <p><strong>Email:</strong> ${escapeHtml(user.email || "")}</p>
+        <p><strong>Role:</strong> ${escapeHtml(user.role || "")}</p>
+        <p><strong>Plan:</strong> ${escapeHtml(user.subscription?.plan || "free")}</p>
         <p><strong>Created:</strong> ${
-          user.createdAt ? new Date(user.createdAt).toLocaleString() : ""
+          user.createdAt ? new Date(user.createdAt).toLocaleString("nl-NL") : ""
         }</p>
         <a href="/logout">Logout</a>
       </body>
@@ -595,13 +584,13 @@ app.get("/logout", (req, res) => {
   });
 });
 
-connectDB()
-  .then(() => {
-    app.listen(PORT, "0.0.0.0", () => {
-      console.log(`🚀 Server started on port: ${PORT}`);
-      console.log(`Mode: ${NODE_ENV}`);
-    });
-  })
-  .catch((err) => {
-    console.error("Failed to start server:", err);
-  });
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+module.exports = serverless(app);
