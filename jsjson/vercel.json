@@ -3,7 +3,7 @@
   "rewrites": [
     { "source": "/auth/google", "destination": "/api/server" },
     { "source": "/api/me", "destination": "/api/server" },
-    { "source": "/profile", "destination": "/api/server" },
+    { "source": "/profile.html", "destination": "/api/server" },
     { "source": "/logout", "destination": "/api/server" }
   ]
 }

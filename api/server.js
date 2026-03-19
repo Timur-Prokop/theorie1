@@ -592,5 +592,4 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
-const serverless = require("serverless-http");
 module.exports = serverless(app);
