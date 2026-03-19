@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
 const { MongoClient, ObjectId } = require("mongodb");
 const admin = require("firebase-admin");
 const serverless = require("serverless-http");
@@ -71,17 +70,10 @@ app.use(
     resave: false,
     saveUninitialized: false,
     proxy: true,
-    store: MongoStore.create({
-      mongoUrl: MONGO_URI,
-      dbName: "theorie1_db",
-      collectionName: "sessions",
-      ttl: 60 * 60 * 24 * 7,
-      autoRemove: "native",
-    }),
     cookie: {
       httpOnly: true,
       secure: true,
-      sameSite: "none",
+      sameSite: "lax",
       maxAge: 1000 * 60 * 60 * 24 * 7,
     },
   })
@@ -97,9 +89,8 @@ app.get("/auth/google", (req, res) => {
 
 app.post("/auth/google", async (req, res) => {
   try {
-    console.log("1. /auth/google called");
-
     const { idToken } = req.body;
+
     if (!idToken) {
       return res.status(400).json({
         success: false,
@@ -107,9 +98,7 @@ app.post("/auth/google", async (req, res) => {
       });
     }
 
-    console.log("2. verifying token");
     const decodedToken = await admin.auth().verifyIdToken(idToken);
-    console.log("3. token verified");
 
     const googleId = decodedToken.uid;
     const email = decodedToken.email || "";
@@ -122,10 +111,8 @@ app.post("/auth/google", async (req, res) => {
       });
     }
 
-    console.log("4. connecting db");
     const database = await connectDB();
     const usersCollection = database.collection("users");
-    console.log("5. db connected");
 
     let user = await usersCollection.findOne({ googleId });
 
@@ -153,8 +140,6 @@ app.post("/auth/google", async (req, res) => {
         _id: insertResult.insertedId,
         ...newUser,
       };
-
-      console.log("6. new user created");
     } else {
       const updateFields = { email, name };
 
@@ -171,36 +156,21 @@ app.post("/auth/google", async (req, res) => {
         ...user,
         ...updateFields,
       };
-
-      console.log("6. existing user updated");
     }
 
     req.session.userId = user._id.toString();
 
-    req.session.save((err) => {
-      if (err) {
-        console.error("7. session save error:", err);
-        return res.status(500).json({
-          success: false,
-          message: "Session save failed",
-          error: err.message,
-        });
-      }
-
-      console.log("8. session saved");
-
-      return res.json({
-        success: true,
-        message: "Google auth success",
-        user: {
-          id: String(user._id),
-          googleId: user.googleId,
-          email: user.email,
-          name: user.name,
-          role: user.role,
-          subscription: user.subscription,
-        },
-      });
+    return res.json({
+      success: true,
+      message: "Google auth success",
+      user: {
+        id: String(user._id),
+        googleId: user.googleId,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+        subscription: user.subscription,
+      },
     });
   } catch (error) {
     console.error("Google auth error:", error);
@@ -294,18 +264,12 @@ app.get("/profile.html", async (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      console.error("logout error:", err);
-      return res.status(500).send("Logout error");
-    }
-
+  req.session.destroy(() => {
     res.clearCookie("connect.sid", {
       httpOnly: true,
       secure: true,
-      sameSite: "none",
+      sameSite: "lax",
     });
-
     return res.redirect("/log-in.html");
   });
 });
