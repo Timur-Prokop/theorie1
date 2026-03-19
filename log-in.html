@@ -178,7 +178,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
   import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBOgOVROS6uqeDPowKEEof5-LUsOK2iQcc",
+    apiKey: "AIzaSyDp1LeUjHQDsrU0w96Cz-ZRD2jM9QG4a3k",
     authDomain: "theorie-storage.firebaseapp.com",
     projectId: "theorie-storage",
     storageBucket: "theorie-storage.firebasestorage.app",
@@ -211,8 +211,15 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
       console.log("ID Token:", idToken);
       console.log("SERVER RESPONSE:", data);
 
+      if (!response.ok || !data.success) {
+        alert("Server error: " + (data.message || "unknown error"));
+        return;
+      }
+
+      window.location.href = "https://www.red-drive.nl/profile";
     } catch (error) {
       console.error("Google login error:", error);
+      alert("Google login error");
     }
   });
 </script>

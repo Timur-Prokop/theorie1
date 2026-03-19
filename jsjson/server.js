@@ -2,18 +2,43 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const session = require("express-session");
-const admin = require("firebase-admin");
 const { MongoClient, ObjectId } = require("mongodb");
 
-const serviceAccount = require("./serviceAccountKey.json");
+const admin = require("firebase-admin");
+
+if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT is missing");
+}
+
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+}
 
 const app = express();
 
-const uri =
-  "mongodb+srv://goodtime2804_db_user:2804ptPT08!@cluster0.78pzwsp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const PORT = process.env.PORT || 7777;
+const NODE_ENV = process.env.NODE_ENV || "development";
+const isProd = NODE_ENV === "production";
 
-const client = new MongoClient(uri);
+const MONGO_URI = process.env.MONGO_URI;
+const SESSION_SECRET = process.env.SESSION_SECRET;
 
+const client = new MongoClient(MONGO_URI);
+if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT is missing");
+}
+
+if (!MONGO_URI) {
+  throw new Error("MONGO_URI is missing");
+}
+
+if (!SESSION_SECRET) {
+  throw new Error("SESSION_SECRET is missing");
+}
 let db;
 
 async function connectDB() {
@@ -25,13 +50,17 @@ async function connectDB() {
   return db;
 }
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+app.set("trust proxy", 1);
 
 app.use(
   cors({
-    origin: true,
+    origin: [
+      "http://localhost:7777",
+      "http://127.0.0.1:7777",
+      "http://192.168.178.152:7777",
+      "https://red-drive.nl",
+      "https://www.red-drive.nl",
+    ],
     credentials: true,
   })
 );
@@ -41,14 +70,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   session({
-    secret: "super_secret_key_change_me",
+    name: "connect.sid",
+    secret: SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    proxy: true,
     cookie: {
       httpOnly: true,
-      secure: false,
+      secure: isProd,
       sameSite: "lax",
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 дней
+      maxAge: 1000 * 60 * 60 * 24 * 7,
     },
   })
 );
@@ -132,9 +163,7 @@ app.post("/auth/google", async (req, res) => {
 
       await usersCollection.updateOne(
         { _id: user._id },
-        {
-          $set: updateFields,
-        }
+        { $set: updateFields }
       );
 
       user = {
@@ -164,6 +193,7 @@ app.post("/auth/google", async (req, res) => {
     return res.status(401).json({
       success: false,
       message: "Google authentication failed",
+      error: error.message,
     });
   }
 });
@@ -223,9 +253,10 @@ app.get("/profile", async (req, res) => {
 
     return res.send(`
       <!DOCTYPE html>
-      <html lang="en">
+      <html lang="nl">
       <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Profile</title>
       </head>
       <body style="font-family: Arial, sans-serif; padding: 40px;">
@@ -234,7 +265,9 @@ app.get("/profile", async (req, res) => {
         <p><strong>Email:</strong> ${user.email}</p>
         <p><strong>Role:</strong> ${user.role}</p>
         <p><strong>Plan:</strong> ${user.subscription?.plan || "free"}</p>
-        <p><strong>Created:</strong> ${user.createdAt ? new Date(user.createdAt).toLocaleString() : ""}</p>
+        <p><strong>Created:</strong> ${
+          user.createdAt ? new Date(user.createdAt).toLocaleString() : ""
+        }</p>
         <a href="/logout">Logout</a>
       </body>
       </html>
@@ -257,12 +290,11 @@ app.get("/logout", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 7777;
-
 connectDB()
   .then(() => {
     app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Server gestart on the port: ${PORT}`);
+      console.log(`Mode: ${NODE_ENV}`);
     });
   })
   .catch((err) => {
