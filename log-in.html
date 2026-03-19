@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -217,12 +217,158 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         return;
       }
 
-      window.location.href = "https://www.red-drive.nl/profile";
+      // window.location.href = "https://www.red-drive.nl/profile";
+      window.location.href = "/profile";
+      
     } catch (error) {
       console.error("Google login error:", error);
       alert("Google login error");
     }
   });
 </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      background: #1b1b1b;
+      padding: 32px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #bbb;
+      margin-bottom: 24px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #111;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    #status {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #ccc;
+      white-space: pre-wrap;
+      word-break: break-word;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Inloggen</h1>
+    <p>Log in met je Google-account</p>
+    <button id="googleLogin">Login with Google</button>
+    <div id="status"></div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPLKKlkCAJhXxh8Js5YQhrnQEYMuargzk",
+      authDomain: "theorie-storage.firebaseapp.com",
+      projectId: "theorie-storage",
+      storageBucket: "theorie-storage.firebasestorage.app",
+      messagingSenderId: "195348676965",
+      appId: "1:195348676965:web:43ed80a05bf8cd5daf218c",
+      measurementId: "G-HP8L8ZQ3Y0"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    const statusEl = document.getElementById("status");
+    const loginBtn = document.getElementById("googleLogin");
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    loginBtn.addEventListener("click", async () => {
+      try {
+        setStatus("Opening Google login...");
+
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        const idToken = await user.getIdToken();
+
+        setStatus("Google login success. Sending token to server...");
+
+        const response = await fetch("/auth/google", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          credentials: "include",
+          body: JSON.stringify({ idToken })
+        });
+
+        const raw = await response.text();
+        console.log("STATUS:", response.status);
+        console.log("RAW RESPONSE:", raw);
+
+        let data = {};
+        try {
+          data = JSON.parse(raw);
+        } catch (e) {
+          // ignore json parse fail
+        }
+
+        if (!response.ok || !data.success) {
+          setStatus("Backend failed:\n" + raw);
+          alert("Backend failed: " + raw);
+          return;
+        }
+
+        setStatus("Login complete. Redirecting...");
+        window.location.href = "/profile";
+      } catch (error) {
+        console.error("Google login error:", error);
+        setStatus("Google login error:\n" + (error.message || "Unknown error"));
+        alert(error.message || "Google login error");
+      }
+    });
+  </script>
 </body>
 </html>
