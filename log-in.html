@@ -100,19 +100,18 @@
       setStatus("Opening Google login...");
 
       const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      const idToken = await user.getIdToken(true);
+      const idToken = await result.user.getIdToken(true);
 
       setStatus("Sending token to backend...");
 
-      const response = await fetch("/api/auth/google", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  credentials: "include",
-  body: JSON.stringify({ idToken })
-});
+      const response = await fetch("/api/auth-google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({ idToken })
+      });
 
       const raw = await response.text();
       console.log("STATUS:", response.status);
@@ -127,12 +126,10 @@
         throw new Error(data.message || raw || "Backend login failed");
       }
 
-      setStatus("Login complete");
       window.location.href = "/profile.html";
     } catch (error) {
       console.error("Google login error:", error);
       setStatus("Google login error:\n" + (error.message || "Unknown error"));
-      alert(error.message || "Google login error");
     }
   });
 </script>
