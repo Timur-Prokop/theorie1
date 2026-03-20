@@ -3,7 +3,6 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const mongoose = require("mongoose");
 const admin = require("firebase-admin");
-const serverless = require("serverless-http");
 
 const app = express();
 
@@ -149,7 +148,6 @@ app.post("/api/auth/google", async (req, res) => {
 
     return req.session.save((err) => {
       if (err) {
-        console.error("Session save error:", err);
         return res.status(500).json({
           success: false,
           message: "Session save failed"
@@ -158,7 +156,6 @@ app.post("/api/auth/google", async (req, res) => {
 
       return res.json({
         success: true,
-        message: "Google auth success",
         user: {
           id: String(user._id),
           googleId: user.googleId,
@@ -203,7 +200,6 @@ app.get("/api/me", async (req, res) => {
       }
     });
   } catch (error) {
-    console.error("api/me error:", error);
     return res.status(500).json({
       success: false,
       message: "Server error",
@@ -213,15 +209,7 @@ app.get("/api/me", async (req, res) => {
 });
 
 app.post("/api/logout", (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      console.error("Logout error:", err);
-      return res.status(500).json({
-        success: false,
-        message: "Logout failed"
-      });
-    }
-
+  req.session.destroy(() => {
     res.clearCookie("connect.sid", {
       httpOnly: true,
       secure: true,
@@ -232,4 +220,4 @@ app.post("/api/logout", (req, res) => {
   });
 });
 
-module.exports = serverless(app);
+module.exports = app;

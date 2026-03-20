@@ -106,13 +106,13 @@
       setStatus("Sending token to backend...");
 
       const response = await fetch("/api/auth/google", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        credentials: "include",
-        body: JSON.stringify({ idToken })
-      });
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  credentials: "include",
+  body: JSON.stringify({ idToken })
+});
 
       const raw = await response.text();
       console.log("STATUS:", response.status);
