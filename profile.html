@@ -19,7 +19,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
 
   <div id="site-header"></div>
 
-      <div class="profile-card">
+      <!-- <div class="profile-card">
         <div class="avatar"></div>
         <div class="profile-container">
           <h1>Jouw profile</h1>
@@ -31,10 +31,88 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         <div id="premium-content" style="display:none; color: white;" >
           <p>Content is voor premium gebruikers</p>
         </div>
-      </div>
+      </div> -->
 
 
-  <script src="jsjson/profile.js"></script>
+      <div class="box">
+    <h1>Profile</h1>
+    <div id="content">Loading...</div>
+    <button id="logoutBtn">Logout</button>
+    <div id="status"></div>
+  </div>
+
+  <script>
+    const contentEl = document.getElementById("content");
+    const statusEl = document.getElementById("status");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    function esc(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    async function loadProfile() {
+      try {
+        const response = await fetch("/api/server/api/me", {
+          method: "GET",
+          credentials: "include"
+        });
+
+        const data = await response.json();
+        console.log("PROFILE DATA:", data);
+
+        if (!data.user) {
+          window.location.href = "/log-in.html";
+          return;
+        }
+
+        const user = data.user;
+
+        contentEl.innerHTML = `
+          ${user.picture ? `<img src="${esc(user.picture)}" alt="Avatar">` : ""}
+          <div class="row"><span class="label">Name:</span> ${esc(user.name)}</div>
+          <div class="row"><span class="label">Email:</span> ${esc(user.email)}</div>
+          <div class="row"><span class="label">Role:</span> ${esc(user.role)}</div>
+          <div class="row"><span class="label">Plan:</span> ${esc(user.subscription?.plan || "free")}</div>
+          <div class="row"><span class="label">Google ID:</span> ${esc(user.googleId)}</div>
+          <div class="row"><span class="label">Created:</span> ${user.createdAt ? new Date(user.createdAt).toLocaleString("nl-NL") : ""}</div>
+        `;
+      } catch (error) {
+        console.error("Profile load error:", error);
+        contentEl.innerHTML = "Failed to load profile";
+      }
+    }
+
+    logoutBtn.addEventListener("click", async () => {
+      try {
+        statusEl.textContent = "Logging out...";
+
+        const response = await fetch("/api/server/logout", {
+          method: "POST",
+          credentials: "include"
+        });
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error(data.message || "Logout failed");
+        }
+
+        window.location.href = "/log-in.html";
+      } catch (error) {
+        console.error("Logout error:", error);
+        statusEl.textContent = error.message || "Logout failed";
+      }
+    });
+
+    loadProfile();
+  </script>
+
+  <!-- <script src="jsjson/profile.js"></script> -->
   <script src="jsjson/include.js"></script>
 </body>
 </html>
