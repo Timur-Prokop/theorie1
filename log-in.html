@@ -70,66 +70,71 @@
     <div id="status"></div>
   </div>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyAPLKKlkCAJhXxh8Js5YQhrnQEYMuargzk",
-      authDomain: "theorie-storage.firebaseapp.com",
-      projectId: "theorie-storage",
-      storageBucket: "theorie-storage.firebasestorage.app",
-      messagingSenderId: "195348676965",
-      appId: "1:195348676965:web:43ed80a05bf8cd5daf218c",
-      measurementId: "G-HP8L8ZQ3Y0"
-    };
+  const firebaseConfig = {
+    apiKey: "AIzaSyAPLKKlkCAJhXxh8Js5YQhrnQEYMuargzk",
+    authDomain: "theorie-storage.firebaseapp.com",
+    projectId: "theorie-storage",
+    storageBucket: "theorie-storage.firebasestorage.app",
+    messagingSenderId: "195348676965",
+    appId: "1:195348676965:web:43ed80a05bf8cd5daf218c",
+    measurementId: "G-HP8L8ZQ3Y0"
+  };
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
-    const statusEl = document.getElementById("status");
-    const loginBtn = document.getElementById("googleLogin");
+  const statusEl = document.getElementById("status");
+  const loginBtn = document.getElementById("googleLogin");
 
-    function setStatus(text) {
-      statusEl.textContent = text;
-    }
+  function setStatus(text) {
+    statusEl.textContent = text;
+  }
 
-    loginBtn.addEventListener("click", async () => {
+  loginBtn.addEventListener("click", async () => {
+    try {
+      setStatus("Opening Google login...");
+
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const idToken = await user.getIdToken(true);
+
+      setStatus("Sending token to backend...");
+
+      const response = await fetch("/api/auth/google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({ idToken })
+      });
+
+      const raw = await response.text();
+      console.log("STATUS:", response.status);
+      console.log("RAW RESPONSE:", raw);
+
+      let data = {};
       try {
-        setStatus("Opening Google login...");
+        data = JSON.parse(raw);
+      } catch (e) {}
 
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        const idToken = await user.getIdToken();
-
-        setStatus("Google success. Sending token to backend...");
-
-        const response = await fetch("/api/server/auth/google", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          credentials: "include",
-          body: JSON.stringify({ idToken })
-        });
-
-        const data = await response.json();
-
-        console.log("BACKEND RESPONSE:", data);
-
-        if (!response.ok || !data.success) {
-          throw new Error(data.message || "Backend login failed");
-        }
-
-        setStatus("Login complete. Redirecting...");
-        window.location.href = "/profile.html";
-      } catch (error) {
-        console.error("Google login error:", error);
-        setStatus("Google login error:\n" + (error.message || "Unknown error"));
-        alert(error.message || "Google login error");
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || raw || "Backend login failed");
       }
-    });
-  </script>
+
+      setStatus("Login complete");
+      window.location.href = "/profile.html";
+    } catch (error) {
+      console.error("Google login error:", error);
+      setStatus("Google login error:\n" + (error.message || "Unknown error"));
+      alert(error.message || "Google login error");
+    }
+  });
+</script>
 </body>
 </html>

@@ -1,295 +1,7 @@
-// const express = require("express");
-// const cors = require("cors");
-// const session = require("express-session");
-// const { MongoClient, ObjectId } = require("mongodb");
-// const admin = require("firebase-admin");
-// const serverless = require("serverless-http");
-
-// const app = express();
-
-// const MONGO_URI = process.env.MONGO_URI;
-// const SESSION_SECRET = process.env.SESSION_SECRET;
-// const FIREBASE_SERVICE_ACCOUNT = process.env.FIREBASE_SERVICE_ACCOUNT;
-
-// if (!MONGO_URI) throw new Error("MONGO_URI is missing");
-// if (!SESSION_SECRET) throw new Error("SESSION_SECRET is missing");
-// if (!FIREBASE_SERVICE_ACCOUNT) throw new Error("FIREBASE_SERVICE_ACCOUNT is missing");
-
-// let serviceAccount;
-// try {
-//   serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT);
-// } catch (e) {
-//   throw new Error("FIREBASE_SERVICE_ACCOUNT is not valid JSON");
-// }
-
-// if (!admin.apps.length) {
-//   admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount),
-//   });
-// }
-
-// let mongoClient;
-// let db;
-
-// async function connectDB() {
-//   if (db) return db;
-
-//   if (!mongoClient) {
-//     mongoClient = new MongoClient(MONGO_URI, {
-//       serverSelectionTimeoutMS: 10000,
-//     });
-//   }
-
-//   await mongoClient.connect();
-//   db = mongoClient.db("theorie1_db");
-//   return db;
-// }
-
-// app.set("trust proxy", 1);
-
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:7777",
-//       "http://127.0.0.1:7777",
-//       "https://red-drive.nl",
-//       "https://www.red-drive.nl",
-//       "https://theorie1.vercel.app",
-//     ],
-//     credentials: true,
-//   })
-// );
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-
-// app.use(
-//   session({
-//     name: "connect.sid",
-//     secret: SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: false,
-//     proxy: true,
-//     cookie: {
-//       httpOnly: true,
-//       secure: true,
-//       sameSite: "lax",
-//       maxAge: 1000 * 60 * 60 * 24 * 7,
-//     },
-//   })
-// );
-
-// app.get("/api/health", (req, res) => {
-//   res.json({ ok: true });
-// });
-
-// app.get("/auth/google", (req, res) => {
-//   res.send("GET /auth/google works");
-// });
-
-// app.post("/auth/google", async (req, res) => {
-//   try {
-//     const { idToken } = req.body;
-
-//     if (!idToken) {
-//       return res.status(400).json({
-//         success: false,
-//         message: "idToken is required",
-//       });
-//     }
-
-//     const decodedToken = await admin.auth().verifyIdToken(idToken);
-
-//     const googleId = decodedToken.uid;
-//     const email = decodedToken.email || "";
-//     const name = decodedToken.name || "No name";
-
-//     if (!email) {
-//       return res.status(400).json({
-//         success: false,
-//         message: "Google account has no email",
-//       });
-//     }
-
-//     const database = await connectDB();
-//     const usersCollection = database.collection("users");
-
-//     let user = await usersCollection.findOne({ googleId });
-
-//     if (!user) {
-//       user = await usersCollection.findOne({ email });
-//     }
-
-//     if (!user) {
-//       const newUser = {
-//         googleId,
-//         email,
-//         name,
-//         role: "user",
-//         subscription: {
-//           plan: "free",
-//           startDate: null,
-//           expireDate: null,
-//         },
-//         createdAt: new Date(),
-//       };
-
-//       const insertResult = await usersCollection.insertOne(newUser);
-
-//       user = {
-//         _id: insertResult.insertedId,
-//         ...newUser,
-//       };
-//     } else {
-//       const updateFields = { email, name };
-
-//       if (!user.googleId) {
-//         updateFields.googleId = googleId;
-//       }
-
-//       await usersCollection.updateOne(
-//         { _id: user._id },
-//         { $set: updateFields }
-//       );
-
-//       user = {
-//         ...user,
-//         ...updateFields,
-//       };
-//     }
-
-//     req.session.userId = user._id.toString();
-
-//     return res.json({
-//       success: true,
-//       message: "Google auth success",
-//       user: {
-//         id: String(user._id),
-//         googleId: user.googleId,
-//         email: user.email,
-//         name: user.name,
-//         role: user.role,
-//         subscription: user.subscription,
-//       },
-//     });
-//   } catch (error) {
-//     console.error("Google auth error:", error);
-//     return res.status(401).json({
-//       success: false,
-//       message: "Google authentication failed",
-//       error: error.message,
-//     });
-//   }
-// });
-
-// app.get("/api/me", async (req, res) => {
-//   try {
-//     if (!req.session.userId) {
-//       return res.json({ user: null });
-//     }
-
-//     const database = await connectDB();
-//     const usersCollection = database.collection("users");
-
-//     const user = await usersCollection.findOne({
-//       _id: new ObjectId(req.session.userId),
-//     });
-
-//     if (!user) {
-//       return res.json({ user: null });
-//     }
-
-//     return res.json({
-//       user: {
-//         id: String(user._id),
-//         googleId: user.googleId,
-//         email: user.email,
-//         name: user.name,
-//         role: user.role,
-//         subscription: user.subscription,
-//         createdAt: user.createdAt,
-//       },
-//     });
-//   } catch (error) {
-//     console.error("api/me error:", error);
-//     return res.status(500).json({
-//       message: "Server error",
-//       error: error.message,
-//     });
-//   }
-// });
-
-// app.get("/profile.html", async (req, res) => {
-//   try {
-//     if (!req.session.userId) {
-//       return res.redirect("/log-in.html");
-//     }
-
-//     const database = await connectDB();
-//     const usersCollection = database.collection("users");
-
-//     const user = await usersCollection.findOne({
-//       _id: new ObjectId(req.session.userId),
-//     });
-
-//     if (!user) {
-//       return res.redirect("/log-in.html");
-//     }
-
-//     return res.send(`
-//       <!DOCTYPE html>
-//       <html lang="nl">
-//       <head>
-//         <meta charset="UTF-8" />
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//         <title>Profile</title>
-//       </head>
-//       <body style="font-family: Arial, sans-serif; padding: 40px;">
-//         <h1>Profile</h1>
-//         <p><strong>Name:</strong> ${escapeHtml(user.name || "")}</p>
-//         <p><strong>Email:</strong> ${escapeHtml(user.email || "")}</p>
-//         <p><strong>Role:</strong> ${escapeHtml(user.role || "")}</p>
-//         <p><strong>Plan:</strong> ${escapeHtml(user.subscription?.plan || "free")}</p>
-//         <p><strong>Created:</strong> ${
-//           user.createdAt ? new Date(user.createdAt).toLocaleString("nl-NL") : ""
-//         }</p>
-//         <a href="/logout">Logout</a>
-//       </body>
-//       </html>
-//     `);
-//   } catch (error) {
-//     console.error("profile error:", error);
-//     return res.status(500).send("Server error");
-//   }
-// });
-
-// app.get("/logout", (req, res) => {
-//   req.session.destroy(() => {
-//     res.clearCookie("connect.sid", {
-//       httpOnly: true,
-//       secure: true,
-//       sameSite: "lax",
-//     });
-//     return res.redirect("/log-in.html");
-//   });
-// });
-
-// function escapeHtml(value) {
-//   return String(value)
-//     .replace(/&/g, "&amp;")
-//     .replace(/</g, "&lt;")
-//     .replace(/>/g, "&gt;")
-//     .replace(/"/g, "&quot;")
-//     .replace(/'/g, "&#039;");
-// }
-
-// module.exports = serverless(app);
-
 const express = require("express");
-const cors = require("cors");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-const { MongoClient, ObjectId } = require("mongodb");
+const mongoose = require("mongoose");
 const admin = require("firebase-admin");
 const serverless = require("serverless-http");
 
@@ -316,40 +28,55 @@ if (!admin.apps.length) {
   });
 }
 
-let mongoClient;
-let db;
-
-async function connectDB() {
-  if (db) return db;
-
-  if (!mongoClient) {
-    mongoClient = new MongoClient(MONGO_URI, {
-      serverSelectionTimeoutMS: 10000,
-    });
-  }
-
-  await mongoClient.connect();
-  db = mongoClient.db("theorie1_db");
-  return db;
+if (mongoose.connection.readyState === 0) {
+  mongoose.connect(MONGO_URI, {
+    dbName: "theorie1_db",
+  });
 }
 
+const userSchema = new mongoose.Schema({
+  googleId: {
+    type: String,
+    unique: true,
+    sparse: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    default: "user"
+  },
+  subscription: {
+    plan: {
+      type: String,
+      default: "free"
+    },
+    startDate: {
+      type: Date,
+      default: null
+    },
+    expireDate: {
+      type: Date,
+      default: null
+    }
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+}, { collection: "users" });
+
+const User = mongoose.models.User || mongoose.model("User", userSchema);
+
 app.set("trust proxy", 1);
-
-app.use(
-  cors({
-    origin: [
-      "http://localhost:7777",
-      "http://127.0.0.1:7777",
-      "https://red-drive.nl",
-      "https://www.red-drive.nl",
-      "https://theorie1.vercel.app",
-    ],
-    credentials: true,
-  })
-);
-
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.use(
   session({
@@ -362,14 +89,14 @@ app.use(
       mongoUrl: MONGO_URI,
       dbName: "theorie1_db",
       collectionName: "sessions",
-      ttl: 60 * 60 * 24 * 7,
+      ttl: 60 * 60 * 24 * 7
     }),
     cookie: {
       httpOnly: true,
       secure: true,
       sameSite: "lax",
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-    },
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
   })
 );
 
@@ -377,80 +104,45 @@ app.get("/api/health", (req, res) => {
   res.json({ ok: true });
 });
 
-app.post("/auth/google", async (req, res) => {
+app.post("/api/auth/google", async (req, res) => {
   try {
     const { idToken } = req.body;
 
     if (!idToken) {
       return res.status(400).json({
         success: false,
-        message: "idToken is required",
+        message: "idToken is required"
       });
     }
 
-    const decodedToken = await admin.auth().verifyIdToken(idToken);
+    const decoded = await admin.auth().verifyIdToken(idToken);
 
-    const googleId = decodedToken.uid;
-    const email = decodedToken.email || "";
-    const name = decodedToken.name || "";
-    const picture = decodedToken.picture || "";
+    const googleId = decoded.uid;
+    const email = decoded.email || "";
+    const name = decoded.name || "No name";
 
     if (!email) {
       return res.status(400).json({
         success: false,
-        message: "Google account has no email",
+        message: "Google account has no email"
       });
     }
 
-    const database = await connectDB();
-    const usersCollection = database.collection("users");
-
-    let user = await usersCollection.findOne({ googleId });
-
-    if (!user) {
-      user = await usersCollection.findOne({ email });
-    }
+    let user = await User.findOne({
+      $or: [{ googleId }, { email }]
+    });
 
     if (!user) {
-      const newUser = {
+      user = await User.create({
         googleId,
         email,
-        name,
-        picture,
-        role: "user",
-        subscription: {
-          plan: "free",
-          startDate: null,
-          expireDate: null,
-        },
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-
-      const insertResult = await usersCollection.insertOne(newUser);
-
-      user = {
-        _id: insertResult.insertedId,
-        ...newUser,
-      };
+        name
+      });
     } else {
-      const updateFields = {
-        googleId,
-        email,
-        name,
-        picture,
-        updatedAt: new Date(),
-      };
-
-      await usersCollection.updateOne(
-        { _id: user._id },
-        { $set: updateFields }
-      );
-
-      user = {
-        ...user,
-        ...updateFields,
-      };
+      user.googleId = googleId;
+      user.email = email;
+      user.name = name;
+      await user.save();
     }
 
     req.session.userId = String(user._id);
@@ -460,7 +152,7 @@ app.post("/auth/google", async (req, res) => {
         console.error("Session save error:", err);
         return res.status(500).json({
           success: false,
-          message: "Session save failed",
+          message: "Session save failed"
         });
       }
 
@@ -472,10 +164,9 @@ app.post("/auth/google", async (req, res) => {
           googleId: user.googleId,
           email: user.email,
           name: user.name,
-          picture: user.picture || "",
           role: user.role,
-          subscription: user.subscription,
-        },
+          subscription: user.subscription
+        }
       });
     });
   } catch (error) {
@@ -483,7 +174,7 @@ app.post("/auth/google", async (req, res) => {
     return res.status(401).json({
       success: false,
       message: "Google authentication failed",
-      error: error.message,
+      error: error.message
     });
   }
 });
@@ -494,12 +185,7 @@ app.get("/api/me", async (req, res) => {
       return res.json({ user: null });
     }
 
-    const database = await connectDB();
-    const usersCollection = database.collection("users");
-
-    const user = await usersCollection.findOne({
-      _id: new ObjectId(req.session.userId),
-    });
+    const user = await User.findById(req.session.userId).lean();
 
     if (!user) {
       return res.json({ user: null });
@@ -511,40 +197,38 @@ app.get("/api/me", async (req, res) => {
         googleId: user.googleId,
         email: user.email,
         name: user.name,
-        picture: user.picture || "",
         role: user.role,
         subscription: user.subscription,
-        createdAt: user.createdAt,
-      },
+        createdAt: user.createdAt
+      }
     });
   } catch (error) {
     console.error("api/me error:", error);
     return res.status(500).json({
+      success: false,
       message: "Server error",
-      error: error.message,
+      error: error.message
     });
   }
 });
 
-app.post("/logout", (req, res) => {
+app.post("/api/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       console.error("Logout error:", err);
       return res.status(500).json({
         success: false,
-        message: "Logout failed",
+        message: "Logout failed"
       });
     }
 
     res.clearCookie("connect.sid", {
       httpOnly: true,
       secure: true,
-      sameSite: "lax",
+      sameSite: "lax"
     });
 
-    return res.json({
-      success: true,
-    });
+    return res.json({ success: true });
   });
 });
 
