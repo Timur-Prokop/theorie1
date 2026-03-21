@@ -94,6 +94,24 @@
   function setStatus(text) {
     statusEl.textContent = text;
   }
+  async function checkAuth() {
+    try {
+      const res = await fetch("/api/me", {
+        method: "GET",
+        credentials: "include"
+      });
+
+      const data = await res.json();
+
+      if (data.user) {
+        window.location.href = "/profile.html";
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  checkAuth();
 
   loginBtn.addEventListener("click", async () => {
     try {
