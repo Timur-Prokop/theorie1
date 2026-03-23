@@ -1,28 +1,48 @@
-const Stripe = require("stripe");
-const { getCurrentUser, getDb } = require("./_lib");
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-const PRICE_MAP = {
-  day: process.env.STRIPE_PRICE_DAY,
-  week: process.env.STRIPE_PRICE_WEEK,
-  "2weeks": process.env.STRIPE_PRICE_2WEEKS,
-  month: process.env.STRIPE_PRICE_MONTH
-};
-
 module.exports = async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      success: false,
-      message: "Method not allowed"
-    });
-  }
-
   try {
-    console.log("STEP 1: start create-checkout-session");
+    if (req.method !== "POST") {
+      return res.status(405).json({
+        success: false,
+        message: "Method not allowed"
+      });
+    }
+
+    const Stripe = require("stripe");
+    const { getCurrentUser, getDb } = require("./_lib");
+
+    const {
+      STRIPE_SECRET_KEY,
+      STRIPE_PRICE_DAY,
+      STRIPE_PRICE_WEEK,
+      STRIPE_PRICE_2WEEKS,
+      STRIPE_PRICE_MONTH,
+      APP_URL
+    } = process.env;
+
+    if (!STRIPE_SECRET_KEY) {
+      return res.status(500).json({
+        success: false,
+        message: "Missing STRIPE_SECRET_KEY"
+      });
+    }
+
+    if (!APP_URL) {
+      return res.status(500).json({
+        success: false,
+        message: "Missing APP_URL"
+      });
+    }
+
+    const stripe = new Stripe(STRIPE_SECRET_KEY);
+
+    const PRICE_MAP = {
+      day: STRIPE_PRICE_DAY,
+      week: STRIPE_PRICE_WEEK,
+      "2weeks": STRIPE_PRICE_2WEEKS,
+      month: STRIPE_PRICE_MONTH
+    };
 
     const user = await getCurrentUser(req);
-    console.log("STEP 2: user =", user ? user.email : null);
 
     if (!user) {
       return res.status(401).json({
@@ -32,15 +52,12 @@ module.exports = async function handler(req, res) {
     }
 
     const { plan } = req.body || {};
-    console.log("STEP 3: plan =", plan);
-
     const priceId = PRICE_MAP[plan];
-    console.log("STEP 4: priceId =", priceId);
 
     if (!priceId) {
       return res.status(400).json({
         success: false,
-        message: "Invalid plan or missing Stripe price env"
+        message: `Invalid plan or missing price env: ${plan}`
       });
     }
 
@@ -48,7 +65,6 @@ module.exports = async function handler(req, res) {
     const users = db.collection("users");
 
     let stripeCustomerId = user.subscription?.stripeCustomerId || null;
-    console.log("STEP 5: stripeCustomerId =", stripeCustomerId);
 
     if (!stripeCustomerId) {
       const customer = await stripe.customers.create({
@@ -60,7 +76,6 @@ module.exports = async function handler(req, res) {
       });
 
       stripeCustomerId = customer.id;
-      console.log("STEP 6: created customer =", stripeCustomerId);
 
       await users.updateOne(
         { _id: user._id },
@@ -81,18 +96,16 @@ module.exports = async function handler(req, res) {
           quantity: 1
         }
       ],
-      success_url: `${process.env.APP_URL}/profile.html?paid=1`,
-      cancel_url: `${process.env.APP_URL}/profile.html?paid=0`
+      success_url: `${APP_URL}/profile.html?paid=1`,
+      cancel_url: `${APP_URL}/profile.html?paid=0`
     });
-
-    console.log("STEP 7: checkout session created =", session.id);
 
     return res.status(200).json({
       success: true,
       url: session.url
     });
   } catch (error) {
-    console.error("create-checkout-session FULL ERROR:", error);
+    console.error("create-checkout-session ERROR:", error);
     return res.status(500).json({
       success: false,
       message: error.message

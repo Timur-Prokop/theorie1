@@ -89,37 +89,37 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
 </section>
   <script>
   async function buyPlan(plan) {
+  try {
+    const res = await fetch("/api/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      body: JSON.stringify({ plan })
+    });
+
+    const raw = await res.text();
+    console.log("STATUS:", res.status);
+    console.log("RAW RESPONSE:", raw);
+
+    let data = null;
     try {
-      const res = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        credentials: "include",
-        body: JSON.stringify({ plan })
-      });
-
-      const raw = await res.text();
-      console.log("STATUS:", res.status);
-      console.log("RAW RESPONSE:", raw);
-
-      let data = null;
-      try {
-        data = JSON.parse(raw);
-      } catch (e) {
-        throw new Error(raw || "Server returned non-JSON response");
-      }
-
-      if (!res.ok || !data.success) {
-        throw new Error(data.message || "Payment error");
-      }
-
-      window.location.href = data.url;
-    } catch (error) {
-      console.error("buyPlan error:", error);
-      alert(error.message || "Payment error");
+      data = JSON.parse(raw);
+    } catch (e) {
+      throw new Error(raw || "Server returned non-JSON response");
     }
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || "Payment error");
+    }
+
+    window.location.href = data.url;
+  } catch (error) {
+    console.error("buyPlan error:", error);
+    alert(error.message || "Payment error");
   }
+}
 </script>
 
     <script src="jsjson/auto_j.js"></script>
