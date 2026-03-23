@@ -31,6 +31,18 @@ const userSchema = new mongoose.Schema({
     expireDate: {
       type: Date,
       default: null
+    },
+    stripeCustomerId: {
+      type: String,
+      default: null
+    },
+    stripeSubscriptionId: {
+      type: String,
+      default: null
+    },
+    status: {
+      type: String,
+      default: "inactive"
     }
   },
   createdAt: {

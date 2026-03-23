@@ -13,13 +13,22 @@ body{
     background-size: 100%;     
 }
 
-.profile-container{
+.container{
     color: white;
 }
 
+.logoutbtn{
+  background: linear-gradient(to left, #860000, #ff2326);
+    color:#ffffff;
+    width: 100px;
+    height: 35px;
+    border: 0px;
+    border-radius: 0px;
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-
-.profile-card {
+.box {
   max-width: 900px;
   height: 80%;
   margin: 0 auto;

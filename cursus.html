@@ -33,7 +33,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         <span class="old">€3,95</span>
         <span class="new">€0,00</span>
         <p data-i18n="main.daytime1">1 dag</p>
-        <button data-i18n="main.begin">BEGIN DIRECT</button>
+        <button data-i18n="main.begin" onclick="buyPlan('day')">BEGIN DIRECT</button>
       </div>
     </div>
 
@@ -49,7 +49,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         <span class="old">€5,95</span>
         <span class="new">€0,00</span>
         <p data-i18n="main.daytime2">7 dagen</p>
-        <button data-i18n="main.begin">BEGIN DIRECT</button>
+        <button data-i18n="main.begin" onclick="buyPlan('week')">BEGIN DIRECT</button>
       </div>
     </div>
 
@@ -65,7 +65,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         <span class="old">€10,95</span>
         <span class="new">€0,00</span>
         <p data-i18n="main.daytime3">14 dagen</p>
-        <button data-i18n="main.begin">BEGIN DIRECT</button>
+        <button data-i18n="main.begin" onclick="buyPlan('2weeks')">BEGIN DIRECT</button>
       </div>
     </div>
 
@@ -81,17 +81,39 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
         <span class="old">€15,95</span>
         <span class="new">€0,00</span>
         <p data-i18n="main.daytime4">31 dagen</p>
-        <button data-i18n="main.begin">BEGIN DIRECT</button>
+        <button data-i18n="main.begin" onclick="buyPlan('month')">BEGIN DIRECT</button>
       </div>
     </div>
 
   </div>
 </section>
+  <script>
+  async function buyPlan(plan) {
+    try {
+      const res = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify({ plan })
+      });
 
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Payment error");
+      }
+
+      window.location.href = data.url;
+    } catch (error) {
+      console.error("buyPlan error:", error);
+      alert(error.message || "Payment error");
+    }
+  }
+</script>
 
     <script src="jsjson/auto_j.js"></script>
-    <!-- <script src="lang/cursLang.js"></script> -->
-    <!-- <script src="lang/cursLangSwitch.js"></script> -->
     <script src="jsjson/include.js"></script>
 </body>
 </html>
