@@ -19,7 +19,10 @@ module.exports = async function handler(req, res) {
   }
 
   try {
+    console.log("STEP 1: start create-checkout-session");
+
     const user = await getCurrentUser(req);
+    console.log("STEP 2: user =", user ? user.email : null);
 
     if (!user) {
       return res.status(401).json({
@@ -29,12 +32,15 @@ module.exports = async function handler(req, res) {
     }
 
     const { plan } = req.body || {};
+    console.log("STEP 3: plan =", plan);
+
     const priceId = PRICE_MAP[plan];
+    console.log("STEP 4: priceId =", priceId);
 
     if (!priceId) {
       return res.status(400).json({
         success: false,
-        message: "Invalid plan"
+        message: "Invalid plan or missing Stripe price env"
       });
     }
 
@@ -42,6 +48,7 @@ module.exports = async function handler(req, res) {
     const users = db.collection("users");
 
     let stripeCustomerId = user.subscription?.stripeCustomerId || null;
+    console.log("STEP 5: stripeCustomerId =", stripeCustomerId);
 
     if (!stripeCustomerId) {
       const customer = await stripe.customers.create({
@@ -53,6 +60,7 @@ module.exports = async function handler(req, res) {
       });
 
       stripeCustomerId = customer.id;
+      console.log("STEP 6: created customer =", stripeCustomerId);
 
       await users.updateOne(
         { _id: user._id },
@@ -77,12 +85,14 @@ module.exports = async function handler(req, res) {
       cancel_url: `${process.env.APP_URL}/profile.html?paid=0`
     });
 
+    console.log("STEP 7: checkout session created =", session.id);
+
     return res.status(200).json({
       success: true,
       url: session.url
     });
   } catch (error) {
-    console.error("create-checkout-session error:", error);
+    console.error("create-checkout-session FULL ERROR:", error);
     return res.status(500).json({
       success: false,
       message: error.message
