@@ -31,11 +31,21 @@ module.exports = async function handler(req, res) {
       if (session.mode === "subscription" && session.customer && session.subscription) {
         const subscription = await stripe.subscriptions.retrieve(session.subscription);
 
+        console.log("checkout.session.completed subscription:", {
+          id: subscription.id,
+          status: subscription.status,
+          current_period_start: subscription.current_period_start,
+          current_period_end: subscription.current_period_end
+        });
+
         await users.updateOne(
           { "subscription.stripeCustomerId": session.customer },
           {
             $set: {
-              "subscription.plan": "premium",
+              "subscription.plan":
+                subscription.status === "active" || subscription.status === "trialing"
+                  ? "premium"
+                  : "free",
               "subscription.status": subscription.status,
               "subscription.stripeSubscriptionId": subscription.id,
               "subscription.startDate": subscription.current_period_start
@@ -56,6 +66,14 @@ module.exports = async function handler(req, res) {
       event.type === "customer.subscription.deleted"
     ) {
       const subscription = event.data.object;
+
+      console.log("subscription event:", event.type, {
+        id: subscription.id,
+        customer: subscription.customer,
+        status: subscription.status,
+        current_period_start: subscription.current_period_start,
+        current_period_end: subscription.current_period_end
+      });
 
       await users.updateOne(
         { "subscription.stripeCustomerId": subscription.customer },

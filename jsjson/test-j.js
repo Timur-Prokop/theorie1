@@ -1,5 +1,5 @@
 
-const TEST_SIZE = 21;
+const TEST_SIZE = 50;
 const TOTAL_SECONDS = 30 * 60;
 
 let questionsInTest = [];

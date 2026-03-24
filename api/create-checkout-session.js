@@ -19,20 +19,6 @@ module.exports = async function handler(req, res) {
       APP_URL
     } = process.env;
 
-    if (!STRIPE_SECRET_KEY) {
-      return res.status(500).json({
-        success: false,
-        message: "Missing STRIPE_SECRET_KEY"
-      });
-    }
-
-    if (!APP_URL) {
-      return res.status(500).json({
-        success: false,
-        message: "Missing APP_URL"
-      });
-    }
-
     const stripe = new Stripe(STRIPE_SECRET_KEY);
 
     const PRICE_MAP = {
@@ -48,6 +34,20 @@ module.exports = async function handler(req, res) {
       return res.status(401).json({
         success: false,
         message: "Not authorized"
+      });
+    }
+
+    const now = new Date();
+    const hasActivePremium =
+      user.subscription &&
+      user.subscription.plan === "premium" &&
+      user.subscription.expireDate &&
+      new Date(user.subscription.expireDate) > now;
+
+    if (hasActivePremium) {
+      return res.status(400).json({
+        success: false,
+        message: "You already have an active premium subscription"
       });
     }
 

@@ -22,7 +22,8 @@ const userSchema = new mongoose.Schema({
   subscription: {
     plan: {
       type: String,
-      default: "free"
+      // default: "free"
+      default: "nothing"
     },
     startDate: {
       type: Date,
