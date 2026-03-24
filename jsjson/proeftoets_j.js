@@ -7,17 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeBtn = document.querySelector('.close-btn');
 
-    // Открытие меню
     menuBtn.addEventListener('click', function() {
         mobileMenu.style.display = 'flex';
     });
 
-    // Закрытие меню
     closeBtn.addEventListener('click', function() {
         mobileMenu.style.display = 'none';
     });
 
-    // Закрытие при клике на ссылку
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
             mobileMenu.style.display = 'none';
@@ -26,8 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const TEST_SIZE = 21;
 const TOTAL_SECONDS = 30 * 60;
+
+const TEST_QUESTION_IDS = [
+  1, 43, 555, 223, 9, 17, 88,
+  101, 202, 303, 404, 505, 301,
+  407, 108, 209, 111, 222, 333,
+  444, 537
+];
 
 let questionsInTest = [];
 let currentIndex = 0;
@@ -36,15 +39,6 @@ let remainingSeconds = TOTAL_SECONDS;
 let timerId = null;
 
 let isSubmitted = false;
-
-function shuffle(array) {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
 
 function pad2(n) {
   return String(n).padStart(2, "0");
@@ -71,22 +65,46 @@ function loadQuestions() {
     );
   }
 
-  const picked = shuffle(data).slice(0, TEST_SIZE);
+  if (!Array.isArray(TEST_QUESTION_IDS) || TEST_QUESTION_IDS.length === 0) {
+    throw new Error("Массив TEST_QUESTION_IDS пуст. Добавь туда ID нужных вопросов.");
+  }
 
-  questionsInTest = picked.map((q, idx) => {
-    const blockId = q.id != null ? String(q.id) : `idx-${idx}`;
+  if (TEST_QUESTION_IDS.length !== 21) {
+    throw new Error(`В TEST_QUESTION_IDS должно быть ровно 21 ID. Сейчас: ${TEST_QUESTION_IDS.length}`);
+  }
+
+  const questionsById = new Map();
+
+  data.forEach((q, idx) => {
+    const rawId = q?.id;
+    if (rawId == null) return;
+
+    const key = String(rawId);
+    if (!questionsById.has(key)) {
+      questionsById.set(key, q);
+    } else {
+      console.warn(`Дубликат id в window.questions: ${key}. Будет использован первый найденный вопрос.`);
+    }
+  });
+
+  const missingIds = TEST_QUESTION_IDS.filter((id) => !questionsById.has(String(id)));
+  if (missingIds.length > 0) {
+    throw new Error(`Не найдены вопросы с ID: ${missingIds.join(", ")}`);
+  }
+
+  questionsInTest = TEST_QUESTION_IDS.map((id, idx) => {
+    const q = questionsById.get(String(id));
     const answers = Array.isArray(q.answers) ? q.answers : [];
-    const answersShuffled = shuffle(answers).map((a) => ({
-      text: a.text,
-      isCorrect: !!a.isCorrect,
-    }));
 
     return {
-      id: blockId,
+      id: String(id),
       question: q.question ?? "",
       imageUrl: q.imageUrl ?? "",
       why: q.why ?? "",
-      answers: answersShuffled,
+      answers: answers.map((a) => ({
+        text: a.text ?? "",
+        isCorrect: !!a.isCorrect,
+      })),
       selectedIndex: null,
     };
   });
@@ -111,7 +129,6 @@ function renderQuestion() {
   const title = document.createElement("h2");
   title.className = "qTitle";
   title.textContent = q.question;
-
   area.appendChild(title);
 
   if (q.imageUrl) {
@@ -179,9 +196,9 @@ function renderQuestion() {
     if (selectedIdx == null) {
       explain.textContent = `Geen antwoord gekozen. Juiste antwoord: ${correctText}. ${q.why}`;
     } else if (q.answers[selectedIdx]?.isCorrect) {
-      explain.textContent = `Juist . ${q.why}`;
+      explain.textContent = `Juist. ${q.why}`;
     } else {
-      explain.textContent = `Onjuist . Jouw antwoord: ${selectedText}. Juiste antwoord: ${correctText}. ${q.why}`;
+      explain.textContent = `Onjuist. Jouw antwoord: ${selectedText}. Juiste antwoord: ${correctText}. ${q.why}`;
     }
 
     const answerNodes = area.querySelectorAll(".answer");
@@ -219,7 +236,7 @@ function prev() {
 
 function setupKeyboardNav() {
   document.addEventListener("keydown", (e) => {
-    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+    const tag = e.target && e.target.tagName ? e.target.tagName.toLowerCase() : "";
     if (tag === "input" || tag === "textarea") return;
 
     if (e.key === "ArrowRight") next();
@@ -234,12 +251,14 @@ function startTimer() {
 
   timerId = window.setInterval(() => {
     remainingSeconds = Math.max(0, remainingSeconds - 1);
-
     timerValue.textContent = formatTime(remainingSeconds);
 
     const timerBox = timerValue.closest(".timer");
     if (timerBox) {
-      timerBox.classList.toggle("timer--warn", remainingSeconds <= 5 * 60 && remainingSeconds > 60);
+      timerBox.classList.toggle(
+        "timer--warn",
+        remainingSeconds <= 5 * 60 && remainingSeconds > 60
+      );
       timerBox.classList.toggle("timer--danger", remainingSeconds <= 60);
     }
 
@@ -302,7 +321,9 @@ function updateOverviewButtonStyles() {
     const q = questionsInTest[idx];
 
     if (!isSubmitted) {
-      btn.classList.add(q.selectedIndex == null ? "overviewItem--unanswered" : "overviewItem--answered");
+      btn.classList.add(
+        q.selectedIndex == null ? "overviewItem--unanswered" : "overviewItem--answered"
+      );
       return;
     }
 
@@ -310,6 +331,7 @@ function updateOverviewButtonStyles() {
       btn.classList.add("overviewItem--wrong");
       return;
     }
+
     const picked = q.answers[q.selectedIndex];
     btn.classList.add(picked && picked.isCorrect ? "overviewItem--correct" : "overviewItem--wrong");
   });
