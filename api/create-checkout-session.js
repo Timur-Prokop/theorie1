@@ -1,17 +1,5 @@
 module.exports = async function handler(req, res) {
-  const now = new Date();
-  const hasActivePremium =
-  user.subscription &&
-  user.subscription.plan === "premium" &&
-  user.subscription.expireDate &&
-  new Date(user.subscription.expireDate) > now;
-
-if (hasActivePremium) {
-  return res.status(400).json({
-    success: false,
-    message: "You already have an active premium subscription"
-  });
-}
+  
   try {
     if (req.method !== "POST") {
       return res.status(405).json({
@@ -42,6 +30,7 @@ if (hasActivePremium) {
     };
 
     const user = await getCurrentUser(req);
+    
 
     if (!user) {
       return res.status(401).json({
