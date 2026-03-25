@@ -44,6 +44,7 @@ fetch('/profile')
                     document.getElementById('user-admin').textContent = user.isAdmin ? 'true' : 'false';
                     document.getElementById('user-paid').textContent = user.isPaid ? 'true' : 'false';
                     document.getElementById('user-created').textContent = user.createdAt;
+                    document.getElementById('user-expireDate').textContent = user.expireDate;
 
                     if (user.isPaid) {
                     document.getElementById('premium-content').style.display = 'block';

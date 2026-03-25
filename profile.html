@@ -47,9 +47,10 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
     document.getElementById("content").innerHTML = `
       <p><strong>Name:</strong> ${data.user.name}</p>
       <p><strong>Email:</strong> ${data.user.email}</p>
-      <p><strong>Created at:</strong> ${data.user.createdAt}</p>
-      <p><strong>Role:</strong> ${data.user.role}</p>
+      <p><strong>Created at:</strong> ${new Date(data.user.createdAt).toLocaleDateString("nl-NL")}</p>
+      
       <p><strong>Plan:</strong> ${data.user.subscription?.plan || "No premium"}</p>
+      <p><strong>Premium geldt tot: </strong> ${new Date(data.user.expireDate).toLocaleDateString("nl-NL") || ""}</p>
     `;
   }
 
