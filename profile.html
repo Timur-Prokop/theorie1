@@ -60,8 +60,9 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
     document.getElementById("content").innerHTML = `
       <p><strong>Name:</strong> ${data.user.name}</p>
       <p><strong>Email:</strong> ${data.user.email}</p>
+      <p><strong>Email:</strong> ${data.user.created}</p>
       <p><strong>Role:</strong> ${data.user.role}</p>
-      <p><strong>Plan:</strong> ${data.user.subscription?.plan || "free"}</p>
+      <p><strong>Plan:</strong> ${data.user.subscription?.plan || "No premium"}</p>
     `;
   }
 
