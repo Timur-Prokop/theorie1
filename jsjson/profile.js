@@ -42,7 +42,8 @@ fetch('/profile')
 
                     console.log('User from server:', user);
                     document.getElementById('user-admin').textContent = user.isAdmin ? 'true' : 'false';
-                    document.getElementById('user-paid').textContent = user.isPaid ? document.getElementById('user-created').textContent = user.createdAt : 'false';
+                    document.getElementById('user-paid').textContent = user.isPaid ? 'true' : 'false';
+                    document.getElementById('user-created').textContent = user.createdAt;
 
                     if (user.isPaid) {
                     document.getElementById('premium-content').style.display = 'block';

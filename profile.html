@@ -19,27 +19,14 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
 
   <div id="site-header"></div>
 
-      <!-- <div class="profile-card">
-        <div class="avatar"></div>
-        <div class="profile-container">
-          <h1>Jouw profile</h1>
-          <p><strong>Naam:</strong> <span id="user-name">Loading...</span></p>
-          <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
-          <p><strong>Betaling:</strong> <span id="user-paid">U hebt nog niks betaald..;(</span></p>
-        </div>
-
-        <div id="premium-content" style="display:none; color: white;" >
-          <p>Content is voor premium gebruikers</p>
-        </div>
-      </div> -->
-
-
       <div class="box">
     <h1>Profile</h1>
     
-<div id="content">Loading...
-</div>
+    <div id="content">Loading...
+    </div>
+
     <div id="status"></div>
+
     <button class="logoutbtn" onclick="logout()">Logout</button>
   </div>
 
@@ -60,7 +47,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
     document.getElementById("content").innerHTML = `
       <p><strong>Name:</strong> ${data.user.name}</p>
       <p><strong>Email:</strong> ${data.user.email}</p>
-      <p><strong>Email:</strong> ${data.user.created}</p>
+      <p><strong>Created at:</strong> ${data.user.createdAt}</p>
       <p><strong>Role:</strong> ${data.user.role}</p>
       <p><strong>Plan:</strong> ${data.user.subscription?.plan || "No premium"}</p>
     `;
