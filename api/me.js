@@ -7,6 +7,11 @@ module.exports = async function handler(req, res) {
     if (!user) {
       return res.status(200).json({ user: null });
     }
+    if (user.subscription?.expireDate && new Date(user.subscription.expireDate) < new Date()) {
+    user.subscription.plan = "No premium";
+    user.subscription.expireDate = null;
+    await user.save();
+  }
 
     return res.status(200).json({
       user: {
