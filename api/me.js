@@ -8,25 +8,25 @@ module.exports = async function handler(req, res) {
       return res.status(200).json({ user: null });
     }
 
-    
-    const expireDate = user.subscription?.expireDate;
 
-if (expireDate && new Date(expireDate) < new Date()) {
-  user.subscription = {
-    ...user.subscription,
-    plan: "No premium",
-    expireDate: null,
-    startDate: null
-  };
+//     const expireDate = user.subscription?.expireDate;
 
-  user.markModified('subscription');
+// if (expireDate && new Date(expireDate) < new Date()) {
+//   user.subscription = {
+//     ...user.subscription,
+//     plan: "No premium",
+//     expireDate: null,
+//     startDate: null
+//   };
 
-  try {
-    await user.save();
-  } catch (saveError) {
-    console.error("Save subscription error:", saveError);
-  }
-}
+//   user.markModified('subscription');
+
+//   try {
+//     await user.save();
+//   } catch (saveError) {
+//     console.error("Save subscription error:", saveError);
+//   }
+// }
 
     return res.status(200).json({
       user: {
