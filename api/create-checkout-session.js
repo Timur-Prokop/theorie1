@@ -52,6 +52,11 @@ module.exports = async function handler(req, res) {
         message: "You already have an active premium subscription"
       });
     }
+    if(!hasActivePremium){
+      return res.status(400).json({
+        message: "Jouw premium is afgelopen"
+      });
+    }
 
     const { plan } = req.body || {};
     const priceId = PRICE_MAP[plan];
