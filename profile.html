@@ -43,6 +43,7 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
       window.location.href = "/log-in.html";
       return;
     }
+    const expireDate = data.user.subscription?.expireDate;
 
     document.getElementById("content").innerHTML = `
       <p><strong>Name:</strong> ${data.user.name}</p>
@@ -50,7 +51,13 @@ _iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","
       <p><strong>Created at:</strong> ${new Date(data.user.createdAt).toLocaleDateString("nl-NL")}</p>
       
       <p><strong>Plan:</strong> ${data.user.subscription?.plan || "No premium"}</p>
-      <p><strong>Premium geldt tot: </strong> ${new Date(data.user.subscription?.expireDate).toLocaleDateString("nl-NL") || ""}</p>
+
+      <p>
+        <strong>Premium geldt tot: </strong>
+        ${expireDate 
+          ? new Date(expireDate).toLocaleDateString("nl-NL") 
+          : "Geen premium"}
+      </p>
     `;
   }
 
