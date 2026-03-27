@@ -1,76 +1,400 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="stylesheet" href="profile-site.css">
-    <link rel="stylesheet" href="header_style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mijn profiel</title>
+  <link rel="stylesheet" href="header_style.css" />
 
-    <script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = {"siteId":4340885,"cookiePolicyId":69956527,"lang":"nl","storage":{"useSiteId":true}};
-</script>
-<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4340885.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      siteId: 4340885,
+      cookiePolicyId: 69956527,
+      lang: "nl",
+      storage: { useSiteId: true }
+    };
+  </script>
+  <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4340885.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #1f2a44, transparent 35%),
+        radial-gradient(circle at top right, #2b1f44, transparent 35%),
+        linear-gradient(135deg, #0f172a, #111827 45%, #1e293b);
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background: rgba(17, 24, 39, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .profile-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .profile-title h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      color: #ffffff;
+    }
+
+    .profile-title p {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 15px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .status-badge.premium {
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+    }
+
+    .status-badge.free {
+      background: rgba(148, 163, 184, 0.12);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .info-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .info-value {
+      font-size: 18px;
+      color: #ffffff;
+      word-break: break-word;
+    }
+
+    .subscription-panel {
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(168, 85, 247, 0.14));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .subscription-panel h2 {
+      margin: 0 0 18px;
+      font-size: 22px;
+      color: #ffffff;
+    }
+
+    .subscription-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .subscription-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .subscription-item .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+    }
+
+    .subscription-item .value {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hint {
+      margin-top: 18px;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-logout {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn-logout:hover {
+      transform: translateY(-1px);
+      background: #dc2626;
+    }
+
+    .loading,
+    .error-message {
+      padding: 18px;
+      border-radius: 16px;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    .loading {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+
+    .error-message {
+      background: rgba(239, 68, 68, 0.12);
+      color: #fecaca;
+      border: 1px solid rgba(239, 68, 68, 0.25);
+    }
+
+    @media (max-width: 800px) {
+      .grid,
+      .subscription-list {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        padding: 22px;
+      }
+
+      .profile-title h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <div id="site-header"></div>
 
-      <div class="box">
-    <h1>Profile</h1>
-    
-    <div id="content">Loading...
-    </div>
+  <main class="page">
+    <section class="profile-card">
+      <div class="profile-top">
+        <div class="profile-title">
+          <h1>Mijn profiel</h1>
+          <p>Bekijk hier je accountgegevens en premiumstatus.</p>
+        </div>
+        <div id="premiumBadge" class="status-badge free">Standaard account</div>
+      </div>
 
-    <div id="status"></div>
+      <div id="content" class="loading">Profiel laden...</div>
 
-    <button class="logoutbtn" onclick="logout()">Logout</button>
-  </div>
+      <div class="actions">
+        <button class="btn btn-logout" onclick="logout()">Logout</button>
+      </div>
+    </section>
+  </main>
 
-<script>
-  async function loadProfile() {
-    const response = await fetch("/api/me", {
-      method: "GET",
-      credentials: "include"
-    });
+  <script>
+    function formatDate(dateString) {
+      if (!dateString) return "Niet beschikbaar";
 
-    const data = await response.json();
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return "Niet beschikbaar";
 
-    if (!data.user) {
-      window.location.href = "/log-in.html";
-      return;
+      return date.toLocaleDateString("nl-NL", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+      });
     }
-    const expireDate = data.user.subscription?.expireDate;
 
-    document.getElementById("content").innerHTML = `
-      <p><strong>Name:</strong> ${data.user.name}</p>
-      <p><strong>Email:</strong> ${data.user.email}</p>
-      <p><strong>Created at:</strong> ${new Date(data.user.createdAt).toLocaleDateString("nl-NL")}</p>
-      
-      <p><strong>Plan:</strong> ${data.user.subscription?.plan || "No premium"}</p>
+    function getDaysLeft(expireDate) {
+      if (!expireDate) return null;
 
-      <p>
-        <strong>Premium geldt tot: </strong>
-        ${expireDate 
-          ? new Date(expireDate).toLocaleDateString("nl-NL") 
-          : "Geen premium"}
-      </p>
-    `;
-  }
+      const now = new Date();
+      const end = new Date(expireDate);
 
-  async function logout() {
-    await fetch("/api/logout", {
-      method: "POST",
-      credentials: "include"
-    });
-    window.location.href = "/log-in.html";
-  }
+      if (isNaN(end.getTime())) return null;
 
-  loadProfile();
-</script>
+      const diff = end.getTime() - now.getTime();
+      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+      if (days < 0) return 0;
+      return days;
+    }
+
+    function getSubscriptionText(subscription) {
+      const plan = subscription?.plan?.toLowerCase() || "free";
+      const expireDate = subscription?.expireDate;
+      const daysLeft = getDaysLeft(expireDate);
+
+      const isPremium =
+        (plan === "premium" || plan === "pro") &&
+        expireDate &&
+        new Date(expireDate).getTime() > Date.now();
+
+      return {
+        isPremium,
+        badgeText: isPremium ? "Premium actief" : "Standaard account",
+        badgeClass: isPremium ? "status-badge premium" : "status-badge free",
+        planText: isPremium ? "Premium" : "Free",
+        expireText: isPremium ? formatDate(expireDate) : "Geen premium",
+        daysLeftText: isPremium
+          ? `${daysLeft} dag${daysLeft === 1 ? "" : "en"} resterend`
+          : "Niet actief"
+      };
+    }
+
+    async function loadProfile() {
+      try {
+        const response = await fetch("/api/me", {
+          method: "GET",
+          credentials: "include"
+        });
+
+        const data = await response.json();
+
+        if (!data.user) {
+          window.location.href = "/log-in.html";
+          return;
+        }
+
+        const user = data.user;
+        const subscriptionInfo = getSubscriptionText(user.subscription);
+
+        const premiumBadge = document.getElementById("premiumBadge");
+        premiumBadge.className = subscriptionInfo.badgeClass;
+        premiumBadge.textContent = subscriptionInfo.badgeText;
+
+        document.getElementById("content").innerHTML = `
+          <div class="grid">
+            <div class="info-box">
+              <div class="info-label">Naam</div>
+              <div class="info-value">${user.name || "Niet ingevuld"}</div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-label">E-mail</div>
+              <div class="info-value">${user.email || "Niet beschikbaar"}</div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-label">Account aangemaakt op</div>
+              <div class="info-value">${formatDate(user.createdAt)}</div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-label">Gebruikersrol</div>
+              <div class="info-value">${user.role || "Gebruiker"}</div>
+            </div>
+          </div>
+
+          <div class="subscription-panel">
+            <h2>Abonnement</h2>
+
+            <div class="subscription-list">
+              <div class="subscription-item">
+                <div class="label">Plan</div>
+                <div class="value">${subscriptionInfo.planText}</div>
+              </div>
+
+              <div class="subscription-item">
+                <div class="label">Geldig tot</div>
+                <div class="value">${subscriptionInfo.expireText}</div>
+              </div>
+
+              <div class="subscription-item">
+                <div class="label">Resterende tijd</div>
+                <div class="value">${subscriptionInfo.daysLeftText}</div>
+              </div>
+            </div>
+
+            <div class="hint">
+              ${subscriptionInfo.isPremium
+                ? "Je premiumabonnement is actief. Je behoudt toegang tot premiumfuncties tot de einddatum hierboven."
+                : "Je hebt momenteel geen actief premiumabonnement."}
+            </div>
+          </div>
+        `;
+      } catch (error) {
+        document.getElementById("content").innerHTML = `
+          <div class="error-message">
+            Er is een fout opgetreden tijdens het laden van je profiel.
+          </div>
+        `;
+        console.error("loadProfile error:", error);
+      }
+    }
+
+    async function logout() {
+      await fetch("/api/logout", {
+        method: "POST",
+        credentials: "include"
+      });
+
+      window.location.href = "/log-in.html";
+    }
+
+    loadProfile();
+  </script>
 
   <script src="jsjson/include.js"></script>
 </body>
