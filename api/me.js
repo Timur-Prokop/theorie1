@@ -1,4 +1,4 @@
-const { getCurrentUser } = require("./_lib");
+const { getCurrentUser, getDb } = require("./_lib");
 
 module.exports = async function handler(req, res) {
   try {
@@ -8,25 +8,32 @@ module.exports = async function handler(req, res) {
       return res.status(200).json({ user: null });
     }
 
+    const expireDate = user.subscription?.expireDate;
 
-//     const expireDate = user.subscription?.expireDate;
+    if (expireDate && new Date(expireDate).getTime() < Date.now()) {
+      const db = await getDb();
+      const users = db.collection("users");
 
-// if (expireDate && new Date(expireDate) < new Date()) {
-//   user.subscription = {
-//     ...user.subscription,
-//     plan: "No premium",
-//     expireDate: null,
-//     startDate: null
-//   };
+      await users.updateOne(
+        { _id: user._id },
+        {
+          $set: {
+            "subscription.plan": "No premium",
+            "subscription.expireDate": null,
+            "subscription.startDate": null,
+            "subscription.status": "expired"
+          }
+        }
+      );
 
-//   user.markModified('subscription');
-
-//   try {
-//     await user.save();
-//   } catch (saveError) {
-//     console.error("Save subscription error:", saveError);
-//   }
-// }
+      user.subscription = {
+        ...user.subscription,
+        plan: "No premium",
+        expireDate: null,
+        startDate: null,
+        status: "expired"
+      };
+    }
 
     return res.status(200).json({
       user: {
