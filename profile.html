@@ -256,41 +256,38 @@
     }
 
     function getDaysLeft(expireDate) {
-      if (!expireDate) return null;
+  if (!expireDate) return null;
 
-      const now = new Date();
-      const end = new Date(expireDate);
+  const now = Date.now();
+  const end = new Date(expireDate).getTime();
 
-      if (isNaN(end.getTime())) return null;
+  if (isNaN(end)) return null;
 
-      const diff = end.getTime() - now.getTime();
-      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  const diff = end - now;
 
-      if (days < 0) return 0;
-      return days;
-    }
+  if (diff <= 0) return 0;
+
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+}
 
     function getSubscriptionText(subscription) {
-      const plan = subscription?.plan?.toLowerCase() || "free";
-      const expireDate = subscription?.expireDate;
-      const daysLeft = getDaysLeft(expireDate);
+  const plan = (subscription?.plan || "No premium").toLowerCase();
+  const expireDate = subscription?.expireDate;
 
-      const isPremium =
-        (plan === "premium" || plan === "pro") &&
-        expireDate &&
-        new Date(expireDate).getTime() > Date.now();
+  const isPremium = plan === "premium" || plan === "pro";
+  const daysLeft = isPremium ? getDaysLeft(expireDate) : 0;
 
-      return {
-        isPremium,
-        badgeText: isPremium ? "Premium actief" : "Standaard account",
-        badgeClass: isPremium ? "status-badge premium" : "status-badge free",
-        planText: isPremium ? "Premium" : "Free",
-        expireText: isPremium ? formatDate(expireDate) : "Geen premium",
-        daysLeftText: isPremium
-          ? `${daysLeft} dag${daysLeft === 1 ? "" : "en"} resterend`
-          : "Niet actief"
-      };
-    }
+  return {
+    isPremium,
+    badgeText: isPremium ? "Premium actief" : "Standaard account",
+    badgeClass: isPremium ? "status-badge premium" : "status-badge free",
+    planText: isPremium ? "Premium" : "Geen premium",
+    expireText: isPremium && expireDate ? formatDate(expireDate) : "Geen premium",
+    daysLeftText: isPremium
+      ? (daysLeft > 0 ? `${daysLeft} dagen resterend` : "Verloopt vandaag")
+      : "Niet actief"
+  };
+}
 
     async function loadProfile() {
       try {

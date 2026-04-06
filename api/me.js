@@ -10,7 +10,7 @@ module.exports = async function handler(req, res) {
 
     const expireDate = user.subscription?.expireDate;
 
-    if (expireDate && new Date(expireDate).getTime() < Date.now()) {
+    if (expireDate && new Date(expireDate).getTime() <= Date.now()) {
       const db = await getDb();
       const users = db.collection("users");
 
