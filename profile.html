@@ -241,146 +241,174 @@
     </section>
   </main>
 
-  <script>
-    function formatDate(dateString) {
-      if (!dateString) return "Niet beschikbaar";
+<script>
+  function escapeHtml(value) {
+    if (value === null || value === undefined) return "";
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 
-      const date = new Date(dateString);
-      if (isNaN(date.getTime())) return "Niet beschikbaar";
+  function formatDate(dateString) {
+    if (!dateString) return "Niet beschikbaar";
 
-      return date.toLocaleDateString("nl-NL", {
-        day: "2-digit",
-        month: "long",
-        year: "numeric"
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "Niet beschikbaar";
+
+    return date.toLocaleDateString("nl-NL", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  function getDaysLeft(expireDate) {
+    if (!expireDate) return null;
+
+    const now = Date.now();
+    const end = new Date(expireDate).getTime();
+
+    if (isNaN(end)) return null;
+
+    const diff = end - now;
+
+    if (diff <= 0) return 0;
+
+    return Math.floor(diff / (1000 * 60 * 60 * 24));
+  }
+
+  function getSubscriptionText(subscription) {
+    const plan = (subscription?.plan || "free").toLowerCase();
+    const expireDate = subscription?.expireDate;
+    const isPremium = plan === "premium" || plan === "pro";
+    const daysLeft = isPremium ? getDaysLeft(expireDate) : null;
+
+    return {
+      isPremium,
+      badgeText: isPremium ? "Premium actief" : "Standaard account",
+      badgeClass: isPremium ? "status-badge premium" : "status-badge free",
+      planText: isPremium ? "Premium" : "Free",
+      expireText: isPremium && expireDate ? formatDate(expireDate) : "Geen premium",
+      daysLeftText: isPremium
+        ? daysLeft === null
+          ? "Onbekend"
+          : daysLeft > 0
+            ? `${daysLeft} dag${daysLeft === 1 ? "" : "en"} resterend`
+            : "Verloopt vandaag"
+        : "Niet actief",
+      hintText: isPremium
+        ? "Je premiumabonnement is actief. Je behoudt toegang tot premiumfuncties tot de einddatum hierboven."
+        : "Je hebt momenteel geen actief premiumabonnement."
+    };
+  }
+
+  async function loadProfile() {
+    const contentEl = document.getElementById("content");
+    const premiumBadge = document.getElementById("premiumBadge");
+
+    try {
+      const response = await fetch("/api/me", {
+        method: "GET",
+        credentials: "include"
       });
-    }
 
-    function getDaysLeft(expireDate) {
-  if (!expireDate) return null;
-
-  const now = Date.now();
-  const end = new Date(expireDate).getTime();
-
-  if (isNaN(end)) return null;
-
-  const diff = end - now;
-
-  if (diff <= 0) return 0;
-
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
-}
-
-    function getSubscriptionText(subscription) {
-  const plan = (subscription?.plan || "No premium").toLowerCase();
-  const expireDate = subscription?.expireDate;
-
-  const isPremium = plan === "premium" || plan === "pro";
-  const daysLeft = isPremium ? getDaysLeft(expireDate) : 0;
-
-  return {
-    isPremium,
-    badgeText: isPremium ? "Premium actief" : "Standaard account",
-    badgeClass: isPremium ? "status-badge premium" : "status-badge free",
-    planText: isPremium ? "Premium" : "Geen premium",
-    expireText: isPremium && expireDate ? formatDate(expireDate) : "Geen premium",
-    daysLeftText: isPremium
-      ? (daysLeft > 0 ? `${daysLeft} dagen resterend` : "Verloopt vandaag")
-      : "Niet actief"
-  };
-}
-
-    async function loadProfile() {
-      try {
-        const response = await fetch("/api/me", {
-          method: "GET",
-          credentials: "include"
-        });
-
-        const data = await response.json();
-
-        if (!data.user) {
-          window.location.href = "/log-in.html";
-          return;
-        }
-
-        const user = data.user;
-        const subscriptionInfo = getSubscriptionText(user.subscription);
-
-        const premiumBadge = document.getElementById("premiumBadge");
-        premiumBadge.className = subscriptionInfo.badgeClass;
-        premiumBadge.textContent = subscriptionInfo.badgeText;
-
-        document.getElementById("content").innerHTML = `
-          <div class="grid">
-            <div class="info-box">
-              <div class="info-label">Naam</div>
-              <div class="info-value">${user.name || "Niet ingevuld"}</div>
-            </div>
-
-            <div class="info-box">
-              <div class="info-label">E-mail</div>
-              <div class="info-value">${user.email || "Niet beschikbaar"}</div>
-            </div>
-
-            <div class="info-box">
-              <div class="info-label">Account aangemaakt op</div>
-              <div class="info-value">${formatDate(user.createdAt)}</div>
-            </div>
-
-            <div class="info-box">
-              <div class="info-label">Gebruikersrol</div>
-              <div class="info-value">${user.role || "Gebruiker"}</div>
-            </div>
-          </div>
-
-          <div class="subscription-panel">
-            <h2>Abonnement</h2>
-
-            <div class="subscription-list">
-              <div class="subscription-item">
-                <div class="label">Plan</div>
-                <div class="value">${subscriptionInfo.planText}</div>
-              </div>
-
-              <div class="subscription-item">
-                <div class="label">Geldig tot</div>
-                <div class="value">${subscriptionInfo.expireText}</div>
-              </div>
-
-              <div class="subscription-item">
-                <div class="label">Resterende tijd</div>
-                <div class="value">${subscriptionInfo.daysLeftText}</div>
-              </div>
-            </div>
-
-            <div class="hint">
-              ${subscriptionInfo.isPremium
-                ? "Je premiumabonnement is actief. Je behoudt toegang tot premiumfuncties tot de einddatum hierboven."
-                : "Je hebt momenteel geen actief premiumabonnement."}
-            </div>
-          </div>
-        `;
-      } catch (error) {
-        document.getElementById("content").innerHTML = `
-          <div class="error-message">
-            Er is een fout opgetreden tijdens het laden van je profiel.
-          </div>
-        `;
-        console.error("loadProfile error:", error);
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
       }
-    }
 
-    async function logout() {
+      const data = await response.json();
+
+      if (!data.user) {
+        window.location.href = "/log-in.html";
+        return;
+      }
+
+      const user = data.user;
+      const subscriptionInfo = getSubscriptionText(user.subscription);
+
+      premiumBadge.className = subscriptionInfo.badgeClass;
+      premiumBadge.textContent = subscriptionInfo.badgeText;
+
+      contentEl.innerHTML = `
+        <div class="grid">
+          <div class="info-box">
+            <div class="info-label">Naam</div>
+            <div class="info-value">${escapeHtml(user.name || "Niet ingevuld")}</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-label">E-mail</div>
+            <div class="info-value">${escapeHtml(user.email || "Niet beschikbaar")}</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-label">Account aangemaakt op</div>
+            <div class="info-value">${formatDate(user.createdAt)}</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-label">Gebruikersrol</div>
+            <div class="info-value">${escapeHtml(user.role || "Gebruiker")}</div>
+          </div>
+        </div>
+
+        <div class="subscription-panel">
+          <h2>Abonnement</h2>
+
+          <div class="subscription-list">
+            <div class="subscription-item">
+              <div class="label">Plan</div>
+              <div class="value">${subscriptionInfo.planText}</div>
+            </div>
+
+            <div class="subscription-item">
+              <div class="label">Geldig tot</div>
+              <div class="value">${subscriptionInfo.expireText}</div>
+            </div>
+
+            <div class="subscription-item">
+              <div class="label">Resterende tijd</div>
+              <div class="value">${subscriptionInfo.daysLeftText}</div>
+            </div>
+          </div>
+
+          <div class="hint">
+            ${subscriptionInfo.hintText}
+          </div>
+        </div>
+      `;
+    } catch (error) {
+      console.error("loadProfile error:", error);
+
+      premiumBadge.className = "status-badge free";
+      premiumBadge.textContent = "Niet beschikbaar";
+
+      contentEl.innerHTML = `
+        <div class="error-message">
+          Er is een fout opgetreden tijdens het laden van je profiel.
+        </div>
+      `;
+    }
+  }
+
+  async function logout() {
+    try {
       await fetch("/api/logout", {
         method: "POST",
         credentials: "include"
       });
-
-      window.location.href = "/log-in.html";
+    } catch (error) {
+      console.error("logout error:", error);
     }
 
-    loadProfile();
-  </script>
+    window.location.href = "/log-in.html";
+  }
+
+  loadProfile();
+</script>
 
   <script src="jsjson/include.js"></script>
 </body>

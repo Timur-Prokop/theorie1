@@ -9,8 +9,9 @@ module.exports = async function handler(req, res) {
     }
 
     const expireDate = user.subscription?.expireDate;
+    const expireTime = expireDate ? new Date(expireDate).getTime() : null;
 
-    if (expireDate && new Date(expireDate).getTime() <= Date.now()) {
+    if (expireTime && !Number.isNaN(expireTime) && expireTime <= Date.now()) {
       const db = await getDb();
       const users = db.collection("users");
 
@@ -18,7 +19,7 @@ module.exports = async function handler(req, res) {
         { _id: user._id },
         {
           $set: {
-            "subscription.plan": "No premium",
+            "subscription.plan": "free",
             "subscription.expireDate": null,
             "subscription.startDate": null,
             "subscription.status": "expired"
@@ -28,7 +29,7 @@ module.exports = async function handler(req, res) {
 
       user.subscription = {
         ...user.subscription,
-        plan: "No premium",
+        plan: "free",
         expireDate: null,
         startDate: null,
         status: "expired"
@@ -42,7 +43,12 @@ module.exports = async function handler(req, res) {
         email: user.email,
         name: user.name,
         role: user.role,
-        subscription: user.subscription,
+        subscription: user.subscription || {
+          plan: "free",
+          expireDate: null,
+          startDate: null,
+          status: "inactive"
+        },
         createdAt: user.createdAt
       }
     });
