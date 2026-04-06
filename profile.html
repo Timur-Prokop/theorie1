@@ -291,7 +291,7 @@
       badgeText: isPremium ? "Premium actief" : "Standaard account",
       badgeClass: isPremium ? "status-badge premium" : "status-badge free",
       planText: isPremium ? "Premium" : "Free",
-      expireText: isPremium && expireDate ? formatDate(expireDate) : "Geen premium",
+      expireText: isPremium && expireDate ? expireDate : "Geen premium",
       daysLeftText: isPremium
         ? daysLeft === null
           ? "Onbekend"
