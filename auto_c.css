@@ -97,7 +97,8 @@ body{
 
 .bord-img img {
   display: block;
-  width: clamp(140px, 22vw, 220px);
+  margin-top: 10px;
+  width: clamp(220px, 22vw, 280px);
   height: auto;
   object-fit: contain;
 }
