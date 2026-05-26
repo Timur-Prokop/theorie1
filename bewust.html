@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto</title>
-    <link rel="stylesheet" href="autosnelweg_c.css">
+    <title>Bewust</title>
+    <link rel="stylesheet" href="auto_c.css">
     <link rel="stylesheet" href="header_style.css">
 
 </head>
@@ -13,7 +13,7 @@
 
 <section id="jouw-auto-info">
     <div class="container">
-      <h2>Auto Theorie – Weer</h2>
+      <h2>Auto Theorie – Bewust</h2>
       
         <article>
             <h3>Het Nieuwe Rijden</h3>
@@ -25,34 +25,38 @@
               <li>Milieuvriendelijk</li>
               <li>Minder slijtage aan de auto</li>
             </ul>
-            <!-- <div class="image_center">
-                <img src="images/borden/" alt="">
-                <p></p>
-            </div> -->
-            <!-- <h4 class="nmotoren"></h4> -->
+
         </article>
 
         <hr class="line">
         
-        <article>
-          <h3>Bandenspanning</h3>
-          <ul>
-            <li>Wordt aangegeven in bar.</li>
-            <li>Voor elke auto geldt een andere aanbevolen spanning.</li>
-            <li>Die informatie vind je in het instructieboekje of op een sticker in de auto (bijv. in de deur).</li>
-          </ul>
-          <div class="image_center">
+        <article class="container-info"> 
+          <div>
+            <h3>Bandenspanning</h3>
+            <ul>
+              <li>Wordt aangegeven in bar.</li>
+              <li>Voor elke auto geldt een andere aanbevolen spanning.</li>
+              <li>Die informatie vind je in het instructieboekje of op een sticker in de auto (bijv. in de deur).</li>
+            </ul>
+          </div>
+          
+          <div class="bord-img">
               <img src="images/borden/bewust_1.png" alt="">
               <p>Spanning</p>
           </div>
+        </article>
 
-          <h4 class="nmotoren">👉 Belangrijk:</h4>
-          <ul>
-            <li>Controleer de spanning maandelijks (ook van het reservewiel).</li>
-            <li>Rijd niet met winterbanden in de zomer.</li>
-            <li>Met de juiste spanning bespaar je brandstof en gaat de band langer mee.</li>
-          </ul>
-          <h4 class="nmotoren">📌 De band met de juiste spanning heeft het beste contact met de weg.</h4>
+        <article class="container-info">
+          <div>
+            <h4 class="nmotoren">👉 Belangrijk:</h4>
+            <ul>
+              <li>Controleer de spanning maandelijks (ook van het reservewiel).</li>
+              <li>Rijd niet met winterbanden in de zomer.</li>
+              <li>Met de juiste spanning bespaar je brandstof en gaat de band langer mee.</li>
+            </ul>
+            <h4 class="nmotoren">📌 De band met de juiste spanning heeft het beste contact met de weg.</h4>
+          </div>
+          
         </article>
 
         <hr class="line">
@@ -73,21 +77,23 @@
 
         <hr class="line">
 
-        <article>
-          <h3>Cruisecontrol</h3>
-          <p>Met cruisecontrol houd je automatisch een constante snelheid.</p>
-          <p>Voordelen:</p>
-          <ul>
-            <li>Je hoeft minder vaak gas te geven of te remmen.</li>
-            <li>Minder inhaalacties → veiliger verkeer.</li>
-            <li>Je rijdt vaak rustiger en zuiniger.</li>
-            <li>Meer aandacht voor het verkeer (omdat je niet steeds op je snelheid hoeft te letten).</li>
-          </ul>
-          <h4 class="nmotoren">
-            ⚠️ Cruisecontrol schakelt automatisch uit bij remmen of ontkoppelen.
-          </h4>
-
-          <div class="image_center">
+        <article class="container-info">
+          <div>
+            <h3>Cruisecontrol</h3>
+            <p>Met cruisecontrol houd je automatisch een constante snelheid.</p>
+            <p>Voordelen:</p>
+            <ul>
+              <li>Je hoeft minder vaak gas te geven of te remmen.</li>
+              <li>Minder inhaalacties → veiliger verkeer.</li>
+              <li>Je rijdt vaak rustiger en zuiniger.</li>
+              <li>Meer aandacht voor het verkeer (omdat je niet steeds op je snelheid hoeft te letten).</li>
+            </ul>
+            <h4 class="nmotoren">
+              ⚠️ Cruisecontrol schakelt automatisch uit bij remmen of ontkoppelen.
+            </h4>
+          </div>
+          
+          <div class="bord-img">
               <img src="images/borden/bewust_2.png" alt="">
               <p>Cruise control symbool</p>
           </div>
@@ -95,14 +101,18 @@
 
         <hr class="line">
 
-        <article>
-          <h3>Start-stop-systeem</h3>
-          <ul>
-            <li>Zet de motor automatisch uit bij stilstand (bijv. voor een stoplicht).</li>
-            <li>Spaart brandstof → tot wel 10% minder verbruik in stadsverkeer.</li>
-            <li>Start vanzelf weer zodra je verder wilt rijden.</li>
-          </ul>
-          <div class="image_center">
+        <article class="container-info">
+          <div>
+            <h3>Start-stop-systeem</h3>
+            <ul>
+              <li>Zet de motor automatisch uit bij stilstand (bijv. voor een stoplicht).</li>
+              <li>Spaart brandstof → tot wel 10% minder verbruik in stadsverkeer.</li>
+              <li>Start vanzelf weer zodra je verder wilt rijden.</li>
+            </ul>
+          </div>
+          
+
+          <div class="bord-img">
               <img src="images/borden/bewust_3.png" alt="">
               <p>Startstop-systeem symbool</p>
           </div>
@@ -202,38 +212,48 @@
 
         <hr class="line">
 
-        <article>
-          <h3>Energielabel</h3>
-          <ul>
-            <li>
-              Op een energielabel zie je:
-              <ul>
-                <li>Brandstofverbruik</li>
-                <li>CO₂-uitstoot</li>
-                <li>Zuinigheidsklasse (A t/m G)</li>
-              </ul>
-            </li>
-            <li>Auto met label A verbruikt tot 20% minder dan auto met label C of D van dezelfde grootte.</li>
-            <li>Let bij aankoop van een auto op dit label om zuiniger te rijden.</li>
-          </ul>
-          <div class="image_center">
+        <article class="container-info">
+          <div>
+            <h3>Energielabel</h3>
+            <ul>
+              <li>
+                Op een energielabel zie je:
+                <ul>
+                  <li>Brandstofverbruik</li>
+                  <li>CO₂-uitstoot</li>
+                  <li>Zuinigheidsklasse (A t/m G)</li>
+                </ul>
+              </li>
+              <li>Auto met label A verbruikt tot 20% minder dan auto met label C of D van dezelfde grootte.</li>
+              <li>Let bij aankoop van een auto op dit label om zuiniger te rijden.</li>
+            </ul>
+          </div>
+          
+
+          <div class="bord-img">
               <img src="images/borden/bewust_4.png" alt="">
           </div>
         </article>
 
         <hr class="line">
 
-        <article>
-          <h3>Volgafstand</h3>
-          <ul>
-            <li>Houd altijd 2 seconden afstand van je voorligger.</li>
-            <li>Zie je dat je moet afremmen? → Laat op tijd gas los en laat de auto uitrollen in de versnelling.</li>
-          </ul>
-          <div class="image_center">
+        <article class="container-info">
+          <div>
+            <h3>Volgafstand</h3>
+            <ul>
+              <li>Houd altijd 2 seconden afstand van je voorligger.</li>
+              <li>Zie je dat je moet afremmen? → Laat op tijd gas los en laat de auto uitrollen in de versnelling.</li>
+            </ul>
+          </div>
+          
+          <div class="bord-img">
               <img src="images/borden/bewust_5.png" alt="">
-              <p>➡️ Dit moet minimaal 2 seconden zijn.</p>
+              <p>minimaal 2 seconden</p>
               <p></p>
           </div>
+        </article>
+
+        <article>
           <h4 class="nmotoren"></h4>
           <ol>
             <li>Kies een vast punt langs de weg (bijv. een lantaarnpaal of verkeersbord).</li>
@@ -241,6 +261,8 @@
             <li>Tel de tijd tot jij er ook voorbij rijdt.</li>
           </ol>
         </article>
+
+
         <hr class="line">
 
         <article>

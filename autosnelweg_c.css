@@ -12,7 +12,12 @@ body{
     background-image: url("images/bgc.png");
     background-size: 100%;     
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 #jouw-auto-info {
   padding: 40px 0;

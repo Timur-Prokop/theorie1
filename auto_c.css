@@ -18,11 +18,19 @@ body{
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.nmotoren{
+  color: yellow;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.line{
+  margin-top: 20px;
+}
 
 
 #jouw-auto-info {
   padding: 40px 0;
-  background-color: transparent; /* ← Прозрачный фон */
+  background-color: transparent;
   color: #fff;
 }
 
@@ -70,16 +78,42 @@ body{
 
 
 
-.dodehoek{
-    display: flex;
-}
-.dodehoek img{
-    margin-left: 40px;
-    width: 300px;
-    height: 300px;
+
+.container-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
 }
 
-/* 📱 Адаптация под мобильные устройства */
+.bord-img {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.bord-img img {
+  display: block;
+  width: clamp(140px, 22vw, 220px);
+  height: auto;
+  object-fit: contain;
+}
+.onder_img{
+  display: block;
+  width: clamp(200px, 22vw, 300px);
+  height: auto;
+  object-fit: contain;
+  margin-top: 30px;
+  margin: auto;
+}
+
+
+
+
+/* aдаптация под мобильные устройства */
 @media (max-width: 768px) {
   #jouw-auto-info {
     padding: 30px 15px;
@@ -100,14 +134,7 @@ body{
   #jouw-auto-info ol {
     font-size: 1.05rem;
   }
-  .dodehoek{
+  .container-info {
     display: block;
+  }
 }
-    .dodehoek img{
-        margin-top: 30px;
-        margin-left: auto;
-    }
-}
-
-
-
